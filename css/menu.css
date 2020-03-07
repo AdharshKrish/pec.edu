@@ -176,7 +176,7 @@
   }
 }
 
-@media(max-width:450px){
+@media(max-width:460px){
   #menu-col-3 ul, #menu-col-4 ul{
     padding-left:10px;
   }
