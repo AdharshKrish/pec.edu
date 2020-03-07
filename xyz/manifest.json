@@ -1,0 +1,31 @@
+{
+  "name": "Pondicherry Engineering College",
+  "short_name": "PEC.edu",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ebf3f4",
+  "theme_color": "#2e8690",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "../img/icons/150px.png",
+      "type": "image/png",
+      "sizes": "151x151"
+    },
+    {
+      "src": "../img/icons/300px.png",
+      "type": "image/png",
+      "sizes": "301x301"
+    },
+    {
+      "src": "../img/watermark.png",
+      "type": "image/png",
+      "sizes": "500x757"
+    },
+        {
+      "src": "../img/icons/splash.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

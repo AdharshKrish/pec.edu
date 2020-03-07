@@ -1,0 +1,69 @@
+index2 changes
+
+<div class="pec-name" id="dept-name">
+    <h4 class="dept-name-text">Pondicherry Engineering College</h4>
+    <h4 class="dept-of"><i>An Autonomus Institute under Govt. of Puducherry</i></h4>
+</div>
+
+
+
+.pec-name{
+    float:left;
+    padding-left:1.5em;
+    margin-top:15px;
+    padding-top: 8px;
+    margin-bottom: 15px;
+}
+.watermark{
+    float: right;
+    opacity: .3;
+}
+.watermark img{
+    position: absolute;
+    z-index: -10;
+    right: 5%;
+    height: 450px;
+    width: 300px;
+    opacity: 0.5;
+    margin-top: 5vh;
+}
+
+.pec-crumb {
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 17px;
+}
+.pec-crumb-item{
+    color:#2e8690;
+}
+.pec-crumb-item:hover{
+    color:#2e8690;
+}
+
+
+
+
+<div class="watermark">
+    <img  src="../img/watermark.png" alt="pec logo watermark" height="300" width="200" >
+</div>
+<crumbs id="pec-crumb" class="pec-crumb"></crumbs>
+
+
+
+
+let link = window.location.href;
+link = link.replace('http://','');
+link = link.replace('https://','');
+let crumbs = link.split('/');
+let a = 'http:/';
+crumbs.forEach((crumb,i)=>{
+    a+='/'+crumb;
+    if(i<crumbs.length-1)
+        document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
+    else
+        document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
+    });
+
+
+
+remove dept name,college name,floating action button
