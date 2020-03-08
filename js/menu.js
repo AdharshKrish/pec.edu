@@ -74,7 +74,6 @@ document.addEventListener('scroll',()=>{
 });
 
 $(window).resize(function() {
-        // window.setTimeout(()=>{location.reload()},1500);
         if(window.outerWidth>996){
             document.getElementById('menu-col-1').style.display = 'block';
             document.getElementById('menu-col-2').style.display = 'block';
@@ -99,6 +98,6 @@ function change(){
 }
 
 function focusS(){
-    window.scrollTo(0,0);setTimeout(()=>{document.getElementById('focus').focus();},0);
+    setTimeout(()=>{document.getElementById('focus').focus();},0);
     document.getElementById('focusChk').focus();
 }
