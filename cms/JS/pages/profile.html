@@ -1,0 +1,193 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="../css/master.css">
+<link rel="stylesheet" href="../css/header.css">
+<script src="../js/ckeditor/ckeditor.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>pec.edu <span>CMS_</span> </h1>
+        
+    </header>
+
+    <main>
+        <div class="container ">
+
+        
+            <div class="row ">
+
+                <div class="col-md-2 "> <!--verticle li-->
+                    <div class="container">
+                        <ul class="nav nav-tab">
+                            <li class="active" > <a href="profile.html" style="color: black;">PROFILE </a></li>
+                            <li> <a href="AddMemoFaculty.html" id=""> ADD MEMO </a></li>
+                            <li><a href="signout.html" style="color: #2E8690">SIGNOUT</a></li>
+                        </ul>
+                    </div>
+                </div>
+             
+                <div class="col-md-2 col-md-push-8 data ">
+                    <div class="container ">
+                        <h3>Name</h3>
+                        <p>Prof. XYZ</p>
+                        <h3>E-mail</h3>
+                        <p>xyz@pec.edu</p>
+                        <h3>Department</h3>
+                        <p>CSE</p>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-md-pull-2">
+                    <div class="panel panel-body">
+                        <div class="row "> <!--DETAILS-->
+                            <div class="col-sm-4 "> <!--FACUTLY IMAGE-->
+                                <div class="container">
+                                    <img src="thiru.png" alt="thiru image" class="img-responsive">
+                                </div>
+                                <div class="btnChangePic">
+                                    <button class="btn btn-primary" >Change Avatar</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 ">
+                                <form class="form3">
+                                    <div class="form-group">
+                                        <label for="designation">Designation</label>
+                                        <select name="designation" class="form-control">
+                                            <option value="none">--Select--</option>
+                                            <option value="prof">Professor</option>
+                                            <option value="ast_prof">Assistance Professor</option>
+                                            <option value="assoc_prof">Associate Professor</option>
+                                            <option value="programmer">Programmar</option>
+                                            <option value="other">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="phone">Phone</label>
+                                                <input type="text" name="phone" placeholder="12345-XXXXX " class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="extno">Extension No</label>
+                                                <input type="text" name="extno" placeholder="XXX" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob">Date of Birth</label>
+                                        <input type="text" name="dob" placeholder="e.g., 15 July" class="form-control">
+                                    </div> 
+                                    
+                                    <div class="form-group">
+                                        <label for="dept">Specialization</label>
+                                        <input type="text" name="specialization" placeholder="e.g., Sensor Networks" class="form-control">
+                                    </div>                         
+                                 
+                                    <!-- <input type="submit" value="UPLOAD" class="btn btn-primary grant-access">
+                                </form> -->
+
+                    
+                            </div>
+                        </div>
+                    <hr >
+                        <div class="row "> <!--WYSIWYG-->
+                             <!-- <span style="float: right;"><button class="btn btn-default"> View Sample</button></span>
+                             <h4>Add more details </h4>
+                             <form> -->
+                                <div class="form-group">
+                                    <label for="qualification">Alma Mater</label>
+                                    <textarea  name="qualification" cols="30" rows="3" placeholder="e.g. Ph.D. (PEC, Pondicherry), 1990; M.Tech. (PEC, Pondicherry), 19983; B.Tech. (PEC, Pondicherry), 1980; High School (Petit Seminaire, Pondicherry), 1978." class="form-control" ></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="interest">Interests</label>
+                                    <textarea name="interest" id="" cols="30" rows="3" class="form-control" placeholder="e.g., Playing Badminton, Biking"></textarea>
+                                </div> 
+                                
+                                <div class="form-group">
+                                    <label for="research">Current Research/Work</label>
+                                    <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g., Sensor Networks"></textarea>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="students">Students</label>
+                                    <textarea name="students" id="" cols="30" rows="3" class="form-control"  placeholder="e.g., Phd Scholar - Arun Kumar"></textarea>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="projects">Projects and Activities</label>
+                                    <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Enter in bulletpoints."></textarea>
+                                </div>
+                                <hr>
+                                 <h3>Publications</h3>
+                                <div class="form-group">
+                                    <label for="books">Books</label>
+                                    <textarea name="books" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="journals">Journals</label>
+                                    <textarea name="journals" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="conferences">Conferences</label>
+                                    <textarea name="conferences" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated"></textarea>
+                                </div>
+                                <hr>
+                                <h3>Social links</h3>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="website">Website</label>
+                                            <input type="text" name="website" placeholder="Paste your URL here" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="linkedin">LinkedIn</label>
+                                            <input type="text" name="linkedin" placeholder="Paste your URL here" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="facebook">Facebook</label>
+                                            <input type="text" name="facebook" placeholder="Paste your URL here " class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="twitter">Twitter</label>
+                                            <input type="text" name="twitter" placeholder="Paste your URL here" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="submit" value="SAVE" class="btn btn-primary grant-access" style="float: right;">
+                            </form>
+                             
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

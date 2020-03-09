@@ -1,0 +1,97 @@
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #71ccd5;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .tags-input {
+    border: 2px solid #dfdfdf;
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 11px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #888;
+  }
+  .tags-input span {
+    background: #bbb;
+    margin-right: 7px;
+    color: #fff;
+    padding: 4px 7px;
+    border-radius: 20px;
+  }
+  .tags-input span[data-selected] {
+    background: #71ccd5;
+  }
+  .tags-input::after {
+    content: "";
+    background: #888;
+    width: 1px;
+    height: 19px;
+    margin: -1px 0 0 -1px;
+    display: none;
+    -webkit-animation: blink 0.5s infinite alternate;
+            animation: blink 0.5s infinite alternate;
+  }
+  .tags-input:focus {
+    border-color: #71ccd5;
+    outline: none;
+  }
+  .tags-input:focus[data-cursor]::after {
+    display: block;
+  }
+  @media screen and (max-width: 736px) {
+    .tags-input:focus[data-cursor]::after {
+      display: none;
+    }
+  }
+  .tags-input:focus + h1 {
+    color: #71ccd5;
+  }
+  .tags-input:focus + h1 span {
+    border-color: #71ccd5;
+  }
+  
+  @-webkit-keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    49% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
