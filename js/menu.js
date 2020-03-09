@@ -74,14 +74,27 @@ document.addEventListener('scroll',()=>{
 });
 
 $(window).resize(function() {
-        if(window.outerWidth>996){
-            document.getElementById('menu-col-1').style.display = 'block';
-            document.getElementById('menu-col-2').style.display = 'block';
-            document.getElementById('menu2-cover').style.display = 'none';
-            document.getElementById('menu-col-3').innerHTML='';
-            document.getElementById('menu-col-4').innerHTML='';
-            document.getElementById('menu-col-4').style.left='0';
+    
+    if(window.outerWidth>980){
+        if(window.pageYOffset>100){
+            document.getElementsByClassName('mob-btn')[0].style.display='block';
         }
+        else{
+            document.getElementsByClassName('mob-btn')[0].style.display='none';
+
+        }
+    }else{
+        document.getElementsByClassName('mob-btn')[0].style.display='block';
+    }
+
+    if(window.outerWidth>996){
+        document.getElementById('menu-col-1').style.display = 'block';
+        document.getElementById('menu-col-2').style.display = 'block';
+        document.getElementById('menu2-cover').style.display = 'none';
+        document.getElementById('menu-col-3').innerHTML='';
+        document.getElementById('menu-col-4').innerHTML='';
+        document.getElementById('menu-col-4').style.left='0';
+    }
 });
 
 function goBack(){

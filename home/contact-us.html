@@ -112,8 +112,9 @@
         }
         .purpose button
         {
-            margin: 10px 0 10px 50px;
+            margin: 10px 0;
             padding: 10px;
+            font-size: 20px;
             background: none;
             border: none;
             border-bottom: 5px solid transparent;
@@ -129,18 +130,28 @@
             font-weight: bold;
             background-color: rgba(0, 128, 128, 0.1);
         }
-        
+        #auth{
+            font-size: 20px; font-family: Oswald;padding-left:20px;color:#2e8690
+        }
         .form
         {
-           padding: 0px 0px 0px 40px;
+           padding: 0px 0px 0px 3vw;
         }
         .form input{
             margin: 5px 0 20px 0;
-            width:425px;
-            border:1px solid ;
+            /* width:425px; */
+            /* border:1px solid ; */
             border-radius: 4px;
             padding:5px;
-            
+            background-color: transparent;
+            /* border: 1.1px solid #9e9e9e; */
+            /* border-radius: 5px; */
+            outline: none;
+            box-shadow: none;
+            transition: 0.3s;
+        }
+        .form input:focus{
+            border-bottom: 1.2px solid #2e8690;
         }
         ::placeholder{
           color:#ccc;
@@ -158,7 +169,6 @@
             outline: none;
             box-shadow: none;
             transition: 0.3s;
-
         }
         .form textarea:focus{
             border: 1.2px solid #2e8690;
@@ -169,10 +179,11 @@
             height:30px;
             background: #fff;
             border-radius: 10px;
-            margin-left: 275px;
+            /* margin-left: 275px; */
             color:#2e8690;
             font-weight:600;
             border:2px solid #2e8690;
+            font-family: 'Segoe UI';
         }
         #submit:hover
         {
@@ -212,6 +223,23 @@
   animation-duration: 0.4s;
 }
 
+
+@media screen and (max-width:1111px){
+  .form input, .form textarea{
+    width:375px;
+  }
+}
+
+@media screen and (max-width:990px){
+  .details{
+            border:none;
+            /* border: 0 0 1px solid #aaa 0; */
+          }
+          .form{
+            margin-top:50px;
+          }
+}
+
 @media screen and (max-width:750px){
   .modal-content{width:70%;}
   main{padding:0 20px}
@@ -222,28 +250,19 @@
   .details{
     margin-top:50px;
   }
+  .purpose button
+{
+    font-size: 15px;
 }
-@media screen and (max-width:990px){
-  .details{
-            border:none;
-            /* border: 0 0 1px solid #aaa 0; */
-          }
-          .form{
-            margin-top:50px;
-          }
+#auth{
+            font-size: 17px;
+        }
 }
-@media screen and (max-width:1111px){
-  .form input{
-    width:375px;
-  }
-  .form textarea{
-    width:375px;
-  }
-  #submit{
-    margin-left:200px;
-  }
+@media screen and (max-width:430px){
+    .form input, .form textarea{
+        width:250px;
+    }
 }
-
 #close {
   color: white;
   /* float: right; */
@@ -379,7 +398,7 @@
             </div>
         <div class="col-lg-3 col-md-5 details">
           <div id="authority">
-            <b id="auth" style="font-size: 20px; font-family: Oswald;padding-left:20px;color:#2e8690">Authority</b>
+            <b id="auth">Authority</b>
             <ul class="list-group" style="font-family: 'Segoe UI';margin-top:20px;">
               <li class="list-group-item" id="aname">-</li>
               <li class="list-group-item" id="amail">-</li>
@@ -390,17 +409,19 @@
         <!-- <div class="hr"></div> -->
             
             <!-- <div class="text-center"> -->
-            <form class="col-lg-4 form col-md-12 form" id="form" method="POST" action="./complain.php">
+            <form class="col-lg-4 col-md-12 form" id="form" method="POST" action="./complain.php">
                 <!-- <h1 id="title"></h1> -->
                 <input name="auth" type="text" id="inauth" hidden required>
                 <input name="authsub" type="text" id="sub" hidden required>
-                Name<br> <input name="name" type="text" placeholder="Steve" required><br>
-                Identification<br><input name="id" type="text" placeholder="12CSXXX" required><br>
-                Email<br><input type="text" name="email" placeholder="steve@example.com" required><br>
-                Phone no.<br><input type="text" name="phno" placeholder="987-XXXX-210" required><br>
-                <textarea name="query" placeholder="Enter text here"></textarea><br>
+                Name<br> <input style="width: 100%" name="name" type="text" placeholder="Steve" required><br>
+                Identification<br><input style="width: 100%" name="id" type="text" placeholder="12CSXXX" required><br>
+                Email<br><input style="width: 100%" type="text" name="email" placeholder="steve@example.com" required><br>
+                Phone no.<br><input style="width: 100%" type="text" name="phno" placeholder="987-XXXX-210" required><br>
+                <textarea style="width: 100%" name="query" placeholder="Enter text here"></textarea><br>
+                <div style="width:100%;display: flex;justify-content: center;">
                 <button type="submit" id="submit">SUBMIT</button>
-            <!-- </div> -->
+                </div>
+                <!-- </div> -->
             </form>
         </div>
         
