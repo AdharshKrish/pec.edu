@@ -114,6 +114,7 @@ header{
     margin-left: 30px;
     font-weight: 500;
     font-size: 17px;
+    font-family: 'Segoe UI';
 }
 .pec-crumb-item{
     color:#2e8690;
@@ -196,6 +197,9 @@ header{
         padding-left: 0.6em;
         margin-top: 8px;
     }
+.pec-crumb {
+    font-size: 12px;
+}
 }
 @media screen and (max-width:420px){
 
