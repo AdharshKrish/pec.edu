@@ -106,11 +106,12 @@ function goBack(){
 }
 
 function change(){
+    window.scrollTo(0,0);
     document.getElementsByClassName('menu-icon')[0].classList.toggle('change')
     document.getElementsByClassName('menu-icon')[1].classList.toggle('change')
 }
 
 function focusS(){
-    setTimeout(()=>{document.getElementById('focus').focus();},0);
+    window.scrollTo(0,0);
     document.getElementById('focusChk').focus();
 }
