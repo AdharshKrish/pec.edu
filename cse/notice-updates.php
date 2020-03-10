@@ -33,6 +33,7 @@
 <!--ADD CUSTOM IMPORTS HERE use convention-->
     <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
     <!-- <script defer src="enter link"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap" class="styleload" media="all" disabled>
 
 
 <!--custom imports ends-->
@@ -122,7 +123,152 @@
         }
         
         /*ENTER INLINE CONTENT CSS*/
-        
+        #demo-modal {
+	text-align: center;
+	padding: 20px;
+}
+
+#demo-modal-target {
+	background: url(default-bg.jpg) no-repeat top left fixed;
+	max-width: 550px;
+	text-align: center;
+	color: #FFF;
+    padding: 60px 0px;
+}
+        .tb1_{
+            border: 1px solid red;
+        }
+        .tb2_{
+            border: 1px solid blue;
+        }
+        .tb3_{
+            border: 1px solid green;
+        }
+        .card{
+            width: 300px;
+            min-width: 280px;
+            padding: 15px 20px;
+            margin: 10px 15px;
+
+            height: fit-content;
+            /* max-height: 400px; */
+            display: inline-block;
+            border-radius: 5px;
+            background: white;
+            transition: all .5s;
+        }
+        .card-container{
+            /* min-height: 150px; */
+            /* height: 300px; */
+            display: flex;
+            padding: 20px;
+            overflow-x:auto;
+        }
+        .card p{
+            margin: 0 !important;
+            color: #707070;
+            font-weight: bolder;
+        }
+        .card-header{
+            padding: 5px;
+        }
+        .card-body{
+            font-size: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            height: 220px;
+            overflow-y: auto;
+        }
+        .hashtags{
+            padding: 7px;
+        }
+        .card:hover{
+            box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
+            transform: scale(1.03);
+        }
+        .faculty-header{
+            border-top:3px double black;
+            border-bottom:3px double black;
+            font-family: 'Oswald',sans-serif;
+            text-align: center;
+            margin-left:5%;
+            margin-right:5%;
+            padding-top:0px;
+            padding-bottom:0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .faculty-header h2{
+            margin-top: 10px;
+        }
+
+        @media (max-width: 520px){
+            .card{
+                min-width: 260px;
+            }
+        }
+        @media (min-width:920px){
+            ::-webkit-scrollbar
+            {
+                width:5px;
+                height: 10px;
+            }
+            ::-webkit-scrollbar-track
+            {
+                border-radius:0px;  
+                /* box-shadow: inset 0 0 5px #bdbdbd; */
+                box-shadow:inset 0 0 5px rgb(114, 114, 114);
+            }
+            ::-webkit-scrollbar-thumb
+           {
+               background: #b8b8b8;
+               border-width:20px;
+               width: 5px;
+           }
+           ::-webkit-scrollbar-thumb:hover
+           {
+               background-color: rgb(163, 163, 117);
+               
+           }
+        }
+        .new-bullet{   /*if time (= currentTime-arrivalTime) <24 hour then display:block else display:none*/
+            color: red;
+            font-size: 22px;
+            position: relative;
+            top: 2px;
+            /* margin-right: -2px; */
+        }
+        .card-parent{
+    min-height: 200px;
+    max-height: 400px;
+    display: flex;
+}
+
+
+.card{
+    min-width: 200px;
+    max-width: 320px;
+    padding: 25px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.card p{
+    margin: 0 !important;
+    color: #707070;
+    font-weight: bolder;
+}
+.card-header{
+    padding: 5px;
+}
+.card-body{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hashtags{
+    padding: 7px;
+}
         /*content css ends*/
     </style>
     <script>
@@ -238,56 +384,53 @@
                 <h2>Notice & Updates</h2>
         </div>
         <div class="container-fluid">
-            <div class="row tb1" style="background-color: #f5f4f4;">
-                <div class="container"style="background-color: whitesmoke;" >
+            <div class="row tb1" style="background-color: #f5f4f4;box-shadow:inset 0 0 10px #707070">
+                <div class="container" style="background-color: whitesmoke;" >
                     <div class="card-container tb3">
 
                      
-                  <?php
-                  
-                  $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 ORDER BY expires_on DESC LIMIT 12 ";
+<?php
+
+$query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 ORDER BY expires_on DESC LIMIT 12 ";
 
 if($result=mysqli_query($db_con,$query))
 { 
-    
-    while($arr=mysqli_fetch_assoc($result))
-    {
+
+while($arr=mysqli_fetch_assoc($result))
+{
 
 
-        $summary=$arr['breif'];
-        $start=$arr['start'];
-        $end=$arr['end'];
-        $cid=$arr['id'];
-                  echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2">
-                            <div class="card-header">
-                                <span style="float: right;"><img src="calendar." alt="calender-icon" title="Add to my Calender"></span>
-                                
-                                <p> <span class="new-bullet">&bull;</span> New</p>
-                                <p>'.$start.'</p>
-                                <p>'.$end.'</p>
-                            </div>
-                            <div class="card-body">
-                             '.$summary.' 
-                            </div>
-                            ';
-                            $query1="SELECT * FROM tags WHERE content_id=".$cid;
-                            echo'
-                            <div class="hashtags">';
+    $summary=$arr['breif'];
+    $start=$arr['start'];
+    $end=$arr['end'];
+    $cid=$arr['id'];
+            echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2">
+                        <div class="card-header">
+                            <span style="float: right;"><img src="img/calendar.png" alt="calender-icon" title="Add to my Calender"></span>
+                            
+                            <p> <span class="new-bullet">&bull;</span> New</p>
+                            <p>'.$start.'</p>
+                            <p>'.$end.'</p>
+                        </div>
+                        <div class="card-body">
+                        '.$summary.' 
+                        </div>
+                        ';
+                        $query1="SELECT * FROM tags WHERE content_id=".$cid;
+                        echo'
+                        <div class="hashtags">';
 
-                            if($result1=mysqli_query($db_con,$query1))
+                        if($result1=mysqli_query($db_con,$query1))
+                        {
+                            while($a=mysqli_fetch_assoc($result1))
                             {
-                                while($a=mysqli_fetch_assoc($result1))
-                                {
-                                    $tag=$a['tagname'];
-                            echo '<a href="#" id="">#'.$tag.'</a> &nbsp;&nbsp';}}
-                                      
-                          echo'  </div></div></a>';
-
-                       //  <button><div onclick="loadDynamicContentModal('.$cid.')"
-                        //  class="btn-modal-target" id="btn-responsive">Exapnd</div></button>
-                        
-    }}
-                     ?>
+                                $tag=$a['tagname'];
+                        echo '<a href="#" id="">#'.$tag.'</a> &nbsp;&nbsp';}}
+                                
+                    echo'  </div></div></a>';
+                    
+}}
+?>
                         
                     </div>
                 </div>
