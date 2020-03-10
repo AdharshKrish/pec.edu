@@ -234,6 +234,65 @@
     <main>
         <!--ENTER MAIN CONTENT HERE-->
             
+        <div class="faculty-header">
+                <h2>Notice & Updates</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="row tb1" style="background-color: #f5f4f4;">
+                <div class="container"style="background-color: whitesmoke;" >
+                    <div class="card-container tb3">
+
+                     
+                  <?php
+                  
+                  $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 ORDER BY expires_on DESC LIMIT 12 ";
+
+if($result=mysqli_query($db_con,$query))
+{ 
+    
+    while($arr=mysqli_fetch_assoc($result))
+    {
+
+
+        $summary=$arr['breif'];
+        $start=$arr['start'];
+        $end=$arr['end'];
+        $cid=$arr['id'];
+                  echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2">
+                            <div class="card-header">
+                                <span style="float: right;"><img src="calendar." alt="calender-icon" title="Add to my Calender"></span>
+                                
+                                <p> <span class="new-bullet">&bull;</span> New</p>
+                                <p>'.$start.'</p>
+                                <p>'.$end.'</p>
+                            </div>
+                            <div class="card-body">
+                             '.$summary.' 
+                            </div>
+                            ';
+                            $query1="SELECT * FROM tags WHERE content_id=".$cid;
+                            echo'
+                            <div class="hashtags">';
+
+                            if($result1=mysqli_query($db_con,$query1))
+                            {
+                                while($a=mysqli_fetch_assoc($result1))
+                                {
+                                    $tag=$a['tagname'];
+                            echo '<a href="#" id="">#'.$tag.'</a> &nbsp;&nbsp';}}
+                                      
+                          echo'  </div></div></a>';
+
+                       //  <button><div onclick="loadDynamicContentModal('.$cid.')"
+                        //  class="btn-modal-target" id="btn-responsive">Exapnd</div></button>
+                        
+    }}
+                     ?>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--main content ends-->
     </main>
