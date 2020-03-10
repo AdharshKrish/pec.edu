@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Computer Science & Engineering</title> <!-- ENTER PAGE TITLE -->
+    <title></title> <!-- ENTER PAGE TITLE -->
     <link rel="icon" href="../img/icon.png">
     <link rel="manifest" href="../manifest.json" />
     <link rel="apple-touch-icon" href="../img/icons/150px.png" />
@@ -29,10 +29,13 @@
     <script defer src="../js/bootstrap4.js"></script>
     <script defer src="../js/menu.js"></script>
     <script async src="../js/pace.js"></script>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap" class="styleload" media="all" disabled>
+
+<!--ADD CUSTOM IMPORTS HERE use convention-->
+    <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
+    <!-- <script defer src="enter link"></script> -->
 
 
+<!--custom imports ends-->
 
     <style>
         .fixed-action-btn {
@@ -42,7 +45,7 @@
             z-index: 4;
             bottom: 10px;
         }
-
+        
         .floatbtn a {
             width: 200px;
             border-radius: unset;
@@ -53,7 +56,7 @@
             text-align: center;
             text-decoration: none;
         }
-
+        
         .floatbtn a:hover {
             background-color: #2e8690;
             color: #fff;
@@ -69,7 +72,7 @@
         html{
             scroll-behavior: smooth;
         }
-        /* body {
+        body {
             display: flex;
             min-height: 100vh;
             flex-direction: column;
@@ -80,7 +83,7 @@
         main {
             flex: 1;
         }
-         */
+        
         ::-webkit-scrollbar {
             width: 0.35em;
         }
@@ -120,208 +123,6 @@
         
         /*ENTER INLINE CONTENT CSS*/
         
-        .butt:focus{
-            outline:none;
-        }
-        .nav-pan a{
-            font-family:'Oswald';
-            color:#000;
-        }
-        .nav-pan a:hover{
-            text-decoration:none;
-        }
-
-        #dept-image{
-        object-fit: cover;
-        position: absolute;
-        z-index: 1;
-        overflow: hidden;
-        height:98%;
-        width: 94%;
-        outline: 1px solid white;
-        outline-offset: -20px;
-}
-@media ( max-width:400px ){
-    #dept-image{
-        outline-offset: -10px;
-    }
-}
-.cover-image {
-  background-image: url("./img/cover.jpg");
-
-  height: 100%;
-  width: 100%;
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: fixed;
-  z-index: 20;
-}
-.cover-dept-text{
-    font-size: 3.5vw;
-    color: white;
-}
-.cover-dept-of {
-    font-size: 1.8vw;
-    color: white;
-}
-@media ( max-width:700px ) {
-    .cover-dept-text{
-        font-size: 5.2vw;
-    }
-    .cover-dept-of {
-        font-size: 2.8vw;
-    }
-}
-html,body {
-    margin: 0;
-    height: 100%;
-  }
-#main-container{
-    height: 82vh;
-}
-.butt{
-    position: absolute;
-    top:60%;
-    background: transparent;
-    border: 0;
-    color: #fff;
-    font-size: 30px;
-}
-
-.date-container{
-    height:20px;
-    width:100%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin:30px 0;
-    position: relative;
-    /* bottom: 40px; */
-}
-#date{
-    padding: 0 10px;
-    font-family: 'Times New Roman';
-    font-size: 1.5vw;
-}
-@media ( max-width:700px ) {
-    #date{
-        font-size: 2.5vw;
-    }
-}
-.left-line{
-    height:1px;
-    width:33%;
-    background-color: #000000;
-}
-.right-line{
-    height:1px;
-    width:33%;
-    background-color: #000000;
-}
-
-.nav-bar{
-    display: flex;
-    position: absolute;
-    top:76vh;
-    z-index: 10;
-}
-.nav-bar span{
-    background-color: white;
-    padding: 10px;
-}
-.nav-bar span:hover{
-    border-bottom: rgb(50,100,255) solid 3px;
-    background-color: rgb(150,200,255);
-}
-.contain{
-    z-index:1;
-}
-.flex-container {
-    display: flex;
-    justify-content: center;
-    font-family: 'Oswald', sans-serif;
-}
-
-.nav_items {
-    background-color: #fff;
-    padding: 10px 30px;
-    text-align: center;
-    line-height: auto;
-    font-size: 22px;
-    box-sizing: border-box;
-    border-bottom: 5px solid #fff;
-    box-shadow: #bfbfbf 2px 1px 4px;
-}
-
-
-.nav_items:hover{
-    background-color: #ebf3f4;
-    border-bottom: 5px solid #2e8690;  /*required*/
-}
-@media(min-width: 715px) and (max-width: 900px){
-    .nav_items {
-        padding: 10px 15px;
-    }
-}
-
-
-.contain{
-    text-align: center;
-    position: absolute;
-    bottom:0;
-    z-index: 10;
-}
-
-@media(max-width: 715px){
-    .flex-container {
-        flex-direction: column;
-        max-width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .nav_items {
-        align-content: center;
-        box-shadow: #bfbfbf 0px 6px 6px;
-    }
-    .contain{
-        position: absolute;
-        top: unset;
-        top: 15vh;
-    }
-}
-
-.date-container{
-    display:flex;
-    align-items: center; /* to vertically align*/
-    text-align: center;
-    padding: 0px 25px;
-}
-
-#date{
-    padding: 0 15px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    min-width: fit-content;
-}
-
-.hr2{
-    display: inline-block;
-    width:40%;
-    border-color: #000;
-}
-@media (max-width: 400px) {
-    #date{
-        font-size: 16px;
-        padding: 0 10px;
-    }
-}
         /*content css ends*/
     </style>
     <script>
@@ -335,20 +136,25 @@ html,body {
 </head>
 
 <body>
-    <section class="cover-image" id="snap">
-        <div class="cover-dept-name">
-            <h4 class="dept-of cover-dept-of">DEPARTMENT <i>of</i></h4>
-            <h4 class="dept-name-text cover-dept-text">Computer Science and Engineering</h4>
-        </div>
-        <button id="butt" class="butt">&DownArrow;</button>
-    </section>
-
+    <floatbtn class="fixed-action-btn">
+        <a class="btn-floating btn-large" style="background-color: #ffffff">
+            <img src="../img/forward.svg" id="iconbtn" alt="nav">
+        </a>
+        <ul class="floatbtn">
+            <li><a href="../home/" class="btn-floating">Home</a></li>
+            <li><a href="../newsupdate/" class="btn-floating">Notice & Updates</a></li>
+            <li><a href="../articles/" class="btn-floating">Articles</a></li>
+            <li><a href="../overview/" class="btn-floating">Overview</a></li>
+            <li><a href="../facultylist/" class="btn-floating">Faculty</a></li>
+            <li><a href="../courses/" class="btn-floating">Courses & Curriculum</a></li>
+        </ul>
+    </floatbtn>
     <header>
         <div class="container-dim container-fluid">
             <div class="row" id="row-top-margin">
-                <div class="logo-container">
+                <a href="http://pec.edu" class="logo-container">
                     <img class="logo" src="../img/logo.png" alt="logo_image" width="100"> 
-                </div>
+                </a>
                 <div class="college_name">
                     <h4 class="college-name-text">Pondicherry</h4><br>
                     <h4 class="college-name-text">Engineering</h4><br>
@@ -429,29 +235,6 @@ html,body {
         <!--ENTER MAIN CONTENT HERE-->
             
 
-        
-        <section>
-            <div style="display:flex;justify-content: center;position: relative;" width="100%" id="main-container">
-                <img id="dept-image" src="img/cover.jpg" style="z-index:1">
-                <div class="contain" style="z-index:1" >
-                    <div class="flex-container justify-content-center nav-pan">
-                             <a  href="../newsupdate/"><div class="nav_items">Notice & Updates</div></a>
-                        <a   href="../articles/"><div class="nav_items" >Articles</div></a> 
-                        <a  href="../overview/"><div class="nav_items"  >Overviews</div></a> 
-                            <a href="../facultylist/"><div class="nav_items"  >Faculty</div></a> 
-                                <a  href="../courses/"><div class="nav_items"   >Courses & Curriculum</div></a> 
-                    </div>
-                </div>
-                
-            </div>
-            
-           
-            <div class="date-container">
-                <hr class="hr2">
-                <div id="date"></div>
-                <hr class="hr2">
-            </div>
-        </section>
         <!--main content ends-->
     </main>
     <footer>
@@ -537,35 +320,20 @@ html,body {
     </footer>
 
     <script>
-        
-//===========================timer clock===========================
-startTime();
-function startTime() {
-    var d = new Date();
-    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var date = "";
-    var hours = d.getHours();
-    var minutes = d.getMinutes();
-    var second = d.getSeconds();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12;
-    minutes = minutes < 10 ? '0'+minutes : minutes;
-    second = second <10? '0'+second:second;
-    var strTime = hours + ':' + minutes +':' + second +' ' + ampm;
-    date=months[d.getMonth()]+" "+d.getDate()+" "+d.getFullYear()+" | "+strTime;
-    document.getElementById('date').innerHTML=date;
-    var t = setTimeout(startTime, 200);
-}
-
-
-//===========================scroll message===========================
-window.setTimeout(message,1700);
-function message(){
-    $("#snap").animate({height:'toggle',opacity:'toggle'},'slow');
-
-}
-
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                direction: 'top',
+                hoverEnabled: false
+            });
+        });
+        let icon = document.getElementById('iconbtn').style;
+        iconbtn.addEventListener('click', () => {
+            if(icon.transform != "rotate(90deg)")
+                icon.transform = "rotate(90deg)";
+            else
+                icon.transform = "rotate(-90deg)";
+        });
     </script>
 
 </body>
