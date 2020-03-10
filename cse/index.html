@@ -257,7 +257,13 @@ html,body {
     font-size: 22px;
     box-sizing: border-box;
     border-bottom: 5px solid #fff;
-    box-shadow: #bfbfbf 2px 1px 4px;
+    /* box-shadow: #bfbfbf 2px 1px 4px; */
+    box-shadow: 0px 0px 15px -5px #000;
+    transition:0.3s;
+}
+.nav_items:hover{
+    box-shadow: none;
+    padding: 10px 50px;
 }
 
 
@@ -268,6 +274,8 @@ html,body {
 @media(min-width: 715px) and (max-width: 900px){
     .nav_items {
         padding: 10px 15px;
+        box-shadow: 0px 0px 15px -5px #000;
+
     }
 }
 
@@ -288,7 +296,10 @@ html,body {
     }
     .nav_items {
         align-content: center;
-        box-shadow: #bfbfbf 0px 6px 6px;
+        box-shadow: 0px 0px 15px -5px #000;
+    }
+    .nav_items:hover{
+        padding:10px 15px;
     }
     .contain{
         position: absolute;
