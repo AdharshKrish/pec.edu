@@ -33,6 +33,7 @@
 <!--ADD CUSTOM IMPORTS HERE use convention-->
     <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
     <!-- <script defer src="enter link"></script> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap" class="styleload" media="all" disabled>
 
 
 <!--custom imports ends-->
@@ -202,6 +203,41 @@
             overflow-x: scroll;
         }
 
+
+        .dept-fluid-img{
+
+        background-image: url("./img/dept.jpg");
+
+        height: 95%;
+        width: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        }
+        .btn {
+            font-family: Arial, Helvetica, sans-serif;
+            background:#2e8690;
+            color:#fff;
+            border:3px solid #2e8690;
+            display:inline-block;
+            transition:0.5s;
+            padding: 10px 30px 10px 10px ;
+            border-radius: 2px;
+        }
+
+.btn:hover, .btn:active {
+  text-decoration: none;
+  color:#000;
+  border-color:#2e8690;
+  background:transparent;
+  padding:10px 10px 10px 30px;
+}
         @media (max-width: 500px){
             .vision, .mission{
                 padding: 10px;
@@ -220,7 +256,7 @@
         </script>
 </head>
 
-<body>
+<body onload="">
     <floatbtn class="fixed-action-btn">
         <a class="btn-floating btn-large" style="background-color: #ffffff">
             <img src="../img/forward.svg" id="iconbtn" alt="nav">
@@ -325,12 +361,13 @@
         <div class="container-fluid over">
             <div class="row row_1">
                 <div class="col-md-2 photo">
-                    <div class="thumbnail image-padding">
+                        <h3 class="text-center" style="font-family: 'Oswald',sans-serif;color: #0ea2be;">HOD's Message</h3>
+                        <div class="text-center" style="padding:15px 0px;">
                         <img src="img/csehod.jpg" alt="faculty-image">
                     </div>
                     <div class="img-caption">
                         <h4>Dr. R. Manoharan</h4>
-                        <p>M.Tech, Ph.D.</p>
+                        <!-- <p>M.Tech, Ph.D.</p> -->
                     </div>
                 </div>
                 <div class="col-md-5 notes" >
@@ -354,7 +391,7 @@
             </div>
             <hr class="hr1">
             <div class="row row2">
-                <div class="col-sm-6 col-md-5">
+                <div class="col-sm-6 col-md-7">
                     <div class="details ">
                         <div class="container1">
                             <p>The department of Computer Science and Engineering had its inception in Pondicherry Engineering College 
@@ -405,13 +442,15 @@
                     </div>
                 </div>
                 <div class=" col-sm-6 col-md-5" >
-                    <div class="thumbnail" >
-                        <img src="img/dept.jpg" alt="department-image" >
+                    <div class="dept-fluid-img" >
+                        <!-- <img src="img/dept.jpg" alt="department-image" > -->
                     </div>
                 </div>
-                <div class=" col-sm-2 col-md-2">
-                    <h3>Gallery &rightarrow; </h3>
+                <div class=" col-sm-12 col-md-12 text-right">
+                    <button class="btn">GALLERY &rightarrow; </button>
                 </div>
+                <!-- <div class="col-sm-12 text-right quick-links"><li><a href="" class="btn"><span class="btn-label">Gallery</span></a></li></div> -->
+                        
             </div>
 
             <hr class="hr1">

@@ -19,7 +19,6 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css" class="styleload" media="all" diabled>
     <link rel="stylesheet" type="text/css" href="../css/footer.css" class="styleload" media="all" disabed>
     <link rel="stylesheet" type="text/css" href="../css/menu.css" class="styleload" media="all" disabled>
-    <link rel="stylesheet" type="text/css" href="../css/style.css" class="styleload" media="all" disabled>
 
 
     <link rel='dns-prefetch' href='https://maps.googleapis.com'>
@@ -128,6 +127,89 @@
         
         /*ENTER INLINE CONTENT CSS*/
         
+
+        .card-container{
+    padding-top: 15px;
+    background: #f5f4f4;
+    box-shadow: inset 0 0 10px #707070;
+
+}
+.dotdotdot{
+    overflow: hidden;
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    background: -webkit-linear-gradient( left,#000, #000,#fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.card-parent{
+    padding: 20px;
+}
+.card{
+    overflow: hidden;
+    background: white;
+    transition: all .5s;
+    padding-top: 6px;
+    border-radius: 10px;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
+    transform: scale(1.03);
+}
+
+.details{
+    padding: 13px;
+}
+.label{
+    padding-left: unset;
+    font-size: 14px;
+    font-weight: bold;
+    color: #707070;
+}
+.thumbnail{
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.faculty-name{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.designation{
+    background: #60a3bc;   /*to change*/
+    text-align: center;
+    padding: 5px;
+    color: white;
+    margin-top: 12px;
+}
+.degree{
+    text-align: center;
+    font-size: 18px;
+}
+
+.faculty-header{
+    border-top:3px double black;
+    border-bottom:3px double black;
+    font-family: 'Oswald',sans-serif;
+    text-align: center;
+    margin-left:5%;
+    margin-right:5%;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.faculty-header h2{
+    margin-top: 10px;
+}
+
         /*content css ends*/
     </style>
     <script>
@@ -260,7 +342,7 @@ if($result)
 }
   ?>
   <div class="faculty-header">
-            <h2>Faculties</h2>
+            <h2>Faculty</h2>
     </div>
     <div class="container-fluid  card-container">
     
@@ -268,7 +350,7 @@ if($result)
         <a href="../faculty/facultypage.php?email=<?php echo $email?>">  
             <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
                 <div class="card">
-                    <p class="designation">Head of Department</p>
+                    <p class="designation" style="background-color:#4a69bb">Head of Department</p>
                    <h3 class="faculty-name"><?php echo $name?></h3>
                     <div class="thumbnail">
                         <img src="../../cms/profilepic/<?php echo$file_path?>" alt="img/sample.jpg" style="object-fit: cover;
@@ -313,7 +395,7 @@ if($result=mysqli_query($db_con,$query))
             echo'<a href="../faculty/facultypage.php?email='.$email.'">
             <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
                 <div class="card">
-                    <p class="designation">Professor</p>
+                    <p class="designation" style="background-color:#3c6382">Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
                         <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
@@ -333,54 +415,7 @@ if($result=mysqli_query($db_con,$query))
 }}?>
                    
                 
-                
-                   <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Assistance Professor'";
-
-if($result=mysqli_query($db_con,$query))
-{ 
-    
-    while($arr=mysqli_fetch_assoc($result))
-    {
-   $name=$arr['name'];
-   $id=$arr['id'];
-   $alma=$arr['qualification'];
-   $spl=$arr['specialization'];
-   $number=$arr['phno'];
-   $ext=$arr['extension'];
-   $email=$arr['contact_official_email'];
-   $query="SELECT * FROM uploading where id=".$id;      
-   $result=mysqli_query($db_con,$query);
-   $arr=mysqli_fetch_assoc($result); 
-   $file_path=$arr['file_name'];
-
-
-  
-            echo'<a href="../faculty/facultypage.php?email='.$email.'">
-            <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
-                <div class="card">
-                    <p class="designation">Professor</p>
-                    <h3 class="faculty-name">'.$name.'</h3>
-                    <div class="thumbnail">
-                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
-                        width: 200px;
-                        height: 200px;">
-                    </div>
-                    <p class="degree">'.$alma.'</p>
-                    <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> '.$spl.'</div><br>
-                        <label class="label"> Phone Number </label>'.$number.'<br>
-                        <label class="label">Email </label>'.$email.'<br>
-                        <label class="label"> Extension </label>'.$ext.' <br>
-                        </div>
-                        </div>
-                        
-                    </div></a>';
-}}?>
-       
-                
-                
-                
+                             
        <?php
 $query="SELECT * FROM basic_faculty_info where post_tier='Associate Professor'";
 
@@ -406,7 +441,7 @@ if($result=mysqli_query($db_con,$query))
             echo'<a href="../faculty/facultypage.php?email='.$email.'">
             <div class="col-sm-6 col-md-6 col-lg-4 card-parent">
                 <div class="card">
-                    <p class="designation">Professor</p>
+                    <p class="designation" style="background-color:#e55039">Associate Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
                         <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
@@ -424,6 +459,55 @@ if($result=mysqli_query($db_con,$query))
                         
                     </div></a>';
 }}?>
+
+
+                   <?php
+$query="SELECT * FROM basic_faculty_info where post_tier='Assistance Professor'";
+
+if($result=mysqli_query($db_con,$query))
+{ 
+    
+    while($arr=mysqli_fetch_assoc($result))
+    {
+   $name=$arr['name'];
+   $id=$arr['id'];
+   $alma=$arr['qualification'];
+   $spl=$arr['specialization'];
+   $number=$arr['phno'];
+   $ext=$arr['extension'];
+   $email=$arr['contact_official_email'];
+   $query="SELECT * FROM uploading where id=".$id;      
+   $result=mysqli_query($db_con,$query);
+   $arr=mysqli_fetch_assoc($result); 
+   $file_path=$arr['file_name'];
+
+
+  
+            echo'<a href="../faculty/facultypage.php?email='.$email.'">
+            <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
+                <div class="card">
+                    <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
+                    <h3 class="faculty-name">'.$name.'</h3>
+                    <div class="thumbnail">
+                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        width: 200px;
+                        height: 200px;">
+                    </div>
+                    <p class="degree">'.$alma.'</p>
+                    <div class="details">
+                        <label class="label"> Specialization </label><div class="dotdotdot"> '.$spl.'</div><br>
+                        <label class="label"> Phone Number </label>'.$number.'<br>
+                        <label class="label">Email </label>'.$email.'<br>
+                        <label class="label"> Extension </label>'.$ext.' <br>
+                        </div>
+                        </div>
+                        
+                    </div></a>';
+}}?>
+       
+                
+                
+   
               
               
               
@@ -451,7 +535,7 @@ if($result=mysqli_query($db_con,$query))
   
             echo'<a href="../faculty/facultypage.php?email='.$email.'"><div class="col-sm-6 col-md-6 col-lg-4  card-parent">
                 <div class="card">
-                    <p class="designation">Professor</p>
+                    <p class="designation">Programmer</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
                         <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;

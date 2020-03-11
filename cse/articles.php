@@ -34,8 +34,7 @@
 <!--ADD CUSTOM IMPORTS HERE use convention-->
     <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
     <!-- <script defer src="enter link"></script> -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/notice.css">
+
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
 
 <!--custom imports ends-->
@@ -125,17 +124,113 @@
         }
         
         /*ENTER INLINE CONTENT CSS*/
-        
-        .card{
-            margin: 15px auto ;
-            text-align: left;
-        }
+ 
         .card-parent{
             text-align: center;
         }
         .card-container{
             padding-bottom: 10px;
+    box-shadow: inset 0 0 10px #707070;
         }
+        
+.card{
+    min-width: 300px;
+    max-width: 320px;
+    padding: 25px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin: 15px auto ;
+    text-align: left;
+}
+.card p{
+    margin: 0 !important;
+    color: #707070;
+    font-weight: bolder;
+}
+.card-header{
+    padding: 5px;
+}
+.card-body{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.hashtags{
+    padding: 7px;
+}
+
+
+.card-container{
+    padding-top: 15px;
+    background: #f5f4f4;
+}
+
+
+.card-parent{
+    padding: 20px;
+}
+.card{
+    background: white;
+    /* border: 1px solid red; */
+    transition: all .5s;
+    padding-top: 6px;
+    border-radius: 10px;
+}
+.card:hover{
+    box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
+    transform: scale(1.03);
+}
+
+.details{
+    padding: 13px;
+}
+.label{
+    padding-left: unset;
+    font-size: 14px;
+    font-weight: bold;
+    color: #707070;
+}
+.thumbnail{
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.faculty-name{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.designation{
+    background: #4a69bd;   /*to change*/
+    text-align: center;
+    padding: 5px;
+    color: white;
+    margin-top: 12px;
+}
+.degree{
+    text-align: center;
+    font-size: 18px;
+}
+
+.faculty-header{
+    border-top:3px double black;
+    border-bottom:3px double black;
+    font-family: 'Oswald',sans-serif;
+    text-align: center;
+    margin-left:5%;
+    margin-right:5%;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.faculty-header h2{
+    margin-top: 10px;
+}
+
 
         /*content css ends*/
     </style>
