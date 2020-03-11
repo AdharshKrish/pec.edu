@@ -349,7 +349,7 @@
     <div class="container-fluid tb1 card-container">
         <div class="row" style="height:400px">
         <?php
-                  
+                  include("../cms/DB_TRANS/db_con.php");
                   $query="SELECT * FROM `article` WHERE dep='cse' LIMIT 20 ";
 
 if($result=mysqli_query($db_con,$query))
@@ -367,7 +367,7 @@ if($result=mysqli_query($db_con,$query))
             <div class="col-sm-6 col-md-4 col-lg-3 tb3 card-parent">
                 <div class="card">
                     <div class="thumbnail">
-                        <img src="../../cms/articles/'.$img.'" alt="image" style="object-fit: cover;
+                        <img src="../cms/articles/'.$img.'" alt="image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;" >
                     </div>

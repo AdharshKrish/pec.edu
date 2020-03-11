@@ -322,6 +322,7 @@
         <!--ENTER MAIN CONTENT HERE-->
   
   <?php
+ include("../cms/DB_TRANS/db_con.php");
 $query="SELECT * FROM basic_faculty_info where post_tier='HOD'";
 $result=mysqli_query($db_con,$query);
 if($result)
@@ -347,28 +348,31 @@ if($result)
     <div class="container-fluid  card-container">
     
         <div class="row ">
-        <a href="../faculty/facultypage.php?email=<?php echo $email?>">  
-            <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
+      
+            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
+            <a href="../faculty/facultypage.php?email=<?php echo $email?>">  
                 <div class="card">
                     <p class="designation" style="background-color:#4a69bb">Head of Department</p>
                    <h3 class="faculty-name"><?php echo $name?></h3>
                     <div class="thumbnail">
-                        <img src="../../cms/profilepic/<?php echo$file_path?>" alt="img/sample.jpg" style="object-fit: cover;
+                        <img src="../cms/profilepic/<?php echo$file_path?>" alt="img/sample.jpg" style="object-fit: cover;
                         width: 200px;
                         height: 200px;" >
                     </div>
                     <p class="degree"><?php echo $alma ?></p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"><?php echo $spl ?></div><br>>
+                        <label class="label"> Specialization </label><div class="dotdotdot"><?php echo $spl ?></div>
                         <label class="label"> Phone Number </label> <?php echo $number ?> <br>
                         <label class="label">Email </label> <?php echo $email ?> <br>
                         <label class="label"> Extension </label>  <?php echo $ext ?> <br>
                     </div>
                    
                 </div>
-             
+                </a>
             </div>
-            </a>
+           
+            
+           
 
              <?php
 $query="SELECT * FROM basic_faculty_info where post_tier='Professor'";
@@ -392,13 +396,15 @@ if($result=mysqli_query($db_con,$query))
 
 
   
-            echo'<a href="../faculty/facultypage.php?email='.$email.'">
-            <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
+            echo'
+            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
+            <a href="../faculty/facultypage.php?email='.$email.'">
+           
                 <div class="card">
                     <p class="designation" style="background-color:#3c6382">Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
-                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;">
                     </div>
@@ -410,8 +416,10 @@ if($result=mysqli_query($db_con,$query))
                         <label class="label"> Extension </label>'.$ext.' <br>
                         </div>
                         </div>
-                        
-                    </div></a>';
+                        </a>
+                    </div>
+               
+                    ';
 }}?>
                    
                 
@@ -438,13 +446,14 @@ if($result=mysqli_query($db_con,$query))
 
 
   
-            echo'<a href="../faculty/facultypage.php?email='.$email.'">
-            <div class="col-sm-6 col-md-6 col-lg-4 card-parent">
+            echo'
+            <div class="col-sm-6 col-md-6 col-lg-4 card-parent"><a href="../faculty/facultypage.php?email='.$email.'">
+         
                 <div class="card">
                     <p class="designation" style="background-color:#e55039">Associate Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
-                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;">
                     </div>
@@ -457,7 +466,7 @@ if($result=mysqli_query($db_con,$query))
                         </div>
                         </div>
                         
-                    </div></a>';
+                    </a></div>';
 }}?>
 
 
@@ -489,7 +498,7 @@ if($result=mysqli_query($db_con,$query))
                     <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
-                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;">
                     </div>
@@ -538,7 +547,7 @@ if($result=mysqli_query($db_con,$query))
                     <p class="designation">Programmer</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
-                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;" >
                     </div>
@@ -582,7 +591,7 @@ if($result=mysqli_query($db_con,$query))
                     <p class="designation">Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
                     <div class="thumbnail">
-                        <img src="../../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;">
                     </div>
