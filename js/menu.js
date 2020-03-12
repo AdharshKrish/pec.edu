@@ -112,6 +112,8 @@ function change(){
 }
 
 function focusS(){
-    window.scrollTo(0,0);
-    document.getElementById('focusChk').focus();
+    if(window.outerWidth>996)
+        document.getElementById('focusChk').focus();
+    else
+        window.setTimeout(()=>{document.getElementById('focus').focus()},10);
 }

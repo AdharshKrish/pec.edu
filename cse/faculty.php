@@ -37,7 +37,7 @@
 <!--ADD CUSTOM IMPORTS HERE use convention-->
     <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
     <!-- <script defer src="enter link"></script> -->
-
+    <link rel="stylesheet" href="../css/oswald.css" class="styleload" media="all" disabled>
 
 <!--custom imports ends-->
 
@@ -398,7 +398,7 @@ if($result=mysqli_query($db_con,$query))
   
             echo'
             <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
-            <a href="../faculty/facultypage.php?email='.$email.'">
+            <a href="facultypage.php?email='.$email.'">
            
                 <div class="card">
                     <p class="designation" style="background-color:#3c6382">Professor</p>

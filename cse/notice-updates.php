@@ -33,7 +33,7 @@
 <!--ADD CUSTOM IMPORTS HERE use convention-->
     <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
     <!-- <script defer src="enter link"></script> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap" class="styleload" media="all" disabled>
+    <link rel="stylesheet" href="../css/oswald.css" class="styleload" media="all" disabled>
 
 
 <!--custom imports ends-->

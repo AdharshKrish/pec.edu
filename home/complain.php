@@ -61,10 +61,7 @@ require 'PHPMailer/src/SMTP.php';
         if($mail->send())
         {
         echo "alert('Complaint has been registered')";
-        // $query=mysqli_query($db_con,"UPDATE login set otp=".$otp." where id=".$arr['id']);
-        // $_SESSION['otp']=1;
-        // $_SESSION['id']=$arr['id'];
-        // header("Location:../otp.php");
+
         header("Location: http://cms.pec.edu/test/contact-us/");
         die();}
         else {

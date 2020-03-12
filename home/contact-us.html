@@ -32,7 +32,8 @@
     <script async src="../js/pace.js"></script>
 
 <!--ADD CUSTOM IMPORTS HERE use convention-->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&display=swap" class="styleload" media="all" disabled>
+<link rel="stylesheet" href="../css/oswald.css" class="styleload" media="all" disabled>
+
 <!--custom imports ends-->
 
 
@@ -394,7 +395,8 @@
                 <button id="c4" class="pur" onclick="loadform(this,'Hostel Grievance Redressal')"> Hostel Grievance Redressal</button><br>
                 <button id="c5" class="pur" onclick="loadform(this,'Campus Facility Grievance Redressal')"> Campus Facility Grievance Redressal</button><br>
                 <button id="c6" class="pur" onclick="loadform(this,'Complaints on Sexual Harassement')"> Complaints on Sexual Harassement</button><br>
-                <button id="c7" class="pur" onclick="loadform(this,'Counselling Request')"> Counselling Request </button>
+                <button id="c7" class="pur" onclick="loadform(this,'Counselling Request')"> Counselling Request </button><br>
+                <button id="c8" class="pur" onclick="loadform(this,'Website Feedback')"> Website Feedback </button>
             </div>
         <div class="col-lg-3 col-md-5 details">
           <div id="authority">
@@ -577,6 +579,11 @@
         aname.innerHTML="Dr. Shanthi Simon";
         amail.innerHTML="shanthisimon@pec.edu";
         ano.innerHTML="9894488322";
+      }else if(s=='Website Feedback')
+      {
+        aname.innerHTML="Design Club Handle";
+        amail.innerHTML="rupamchirom@pec.edu";
+        ano.innerHTML="-";
       }else{
         aname.innerHTML="Dr. G. Nagarajan ";
         amail.innerHTML="nagarajanpec@pec.edu";
