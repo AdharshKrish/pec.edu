@@ -42,7 +42,10 @@ $error=1;
 					text-align:center;
 				}
 			}
-		</style>
+        </style>
+        <script src="https://www.google.com/recaptcha/api.js" async defer>
+    </script>
+    
     </head>
 </head>
 <body>
@@ -71,12 +74,16 @@ $error=1;
                           
                     <label id="label_pass" style="font-size: 18px">OTP</label>
                     <br>
-                    <form method="POST" action="./DB_TRANS/check_otp.php">
+                    <form id="ccform" method="POST" action="./DB_TRANS/check_otp.php">
+                    <div class="g-recaptcha" data-sitekey="6LfIqOAUAAAAACIme5yRiyxA_ciXIXavspv9hopD"></div>
                     <input type="text" name="otp" style="background-color: none;font-size: 18px" class="webmaster-name" id="username"
                         placeholder="  8 number digit" required/>
                     <p id="msg" >Please check mail for OTP</p>
                     <button type="submit" id="button" class="login" >ENTER OTP</button>
                 </form>
+                <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
                    </div>
                         
                     <!-- </div> -->
@@ -88,3 +95,18 @@ $error=1;
     </div>
 </body>
 </html>
+<script>
+       
+  var form = document.getElementById("ccform");
+  if(form)
+  {
+     
+form.addEventListener("submit", function(event){
+    if (grecaptcha.getResponse() === '') {                            
+      event.preventDefault();
+      alert('Please check the recaptcha');
+    }
+  }
+, false);}
+
+        </script>
