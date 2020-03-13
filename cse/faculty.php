@@ -322,7 +322,7 @@
         <!--ENTER MAIN CONTENT HERE-->
   
   <?php
- include("../cms/DB_TRANS/db_con.php");
+ include("db_con.php");
 $query="SELECT * FROM basic_faculty_info where post_tier='HOD'";
 $result=mysqli_query($db_con,$query);
 if($result)

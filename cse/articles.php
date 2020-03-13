@@ -349,7 +349,7 @@
     <div class="container-fluid tb1 card-container">
         <div class="row" style="height:400px">
         <?php
-                  include("../cms/DB_TRANS/db_con.php");
+                  include("db_con.php");
                   $query="SELECT * FROM `article` WHERE dep='cse' LIMIT 20 ";
 
 if($result=mysqli_query($db_con,$query))
