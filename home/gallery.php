@@ -221,7 +221,7 @@ if($res=mysqli_query($db_con,$query))
                             <div class="nested-footer-2 " style="max-width:90%;">
                                 <div class="row row-footer-21">
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="all" href="gallery.php" target="blank">
+                                        <a alt="all" href="gallery.php">
                                             <p class="link-footer-2">All</p>
                                         </a>
                                     </div>

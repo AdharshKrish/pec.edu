@@ -155,7 +155,8 @@
             display: inline-block;
             border-radius: 5px;
             background: white;
-            transition: all .5s;
+            transition: all .3s;
+            box-shadow:none;
         }
         .card-container{
             /* min-height: 150px; */
@@ -268,6 +269,14 @@
 }
 .hashtags{
     padding: 7px;
+}
+a{
+    text-decoration:none;
+    color:#000;
+}
+a:hover{
+    text-decoration:none;
+    color:#000;
 }
         /*content css ends*/
     </style>
@@ -385,13 +394,13 @@
         </div>
         <div class="container-fluid">
             <div class="row tb1" style="background-color: #f5f4f4;box-shadow:inset 0 0 10px #707070">
-                <div class="container" style="background-color: whitesmoke;" >
+                <div class="container">
                     <div class="card-container tb3">
 
                      
 <?php
  include("db_con.php");
-$query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 ORDER BY expires_on DESC LIMIT 12 ";
+$query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 ORDER BY expires_on DESC LIMIT 12";
 
 if($result=mysqli_query($db_con,$query))
 { 
@@ -404,7 +413,7 @@ while($arr=mysqli_fetch_assoc($result))
     $start=$arr['start'];
     $end=$arr['end'];
     $cid=$arr['id'];
-            echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2">
+            echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2"style="height:400px">
                         <div class="card-header">
                             <span style="float: right;"><img src="img/calendar.png" alt="calender-icon" title="Add to my Calender"></span>
                             
