@@ -412,10 +412,10 @@ else {
                         <div class="col-sm-6" style="min-width: 240px;">   
                             <h6 style="color: #707070;">Find me on</h6>
                             <ul>
-                                <li><a href="https://linkedin.com/<?php echo $linkedin?>"><img src="linkedin-brands.svg" alt="linkedin-brands" height="24" width="24"> <?php echo $linkedin?></a><br></li>
-                                <li><a href="https://facebook.com/<?php echo $twitter?>"><img src="facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24"> <?php echo $twitter?></a><br></li>
-                                <li><a href="https://twitter.com/<?php echo $facebook?>"><img src="twitter-brands.svg" alt="twitter-brands" height="24" width="24"><?php echo $facebook?> </a><br></li>
-                                <li><a href="https://<?php echo $contact?>"><img src="globe-solid.svg" alt="globe-solid" height="24" width="24"><?php echo $contact?></a><br></li>
+                                <li><a href="https://linkedin.com/<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24"> <?php echo $linkedin?></a><br></li>
+                                <li><a href="https://facebook.com/<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24"> <?php echo $twitter?></a><br></li>
+                                <li><a href="https://twitter.com/<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24"><?php echo $facebook?> </a><br></li>
+                                <li><a href="https://<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24"><?php echo $contact?></a><br></li>
                             </ul>   
                         </div>
                     </div>
@@ -438,21 +438,20 @@ else {
             </div>
         </div>  
         
-        <div class="row" style="text-align: center;">
+        <!-- <div class="row" style="text-align: center;">
             
             <div class="offset-md-5 "></div>
-            <div class="col-md-1 d-none d-md-block"> <!--hide on screen smaller than md-->
+            <div class="col-md-1 d-none d-md-block">
                 <br>
                 <img src="angle-down-solid.svg" alt="angle-down-solid" height="32" width="32">
             </div>
             <div class="col-md-3 col-6">
-                <!-- two links -->
                 <a href="#">Print Profile</a> 
             </div>
             <div class="col-md-3 col-6">
                 <a href="#">Print Card</a>
             </div>
-        </div>
+        </div> -->
         <hr>
         <!-- research, projects and students -->
         <div class="row">

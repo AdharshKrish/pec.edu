@@ -151,7 +151,7 @@
 .card{
     overflow: hidden;
     background: white;
-    transition: all .5s;
+    transition: all .3s;
     padding-top: 6px;
     border-radius: 10px;
 }
@@ -209,6 +209,13 @@
 .faculty-header h2{
     margin-top: 10px;
 }
+a{
+    color:#000;
+}
+a:hover{
+    text-decoration:none;
+    color:#000;
+}
 
         /*content css ends*/
     </style>
@@ -232,7 +239,7 @@
             <li><a href="../newsupdate/" class="btn-floating">Notice & Updates</a></li>
             <li><a href="../articles/" class="btn-floating">Articles</a></li>
             <li><a href="../overview/" class="btn-floating">Overview</a></li>
-            <li><a href="../facultylist/" class="btn-floating">Faculty</a></li>
+            <li><a href=".list/" class="btn-floating">Faculty</a></li>
             <li><a href="../courses/" class="btn-floating">Courses & Curriculum</a></li>
         </ul>
     </floatbtn>
@@ -320,7 +327,7 @@
     </div>
     <main>
         <!--ENTER MAIN CONTENT HERE-->
-  
+    
   <?php
  include("../cms/DB_TRANS/db_con.php");
 $query="SELECT * FROM basic_faculty_info where post_tier='HOD'";
@@ -345,12 +352,12 @@ if($result)
   <div class="faculty-header">
             <h2>Faculty</h2>
     </div>
-    <div class="container-fluid  card-container">
-    
-        <div class="row ">
+    <div class="container-fluid card-container">
+    <div class="container">
+        <div class="row">
       
-            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
-            <a href="../faculty/facultypage.php?email=<?php echo $email?>">  
+            <div class="col-sm-12 col-md-6 col-lg-4 card-parent">
+            <a href="./facultypage.php?email=<?php echo $email?>">  
                 <div class="card">
                     <p class="designation" style="background-color:#4a69bb">Head of Department</p>
                    <h3 class="faculty-name"><?php echo $name?></h3>
@@ -366,12 +373,9 @@ if($result)
                         <label class="label">Email </label> <?php echo $email ?> <br>
                         <label class="label"> Extension </label>  <?php echo $ext ?> <br>
                     </div>
-                   
                 </div>
-                </a>
+            </a>
             </div>
-           
-            
            
 
              <?php
@@ -397,7 +401,7 @@ if($result=mysqli_query($db_con,$query))
 
   
             echo'
-            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
+            <div class="col-sm-12 col-md-6 col-lg-4  card-parent">
             <a href="facultypage.php?email='.$email.'">
            
                 <div class="card">
@@ -414,10 +418,10 @@ if($result=mysqli_query($db_con,$query))
                         <label class="label"> Phone Number </label>'.$number.'<br>
                         <label class="label">Email </label>'.$email.'<br>
                         <label class="label"> Extension </label>'.$ext.' <br>
-                        </div>
-                        </div>
-                        </a>
                     </div>
+                </div>
+            </a>
+            </div>
                
                     ';
 }}?>
@@ -447,8 +451,8 @@ if($result=mysqli_query($db_con,$query))
 
   
             echo'
-            <div class="col-sm-6 col-md-6 col-lg-4 card-parent"><a href="../faculty/facultypage.php?email='.$email.'">
-         
+            <div class="col-sm-12 col-md-6 col-lg-4 card-parent">
+                <a href="./facultypage.php?email='.$email.'">
                 <div class="card">
                     <p class="designation" style="background-color:#e55039">Associate Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
@@ -464,14 +468,14 @@ if($result=mysqli_query($db_con,$query))
                         <label class="label">Email </label>'.$email.'<br>
                         <label class="label"> Extension </label>'.$ext.' <br>
                         </div>
-                        </div>
-                        
-                    </a></div>';
+                    </div>
+                </a>
+            </div>';
 }}?>
 
 
                    <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Assistance Professor'";
+$query="SELECT * FROM basic_faculty_info where post_tier='Assistant Professor'";
 
 if($result=mysqli_query($db_con,$query))
 { 
@@ -490,28 +494,27 @@ if($result=mysqli_query($db_con,$query))
    $arr=mysqli_fetch_assoc($result); 
    $file_path=$arr['file_name'];
 
-
-  
-            echo'<a href="../faculty/facultypage.php?email='.$email.'">
-            <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
-                <div class="card">
-                    <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
-                    <h3 class="faculty-name">'.$name.'</h3>
-                    <div class="thumbnail">
-                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
-                        width: 200px;
-                        height: 200px;">
+        echo'
+        <div class="col-sm-12 col-md-6 col-lg-4 card-parent">
+            <a href="./facultypage.php?email='.$email.'">
+            <div class="card">
+                <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
+                <h3 class="faculty-name">'.$name.'</h3>
+                <div class="thumbnail">
+                    <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                    width: 200px;
+                    height: 200px;">
+                </div>
+                <p class="degree">'.$alma.'</p>
+                <div class="details">
+                    <label class="label"> Specialization </label><div class="dotdotdot"> '.$spl.'</div><br>
+                    <label class="label"> Phone Number </label>'.$number.'<br>
+                    <label class="label">Email </label>'.$email.'<br>
+                    <label class="label"> Extension </label>'.$ext.' <br>
                     </div>
-                    <p class="degree">'.$alma.'</p>
-                    <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> '.$spl.'</div><br>
-                        <label class="label"> Phone Number </label>'.$number.'<br>
-                        <label class="label">Email </label>'.$email.'<br>
-                        <label class="label"> Extension </label>'.$ext.' <br>
-                        </div>
-                        </div>
-                        
-                    </div></a>';
+                </div>
+            </a>
+        </div>';
 }}?>
        
                 
@@ -521,7 +524,7 @@ if($result=mysqli_query($db_con,$query))
               
               
               <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Programmar'";
+$query="SELECT * FROM basic_faculty_info where post_tier='Programmer'";
 
 if($result=mysqli_query($db_con,$query))
 { 
@@ -542,7 +545,7 @@ if($result=mysqli_query($db_con,$query))
 
 
   
-            echo'<a href="../faculty/facultypage.php?email='.$email.'"><div class="col-sm-6 col-md-6 col-lg-4  card-parent">
+            echo'<a href="./facultypage.php?email='.$email.'"><div class="col-sm-12 col-md-6 col-lg-4  card-parent">
                 <div class="card">
                     <p class="designation">Programmer</p>
                     <h3 class="faculty-name">'.$name.'</h3>
@@ -586,7 +589,7 @@ if($result=mysqli_query($db_con,$query))
 
 
   
-            echo'<a href="../faculty/facultypage.php?email='.$email.'"><div class="col-sm-6 col-md-6 col-lg-4  card-parent">
+            echo'<a href="./facultypage.php?email='.$email.'"><div class="col-sm-12 col-md-6 col-lg-4  card-parent">
                 <div class="card">
                     <p class="designation">Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
@@ -609,7 +612,7 @@ if($result=mysqli_query($db_con,$query))
         
           
         </div>
-        
+    </div>
     </div>
 
         <!--main content ends-->
