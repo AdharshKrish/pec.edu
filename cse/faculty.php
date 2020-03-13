@@ -154,6 +154,7 @@
     transition: all .3s;
     padding-top: 6px;
     border-radius: 10px;
+    box-shadow:none;
 }
 
 .card:hover{

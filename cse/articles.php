@@ -171,10 +171,10 @@
 }
 .card{
     background: white;
-    /* border: 1px solid red; */
-    transition: all .5s;
+    transition: all .3s;
     padding-top: 6px;
     border-radius: 10px;
+    box-shadow:none;
 }
 .card:hover{
     box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
@@ -228,6 +228,14 @@
 }
 .faculty-header h2{
     margin-top: 10px;
+}
+
+a{
+    color:#000;
+}
+a:hover{
+    text-decoration:none;
+    color:#000;
 }
 
 
@@ -346,7 +354,8 @@
             <h2>Articles</h2>
     </div>
     <div class="container-fluid tb1 card-container">
-        <div class="row" style="height:400px">
+        <div class="container">
+        <div class="row">
         <?php
                   include("db_con.php");
                   $query="SELECT * FROM `article` WHERE dep='cse' LIMIT 20 ";
@@ -362,7 +371,7 @@ if($result=mysqli_query($db_con,$query))
         $dep=$arr['dep'];
         $img=$arr['img'];
         echo'
-        <a href="articles_page.php?id='.$id.'">
+        <a href="articlespage.php?id='.$id.'">
             <div class="col-sm-6 col-md-4 col-lg-3 tb3 card-parent">
                 <div class="card">
                     <div class="thumbnail">
@@ -376,17 +385,16 @@ if($result=mysqli_query($db_con,$query))
                     <div class="card-header">
                         <p>'.$dep.'</p>
                     </div>
-
                 </div>
-            </div>  </a>';
-           
+            </div>  
+        </a>';
     }}?>
             
            
 
         </div> 
     </div>
-
+</div>
         <!--main content ends-->
     </main>
     <footer>
