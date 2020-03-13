@@ -381,7 +381,7 @@
     <main>
     
     <?php
- include("../cms/DB_TRANS/db_con.php");
+ include("db_con.php");
 $id=$_GET['id'];
 
 
