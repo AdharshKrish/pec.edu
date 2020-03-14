@@ -48,6 +48,22 @@ if($res=mysqli_query($db_con,$query))
     <script async src="../js/pace.js"></script>
 
     <style>
+        main{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        floatbtn{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        header{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        footer{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
         ul {
             list-style-type: none;
         }

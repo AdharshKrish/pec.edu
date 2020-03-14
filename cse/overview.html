@@ -42,6 +42,22 @@
 <!--custom imports ends-->
 
     <style>
+        main{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        floatbtn{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        header{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        footer{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
         .fixed-action-btn {
             right: 83%;
             top: 88%;
