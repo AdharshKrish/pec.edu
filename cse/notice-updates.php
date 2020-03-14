@@ -159,7 +159,8 @@
             display: inline-block;
             border-radius: 5px;
             background: white;
-            transition: all .5s;
+            transition: .3s;
+            box-shadow:none;
         }
         .card-container{
             /* min-height: 150px; */
@@ -186,6 +187,10 @@
         }
         .hashtags{
             padding: 7px;
+            /* color:#0ea2be; */
+            color:#00f;
+            height:40px;
+            overflow-y: auto;
         }
         .card:hover{
             box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
@@ -236,30 +241,22 @@
                
            }
         }
-        .new-bullet{   /*if time (= currentTime-arrivalTime) <24 hour then display:block else display:none*/
+        .new-bullet span{   /*if time (= currentTime-arrivalTime) <24 hour then display:block else display:none*/
             color: red;
             font-size: 22px;
             position: relative;
             top: 2px;
-            /* margin-right: -2px; */
         }
 
-        a{
-    color:#000;
-}
-a:hover{
-    text-decoration:none;
-    color:#000;
-}
 
         /*content css ends*/
     </style>
     <script>
         document.addEventListener("DOMContentLoaded",function(){
-        var imports = document.querySelectorAll(".styleload");
-        imports.forEach((imp)=>{
-            imp.removeAttribute("disabled");
-        });        
+            var imports = document.querySelectorAll(".styleload");
+            imports.forEach((imp)=>{
+                imp.removeAttribute("disabled");
+            }); 
         });
         </script>
 </head>
@@ -319,7 +316,6 @@ a:hover{
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
-    <!-- </header> -->
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -369,7 +365,7 @@ a:hover{
         </div>
         <div class="container-fluid">
             <div class="row tb1" style="background-color: #f5f4f4;box-shadow:inset 0 0 10px #707070">
-                <div class="container">
+                <!-- <div class="container"> -->
                     <div class="card-container tb3">
 
                      
@@ -380,43 +376,42 @@ $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' 
 if($result=mysqli_query($db_con,$query))
 { 
 
-while($arr=mysqli_fetch_assoc($result))
-{
-
-
-    $summary=$arr['breif'];
-    $start=$arr['start'];
-    $end=$arr['end'];
-    $cid=$arr['id'];
-            echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2"style="height:400px">
-                        <div class="card-header">
-                            <span style="float: right;"><img src="../img/calendar.png" alt="calender-icon" title="Add to my Calender"></span>
-                            
-                            <p> <span class="new-bullet">&bull;</span> New</p>
-                            <p>'.$start.'</p>
-                            <p>'.$end.'</p>
-                        </div>
-                        <div class="card-body">
-                        '.$summary.' 
-                        </div>
-                        ';
-                        $query1="SELECT * FROM tags WHERE content_id=".$cid;
-                        echo'
-                        <div class="hashtags">';
-
-                        if($result1=mysqli_query($db_con,$query1))
-                        {
-                            while($a=mysqli_fetch_assoc($result1))
-                            {
-                                $tag=$a['tagname'];
-                        echo '<a href="#" id="">#'.$tag.'</a> &nbsp;&nbsp';}}
-                                
-                    echo'  </div></div></a>';
+    while($arr=mysqli_fetch_assoc($result))
+    {
+        $summary=$arr['breif'];
+        $start=$arr['start'];
+        $end=$arr['end'];
+        $cid=$arr['id'];
+        echo'<btn class="card tb2" onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
+                <div class="card-header">
+                    <span style="float: right;"><img src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
                     
-}}
+                    <p class="new-bullet"><span>&bull;</span>New</p>
+                    <p>'.$start.'</p>
+                    <p>'.$end.'</p>
+                </div>
+                <div class="card-body">
+                    '.$summary.'
+                </div>';
+                $query1="SELECT * FROM tags WHERE content_id=".$cid;
+                echo'<div class="hashtags">';
+
+                if($result1=mysqli_query($db_con,$query1))
+                {
+                    while($a=mysqli_fetch_assoc($result1))
+                    {
+                        $tag=$a['tagname'];
+                        echo'<tag>#'.$tag.'</tag> &nbsp;&nbsp;';
+                    }
+                }
+        echo'   </div>
+            </btn>';            
+    }
+}
 ?>
-                    <a href="get-dynamic-data.php?id='10'">
-                        <div class="card tb2">
+
+                    
+                        <!-- <card class="card tb2">
                             <div class="card-header">
                                 <span style="float: right;"><img src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
                                 
@@ -427,16 +422,18 @@ while($arr=mysqli_fetch_assoc($result))
                             <div class="card-body">
                                 A workshop on android app sponsored by google will be conducted in auditorium hall, interested can register soon.
                             </div>
-                            <div class="hashtags" style="color:#0ea2be">
+                            <div class="hashtags">
                                     <tag id="">#workshop</tag> &nbsp;&nbsp;
                             </div>
-                        </div>
-                    </a>
+                        </card> -->
+                    
 
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
+<div class="modal" id="full-notice" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+</div>
 
         <!--main content ends-->
     </main>
@@ -537,6 +534,22 @@ while($arr=mysqli_fetch_assoc($result))
             else
                 icon.transform = "rotate(-90deg)";
         });
+
+
+        function getFullContent(cid) {
+            document.getElementById('full-notice').innerHTML = '';
+                $.ajax({
+                    type: "POST",
+                    url: "get-dynamic-data.php",
+                    data: {
+                        id: cid
+                    },
+                    cache: false,
+                    success: function (html) {
+                        document.getElementById('full-notice').innerHTML = html;
+                    }
+                });
+        }
     </script>
 
 </body>
