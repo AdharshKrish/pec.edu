@@ -139,18 +139,6 @@
         }
         
         /*ENTER INLINE CONTENT CSS*/
-        #demo-modal {
-	text-align: center;
-	padding: 20px;
-}
-
-#demo-modal-target {
-	background: url(default-bg.jpg) no-repeat top left fixed;
-	max-width: 550px;
-	text-align: center;
-	color: #FFF;
-    padding: 60px 0px;
-}
         .tb1_{
             border: 1px solid red;
         }
@@ -171,8 +159,7 @@
             display: inline-block;
             border-radius: 5px;
             background: white;
-            transition: all .3s;
-            box-shadow:none;
+            transition: all .5s;
         }
         .card-container{
             /* min-height: 150px; */
@@ -188,8 +175,9 @@
         }
         .card-header{
             padding: 5px;
+            background:none;
         }
-        .card-body{
+        .card .card-body{
             font-size: 20px;
             padding-top: 15px;
             padding-bottom: 15px;
@@ -255,45 +243,15 @@
             top: 2px;
             /* margin-right: -2px; */
         }
-        .card-parent{
-    min-height: 200px;
-    max-height: 400px;
-    display: flex;
-}
 
-
-.card{
-    min-width: 200px;
-    max-width: 320px;
-    padding: 25px;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.card p{
-    margin: 0 !important;
-    color: #707070;
-    font-weight: bolder;
-}
-.card-header{
-    padding: 5px;
-}
-.card-body{
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.hashtags{
-    padding: 7px;
-}
-a{
-    text-decoration:none;
+        a{
     color:#000;
 }
 a:hover{
     text-decoration:none;
     color:#000;
 }
+
         /*content css ends*/
     </style>
     <script>
@@ -432,7 +390,7 @@ while($arr=mysqli_fetch_assoc($result))
     $cid=$arr['id'];
             echo'<a href="get-dynamic-data.php?id='.$cid.'"><div  class="card tb2"style="height:400px">
                         <div class="card-header">
-                            <span style="float: right;"><img src="img/calendar.png" alt="calender-icon" title="Add to my Calender"></span>
+                            <span style="float: right;"><img src="../img/calendar.png" alt="calender-icon" title="Add to my Calender"></span>
                             
                             <p> <span class="new-bullet">&bull;</span> New</p>
                             <p>'.$start.'</p>
@@ -457,7 +415,24 @@ while($arr=mysqli_fetch_assoc($result))
                     
 }}
 ?>
-                        
+                    <a href="get-dynamic-data.php?id='10'">
+                        <div class="card tb2">
+                            <div class="card-header">
+                                <span style="float: right;"><img src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
+                                
+                                <p> <span class="new-bullet">&bull;</span> New</p>
+                                <p>22 June '19</p>
+                                <p>9.00 - 11.00</p>
+                            </div>
+                            <div class="card-body">
+                                A workshop on android app sponsored by google will be conducted in auditorium hall, interested can register soon.
+                            </div>
+                            <div class="hashtags" style="color:#0ea2be">
+                                    <tag id="">#workshop</tag> &nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </a>
+
                     </div>
                 </div>
             </div>
