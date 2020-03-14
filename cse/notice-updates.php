@@ -16,8 +16,8 @@
 
     <link rel="stylesheet" type="text/css" href="../css/new-material.css" class="styleload" media="all" disabled>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap4.css" class="styleload" media="all" disabled>
-    <link rel="stylesheet" type="text/css" href="../css/header.css" class="styleload" media="all" diabled>
-    <link rel="stylesheet" type="text/css" href="../css/footer.css" class="styleload" media="all" disabed>
+    <link rel="stylesheet" type="text/css" href="../css/header.css" class="styleload" media="all" disabled>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" class="styleload" media="all" disabled>
     <link rel="stylesheet" type="text/css" href="../css/menu.css" class="styleload" media="all" disabled>
 
     <link rel='dns-prefetch' href='https://maps.googleapis.com'>
@@ -39,6 +39,22 @@
 <!--custom imports ends-->
 
     <style>
+        main{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        floatbtn{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        header{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        footer{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
         .fixed-action-btn {
             right: 83%;
             top: 88%;
@@ -119,7 +135,7 @@
           top: 0;
           right: 100%;
           width: 100%;
-          height: 2px;
+          height: 5px;
         }
         
         /*ENTER INLINE CONTENT CSS*/
@@ -296,12 +312,12 @@ a:hover{
             <img src="../img/forward.svg" id="iconbtn" alt="nav">
         </a>
         <ul class="floatbtn">
-            <li><a href="../home/" class="btn-floating">Home</a></li>
-            <li><a href="../newsupdate/" class="btn-floating">Notice & Updates</a></li>
-            <li><a href="../articles/" class="btn-floating">Articles</a></li>
-            <li><a href="../overview/" class="btn-floating">Overview</a></li>
-            <li><a href="../facultylist/" class="btn-floating">Faculty</a></li>
-            <li><a href="../courses/" class="btn-floating">Courses & Curriculum</a></li>
+            <li><a href="./" class="btn-floating">Home</a></li>
+            <li><a href="./notice-updates.php" class="btn-floating">Notice & Updates</a></li>
+            <li><a href="./articles.php" class="btn-floating">Articles</a></li>
+            <li><a href="./overview.html" class="btn-floating">Overview</a></li>
+            <li><a href="./faculty.php" class="btn-floating">Faculty</a></li>
+            <li><a href="./courses.html" class="btn-floating">Courses & Curriculum</a></li>
         </ul>
     </floatbtn>
     <header>
@@ -345,7 +361,7 @@ a:hover{
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
-    </header>
+    <!-- </header> -->
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -386,6 +402,7 @@ a:hover{
             </div>
         </div>
     </div>
+    </header>
     <main>
         <!--ENTER MAIN CONTENT HERE-->
             

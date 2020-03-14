@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="../css/new-material.css" class="styleload" media="all" disabled>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap4.css" class="styleload" media="all" disabled>
     <link rel="stylesheet" type="text/css" href="../css/header.css" class="styleload" media="all" diabled>
-    <link rel="stylesheet" type="text/css" href="../css/footer.css" class="styleload" media="all" disabed>
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" class="styleload" media="all" disabled>
     <link rel="stylesheet" type="text/css" href="../css/menu.css" class="styleload" media="all" disabled>
     
 
@@ -257,12 +257,12 @@ a:hover{
             <img src="../img/forward.svg" id="iconbtn" alt="nav">
         </a>
         <ul class="floatbtn">
-            <li><a href="../home/" class="btn-floating">Home</a></li>
-            <li><a href="../newsupdate/" class="btn-floating">Notice & Updates</a></li>
-            <li><a href="../articles/" class="btn-floating">Articles</a></li>
-            <li><a href="../overview/" class="btn-floating">Overview</a></li>
-            <li><a href="../facultylist/" class="btn-floating">Faculty</a></li>
-            <li><a href="../courses/" class="btn-floating">Courses & Curriculum</a></li>
+            <li><a href="./" class="btn-floating">Home</a></li>
+            <li><a href="./notice-updates.php" class="btn-floating">Notice & Updates</a></li>
+            <li><a href="./articles.php" class="btn-floating">Articles</a></li>
+            <li><a href="./overview.html" class="btn-floating">Overview</a></li>
+            <li><a href="./faculty.php" class="btn-floating">Faculty</a></li>
+            <li><a href="./courses.html" class="btn-floating">Courses & Curriculum</a></li>
         </ul>
     </floatbtn>
     <header>
