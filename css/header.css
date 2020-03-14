@@ -2,6 +2,10 @@
     opacity: 0; 
     transition: opacity 3s;
 } */
+::-webkit-scrollbar {
+            height: 0.35em;
+            width: 0.35em;
+}
 header{
     padding:0;
     margin:0;
