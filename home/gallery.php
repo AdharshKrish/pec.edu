@@ -52,10 +52,6 @@ if($res=mysqli_query($db_con,$query))
             opacity: 0; 
             transition: opacity 3s;
         }
-        floatbtn{
-            opacity: 0; 
-            transition: opacity 3s;
-        }
         header{
             opacity: 0; 
             transition: opacity 3s;
@@ -183,7 +179,6 @@ if($res=mysqli_query($db_con,$query))
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
-    </header>
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -223,6 +218,7 @@ if($res=mysqli_query($db_con,$query))
             </div>
         </div>
     </div>
+    </header>
     <main>
         <crumbs id="pec-crumb" class="pec-crumb"></crumbs>
         
