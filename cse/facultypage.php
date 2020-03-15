@@ -387,7 +387,7 @@ else {
                 <div class="row" style="min-width:120px;">
                     <div class="col-5 ">
                         <div class="thumbnail">
-                            <div class=""><?php  echo "<img src='../../cms/profilepic/". $file_path ."' style='resize: both;
+                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both;
                              width:150px;
                              height:200px;' alt='error'>";?></div>
                         </div>

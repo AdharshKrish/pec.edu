@@ -346,7 +346,8 @@ a:hover{
     <main>
         <!--ENTER MAIN CONTENT HERE-->
     
-  <?php
+  
+        <?php
  include("db_con.php");
 $query="SELECT * FROM basic_faculty_info where post_tier='HOD'";
 $result=mysqli_query($db_con,$query);
@@ -370,12 +371,12 @@ if($result)
   <div class="faculty-header">
             <h2>Faculty</h2>
     </div>
-    <div class="container-fluid card-container">
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid  card-container">
+    
+        <div class="row ">
       
-            <div class="col-sm-12 col-md-6 col-lg-4 card-parent">
-            <a href="./facultypage.php?email=<?php echo $email?>">  
+            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
+            <a href="facultypage.php?email=<?php echo $email?>">  
                 <div class="card">
                     <p class="designation" style="background-color:#4a69bb">Head of Department</p>
                    <h3 class="faculty-name"><?php echo $name?></h3>
@@ -391,9 +392,12 @@ if($result)
                         <label class="label">Email </label> <?php echo $email ?> <br>
                         <label class="label"> Extension </label>  <?php echo $ext ?> <br>
                     </div>
+                   
                 </div>
-            </a>
+                </a>
             </div>
+           
+            
            
 
              <?php
@@ -401,7 +405,8 @@ $query="SELECT * FROM basic_faculty_info where post_tier='Professor'";
 
 if($result=mysqli_query($db_con,$query))
 { 
-    
+   
+
     while($arr=mysqli_fetch_assoc($result))
     {
    $name=$arr['name'];
@@ -411,15 +416,22 @@ if($result=mysqli_query($db_con,$query))
    $number=$arr['phno'];
    $ext=$arr['extension'];
    $email=$arr['contact_official_email'];
-   $query="SELECT * FROM uploading where id=".$id;      
-   $result=mysqli_query($db_con,$query);
-   $arr=mysqli_fetch_assoc($result); 
-   $file_path=$arr['file_name'];
+   $query="SELECT * FROM uploading where id=".$id;  
+   //secho $query;    
+   if( $result1=mysqli_query($db_con,$query))
+   {
 
+   $arr1=mysqli_fetch_assoc($result1); 
+   if(mysqli_num_rows($result1)>0)
+   $file_path=$arr1['file_name'];
+   else
+   $file_path="sample.jpg";
+   }
+   
 
   
             echo'
-            <div class="col-sm-12 col-md-6 col-lg-4  card-parent">
+            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
             <a href="facultypage.php?email='.$email.'">
            
                 <div class="card">
@@ -436,10 +448,10 @@ if($result=mysqli_query($db_con,$query))
                         <label class="label"> Phone Number </label>'.$number.'<br>
                         <label class="label">Email </label>'.$email.'<br>
                         <label class="label"> Extension </label>'.$ext.' <br>
+                        </div>
+                        </div>
+                        </a>
                     </div>
-                </div>
-            </a>
-            </div>
                
                     ';
 }}?>
@@ -451,7 +463,8 @@ $query="SELECT * FROM basic_faculty_info where post_tier='Associate Professor'";
 
 if($result=mysqli_query($db_con,$query))
 { 
-    
+   
+
     while($arr=mysqli_fetch_assoc($result))
     {
    $name=$arr['name'];
@@ -461,16 +474,22 @@ if($result=mysqli_query($db_con,$query))
    $number=$arr['phno'];
    $ext=$arr['extension'];
    $email=$arr['contact_official_email'];
-   $query="SELECT * FROM uploading where id=".$id;      
-   $result=mysqli_query($db_con,$query);
-   $arr=mysqli_fetch_assoc($result); 
-   $file_path=$arr['file_name'];
+   $query="SELECT * FROM uploading where id=".$id;  
+   //secho $query;    
+   if( $result1=mysqli_query($db_con,$query))
+   {
 
+   $arr1=mysqli_fetch_assoc($result1); 
+   if(mysqli_num_rows($result1)>0)
+   $file_path=$arr1['file_name'];
+   else
+   $file_path="sample.jpg";
+   }
 
   
             echo'
-            <div class="col-sm-12 col-md-6 col-lg-4 card-parent">
-                <a href="./facultypage.php?email='.$email.'">
+            <div class="col-sm-6 col-md-6 col-lg-4 card-parent"><a href="facultypage.php?email='.$email.'">
+         
                 <div class="card">
                     <p class="designation" style="background-color:#e55039">Associate Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
@@ -486,18 +505,18 @@ if($result=mysqli_query($db_con,$query))
                         <label class="label">Email </label>'.$email.'<br>
                         <label class="label"> Extension </label>'.$ext.' <br>
                         </div>
-                    </div>
-                </a>
-            </div>';
+                        </div>
+                        
+                    </a></div>';
 }}?>
 
 
                    <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Assistant Professor'";
-
+$query="SELECT * FROM basic_faculty_info where post_tier='Assistance Professor'";
 if($result=mysqli_query($db_con,$query))
 { 
-    
+   
+
     while($arr=mysqli_fetch_assoc($result))
     {
    $name=$arr['name'];
@@ -507,32 +526,38 @@ if($result=mysqli_query($db_con,$query))
    $number=$arr['phno'];
    $ext=$arr['extension'];
    $email=$arr['contact_official_email'];
-   $query="SELECT * FROM uploading where id=".$id;      
-   $result=mysqli_query($db_con,$query);
-   $arr=mysqli_fetch_assoc($result); 
-   $file_path=$arr['file_name'];
+   $query="SELECT * FROM uploading where id=".$id;  
+   //secho $query;    
+   if( $result1=mysqli_query($db_con,$query))
+   {
 
-        echo'
-        <div class="col-sm-12 col-md-6 col-lg-4 card-parent">
-            <a href="./facultypage.php?email='.$email.'">
-            <div class="card">
-                <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
-                <h3 class="faculty-name">'.$name.'</h3>
-                <div class="thumbnail">
-                    <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
-                    width: 200px;
-                    height: 200px;">
-                </div>
-                <p class="degree">'.$alma.'</p>
-                <div class="details">
-                    <label class="label"> Specialization </label><div class="dotdotdot"> '.$spl.'</div><br>
-                    <label class="label"> Phone Number </label>'.$number.'<br>
-                    <label class="label">Email </label>'.$email.'<br>
-                    <label class="label"> Extension </label>'.$ext.' <br>
+   $arr1=mysqli_fetch_assoc($result1); 
+   if(mysqli_num_rows($result1)>0)
+   $file_path=$arr1['file_name'];
+   else
+   $file_path="sample.jpg";
+   }
+  
+            echo'<a href="facultypage.php?email='.$email.'">
+            <div class="col-sm-6 col-md-6 col-lg-4  card-parent">
+                <div class="card">
+                    <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
+                    <h3 class="faculty-name">'.$name.'</h3>
+                    <div class="thumbnail">
+                        <img src="../cms/profilepic/'.$file_path.'" alt="faculty-image" style="object-fit: cover;
+                        width: 200px;
+                        height: 200px;">
                     </div>
-                </div>
-            </a>
-        </div>';
+                    <p class="degree">'.$alma.'</p>
+                    <div class="details">
+                        <label class="label"> Specialization </label><div class="dotdotdot"> '.$spl.'</div><br>
+                        <label class="label"> Phone Number </label>'.$number.'<br>
+                        <label class="label">Email </label>'.$email.'<br>
+                        <label class="label"> Extension </label>'.$ext.' <br>
+                        </div>
+                        </div>
+                        
+                    </div></a>';
 }}?>
        
                 
@@ -542,11 +567,12 @@ if($result=mysqli_query($db_con,$query))
               
               
               <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Programmer'";
+$query="SELECT * FROM basic_faculty_info where post_tier='Programmar'";
 
 if($result=mysqli_query($db_con,$query))
 { 
-    
+   
+
     while($arr=mysqli_fetch_assoc($result))
     {
    $name=$arr['name'];
@@ -556,14 +582,20 @@ if($result=mysqli_query($db_con,$query))
    $number=$arr['phno'];
    $ext=$arr['extension'];
    $email=$arr['contact_official_email'];
-   $query="SELECT * FROM uploading where id=".$id;      
-   $result=mysqli_query($db_con,$query);
-   $arr=mysqli_fetch_assoc($result); 
-   $file_path=$arr['file_name'];
+   $query="SELECT * FROM uploading where id=".$id;  
+   //secho $query;    
+   if( $result1=mysqli_query($db_con,$query))
+   {
 
+   $arr1=mysqli_fetch_assoc($result1); 
+   if(mysqli_num_rows($result1)>0)
+   $file_path=$arr1['file_name'];
+   else
+   $file_path="sample.jpg";
+   }
 
   
-            echo'<a href="./facultypage.php?email='.$email.'"><div class="col-sm-12 col-md-6 col-lg-4  card-parent">
+            echo'<a href="facultypage.php?email='.$email.'"><div class="col-sm-6 col-md-6 col-lg-4  card-parent">
                 <div class="card">
                     <p class="designation">Programmer</p>
                     <h3 class="faculty-name">'.$name.'</h3>
@@ -590,7 +622,8 @@ $query="SELECT * FROM basic_faculty_info where post_tier='Others'";
 
 if($result=mysqli_query($db_con,$query))
 { 
-    
+   
+
     while($arr=mysqli_fetch_assoc($result))
     {
    $name=$arr['name'];
@@ -600,14 +633,21 @@ if($result=mysqli_query($db_con,$query))
    $number=$arr['phno'];
    $ext=$arr['extension'];
    $email=$arr['contact_official_email'];
-   $query="SELECT * FROM uploading where id=".$id;      
-   $result=mysqli_query($db_con,$query);
-   $arr=mysqli_fetch_assoc($result); 
-   $file_path=$arr['file_name'];
+   $query="SELECT * FROM uploading where id=".$id;  
+   //secho $query;    
+   if( $result1=mysqli_query($db_con,$query))
+   {
+
+   $arr1=mysqli_fetch_assoc($result1); 
+   if(mysqli_num_rows($result1)>0)
+   $file_path=$arr1['file_name'];
+   else
+   $file_path="sample.jpg";
+   }
 
 
   
-            echo'<a href="./facultypage.php?email='.$email.'"><div class="col-sm-12 col-md-6 col-lg-4  card-parent">
+            echo'<a href="facultypage.php?email='.$email.'"><div class="col-sm-6 col-md-6 col-lg-4  card-parent">
                 <div class="card">
                     <p class="designation">Professor</p>
                     <h3 class="faculty-name">'.$name.'</h3>
@@ -630,7 +670,7 @@ if($result=mysqli_query($db_con,$query))
         
           
         </div>
-    </div>
+        
     </div>
 
         <!--main content ends-->
