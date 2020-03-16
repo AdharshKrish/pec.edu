@@ -4,6 +4,7 @@ require_once('./db_con.php');
 $email=$_POST['email'];
 $name=$_POST['name'];
 $dep=$_POST['dept'];
+$desg=$_POST['role'];
 
 //echo "INSERT INTO `login`(`desg`, `username`, `email`, `department`) VALUES ('".$role."','".$name."','".$email."','".$dep."')";
 
@@ -17,22 +18,37 @@ if($result)
     if(mysqli_num_rows($result)==0)
     {
            //insert into table if not exists
-  $query="INSERT INTO `login`( `username`, `email`, `department`,`desg`) VALUES ('".$name."','".$email."','".$dep."','faculty')";
+  $query="INSERT INTO `login`( `username`, `email`, `department`) VALUES ('".$name."','".$email."','".$dep."')";
   if(mysqli_query($db_con,$query))
 {
-//continue
+  $query_check_exists="SELECT * FROM login WHERE email='".$email."'";
+//echo $query_check_exists;
+$result=mysqli_query($db_con,$query_check_exists);
+$arr1=mysqli_fetch_assoc($result);$idref=$arr1['id'];
+
+
+
+$query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'$desg')";
+mysqli_query($db_con,$query);
+//continu
 header("Location: ../pages/webmaster_dashboard.php?message=successfully added role");
           exit();
       
 }
 else {
   echo 1;
-  //header("Location: ../pec/error/error404.html");
+  header("Location: ../pec/error/error404.html");
   exit();
 }
     }
     else {
         echo 2;
+        $arr1=mysqli_fetch_assoc($result);$idref=$arr1['id'];
+
+        $query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'$desg')";
+        mysqli_query($db_con,$query);
+
+
         header("Location: ../pages/webmaster_dashboard.php?message=already exists");
           exit();
     }
