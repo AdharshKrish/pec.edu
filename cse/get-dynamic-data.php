@@ -22,6 +22,9 @@ if($result=mysqli_query($db_con,$query))
 <div class="modal-content">
   <div class="modal-header">
     <h5 class="modal-title">'.$start.' &emsp;to&emsp; '.$end.'</h5>
+    <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </div>
   </div>
   <div class="modal-body">
     '.$summary.'<br>';

@@ -247,6 +247,10 @@
             position: relative;
             top: 2px;
         }
+        .cal-icon:hover{
+            cursor: pointer;
+
+        }
 
 
         /*content css ends*/
@@ -384,7 +388,7 @@ if($result=mysqli_query($db_con,$query))
         $cid=$arr['id'];
         echo'<btn class="card tb2" onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
                 <div class="card-header">
-                    <span style="float: right;"><img src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
+                    <span style="float: right;"><img class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
                     
                     <p class="new-bullet"><span>&bull;</span>New</p>
                     <p>'.$start.'</p>
