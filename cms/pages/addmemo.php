@@ -49,6 +49,8 @@ else {
 <html>
 
 <head>
+    <title>Faculty Dashboard</title> <!-- ENTER PAGE TITLE -->
+    <link rel="icon" href="../icon.png">
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -77,8 +79,8 @@ else {
                 <div class="col-md-2 "> <!--verticle li-->
                     <div class="container">
                         <ul class="nav nav-tab">
-                        <li class="active" > <a href="./faculty_dashboard.php" style="color: black;">PROFILE </a></li>
-                            <li> <a href="./addmemo.php" id=""> ADD MEMO </a></li>
+                        <li class="active" > <a href="./faculty_dashboard.php">PROFILE </a></li>
+                            <li> <a href="./addmemo.php" id=""  style="color: black;"> ADD MEMO </a></li>
                             <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                         </ul>
                     </div>

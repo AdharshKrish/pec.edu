@@ -102,6 +102,8 @@ else {
 <html>
 
 <head>
+    <title>Faculty Dashboard</title> <!-- ENTER PAGE TITLE -->
+    <link rel="icon" href="../icon.png">
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -170,49 +172,32 @@ else {
                }
                 ?>
                     <div class="panel panel-body">
-                    
                         <div class="row "> <!--DETAILS-->
                             <div class="col-sm-4 "> <!--FACUTLY IMAGE-->
-
-
-
-
-                             
-                  
                               <div class="container">
-                              
-                                    
-                                     <form id="form1" action=".\DB_TRANS\special\uploadpic\db.php" method="post" enctype="multipart/form-data">
-                             
-
-
+                                <form id="form1" action=".\DB_TRANS\special\uploadpic\db.php" method="post" enctype="multipart/form-data">
                                     <div id="preview">
-                                    <?php $result=mysqli_query($db_con,"select * from uploading where id=".$id);
-                                  
-$count=mysqli_num_rows($result);
-$fetch=mysqli_fetch_assoc($result);
-$path='..\profilepic/';
-$path = $path.strtolower($fetch['file_name']); 
-if($count<=0)
-{
-    echo  "<img src='thiru.png'   class='img-responsive' /></div>";
-}
-else {
-    echo  "<img src='".$path."'   class='img-responsive' /></div>";
-}?>
-                                   
-                                   <input id="uploadImage" type="file" style=" border: unset;
-    padding: 5px;" accept="image/*" name="image" />
+                                        <?php $result=mysqli_query($db_con,"select * from uploading where id=".$id);
+                                    
+                                        $count=mysqli_num_rows($result);
+                                        $fetch=mysqli_fetch_assoc($result);
+                                        $path='..\profilepic/';
+                                        $path = $path.strtolower($fetch['file_name']); 
+                                        if($count<=0)
+                                        {
+                                            echo  "<img src='thiru.png'   class='img-responsive' /></div>";
+                                        }
+                                        else {
+                                            echo  "<img src='".$path."'   class='img-responsive' /></div>";
+                                        }?>                               
+                                        <input id="uploadImage" type="file" style=" border: unset;
+                                        padding: 5px;" accept="image/*" name="image" />
                                    </div>
                                   <div class="btnChangePic">                                
-                               
-                               
                                   <button class="btn btn-primary" style="align-self: center;" type="submit" value="Upload">ADD IMAGE</button>
-                                 </form>
+                                </form>
                                 </div>
-                               
-
-
+                        
                             </div>
                             <div class="col-sm-8 ">
                                 <form class="form3" method="POST" action="../DB_TRANS/update_profile.php">
@@ -233,7 +218,6 @@ else {
                                             <option value="ast_prof">Assistance Professor</option>
                                             <option value="assoc_prof">Associate Professor</option>
                                             <option value="programmer">Programmar</option>
-                                            <option value="HOD">HOD</option>
                                             <option value="other">Others</option>
                                         </select>
                                     </div>
