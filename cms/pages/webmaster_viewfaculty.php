@@ -59,7 +59,7 @@ $result = mysqli_query($db_con, $query);
                         <li class="active"> <a href="webmaster_dashboard.php">ADD FACULTY </a></li>
                         <li> <a href="webmasteraddrole.php" id=""> ADD ROLES </a></li>
                         <li> <a href="webmasteraddmemo.php" id=""> ADD MEMO </a></li>
-                        <li> <a href="webmaster_viewmemo.php"> VIEW DATASET </a></li>
+                        <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
                         <li> <a href="webmaster_viewfaculty.php" style="color: black;"> VIEW FACULTY DATA SET </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>

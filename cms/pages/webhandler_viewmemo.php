@@ -61,7 +61,7 @@ $result = mysqli_query($db_con, $query);
                     <ul class="nav nav-tab">
                         <li class="active"> <a href="webhandler_dashboard.php">ADD ARTICLE </a></li>
 
-                        <li> <a href="webhandler_viewmemo.php" style="color: black;"> VIEW DATASET </a></li>
+                        <li> <a href="webhandler_viewmemo.php" style="color: black;"> VIEW MEMO </a></li>
                         <li> <a href="../gallery/" style="color: black;"> GALLERY </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>

@@ -62,7 +62,7 @@ else {
                     <ul class="nav nav-tab">
                         <li class="active" > <a href="webhandler_dashboard.php" style="color: black;">ADD ARTICLE </a></li>
                        
-                        <li> <a href="webhandler_viewmemo.php"> VIEW DATASET </a></li>
+                        <li> <a href="webhandler_viewmemo.php"> VIEW MEMO </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>
                 </div>
