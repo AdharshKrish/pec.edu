@@ -130,6 +130,10 @@ if($res=mysqli_query($db_con,$query))
                     margin: 0;
                     text-align: left;
                 }
+                .img-fluid:hover{
+                    cursor: pointer;
+                }
+
         /*content css ends*/
     </style>
     <script>
@@ -227,6 +231,25 @@ if($res=mysqli_query($db_con,$query))
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
                 <!-- tag/links -->
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exid"></h5>
+        <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </div>
+        </div>
+    <div class="modal-body">
+      <img src="" alt="" id="exp-img" style="width:100%">
+    </div>
+    </div>
+  </div>
+</div>
+
+
                 <br>
                     <div class="footer-2">
                         <div class="container-fluid tb1" >
@@ -307,9 +330,9 @@ if($res=mysqli_query($db_con,$query))
                    $tags=$result['tags'];
                    $desc=$result['description'];
                 echo'
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-6" data-toggle="modal" data-target=".bd-example-modal-lg">
                     <div class="tb">   
-                        <img class="img-fluid" src="../cms/galleryimages/'.$imgname.'" alt="img1" srcset="">
+                        <img class="img-fluid" onclick="expImg(\'../cms/galleryimages/'.$imgname.'\')" src="../cms/galleryimages/'.$imgname.'" alt="img1" srcset="">
                              <div class="figure-caption">
                             <h3>'.$tags.'</h3>
                             <p class="">'.$desc.'</p>
@@ -414,6 +437,12 @@ if($res=mysqli_query($db_con,$query))
             else
                 document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
             });
+
+
+            function expImg(a){
+                // console.log(a);
+                document.getElementById('exp-img').src=a;
+            }
     </script>
 </body>
 </html>
