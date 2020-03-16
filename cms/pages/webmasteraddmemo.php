@@ -55,29 +55,19 @@ else
 
 ?>
 
-
-
-
-
-
-
-
-
 <html>
 
 <head>
-    <!-- Latest compiled and minified CSS -->
+    <title>Webmaster</title>
+    <link rel="icon" href="../icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../css/master.css">
 <link rel="stylesheet" href="../css/header.css">
-
 </head>
 
 <body>
@@ -140,8 +130,6 @@ else
                             </div>";
                             }}
                             ?>
-                           
-                         
                         </div>
                 </div>
                
@@ -170,14 +158,24 @@ else
                                 ?>
                                 </div>
                                   <div class="form-group">
-                                    <label for="phone">Visibility</label>
-                                    <?php
-                                    if(isset($_GET['content_id']))
-                                    echo" <input type='text' name='hashtag' value='".$arr['department']."' class='form-control'>";
-                                    else {
-                                        echo" <input type='text' name='hashtag' placeholder='Hashtags' class='form-control'>";
-                                    }
-                                ?>
+                                    <label for="date-from">Visibility</label>
+                                        <select name="visib" class="form-control">
+                                            <option value="none" selected="true" disabled>Select</option>
+                                            <option value="all">ALL DEPARTMENTS AND MAIN PAGE</option>
+                                            <option value="main">MAIN PAGE</option>
+                                            <option value="cse">Computer Science and Engineering</option>
+                                            <option value="it">Information Technology</option>
+                                            <option value="eee">Electrical and Electronics Engineering</option>
+                                            <option value="ece">Electronics and Communication Engineering</option>
+                                            <option value="eie">Electronics and Instrumentation Engineering</option>
+                                            <option value="civil">Civil Engineering</option>
+                                            <option value="chem">Chemical Engineering</option>
+                                            <option value="mech">Mechanical Engineering</option>
+                                            <option value="phy">Department of Physics</option>
+                                            <option value="che">Department of Chemistry</option>
+                                            <option value="math">Department of Mathematics</option>
+                                            <option value="hs">Department of Humanity Sciences</option>
+                                            </select>
                                 </div>
                                 <div class="row">
                                     

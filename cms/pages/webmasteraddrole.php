@@ -94,7 +94,7 @@ else {
                                     </div>   
                                     
                                     <div class="form-group">
-                                        <label for="name">Name</label>
+                                        <label for="name">Username</label>
                                         <input type="text" name="email" placeholder="Email" class="form-control">
                                     </div>
 
