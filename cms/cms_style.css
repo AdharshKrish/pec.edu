@@ -5,9 +5,6 @@ html, body{
 *{
     box-sizing: border-box;
 }
-body{
-    /* background-color: lightblue; */
-}
 div{
     height: 100%;
 }
@@ -60,20 +57,12 @@ div.cover_image{
 
 .footer {
     position: fixed;
-    /* width: inherit; */
-    /* bottom: 0; */
     bottom: 20px;
-    /* text-align: center; */
     padding-left: 15px;
   }
 
   /* jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
   
-.access-type{
-    /* padding-top: 30%; */
-    
-    
-}
 ul{
     text-align: center;
     margin-left: auto;

@@ -85,7 +85,7 @@ else {
                                     <div class="form-group">
                                         <label for="dept">Department</label>
                                         <select name="dept" class="form-control">
-                                            <option value="none">--Select--</option>
+                                            <option value="none" selected="true" disabled>Select</option>
                                             <option value="cse">Computer Science and Engineering</option>
                                             <option value="it">Information Technology</option>
                                             <option value="eee">Electrical and Electronics Engineering</option>
@@ -110,12 +110,11 @@ else {
                                     <div class="form-group">
                                         <label for="email">Role</label>
                                         <select name="role" class="form-control">
-                                            <option value="none">--Select--</option>
+                                            <option value="none" selected="true" disabled>Select</option>
                                             <option value="HOD">HOD</option>
                                             <option value="DEAN">Webhandler</option>
                                             <option value="WEBMASTER">Webmaster</option>
-                                            <option value="faculty">Faculty</option>
-                                            <option value="other">Cells and communities</option>
+                                            <option value="other">4Cs</option>
                                         </select>
                                     </div>
                                     <br>
@@ -124,15 +123,10 @@ else {
                             </div>
                     </div>
                 </div>
-
-                
-
             </div>
         </div>
     </main>
-
     <footer>
-
     </footer>
 </body>
 </html>
