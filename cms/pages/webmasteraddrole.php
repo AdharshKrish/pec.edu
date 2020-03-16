@@ -32,35 +32,26 @@ else {
 <html>
 
 <head>
-    <!-- Latest compiled and minified CSS -->
+    <title>Webmaster</title>
+    <link rel="icon" href="../icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../css/master.css">
 <link rel="stylesheet" href="../css/header.css">
-
 </head>
-
 
 <body>
     <header>
         <h1>pec.edu <span>CMS_</span> </h1>
     </header>
-
     <main>
         <div class="container">
-
-        
             <div class="row ">
-
                 <div class="col-md-2 "> <!--verticle li-->
-                    
-                 
                 <ul class="nav nav-tab">
                         <li > <a href="webmaster_dashboard.php" >ADD FACULTY </a></li>
                         <li  class="active"> <a href="webmasteraddrole.php"style="color: black;"> ADD ROLES </a></li>
@@ -109,14 +100,14 @@ else {
 
                                     <div class="form-group">
                                         <label for="email">Role</label>
-                                        <select name="role" class="form-control">
+                                        <select name="role" class="form-control" onchange='checkvalue(this.value)'>
                                             <option value="none" selected="true" disabled>Select</option>
-                                            <option value="HOD">HOD</option>
-                                            <option value="DEAN">Webhandler</option>
+                                            <option value="HOD">HOD/Webhandler</option>
                                             <option value="WEBMASTER">Webmaster</option>
-                                            <option value="other">4Cs</option>
+                                            <option value="other">4C</option>
                                         </select>
                                     </div>
+                                    <input type="text" name="4C" id="4c" class="form-control" style='display:none' placeholder="Enter Cell/Club/Committee/Chapter Title">
                                     <br>
                                     <input type="submit" value="GRANT ACCESS" class="btn btn-primary btn-large grant-access">
                                 </form>
@@ -128,5 +119,14 @@ else {
     </main>
     <footer>
     </footer>
+    <script>
+        function checkvalue(val)
+        {
+            if(val==="other")
+            document.getElementById('4c').style.display='block';
+            else
+            document.getElementById('4c').style.display='none'; 
+        }
+    </script>
 </body>
 </html>
