@@ -99,12 +99,12 @@
 
                                     <div class="form-group">
                                         <label for="dept">Designation</label>
-                                        <select name="dept" class="form-control">
-                                            <option value="none" selected="true" disabled>Select</option>
-                                            <option value="professor">Professor</option>
-                                            <option value="associate professor">Associate Professor</option>
-                                            <option value="assistant professor">Assistant Professor</option>  
-                                            <option value="other">Others</option>
+                                        <select name="role" class="form-control" onchange='checkvalue(this.value)'>
+                                        <option value="none" selected="true" disabled>Select</option>
+                                        s    <option value="faculty">Faculty</option>
+                                            <option value="DEAN">Webhandler</option>
+                                            <option value="WEBMASTER">Webmaster</option>
+                                            <option value="other">4C</option>
                                         </select>
                                     </div>
 
