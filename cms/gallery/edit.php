@@ -68,10 +68,19 @@ $result=mysqli_query($db_con,$query);
         
             <div class="row ">
         
-               
+            <div class="col-md-2 ">
+                    <!--verticle li-->
+
+                    <ul class="nav nav-tab">
+                        <li class="active"> <a href="webhandler_dashboard.php">ADD ARTICLE </a></li>
+                        <li> <a href="webhandler_viewmemo.php"> VIEW MEMO </a></li>
+                        <li> <a href="../gallery/"> ADD PHOTOS </a></li>
+                        <li> <a href="../gallery/edit.php"  style="color: black;"> EDIT PHOTOS </a></li>
+                        <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                    </ul>
+                </div>
              
                 <div class="col-md-12">
-                <button type="button" class="btn success"> <a href="index.php"> GO BACK</a></button>
                     <div class="panel panel-default"> <?php
                 if($error==1)
                  echo "  <div class='alert alert-success'>

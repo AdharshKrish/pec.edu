@@ -56,6 +56,17 @@ else {
 
         
             <div class="row ">
+            <div class="col-md-2 ">
+                    <!--verticle li-->
+
+                    <ul class="nav nav-tab">
+                        <li class="active"> <a href="webhandler_dashboard.php">ADD ARTICLE </a></li>
+                        <li> <a href="webhandler_viewmemo.php"> VIEW MEMO </a></li>
+                        <li> <a href="../gallery/"  style="color: black;"> ADD PHOTOS </a></li>
+                        <li> <a href="../gallery/edit.php"> EDIT PHOTOS </a></li>
+                        <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                    </ul>
+                </div>
                 
                     <div class="panel panel-default"> <?php
                 if($error==1)
@@ -65,7 +76,6 @@ else {
                 ?>
                 
             <div class="col-md-12 ">
-            <button type="button" class="btn success"><a href='edit.php'>EDIT PHOTOS </a></button>
                         <div class="panel-body">
                             
                         <div class="form-group">
