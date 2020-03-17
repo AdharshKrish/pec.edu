@@ -32,6 +32,8 @@ else {
 ?><html>
 
 <head>
+    <title>Webhandler</title>
+    <link rel="icon" href="../icon.png">
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -56,26 +58,26 @@ else {
 
         
             <div class="row ">
-            <div class="col-md-2 ">
+            <div class="col-sm-2 ">
                     <!--verticle li-->
 
                     <ul class="nav nav-tab">
-                        <li class="active"> <a href="webhandler_dashboard.php">ADD ARTICLE </a></li>
-                        <li> <a href="webhandler_viewmemo.php"> VIEW MEMO </a></li>
+                        <li class="active"> <a href="../pages/webhandler_dashboard.php">ADD ARTICLE </a></li>
+                        <li> <a href="../pages/webhandler_viewmemo.php"> VIEW MEMO </a></li>
                         <li> <a href="../gallery/"  style="color: black;"> ADD PHOTOS </a></li>
                         <li> <a href="../gallery/edit.php"> EDIT PHOTOS </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>
                 </div>
                 
-                    <div class="panel panel-default"> <?php
+                    <div> <?php
                 if($error==1)
                  echo "  <div class='alert alert-success'>
                  <strong>SUCCESSFULL</strong> ".$message."
                </div>";
                 ?>
                 
-            <div class="col-md-12 ">
+            <div class="col-sm-10 ">
                         <div class="panel-body">
                             
                         <div class="form-group">
