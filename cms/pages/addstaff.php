@@ -1,40 +1,32 @@
 <?php
-
 require_once('../DB_TRANS/db_con.php');
-if(isset($_SESSION['loggedin_status']))
-{
-$logged=$_SESSION['loggedin_status'];
-if($logged=900)
-{
-  if($_SESSION['role']=="webhandler")
-  {
-    $error=0;
-    if(isset($_GET['message']))
-    {
-    $message=$_GET['message'];
-    $error=1;
+if(isset($_SESSION['loggedin_status'])){
+    $logged=$_SESSION['loggedin_status'];
+    if($logged=900){
+        if($_SESSION['role']=="webhandler")
+        {
+            $error=0;
+            if(isset($_GET['message']))
+            {
+                $message=$_GET['message'];
+                $error=1;
+            }
+        }
+        else {
+            header("Location: ../index.php");
+        }
     }
-  }
-  else {
-     header("Location: ../index.php");
-  }
+    else {
+        header("Location: ../index.php");
+        exit();
+    }
 }
-else {
-    header("Location: ../index.php");
-    exit();
-}
-}
-
-else {
-    header("Location:  ../error/error404.html");
-    exit();
-}
-
-
 ?>
 <html>
 
 <head>
+    <title>Add staff</title>
+    <link rel="icon" href="../icon.png">
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -81,11 +73,6 @@ else {
                </div>";
                 ?>
                         <div class="panel-body">
-
-
-
-
-
                         <form class="form3" method="POST" action="../DB_TRANS/addstaff.php"  enctype="multipart/form-data">                 
                   
                              <div class="form-group">

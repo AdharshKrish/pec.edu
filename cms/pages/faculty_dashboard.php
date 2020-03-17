@@ -75,7 +75,7 @@ if (isset($_SESSION['loggedin_status'])) {
         }
     } else {
         echo "error2";
-        // header("Location: http://localhost/pec/error/error404.html");
+        header("Location: http://localhost/pec/error/error404.html");
         exit();
     }
 } else {
@@ -149,11 +149,12 @@ if (isset($_SESSION['loggedin_status'])) {
 
                         <?php
                         if ($error == 1)
-                            echo "  <div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> " . $message . "
-               </div>";
+                            echo    "<div class='alert alert-success'>
+                                    <strong>SUCCESSFULL</strong> " . $message .
+                                    "</div>";
                         if ($staff == 1) {
                             echo '<button type="button" class="btn success"> <a href="addstaff.php"> ADD/EDIT STAFF</a></button>';
+
                         }
                         ?>
                         <div class="panel panel-body">
@@ -195,14 +196,15 @@ if (isset($_SESSION['loggedin_status'])) {
                                                         echo $post_tier;
                                                     else {
                                                         echo "Others";
-                                                    }                                                ?>
+                                                    }                                                
+                                                    ?>
                                                 </option>
-                                                <option value="none">--Select--</option>
-                                                <option value="prof">Professor</option>
-                                                <option value="ast_prof">Assistance Professor</option>
-                                                <option value="assoc_prof">Associate Professor</option>
-                                                <option value="programmer">Programmar</option>
-                                                <option value="other">Others</option>
+                                                <option value="none" selected="true" disabled>Select</option>
+                                                <option value="professor">Professor</option>
+                                                <option value="asociate professor">Associate Professor</option>
+                                                <option value="assistant prof">Assistant Professor</option>
+                                                <option value="programmer">Programmer</option>
+                                                <option value="others">Others</option>
                                             </select>
                                         </div>
                                         <div class="row">

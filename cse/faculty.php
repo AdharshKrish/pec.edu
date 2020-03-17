@@ -512,7 +512,7 @@ if($result=mysqli_query($db_con,$query))
 
 
                    <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Assistance Professor'";
+$query="SELECT * FROM basic_faculty_info where post_tier='Assistant Professor'";
 if($result=mysqli_query($db_con,$query))
 { 
    
@@ -567,7 +567,7 @@ if($result=mysqli_query($db_con,$query))
               
               
               <?php
-$query="SELECT * FROM basic_faculty_info where post_tier='Programmar'";
+$query="SELECT * FROM basic_faculty_info where post_tier='Programmer'";
 
 if($result=mysqli_query($db_con,$query))
 { 

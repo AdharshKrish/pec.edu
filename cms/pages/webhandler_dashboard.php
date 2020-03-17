@@ -92,7 +92,7 @@ else {
                                     <div class="form-group">
                                         <label for="dept">Department</label>
                                         <select name="dept" class="form-control">
-                                            <option value="none">--Select--</option>
+                                            <option value="none" selected="true" disabled>Select</option>
                                             <option value="cse">Computer Science and Engineering</option>
                                             <option value="it">Information Technology</option>
                                             <option value="eee">Electrical and Electronics Engineering</option>
