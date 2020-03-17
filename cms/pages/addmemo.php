@@ -106,26 +106,26 @@ else {
                     <?php
                 if($error==1)
                  echo "  <div class='alert alert-danger'>
-                 <strong>THE INPUT FORMAT IS WRONG OR IS NOT FILLED AT ALL</strong>        please donot spam or else your system will be banned
+                 <strong>THE INPUT FORMAT IS WRONG OR IS NOT FILLED AT ALL</strong>Please do not spam or else your system will be banned
                </div>";
                 ?>
                         <form action="../DB_TRANS/addmemo_faculty.php" class="form" enctype='multipart/form-data' method="POST">
                             <div class="form-group">
                                 <label for="note"> Note </label>
-                                <textarea name="note" cols="30" rows="7" class="form-control" placeholder="e.g., Happy Independence Day" style="background-color: white;" ></textarea>
+                                <textarea name="note" cols="30" rows="7" class="form-control" placeholder="e.g. Happy Independence Day" style="background-color: white;" ></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Hashtags</label>
-                                <input type="text" name="tags" placeholder="Hashtags" class="form-control">
+                                <input type="text" name="tags" placeholder="e.g. Holiday (Separate tags with comma)" class="form-control">
                             </div>
 
                             <div class="row">
                                 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="date-from">Visibility</label>
+                                        <label for="date-from">Visibility (Please strictly select necessary)</label>
                                         <select name="visib" class="form-control">
-                                            <option value="none">--Select--</option>
+                                            <option value="none"selected="true" disabled>Select</option>
                                             <option value="all">ALL DEPARTMENTS AND MAIN PAGE</option>
                                             <option value="main">MAIN PAGE</option>
                                             <option value="cse">Computer Science and Engineering</option>
