@@ -385,12 +385,12 @@ else {
         <div class="row " style="margin-top:20px">
             <div class="col-sm-5 col-lg-4">
                 <div class="row" style="min-width:120px;">
-                    <div class="col-5 ">
+                    <div class="col-md-6 ">
                         <div class="thumbnail">
                             <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both; width:150px; height:200px; margin-right:5px' alt='error'>";?></div>
                         </div>
                     </div>
-                    <div class="col-7 " style="display: flex; align-items: center;">
+                    <div class="col-md-6 " style="margin-top:20px;display: flex; align-items: center;">
                         <div class="caption">
                             <h4 style="font-size: 20px;"><?php echo $name?></h4>
                             <p><?php echo $post_tier?></p>
@@ -416,7 +416,7 @@ else {
                              <label class="label"> Phone </label>  <?php echo $contact?> <br>
                              <label class="label"> Email </label>  <?php echo $email?><br>
                             <label class="label"> Extension </label>  123 <br>
-                            <hr>
+                            <!-- <hr> -->
                         </div>
                         <div class="col-sm-6" style="min-width: 240px;">   
                             <h6 style="color: #707070;">Find me on</h6>
@@ -458,7 +458,7 @@ else {
                 <div>
                     <p> 
                         <label class="label"> Students </label><br>
-                            <p><?php echo $student?></p>
+                            <?php echo $student?>
                         </p>
                 </div>
             </div>

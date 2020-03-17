@@ -188,7 +188,8 @@
 .card{
     background: white;
     transition: all .3s;
-    padding-top: 6px;
+    /* padding-top:100px; */
+    padding-top: 35px;
     border-radius: 10px;
     box-shadow:none;
 }
@@ -196,7 +197,9 @@
     box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
     transform: scale(1.03);
 }
-
+/* .card .caption{
+    width: 50%;
+} */
 .details{
     padding: 13px;
 }
@@ -371,7 +374,7 @@ a:hover{
             <h2>Articles</h2>
     </div>
     <div class="container-fluid tb1 card-container">
-        <div class="container">
+        <!-- <div class="container"> -->
         <div class="row">
         <?php
                   include("db_con.php");
@@ -387,17 +390,26 @@ if($result=mysqli_query($db_con,$query))
         $summary=$arr['name'];
         $dep=$arr['dep'];
         $img=$arr['img'];
+        $author=$arr['author'];
+
+        if($img==""){
+            $img="default.png";
+        }
+
         echo'
         <a href="articlespage.php?id='.$id.'">
             <div class="col-sm-6 col-md-4 col-lg-3 tb3 card-parent">
                 <div class="card">
                     <div class="thumbnail">
-                        <img src="../cms/articles/'.$img.'" alt="image" style="object-fit: cover;
+                        <img src="../cms/articles/'.$img.'" alt="" style="object-fit: cover;
                         width: 200px;
                         height: 200px;" >
                     </div>
-                    <div class="caption">
+                    <div class="caption" style="padding-top:15px">
                         <h4>'.$summary.'</h4>
+                    </div>
+                    <div class="caption" >
+                        <h4 style="font-size:13px;color:#707070">'.$author.'</h4>
                     </div>
                     <div class="card-header">
                         <p>'.$dep.'</p>
@@ -410,7 +422,7 @@ if($result=mysqli_query($db_con,$query))
            
 
         </div> 
-    </div>
+    <!-- </div> -->
 </div>
         <!--main content ends-->
     </main>
