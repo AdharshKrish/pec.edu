@@ -393,7 +393,7 @@
 
             <div class="row ">
 
-                <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
+                <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
                     <a href="facultypage.php?email=<?php echo $email ?>">
                         <div class="card">
                             <p class="designation" style="background-color:#4a69bb">Head of Department</p>
@@ -415,8 +415,6 @@
                         </div>
                     </a>
                 </div>
-
-
 
 
                 <?php
@@ -447,7 +445,7 @@
 
 
                         echo '
-            <div class="col-sm-4 col-md-6 col-lg-4  card-parent">
+            <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
             <a href="facultypage.php?email=' . $email . '">
            
                 <div class="card">
@@ -502,7 +500,7 @@
 
 
                         echo '
-            <div class="col-sm-6 col-md-6 col-lg-4 card-parent"><a href="facultypage.php?email=' . $email . '">
+            <div class="col-sm-6 col-md-6 col-lg-3 card-parent"><a href="facultypage.php?email=' . $email . '">
          
                 <div class="card">
                     <p class="designation" style="background-color:#e55039">Associate Professor</p>
@@ -551,7 +549,7 @@
                         }
 
                         echo '
-            <div class="col-sm-6 col-md-6 col-lg-4  card-parent"><a href="facultypage.php?email=' . $email . '">
+            <div class="col-sm-6 col-md-6 col-lg-3  card-parent"><a href="facultypage.php?email=' . $email . '">
                 <div class="card">
                     <p class="designation" style="background-color:#fa983a">Assistant Professor</p>
                     <h3 class="faculty-name">' . $name . '</h3>
@@ -596,7 +594,7 @@
                         }
 
 
-                        echo '<div class="col-sm-6 col-md-6 col-lg-4  card-parent"><a href="facultypage.php?email=' . $email . '">
+                        echo '<div class="col-sm-6 col-md-6 col-lg-3  card-parent"><a href="facultypage.php?email=' . $email . '">
                 <div class="card">
                     <p class="designation">Programmer</p>
                     <h3 class="faculty-name">' . $name . '</h3>
@@ -646,7 +644,7 @@
 
 
 
-                        echo '<div class="col-sm-6 col-md-6 col-lg-4  card-parent"><a href="facultypage.php?email=' . $email . '">
+                        echo '<div class="col-sm-6 col-md-6 col-lg-3 card-parent"><a href="facultypage.php?email=' . $email . '">
                 <div class="card">
                     <p class="designation">Other</p>
                     <h3 class="faculty-name">' . $name . '</h3>
