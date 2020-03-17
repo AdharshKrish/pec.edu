@@ -59,6 +59,8 @@
         document.getElementById('rec').style.transform = "translate(300%,0)";
         document.getElementById("otp").action="./DB_TRANS/login.php?role=faculty";
         document.getElementById("label1").innerHTML="Faculty Login";
+        document.getElementById('web').style.display="block";
+        document.getElementById('cell').style.display="none";
         // setTimeout("window.location.href='faculty.html'",2000);
     }
 
@@ -66,7 +68,8 @@
         document.getElementById("label1").innerHTML="Webmaster Login";        
         document.getElementById('rec').style.transform = "translate(12%,0)";
         document.getElementById("otp").action="./DB_TRANS/login.php?role=webmaster";
-        
+        document.getElementById('web').style.display="block";
+        document.getElementById('cell').style.display="none";        
         // setTimeout("window.location.href='webmaster.html'",2000);
     }
 
@@ -74,11 +77,14 @@
         document.getElementById("label1").innerHTML="Webhandler Login";
         document.getElementById("otp").action="./DB_TRANS/login.php?role=webhandler";
         document.getElementById('rec').style.transform = "translate(500%,0)";
+        document.getElementById('web').style.display="block";
+        document.getElementById('cell').style.display="none";
     }
     function move3()
     {
         document.getElementById("label1").innerHTML="Cells and Club Login";
         document.getElementById("otp").action="./DB_TRANS/login.php?role=cells";
-        document.getElementById('rec').style.transform = "translate(850%,0)";
-
+        document.getElementById('rec').style.transform = "translate(835%,0)";
+        document.getElementById('web').style.display="none";
+        document.getElementById('cell').style.display="flex";
     }
