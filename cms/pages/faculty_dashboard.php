@@ -239,9 +239,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                             <label for="qualification">Qualification</label>
                                             <?php
                                             if ($exist == 1)
-                                                echo ' <input  type="text" name="qualification" value="' . $qualification . '"  placeholder="Enter your qualifications separated by comma." class="form-control"/>';
+                                                echo ' <input  type="text" name="qualification" value="' . $qualification . '"  placeholder="Enter your qualifications" class="form-control"/>';
                                             else {
-                                                echo ' <input  type="text" name="qualification" placeholder="Enter your qualifications separated by comma." class="form-control" >';
+                                                echo ' <input  type="text" name="qualification" placeholder="Enter your qualifications" class="form-control" >';
                                             }                                                ?>
 
                                         </div>
@@ -249,7 +249,7 @@ if (isset($_SESSION['loggedin_status'])) {
                                             <label for="dept">Specialization</label>
                                             <?php
                                             if ($exist == 1)
-                                                echo '<input type="text" name="specialization" value="' . $specilization . '" placeholder="Enter your specializations here" class="form-control">';
+                                                echo '<input type="text" name="specialization" value="' . $specilization . '" placeholder="Enter your specializations" class="form-control">';
                                             else {
                                                 echo ' <input type="text" name="specialization" placeholder="Specialization" class="form-control">';
                                             }                                                ?>
@@ -269,7 +269,7 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="qualification">Alma Mater</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo ' <textarea  name="alma" cols="30" rows="3"  placeholder="e.g. Ph.D. - PEC, Pondicherry, 1990; M.Tech. - PEC, Pondicherry, 19983; B.Tech. - PEC, Pondicherry, 1980; High School - Petit Seminaire, Pondicherry, 1978." class="form-control" >' . $alma . '</textarea>';
+                                        echo ' <textarea  name="alma" cols="30" rows="3"  placeholder="e.g. Ph.D. - PEC, Pondicherry, 1990; M.Tech. - PEC, Pondicherry, 1998; B.Tech. - PEC, Pondicherry, 1980; High School - Petit Seminaire, Pondicherry, 1978." class="form-control" >' . $alma . '</textarea>';
                                     else {
                                         echo '  <textarea  name="alma" cols="30" rows="3" placeholder="e.g. Ph.D. (PEC, Pondicherry), 1990; M.Tech. (PEC, Pondicherry), 19983; B.Tech. (PEC, Pondicherry), 1980; High School (Petit Seminaire, Pondicherry), 1978." class="form-control" ></textarea>';
                                     }                                                ?>
@@ -289,9 +289,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="interest">Interests</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '  <textarea name="interest" id="" cols="30" rows="3" class="form-control" placeholder="e.g., Playing Badminton, Biking ...">' . $interest . '</textarea>';
+                                        echo '  <textarea name="interest" id="" cols="30" rows="3" class="form-control" placeholder="e.g. Playing Badminton, Biking ...">' . $interest . '</textarea>';
                                     else {
-                                        echo '  <textarea name="interest" id="" cols="30" rows="3" class="form-control" placeholder="e.g., Playing Badminton, Biking ..."></textarea>';
+                                        echo '  <textarea name="interest" id="" cols="30" rows="3" class="form-control" placeholder="e.g. Playing Badminton, Biking ..."></textarea>';
                                     }                                                ?>
 
                                 </div>
@@ -300,9 +300,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="research">Current Research/Work</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g., Sensor Networks">' . $research . '</textarea>';
+                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g. Sensor Networks">' . $research . '</textarea>';
                                     else {
-                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g., Sensor Networks"></textarea>';
+                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g. Sensor Networks"></textarea>';
                                     }                                                ?>
 
                                 </div>
@@ -310,9 +310,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="students">Students</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '  <textarea name="students" id="" cols="30" rows="3" class="form-control"  placeholder="e.g., Phd Scholar - Arun Kumar (2018-)">' . $student . '</textarea>';
+                                        echo '  <textarea name="students" id="" cols="30" rows="3" class="form-control"  placeholder="e.g. Phd Scholar - Arun Kumar (2018-)">' . $student . '</textarea>';
                                     else {
-                                        echo ' < <textarea name="students" id="" cols="30" rows="3" class="form-control"  placeholder="e.g., Phd Scholar - Arun Kumar"></textarea>';
+                                        echo ' < <textarea name="students" id="" cols="30" rows="3" class="form-control"  placeholder="e.g. Phd Scholar - Arun Kumar"></textarea>';
                                     }                                                ?>
 
                                 </div>

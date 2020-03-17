@@ -116,7 +116,7 @@ else {
                             </div>
                             <div class="form-group">
                                 <label for="phone">Hashtags</label>
-                                <input type="text" name="tags" placeholder="e.g. Holiday (Separate tags with comma)" class="form-control">
+                                <input type="text" name="tags" placeholder="e.g. Holiday" class="form-control">
                             </div>
 
                             <div class="row">
@@ -166,13 +166,13 @@ else {
                             </div>
                             <div class="row" style="text-align: center;">
                                 <div class="col-sm-6" style="text-align: left;">
-                                    <label for="myFile" >Select one of more files:</label> <input type="file" name="file[]" style="border: unset;" class="btn btn-default" multiple="multiple">
+                                    <label for="myFile" >Select one file: <br>(Please attach as link using Google Drive if more file is concerned)</label> <input type="file" name="file[]" style="border: unset;" class="btn btn-default" multiple="multiple">
                                 </div>
                                 <br>
                                 <div class="col-sm-6">
                                     <div class="row">
                                         <div class="col-xs-6">
-                                            <input type="button" value="Clear" class="clearButton grant-access">
+                                            <input type="button" value="CLEAR" class="clearButton grant-access">
                                         </div>
                                         <div class="col-xs-6">
                                             <input type="submit" value="APPLY" class="grant-access">

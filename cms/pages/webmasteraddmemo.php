@@ -143,7 +143,7 @@ else
                                     if(isset($_GET['content_id']))
                                     echo"<textarea name='note' cols='30' rows='7' class='form-control'  style='background-color: white;' >".$arr['breif']."</textarea>";
                                     else {
-                                        echo"<textarea name='note' cols='30' rows='7' class='form-control' placeholder='e.g., Happy Independence Day' style='background-color: white;' ></textarea>";
+                                        echo"<textarea name='note' cols='30' rows='7' class='form-control' placeholder='e.g. Happy Independence Day' style='background-color: white;' ></textarea>";
                                     }
                                 ?>
                                 </div>
@@ -217,7 +217,7 @@ else
                                 <div class="row" style="text-align: center;">
                                     <div class="col-sm-6" style="text-align: left;">
                                         <div class="form-group">
-                                            <label for="myFile" >Select One or More file:</label> 
+                                            <label for="myFile" >Select one or more file:</label> 
                                             <ul>
                                             <?php
                                               if(isset($_GET['content_id']))
