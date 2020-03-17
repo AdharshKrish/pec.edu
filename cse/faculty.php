@@ -411,11 +411,9 @@
                                 <label class="label">Email </label> <?php echo $email ?> <br>
                                 <label class="label"> Extension </label> <?php echo $ext ?> <br>
                             </div>
-
                         </div>
                     </a>
                 </div>
-
 
                 <?php
                 $query = "SELECT * FROM basic_faculty_info where post_tier='Professor'";
