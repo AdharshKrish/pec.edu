@@ -451,7 +451,7 @@
             <a href="facultypage.php?email=' . $email . '">
            
                 <div class="card">
-                    <p class="designation" style="background-color:#3c6382">Professor</p>
+                    <p class="designation" style="background-color:#b71540">Professor</p>
                     <h3 class="faculty-name">' . $name . '</h3>
                     <div class="thumbnail">
                         <img src="../cms/profilepic/' . $file_path . '" alt="faculty-image" style="object-fit: cover;
