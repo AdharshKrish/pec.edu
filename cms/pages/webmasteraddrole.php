@@ -103,7 +103,7 @@ else {
                                         <select name="role" class="form-control" onchange='checkvalue(this.value)'>
                                             <option value="none" selected="true" disabled>Select</option>
                                             <option value="HOD">HOD</option>
-                                            <option value="DEAN">Webhandler</option>
+                                            <option value="WEBHANDLER">Webhandler</option>
                                             <option value="WEBMASTER">Webmaster</option>
                                             <option value="other">4C</option>
                                         </select>
