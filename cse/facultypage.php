@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Skeleton</title> <!-- ENTER PAGE TITLE -->
+    <title>Faculty Profile</title> <!-- ENTER PAGE TITLE -->
     <link rel="icon" href="../img/icon.png">
     <link rel="manifest" href="../manifest.json" />
     <link rel="apple-touch-icon" href="../img/icons/150px.png" />
@@ -382,38 +382,30 @@ else {
 
 ?>
         <div class="container root-container" >
-        <div class="row ">
+        <div class="row " style="margin-top:20px">
             <div class="col-sm-5 col-lg-4">
                 <div class="row" style="min-width:120px;">
                     <div class="col-5 ">
                         <div class="thumbnail">
-                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both;
-                             width:150px;
-                             height:200px;' alt='error'>";?></div>
+                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both; width:150px; height:200px; margin-right:5px' alt='error'>";?></div>
                         </div>
                     </div>
                     <div class="col-7 " style="display: flex; align-items: center;">
                         <div class="caption">
                             <h4 style="font-size: 20px;"><?php echo $name?></h4>
-                            <p><i><?php echo $post_tier?></i></p>
+                            <p><?php echo $post_tier?></p>
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="row">
                     <div class="col">
-                        <label class="label"> Alma mater </label>
+                        <label class="label"> Alma mater </label><br>
                         <?php echo $alma?>
-                      <!--  <ul>
-                            <li>Ph.D. (IIT Madras), 1998;</li>
-                            <li>M.Tech. (PEC, Pondicherry), 1983;</li>
-                            <li>B.Tech. (PEC, Pondicherry),1980;</li>
-                            <li>High School (Petit Seminaire, Pondicherry), 1978</li>
-                        </ul>-->
                     </div>
                 </div>
-                <div class="row row_specialization">
-                    <label class="label"> Specialization </label>
+                <div class="row_specialization" style="margin-top: 20px; margin-bottom: 20px">
+                    <label class="label"> Specialization </label><br>
                     <?php echo $specilization?>
                 </div>
             </div>
@@ -428,17 +420,16 @@ else {
                         </div>
                         <div class="col-sm-6" style="min-width: 240px;">   
                             <h6 style="color: #707070;">Find me on</h6>
-                            <ul>
-                                <li><a href="https://linkedin.com/<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24"> <?php echo $linkedin?></a><br></li>
-                                <li><a href="https://facebook.com/<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24"> <?php echo $twitter?></a><br></li>
-                                <li><a href="https://twitter.com/<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24"><?php echo $facebook?> </a><br></li>
-                                <li><a href="https://<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24"><?php echo $contact?></a><br></li>
+                            <ul style="margin: 5px 0px 5px 0px;">
+                                <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
+                                <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $twitter?></a><br></li>
+                                <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $facebook?> </a><br></li>
+                                <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $contact?></a><br></li>
                             </ul>   
                         </div>
                     </div>
                     <br>
                     <div class="row row_dob">
-                        <!-- <div class="container1"> -->
                             <div class="col-sm-4">
                                 <p> 
                                     <label class="label"> Date of Birth </label><br>
@@ -449,28 +440,13 @@ else {
                                 <p> <label class="label"> Interests</label><br>
                                 <?php echo $interest?></p>
                             </div>
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </div>  
-        
-        <!-- <div class="row" style="text-align: center;">
-            
-            <div class="offset-md-5 "></div>
-            <div class="col-md-1 d-none d-md-block">
-                <br>
-                <img src="angle-down-solid.svg" alt="angle-down-solid" height="32" width="32">
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="#">Print Profile</a> 
-            </div>
-            <div class="col-md-3 col-6">
-                <a href="#">Print Card</a>
-            </div>
-        </div> -->
         <hr>
-        <!-- research, projects and students -->
+        <div class="watermark">
+        </div>
         <div class="row">
             <div class="col-md-5 col-sm-4" >
                 <div>
@@ -482,11 +458,6 @@ else {
                 <div>
                     <p> 
                         <label class="label"> Students </label><br>
-                            Current PhD students - <br>
-                           <!-- <span class="student_name">Arun Kumar</span> <br>
-                            <span class="student_name">Ravindranath Tagore</span> <br>
-                            Degree students - <br>
-                            2nd Year B.Tech. CSE Batch of 2020 (CS104-Computer Networks)-->
                             <p><?php echo $student?></p>
                         </p>
                 </div>
@@ -494,70 +465,33 @@ else {
             <div class="col-md-7 col-sm-8" style="overflow:auto;">
                 <div>
                     <label class="label"> Projects and Activities </label>
-                    
-                    <!--<ol>
-                        <li> Worked on Programmable data planes for routers </li>
-                        <li> Awarded the Hopkins Award in recognition of contributions made to the Mobile and Sensor Computing domain. </li>
-                        <li> The Institute is committed to generating, disseminating. </li>
-                        <li> Preserving knowledge, and to working with others to bring this knowledge to bear on the world’s great challenges. </li>
-                    </ol>-->
+                    <br>
                     <?php echo$project?>
                     
                     
                     </div>
             </div>
         </div>
-            
-        <div class="watermark">
-            <img  src="PEC logo watermark.jpg" alt="pec logo watermark" height="300" width="200" >
-        </div>
-        <!-- publications, books, journerls, conferences -->
         <div class="row">
-            <div class="container">
-
-  
-                <label class="label"> Publications </label> <br>
+            <div class="container" style="margin: 20px 0px 30px 0px">
+                <label class="label"> Publications </label>
                 <article>
                     <h3 style="color: #ebdd22;">Books</h3>
                     <hr>
-                   <!-- <ul>
-                        <li>Basic Electrical engineering - R.Anandanatarajan and P. Ramesh  Babu , Scitech Publications, 2009, 
-                            978-81-8371-189-0</li>
-                        <li>Control Systems Engineering - R.Anandanatarajan and P. Ramesh  Babu, SciTech Publications, 2005, 
-                            978-81-8371-360-3</li>
-                    </ul>-->
-                    <?php echo $books?>
+                    <?php echo $books?><br>
                 </article>
+                <br>
                 <article>
                     <h3 style="color: #fa983a;">Journals</h3>
                     <hr>
-                   <!-- <ul>
-                        <li>
-                            S. Anbumalar, P. Ramesh Babu, R.Anandanatarajan, ”Overlapped Chromotograms separation Using Nonnegative 
-                            matrix factorization” International journal of computer and Electrical Engineering, Vol.3, No.5, Oct 2011.
-                        </li>
-                        <li> 
-                            S. Anbumalar, P. Ramesh Babu, R.Anandanatarajan,” An Algorithm to resolve Embedded Chromotograms in 
-                            Chemical Analysis, International journal of computing Vol.1, No.4, Oct 2011.
-                        </li>
-                    </ul>-->
-                    <?php echo $journals?>
+                    <?php echo $journals?><br>
                    
                 </article>
+                <br>
                 <article>
                     <h3 style="color: #b71540;">Conferences</h3>
                     <hr>
-                    <!--<ul>
-                        <li>
-                            S. Anbumalar, P. Ramesh Babu, R.Anandanatarajan, ”Overlapped Chromotograms separation Using Nonnegative 
-                            matrix factorization” International journal of computer and Electrical Engineering, Vol.3, No.5, Oct 2011.
-                        </li>
-                        <li> 
-                            S. Anbumalar, P. Ramesh Babu, R.Anandanatarajan,” An Algorithm to resolve Embedded Chromotograms in 
-                            Chemical Analysis, International journal of computing Vol.1, No.4, Oct 2011.
-                        </li>
-                    </ul>-->
-                    <?php echo $conferences?>
+                    <?php echo $conferences?><br>
                 </article>
             </div>
         </div>
