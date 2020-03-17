@@ -1,33 +1,33 @@
 <?php
-// session_start();
-// if(isset($_SESSION['loggedin_status']))
-// {
-// $logged=$_SESSION['loggedin_status'];
-// if($logged=900)
-// {
-//   if($_SESSION['role']=="webhandler")
-//   {
-//     $error=0;
-//     if(isset($_GET['message']))
-//     {
-//     $message=$_GET['message'];
-//     $error=1;
-//     }
-//   }
-//   else {
-//     // header("Location: ../index.php");
-//   }
-// }
-// else {
-//    // header("Location: ../index.php");
-//     exit();
-// }
-// }
+session_start();
+if(isset($_SESSION['loggedin_status']))
+{
+$logged=$_SESSION['loggedin_status'];
+if($logged=900)
+{
+  if($_SESSION['role']=="webhandler")
+  {
+    $error=0;
+    if(isset($_GET['message']))
+    {
+    $message=$_GET['message'];
+    $error=1;
+    }
+  }
+  else {
+    // header("Location: ../index.php");
+  }
+}
+else {
+   // header("Location: ../index.php");
+    exit();
+}
+}
 
-// else {
-//   //  header("Location:  ../error/error404.html");
-//     exit();
-// }
+else {
+  //  header("Location:  ../error/error404.html");
+    exit();
+}
 ?>
 <html>
 
