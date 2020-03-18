@@ -139,125 +139,68 @@
         }
         
         /*ENTER INLINE CONTENT CSS*/
- 
-        .card-parent{
+
+        .article-header{
+            border-top:3px double black;
+            border-bottom:3px double black;
+            font-family: 'Oswald',sans-serif;
             text-align: center;
+            margin-left:5%;
+            margin-right:5%;
+            padding-top:0px;
+            padding-bottom:0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
-        .card-container{
-            padding-bottom: 10px;
-    box-shadow: inset 0 0 10px #707070;
+        .article-header h2{
+            margin-top: 10px;
         }
-        
-.card{
-    min-width: 300px;
-    max-width: 320px;
-    padding: 25px;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin: 15px auto ;
-    text-align: left;
-}
-.card p{
-    margin: 0 !important;
-    color: #707070;
-    font-weight: bolder;
-}
-.card-header{
-    padding: 5px;
-}
-.card-body{
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.hashtags{
-    padding: 7px;
-}
 
-
-.card-container{
-    padding-top: 15px;
-    background: #f5f4f4;
-}
-
-
-.card-parent{
-    padding: 20px;
-}
-.card{
-    background: white;
-    transition: all .3s;
-    /* padding-top:100px; */
-    padding-top: 35px;
-    border-radius: 10px;
-    box-shadow:none;
-}
-.card:hover{
-    box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
-    transform: scale(1.03);
-}
-/* .card .caption{
-    width: 50%;
-} */
-.details{
-    padding: 13px;
-}
-.label{
-    padding-left: unset;
-    font-size: 14px;
-    font-weight: bold;
-    color: #707070;
-}
-.thumbnail{
-    max-width: 200px;
-    max-height: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.faculty-name{
-    font-size: 25px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.designation{
-    background: #4a69bd;   /*to change*/
-    text-align: center;
-    padding: 5px;
-    color: white;
-    margin-top: 12px;
-}
-.degree{
-    text-align: center;
-    font-size: 18px;
-}
-
-.faculty-header{
-    border-top:3px double black;
-    border-bottom:3px double black;
-    font-family: 'Oswald',sans-serif;
-    text-align: center;
-    margin-left:5%;
-    margin-right:5%;
-    padding-top:0px;
-    padding-bottom:0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.faculty-header h2{
-    margin-top: 10px;
-}
-
-a{
-    color:#000;
-}
-a:hover{
-    text-decoration:none;
-    color:#000;
-}
-
-
+        .art{
+            background-color: #fff;
+            margin:20px 0;
+            padding:20px 0 20px 0px;
+            overflow-x:hidden;
+            border-radius: 10px;
+            color:#000;
+            transition: .3s;
+        }
+        .art:hover{
+            text-decoration:none;
+            color:#000;
+            box-shadow: 4px 4px 12px 2px #0005;
+            transform: scale(1.008);
+        }
+        .art .thumb{
+            object-fit: cover;
+            height:170px;
+            width: 100%;
+            border-radius:0 10px 10px 0;
+        }
+        .art .title{
+            padding:20px 30px;
+            text-align:justify;
+        }
+        .art .auth{
+            font-variant: small-caps;
+            font-size:18px;
+            color: #707070;
+            padding:0 30px;
+        }
+        .art .dep{
+            background-color: #41a700;
+            text-transform: uppercase;
+            margin-bottom:0px;
+            padding:10px 0 10px 20px;
+            color:#fff;
+            font-weight:bold;
+            border-radius:10px;
+        }
+        @media screen and (max-width:770px){
+            .art .thumb{
+                border-radius:0;
+            }
+        }
         /*content css ends*/
     </style>
     <script>
@@ -370,49 +313,49 @@ a:hover{
     <main>
         <!--ENTER MAIN CONTENT HERE-->
                 
-        <div class="faculty-header">
+        <div class="article-header">
             <h2>Articles</h2>
     </div>
-    <div class="container-fluid tb1 card-container">
-        <!-- <div class="container"> -->
+    <div class="container-fluid" style="box-shadow: inset 0 0 10px #707070;background: #f5f4f4;padding:30px 0">
+    <div class="container">
         <div class="row">
         <?php
                   include("db_con.php");
                   $query="SELECT * FROM `article` WHERE dep='cse' LIMIT 20 ";
 
-if($result=mysqli_query($db_con,$query))
-{ 
-    
-    while($arr=mysqli_fetch_assoc($result))
-    {
+                    if($result=mysqli_query($db_con,$query))
+                    { 
+                        
+                        while($arr=mysqli_fetch_assoc($result))
+                        {
 
-        $id=$arr['id'];
-        $summary=$arr['name'];
-        $dep=$arr['dep'];
-        $img=$arr['img'];
-        $author=$arr['author'];
+                            $id=$arr['id'];
+                            $title=$arr['name'];
+                            $dep=$arr['dep'];
+                            $img=$arr['img'];
+                            $author=$arr['author'];
 
-        if($img==""){
-            $img="default.png";
-        }
+                            if($img==""){
+                                $img="default.png";
+                            }
 
         echo'
-        <a href="articlespage.php?id='.$id.'">
-            <div class="col-sm-6 col-md-4 col-lg-3 tb3 card-parent">
-                <div class="card">
-                    <div class="thumbnail">
-                        <img src="../cms/articles/'.$img.'" alt="" style="object-fit: cover;
-                        width: 200px;
-                        height: 200px;" >
-                    </div>
-                    <div class="caption" style="padding-top:15px">
-                        <h4>'.$summary.'</h4>
-                    </div>
-                    <div class="caption" >
-                        <h4 style="font-size:13px;color:#707070">'.$author.'</h4>
-                    </div>
-                    <div class="card-header">
-                        <p>'.$dep.'</p>
+        <a class="col-12 art" href="articlespage.php?id='.$id.'">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="thumb" src="../cms/articles/'.$img.'">
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-12 title">
+                            <h4>'.$title.'</h4>
+                        </div>
+                        <div class="col-9 auth">
+                            <p>'.$author.'</p>
+                        </div>
+                        <div class="col-3 dep">
+                            <dep>'.$dep.'</dep>
+                        </div>
                     </div>
                 </div>
             </div>  
@@ -422,7 +365,6 @@ if($result=mysqli_query($db_con,$query))
            
 
         </div> 
-    <!-- </div> -->
 </div>
         <!--main content ends-->
     </main>

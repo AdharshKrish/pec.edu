@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php 
+    require_once('./db_con.php');
+    $id=$_GET['id'];
+    $query="SELECT * FROM `article` WHERE id=$id LIMIT 20 ";
 
+    if($result=mysqli_query($db_con,$query))
+    { 
+        
+    $arr=mysqli_fetch_assoc($result);
+            $summary=$arr['name'];
+            $dep=$arr['dep'];
+            $img=$arr['img'];
+            $body=$arr['body'];
+        
+    }
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Skeleton</title> <!-- ENTER PAGE TITLE -->
+    <title><?php echo$summary?></title> <!-- ENTER PAGE TITLE -->
     <link rel="icon" href="../img/icon.png">
     <link rel="manifest" href="../manifest.json" />
     <link rel="apple-touch-icon" href="../img/icons/150px.png" />
@@ -250,23 +265,7 @@
     </header>
     <main>
         <!--ENTER MAIN CONTENT HERE-->
-        <?php 
-require_once('./db_con.php');
-//require_once('db/header/header.php');  
-$id=$_GET['id'];
-$query="SELECT * FROM `article` WHERE id=$id LIMIT 20 ";
 
-if($result=mysqli_query($db_con,$query))
-{ 
-    
-$arr=mysqli_fetch_assoc($result);
-        $summary=$arr['name'];
-        $dep=$arr['dep'];
-        $img=$arr['img'];
-        $body=$arr['body'];
-      
-}
-?>
 <div  style="padding:40px" class="container-fluid tb1 card-container">
         <div class="row " style="height:400px">
         <?php echo $body?>
