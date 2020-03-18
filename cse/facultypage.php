@@ -216,12 +216,12 @@ h3{
             <img src="../img/forward.svg" id="iconbtn" alt="nav">
         </a>
         <ul class="floatbtn">
-            <li><a href="../home/" class="btn-floating">Home</a></li>
-            <li><a href="../newsupdate/" class="btn-floating">Notice & Updates</a></li>
-            <li><a href="../articles/" class="btn-floating">Articles</a></li>
-            <li><a href="../overview/" class="btn-floating">Overview</a></li>
-            <li><a href="../facultylist/" class="btn-floating">Faculty</a></li>
-            <li><a href="../courses/" class="btn-floating">Courses & Curriculum</a></li>
+            <li><a href="./" class="btn-floating">Home</a></li>
+            <li><a href="./notice-updates.php" class="btn-floating">Notice & Updates</a></li>
+            <li><a href="./articles.php" class="btn-floating">Articles</a></li>
+            <li><a href="./overview.html" class="btn-floating">Overview</a></li>
+            <li><a href="./faculty.php" class="btn-floating">Faculty</a></li>
+            <li><a href="./courses.html" class="btn-floating">Courses & Curriculum</a></li>
         </ul>
     </floatbtn>
     <header>
