@@ -83,7 +83,7 @@
     function move3()
     {
         document.getElementById("label1").innerHTML="Cells and Club Login";
-        document.getElementById("otp").action="./DB_TRANS/login.php?role=cells";
+        document.getElementById("otp").action="./DB_TRANS/ccc_login.php?role=ccc";
         document.getElementById('rec').style.transform = "translate(835%,0)";
         document.getElementById('web').style.display="none";
         document.getElementById('cell').style.display="flex";

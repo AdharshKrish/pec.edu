@@ -77,7 +77,7 @@
                             </form>
                         </div>
                         <div id="cell" class="form-group" style="margin-top:50px;padding:0 5vw;">
-                            <form id="otp" method="POST" action="./DB_TRANS/login.php?role=webmaster">
+                            <form id="otp" method="POST" action="./DB_TRANS/ccc_login.php?role=ccc">
                                 <select name="email" class="form-control">
                                     <option value="none" selected="true" disabled>Select</option>
                                 <!-- Committee -->
