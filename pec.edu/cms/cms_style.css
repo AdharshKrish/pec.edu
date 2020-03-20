@@ -1,0 +1,179 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+div{
+    height: 100%;
+}
+div.cover_image{
+    background: url('college.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    
+}
+.container-fluid{
+    width: 100%;
+}
+
+ .col_no_padding{  /*  used to remove 15px padding from bootstrap col */
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.curser{
+    color: cadetblue;
+    animation: blinkingbox 1s infinite;
+}
+@keyframes blinkingbox {
+    0%{	color: #2E8690;	}
+    50%{	color: #fff;	}
+}
+.cms{
+    color:cadetblue;
+}
+.header{
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    /*float: left;*/
+}
+
+@media (max-width:768px){
+    .header{
+        font-size: 24px;
+    }            
+}
+
+@media (max-width:512px){
+    .header{
+        font-size: 18px;
+    }            
+}
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    padding-left: 15px;
+  }
+
+  /* jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj */
+  
+ul{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.b1 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.b2 {
+    float: left;
+    margin-left: 25px;
+}
+
+.b5 {
+    float: left;
+    border-bottom: #2E8690;
+}
+
+.b_float{
+    float: left;
+    margin-left: 3em;
+}
+
+.b3 {
+    color: #000;
+    font-family: "Segoe UI";
+    font-size: 20px;
+    text-decoration: none;
+}
+.b3:hover{
+    color: #000;
+}
+.b4 {
+    float: left;
+    padding-left: 2px;
+    margin-left: 2px;
+    color: #828282;
+    font-family: "Segoe UI";
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.b4:hover {
+    color: #000;
+}
+
+.rectangle {
+    padding-top: 30px;
+    height: 7px;
+    width: 45px;
+    transform: translate(12%,0);
+    border-bottom: 2px solid #2E8690;
+    transition: transform 1s;
+} 
+
+@media (max-width:400px){
+    .footer a{
+        font-size: 16px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }         
+    .rectangle{
+        padding-top: 24px;
+    }   
+    hr{
+        margin-bottom: 0;   
+    }
+}
+
+/* =================================================== */
+.webmaster{
+    /* padding-left: 35%; */
+    font-weight: bold;
+    font-size:20px;
+    
+}
+.webmaster-login{
+    padding-top: 35px;
+    margin-top: 10px;
+    text-align: center;
+}
+.password{
+    padding-top: 10%;
+    padding-left: 20%;
+    /* border: 1px solid gold;  */
+}
+.password p{
+    color: #109F47;
+    font-family: "Segoe UI";
+    font-size: 12px;
+} 
+
+.webmaster-name {
+        border: 0;
+        border-bottom: 1.5px solid #C8CCD4;
+        width: 80%;
+        height: 52px;
+        outline: none;
+ }
+ .login{
+     float: right;
+ }
+ button {
+    height: 35px;
+    width: 180px;
+    background: cadetblue;
+    margin-right: 20%;
+    border: none;
+    color: white;
+    border-radius: 7px;
+}

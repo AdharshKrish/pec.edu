@@ -1,0 +1,10 @@
+#not found
+ErrorDocument 404 /404.html
+#Gone
+ErrorDocument 410 /410.html
+#Forbidden
+ErrorDocument 403 /403.html
+#moved teporarily
+ErrorDocument 302 /302.html
+#moved permanently
+ErrorDocument 301 /301.html

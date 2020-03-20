@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>410 Gone</title>
+  <link rel="icon" href="./img/icon.png">
+<style>
+  @import url(//fonts.googleapis.com/css?family=Oswald);
+  
+:root {
+  --background: #000;
+  --text: #FFF;
+  --highlight: #2e8690;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, #ffffff 0%,#2e8690 100%);
+  color: white;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+ul {
+
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+ul a {
+  margin: 10px;
+  position: relative;
+  color: var(--text);
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+ul a:before {
+  position: absolute;
+  bottom: -2px;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: var(--highlight);
+  transform: translateX(-100%);
+  opacity: 0;
+}
+ul a:hover:before {
+  opacity: 1;
+  transition: 0.5s transform ease, 0.8s opacity ease;
+  transform: translateX(0);
+}
+ul .active {
+  color: var(--highlight);
+}
+ul .active:hover:before {
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+
+ <div class="inner-header flex">
+    
+    <div class="navigation">
+    <img src="http://cms.pec.edu/test/home/img/logo.png" width="102px" height="152px"/>
+    <div style="align-items: center">
+      <ul>
+        <a href="javascript:window.history.back()" class="active">RETURN</a>
+        <a href="http://www.pec.edu/about" target="blank">ABOUT SITE</a>
+        <a href="http://www.pec.edu">HOMEPAGE</a>
+      </ul>
+    </div>
+      <h1 style="font-family: oswald">Code 410<br>The page you are looking is permanently removed.</h1>
+    </div>
+  </div>
+
+  <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+  </div>
+
+</div>
+  
+</body>
+</html>

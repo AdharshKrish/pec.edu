@@ -1,0 +1,18 @@
+header > h1{
+    text-align: center;
+}
+header span{
+    color: #2E8690;
+    /* font-weight: 100; */
+}
+main .nav a{
+    font-weight: bold;
+    color: #BFBFBF;
+}
+header{
+    padding: 1%;
+}
+
+.panel-body{
+    background-color: #EBF2F3 !important;
+}
