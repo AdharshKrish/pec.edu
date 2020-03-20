@@ -26,7 +26,7 @@ if($result=mysqli_query($db_con,$query))
         }else if($dept=="ece"){
             $dept="Department of ECE";
             $clr="#eb2f06";
-        }else if($dept=="all"){
+        }else{
             $dept="General";
             $clr="#41a700";
         }
@@ -66,107 +66,6 @@ if($result=mysqli_query($db_con,$query))
         </btn>';
 
 
-        echo'<btn class=cad onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
-        <div class=header>
-            <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>
-            <div class=row>
-                <div class=col-1>
-                    <span class=bul>&bull;</span>
-                </div>
-                <div class=col-10>
-                    <div class=head>
-                        <new>New</new><br>
-                        <start>'.$start.'</start>
-                        <p>'.$end.'</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=summary>
-            '.$summary.'
-        </div>';
-        $query1="SELECT * FROM tags WHERE content_id=".$cid;
-        echo'<div class=hashtags>';
-
-        if($result1=mysqli_query($db_con,$query1))
-        {
-            while($a=mysqli_fetch_assoc($result1))
-            {
-                $tag=$a['tagname'];
-                echo'<tag>#'.$tag.'</tag> &nbsp;&nbsp;';
-            }
-        }
-        echo'   </div>
-        </btn>';
-
-
-
-        echo'<btn class=cad onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
-        <div class=header>
-            <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>
-            <div class=row>
-                <div class=col-1>
-                    <span class=bul>&bull;</span>
-                </div>
-                <div class=col-10>
-                    <div class=head>
-                        <new>New</new><br>
-                        <start>'.$start.'</start>
-                        <p>'.$end.'</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=summary>
-            '.$summary.'
-        </div>';
-        $query1="SELECT * FROM tags WHERE content_id=".$cid;
-        echo'<div class=hashtags>';
-
-        if($result1=mysqli_query($db_con,$query1))
-        {
-            while($a=mysqli_fetch_assoc($result1))
-            {
-                $tag=$a['tagname'];
-                echo'<tag>#'.$tag.'</tag> &nbsp;&nbsp;';
-            }
-        }
-        echo'   </div>
-        </btn>';
-
-
-        echo'<btn class=cad onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
-        <div class=header>
-            <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>
-            <div class=row>
-                <div class=col-1>
-                    <span class=bul>&bull;</span>
-                </div>
-                <div class=col-10>
-                    <div class=head>
-                        <new>New</new><br>
-                        <start>'.$start.'</start>
-                        <p>'.$end.'</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class=summary>
-            '.$summary.'
-        </div>';
-        $query1="SELECT * FROM tags WHERE content_id=".$cid;
-        echo'<div class=hashtags>';
-
-        if($result1=mysqli_query($db_con,$query1))
-        {
-            while($a=mysqli_fetch_assoc($result1))
-            {
-                $tag=$a['tagname'];
-                echo'<tag>#'.$tag.'</tag> &nbsp;&nbsp;';
-            }
-        }
-        echo'   </div>
-        </btn>';
     }
 }
 ?>
