@@ -106,10 +106,10 @@
         }
 
         /*ENTER INLINE CONTENT CSS*/
-        .video{
-            height:720px;
+        .video img{
+            /* height:720px; */
             width: 100%;
-            background-color: aqua;
+            object-fit: cover;
         }
         .divider{
             height:5px;
@@ -264,6 +264,9 @@
         .academics-color:hover{
             background-color: #ae292930;
         }
+        .campus-color{
+            margin-right:50px;
+        }
         .campus-color h1{
             color:#1e3799;
         }
@@ -277,6 +280,9 @@
         }
         .campus-color:hover{
             background-color: #1e379930;
+        }
+        .placement-color{
+            margin-left:50px;
         }
         .placement-color h1{
             color:#ffc72c;
@@ -416,8 +422,8 @@
         }
         .admission{
             background-color: #f8f8f8;
-            margin:15px;
-            padding:50px 30px;
+            margin:15px 60px;
+            padding:40px 50px;
         }
         .admission h1{
             font-family:'Times New Roman';
@@ -427,8 +433,12 @@
             font-size: 18px;
             font-weight: 400;
         }
-        .admission .suthum-box{
-            margin:0;
+        
+        @media screen and (max-width:993px){
+            .placement-color,.campus-color,.admission{
+                margin-left:0;
+                margin-right:0;
+            }
         }
         /*content css ends*/
     </style>
@@ -525,7 +535,7 @@
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
             <div class="video">
-                <p class="text-center" style="font-size:60px;padding-top:300px">VIDEO COMING SOON</p>
+                <img src="img/lazy.gif">
             </div>
             <div class="divider"></div>
             <div class="container-fluid">
@@ -615,12 +625,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <div style="width: 100%;height: 100%;padding:50px">
                             <div style="background-color:#1e3799;width: 100%;height: 100%"></div>
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <div class="suthum-box campus-color" onclick="window.location.href='#'">
                             <h1>Campus Life</h1>
                             <p>Started in 1984 under the VII Five Year Plan, PEC has been growing from strength to strength since and it continues to encourage its students to develop leadership qualities and emerge as visionaries making a considerable difference across the globe.  PEC is ranked 76 in Engineering Category by NIRF India Rankings 2019.</p>
@@ -633,7 +643,7 @@
                             </div>                       
                         </div>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <div class="suthum-box placement-color" onclick="window.location.href='#'">
                             <h1>Placements</h1>
                             <p>Started in 1984 under the VII Five Year Plan, PEC has been growing from strength to strength since and it continues to encourage its students to develop leadership qualities and emerge as visionaries making a considerable difference across the globe.  PEC is ranked 76 in Engineering Category by NIRF India Rankings 2019.</p>
@@ -646,7 +656,7 @@
                             </div>                       
                         </div>
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <div style="width: 100%;height: 100%;padding:50px">
                             <div style="background-color:#ffc72c;width: 100%;height: 100%"></div>
                         </div>
@@ -655,12 +665,8 @@
                         <h1 style="color:#2e8690;margin-bottom: 30px">Admission</h1>
                         <p>Admission to PEC is done through the Centralised Admission Committee (CENTAC), Govt. of Puducherry and the Joint Seat Allocation Authority (JoSAA), Ministry of Human Resource Development (MHRD), Govt. of India. More details on admission procedure and intake can be found on these websites. </p>
                         <div class="row">
-                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
-                                <div class="suthum-box btn-clr" style="width:150px" onclick="window.location.href='#'">CENTAC</div>
-                            </div>
-                            <div class="col-xl-10 col-lg-9 col-md-8 col-sm-7">
-                                <div class="suthum-box btn-clr" style="width:135px" onclick="window.location.href='#'">JoSAA</div>
-                            </div>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6"><div class="qlinks" onclick="window.location.href='#'">CENTAC</div></div>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6"><div class="qlinks" onclick="window.location.href='#'">JoSAA</div></div>
                         </div>
                     </div>
                 </div>
