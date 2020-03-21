@@ -42,6 +42,7 @@
         main{
             opacity: 0; 
             transition: opacity 3s;
+            overflow-x: hidden;
         }
         floatbtn{
             opacity: 0; 
@@ -126,7 +127,7 @@
         .qic-link{
             background-color:#f8f8f8;
             padding:30px;
-            margin:50px 10px;
+            margin:50px 0px 50px 10px;
         }
         .qic-link h,.noticeh{
             font-family: Oswald;
@@ -433,13 +434,37 @@
             font-size: 18px;
             font-weight: 400;
         }
-        
+
+        .fade-in{
+            opacity: 0;
+            transition: opacity .6s ease-in;
+        }
+        .fade-in.appear{
+            opacity: 1;
+        }
+
+        .from-left{
+            transform: translateX(-50%);
+        }
+        .from-right{
+            transform: translateX(50%);
+        }
+        .from-left,.from-right{
+            opacity: 0;
+            transition: transform .5s ease-in-out, opacity .5s ease-in;
+        }
+        .from-left.appear, .from-right.appear{
+            opacity: 1;
+            transform:translateX(0);
+        }
+
         @media screen and (max-width:993px){
             .placement-color,.campus-color,.admission{
                 margin-left:0;
                 margin-right:0;
             }
         }
+
         /*content css ends*/
     </style>
     <script>
@@ -540,22 +565,22 @@
             <div class="divider"></div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-3 col-md-4 col-sm-6 gal-img">
+                    <div class="col-xl-3 col-md-4 col-sm-6 gal-img slide-in from-left">
                         <div class="suthum-box btn-clr" style="width:180px" onclick="window.location.href='#'">GALLERY&nbsp;&rightarrow;</div>
                     </div>
                     <div class="col-xl-5 col-md-8 col-sm-6">
                         <div class="qic-link">
                             <h>QUICK LINKS</h>
                             <div class="row">
-                                <div class="col-md-6"><div class="qlinks" onclick="window.location.href='#'">IIS</div></div>
-                                <div class="col-md-6"><div class="qlinks" onclick="window.location.href='#'">PLACEMENTS</div></div>
-                                <div class="col-md-6"><div class="qlinks" onclick="window.location.href='#'">ACADEMICS</div></div>
-                                <div class="col-md-6"><div class="qlinks" onclick="window.location.href='#'">ADMISSIONS</div></div>
-                                <div class="col-md-6"><div class="qlinks" onclick="window.location.href='#'">RESEARCH</div></div>
+                                <div class="col-md-6 slide-in from-left"><div class="qlinks" onclick="window.location.href='#'">IIS</div></div>
+                                <div class="col-md-6 slide-in from-left"><div class="qlinks" onclick="window.location.href='#'">PLACEMENTS</div></div>
+                                <div class="col-md-6 slide-in from-left"><div class="qlinks" onclick="window.location.href='#'">ACADEMICS</div></div>
+                                <div class="col-md-6 slide-in from-left"><div class="qlinks" onclick="window.location.href='#'">ADMISSIONS</div></div>
+                                <div class="col-md-6 slide-in from-left"><div class="qlinks" onclick="window.location.href='#'">RESEARCH</div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-12">
+                    <div class="col-xl-4 col-md-12 slide-in from-right">
                         <div class="suthum-box about-color" onclick="window.location.href='#'">
                             <h1>About PEC</h1>
                             <p>Started in 1984 under the VII Five Year Plan, PEC has been growing from strength to strength and continues to encourage its students to develop leadership qualities and emerge as visionaries making a considerable difference across the globe.  PEC is ranked 76 in Engineering Category by NIRF India Rankings 2019.</p>
@@ -585,7 +610,7 @@
             <div class="divider"></div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xl-5">
+                    <div class="col-xl-5 fade-in">
                         <div class="suthum-box academics-color" onclick="window.location.href='#'">
                             <h1>Academics</h1>
                             <p>Started in 1984 under the VII Five Year Plan, PEC has been growing from strength to strength since and it continues to encourage its students to develop leadership qualities and emerge as visionaries making a considerable difference across the globe.  PEC is ranked 76 in Engineering Category by NIRF India Rankings 2019.</p>
@@ -598,7 +623,7 @@
                             </div>                       
                         </div>
                     </div>
-                    <div class="col-xl-7">
+                    <div class="col-xl-7 fade-in">
                         <div class="departments">
                             <h1>OUR DEPARTMENTS</h1>
                             <div class="row">
@@ -625,12 +650,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div style="width: 100%;height: 100%;padding:50px">
+                    <div class="col-lg-6 slide-in from-left">
+                        <div class="" style="width: 100%;height: 100%;padding:50px">
                             <div style="background-color:#1e3799;width: 100%;height: 100%"></div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 slide-in from-right">
                         <div class="suthum-box campus-color" onclick="window.location.href='#'">
                             <h1>Campus Life</h1>
                             <p>Started in 1984 under the VII Five Year Plan, PEC has been growing from strength to strength since and it continues to encourage its students to develop leadership qualities and emerge as visionaries making a considerable difference across the globe.  PEC is ranked 76 in Engineering Category by NIRF India Rankings 2019.</p>
@@ -643,7 +668,7 @@
                             </div>                       
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 slide-in from-left">
                         <div class="suthum-box placement-color" onclick="window.location.href='#'">
                             <h1>Placements</h1>
                             <p>Started in 1984 under the VII Five Year Plan, PEC has been growing from strength to strength since and it continues to encourage its students to develop leadership qualities and emerge as visionaries making a considerable difference across the globe.  PEC is ranked 76 in Engineering Category by NIRF India Rankings 2019.</p>
@@ -656,12 +681,12 @@
                             </div>                       
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div style="width: 100%;height: 100%;padding:50px">
+                    <div class="col-lg-6 slide-in from-right">
+                        <div class="" style="width: 100%;height: 100%;padding:50px">
                             <div style="background-color:#ffc72c;width: 100%;height: 100%"></div>
                         </div>
                     </div>
-                    <div class="admission">
+                    <div class="admission fade-in">
                         <h1 style="color:#2e8690;margin-bottom: 30px">Admission</h1>
                         <p>Admission to PEC is done through the Centralised Admission Committee (CENTAC), Govt. of Puducherry and the Joint Seat Allocation Authority (JoSAA), Ministry of Human Resource Development (MHRD), Govt. of India. More details on admission procedure and intake can be found on these websites. </p>
                         <div class="row">
@@ -812,6 +837,35 @@
                     }
                 });
         }
+        
+        const faders = document.querySelectorAll('.fade-in')
+        const sliders = document.querySelectorAll('.slide-in')
+        const appearOptions = {
+            threshold: 0,
+            rootMargin: "0px 0px -300px 0px"
+        }
+
+        const appearOnScroll = new IntersectionObserver(
+            function(
+                entries,appearOnScroll
+            ){
+                entries.forEach(entry => {
+                    if(!entry.isIntersecting){
+                        return;
+                    }
+                    entry.target.classList.add('appear')
+                    appearOnScroll.unobserve(entry.target)
+                })
+            },
+        appearOptions)
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader)
+        })
+        sliders.forEach(slider => {
+            appearOnScroll.observe(slider)
+        })
+
     </script>
 
 </body>
