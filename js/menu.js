@@ -29,7 +29,7 @@ function menu(elt,item)
             document.getElementById('menu-col-4').style.left='35%';
         }
         document.getElementById('menu-col-3').style.borderRight='1px solid #707070';
-        document.getElementById('menu-col-3').innerHTML='<ul><li class="menu3">Campus&nbsp;Life</li><li class="menu3" onmouseover="menu1(this,1)">Committees<img src="../img/forward.svg" style="float:right;height:15px;margin-top:1.5vw" alt=">"></li><li class="menu3" onmouseover="menu1(this,2)">Cells<img src="../img/forward.svg" style="float:right;height:15px;margin-top:1.5vw" alt=">"></li><li class="menu3" onmouseover="menu1(this,3)">Clubs<img src="../img/forward.svg" style="float:right;height:15px;margin-top:1.5vw" alt=">"></li><li class="menu3" onmouseover="menu1(this,4)">Chapters<img src="../img/forward.svg" style="float:right;height:15px;margin-top:1.5vw" alt=">"></li><li class="menu3">Facilities</li></ul>';
+        document.getElementById('menu-col-3').innerHTML='<ul><li class="menu3">Campus&nbsp;Life</li><li class="menu3" onmouseover="menu1(this,1)">Committees<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,2)">Cells<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,3)">Clubs<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,4)">Chapters<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3">Facilities</li></ul>';
         document.getElementById('menu-col-4').innerHTML='';
     }
     else if(item==='departments'){
@@ -37,7 +37,7 @@ function menu(elt,item)
         document.getElementById('menu-col-4').innerHTML='<ul><li>Electronics and Instrumentation Engineering</li><li>Humanities and Social Sciences</li><li>Information Technology</li><li>Mathematics</li><li>Mechanical Engineering</li><li>Physics</li></ul>';
     }
     else{
-        document.getElementById('menu-col-3').innerHTML='<p style="font-size:18px;line-height:1.5;">Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and College development and is managed by a Board of Governors.</p>';
+        document.getElementById('menu-col-3').innerHTML='<p class="menu-about">Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and College development and is managed by a Board of Governors.</p>';
         document.getElementById('menu-col-4').innerHTML='<img src="../img/about.jpg" alt="college-img" style="width:18vw">';
     }
 }
