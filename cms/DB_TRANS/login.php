@@ -111,7 +111,7 @@ if($cv>0)
 
 }
 else{
-    //header("Location: ../index.php?message=wrong access code  ");
+    header("Location: ../index.php?message=wrong access code  ");
     die();
 }
 }
