@@ -1,0 +1,19 @@
+[11-Oct-2019 00:22:29 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[12-Oct-2019 03:02:17 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[12-Oct-2019 03:05:21 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[12-Oct-2019 09:59:50 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[13-Oct-2019 15:44:14 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[13-Oct-2019 15:46:49 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/pec/pages/faculty_dashboard.php on line 37
+[13-Oct-2019 15:46:49 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/pec/pages/faculty_dashboard.php on line 45
+[13-Oct-2019 15:47:46 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/pec/pages/faculty_dashboard.php on line 37
+[13-Oct-2019 15:47:46 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/pec/pages/faculty_dashboard.php on line 45
+[13-Oct-2019 15:48:06 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[22-Oct-2019 15:26:00 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[22-Oct-2019 15:26:31 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[22-Oct-2019 20:00:14 America/Chicago] PHP Notice:  Undefined variable: content_id in /home/pecedu/public_html/cms/test/pec/pages/webmasteraddmemo.php on line 222
+[28-Jan-2020 10:15:37 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/cms/pages/webhandler_viewmemo.php on line 90
+[28-Jan-2020 10:18:38 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/cms/pages/webhandler_viewmemo.php on line 90
+[28-Jan-2020 10:30:16 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/cms/pages/webhandler_viewmemo.php on line 90
+[28-Jan-2020 10:52:51 America/Chicago] PHP Notice:  Undefined index: dob in /home/pecedu/public_html/cms/test/cms/pages/faculty_dashboard.php on line 34
+[28-Jan-2020 11:47:59 America/Chicago] PHP Notice:  Undefined index: dob in /home/pecedu/public_html/cms/test/cms/pages/faculty_dashboard.php on line 34
+[28-Jan-2020 23:05:04 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/cms/pages/webhandler_viewmemo.php on line 90

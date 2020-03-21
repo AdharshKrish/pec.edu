@@ -1,0 +1,166 @@
+    .img-responsive{
+        height: 720px;
+        width: 100%; 
+        background-image: url('Rectangle 1.png');
+        background-size: cover;
+        background-repeat: no-repeat;        
+    }    
+    .header{
+        font-size: 32px;
+    }
+    .cms{
+            color:cadetblue;
+        }
+    .webmaster{
+        padding-left: 35%;
+        font-weight: bold;
+        font-size:30px;
+    }
+    .webmaster-login{
+        padding-top: 6%;
+        background: center;
+    }
+    .password{
+        padding-top: 12%;
+        padding-left: 22%;
+    }
+    .password p{
+        color: #109F47;
+        font-family: "Segoe UI";
+        font-size: 12px;
+    } 
+    
+    .webmaster-name {
+            border: 0;
+            border-bottom: 1.5px solid #C8CCD4;
+            width: 80%;
+            height: 52px;
+            outline: none;
+     }
+     .login{
+         float: right;
+     }
+     button {
+            height: 42px;
+            width: 200px;
+            background: cadetblue;
+            margin-right: 20%;
+            border: none;
+            color: white;
+            border-radius: 7px;
+        }
+    html,body{
+        width: 100%;
+        height:100%;
+    }
+    .access-type{
+        padding-top: 30%;
+    }
+    .b1 {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-left: 0px;
+        }
+        
+        .b2 {
+            float: left;
+            margin-left: 25px;
+        }
+        
+        .b5 {
+            float: left;
+            border-bottom: #2E8690;
+        }
+        
+        .b3 {
+            color: #000;
+            font-family: "Segoe UI";
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .b3:hover{
+            color: #000;
+        }
+        .b4 {
+            float: left;
+            padding-left: 2px;
+            margin-left: 2px;
+            color: #828282;
+            font-family: "Segoe UI";
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .b4:hover {
+            color: #000;
+        }
+        
+        .rectangle {
+            padding-top: 30px;
+            height: 7px;
+            width: 45px;
+            transform: translate(12%,0);
+            border-bottom: 2px solid #2E8690;
+            transition: transform 1s;
+        } 
+        @media only screen and (min-width:300px) and (max-width: 511px){
+        .webmaster{
+        padding-left: 30%;
+        padding-right: 20%;
+        font-size:15px;
+        }
+        .header{
+            font-size: 15px;
+        }
+        .b3{
+            font-size: 10px;
+        }
+        .b4{
+            font-size: 10px;
+        }
+        .content{
+            height:720px;
+         }
+         .rectangle{
+            padding-top: 20px;
+            border-bottom: 1.5px solid #2E8690;
+            height: 5px;
+            width: 28px;
+            transform: translate(15%,0);
+        }
+        .access-type{
+            padding-top: 35%;
+        }
+       
+    }
+    @media only screen and (min-width: 510px) and (max-width: 620px){
+        .b3{
+            font-size: 15px;
+        }
+        .header{
+            font-size:20px
+        }
+        .webmaster{
+            font-size: 18px;
+        }
+        .rectangle{
+            padding-top: 20px;
+            border-bottom: 1.5px solid #2E8690;
+            height: 5px;
+            width: 37px;
+            transform: translate(15%,0);
+        }
+
+        .b4{
+            font-size: 15px;
+        }
+    }
+    .curser{
+            color: cadetblue;
+            animation: blinkingbox 1s infinite;
+        }
+     @keyframes blinkingbox {
+	     0%{	color: #2E8690;	}
+	    50%{	color: #fff;	}
+        }

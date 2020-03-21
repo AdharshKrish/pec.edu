@@ -1,0 +1,135 @@
+[10-Oct-2019 23:53:50 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[10-Oct-2019 23:53:50 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[10-Oct-2019 23:53:50 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[10-Oct-2019 23:53:50 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[10-Oct-2019 23:54:17 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[10-Oct-2019 23:54:17 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[10-Oct-2019 23:54:17 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[10-Oct-2019 23:54:17 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[10-Oct-2019 23:54:37 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[10-Oct-2019 23:54:37 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[10-Oct-2019 23:54:37 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[10-Oct-2019 23:54:37 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:02:48 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:02:48 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:02:48 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:02:48 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:09:02 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:09:02 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:09:02 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:09:02 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:11:50 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:11:50 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 13
+[11-Oct-2019 00:11:50 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 14
+[11-Oct-2019 00:11:50 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:11:50 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:11:50 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:13:28 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:13:28 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:13:28 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:13:28 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:14:08 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:14:08 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:14:08 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:14:08 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:14:34 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:14:34 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:14:34 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:14:34 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:15:53 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:15:53 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:15:53 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:15:53 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:15:54 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:15:54 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:15:54 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:15:54 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:16:27 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:17:43 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:17:43 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:17:43 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:17:43 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:18:22 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:18:22 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:18:22 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:18:22 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:18:44 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/pec/DB_TRANS/db_con.php on line 2
+[11-Oct-2019 00:18:44 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 18
+[11-Oct-2019 00:18:44 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 21
+[11-Oct-2019 00:18:44 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 23
+[11-Oct-2019 00:23:52 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/check_otp.php on line 25
+[11-Oct-2019 00:25:12 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/check_otp.php on line 25
+[13-Oct-2019 10:41:10 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/check_otp.php on line 25
+[14-Oct-2019 02:41:42 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/login.php on line 13
+[14-Oct-2019 02:43:12 America/Chicago] PHP Notice:  Undefined index: website in /home/pecedu/public_html/cms/test/pec/DB_TRANS/update_profile.php on line 24
+[14-Oct-2019 03:10:02 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/webmaster_addmember.php on line 4
+[14-Oct-2019 03:10:02 America/Chicago] PHP Notice:  Undefined index: name in /home/pecedu/public_html/cms/test/pec/DB_TRANS/webmaster_addmember.php on line 5
+[14-Oct-2019 03:10:02 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/webmaster_addmember.php on line 6
+[14-Oct-2019 04:30:37 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[14-Oct-2019 04:30:37 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[14-Oct-2019 04:30:37 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[19-Oct-2019 05:16:04 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/pecedu/public_html/cms/test/pec/DB_TRANS/webmaster_addmember.php on line 20
+[19-Oct-2019 05:16:46 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[19-Oct-2019 05:16:46 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[19-Oct-2019 05:16:46 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[19-Oct-2019 05:21:27 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[19-Oct-2019 05:21:27 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[19-Oct-2019 05:21:27 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[19-Oct-2019 05:22:08 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[19-Oct-2019 05:22:08 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[19-Oct-2019 05:22:08 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[19-Oct-2019 05:24:08 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[19-Oct-2019 05:24:08 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[19-Oct-2019 05:24:08 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[22-Oct-2019 12:32:39 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[22-Oct-2019 12:32:39 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[22-Oct-2019 12:32:39 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[22-Oct-2019 13:03:59 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[22-Oct-2019 13:03:59 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[22-Oct-2019 13:03:59 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[22-Oct-2019 19:52:22 America/Chicago] PHP Notice:  Undefined index: email in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 4
+[22-Oct-2019 19:52:22 America/Chicago] PHP Notice:  Undefined index: role in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 5
+[22-Oct-2019 19:52:22 America/Chicago] PHP Notice:  Undefined index: dept in /home/pecedu/public_html/cms/test/pec/DB_TRANS/addrole.php on line 6
+[27-Jan-2020 21:53:59 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[27-Jan-2020 21:53:59 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[27-Jan-2020 21:53:59 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[27-Jan-2020 21:53:59 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[27-Jan-2020 21:54:09 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[27-Jan-2020 21:54:09 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[27-Jan-2020 21:54:09 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[27-Jan-2020 21:54:09 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[27-Jan-2020 21:54:17 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[27-Jan-2020 21:54:17 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[27-Jan-2020 21:54:17 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[27-Jan-2020 21:54:17 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[27-Jan-2020 21:54:24 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[27-Jan-2020 21:54:24 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[27-Jan-2020 21:54:24 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[27-Jan-2020 21:54:24 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[28-Jan-2020 03:51:56 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[28-Jan-2020 03:51:56 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[28-Jan-2020 03:51:56 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[28-Jan-2020 03:51:56 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[28-Jan-2020 03:52:43 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[28-Jan-2020 03:52:43 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[28-Jan-2020 03:52:43 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[28-Jan-2020 03:52:43 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[28-Jan-2020 03:53:45 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[28-Jan-2020 03:53:45 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[28-Jan-2020 03:53:45 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[28-Jan-2020 03:53:45 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[28-Jan-2020 05:21:30 America/Chicago] PHP Warning:  mysqli_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/pecedu/public_html/cms/test/cms/DB_TRANS/db_con.php on line 3
+[28-Jan-2020 05:21:30 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 17
+[28-Jan-2020 05:21:30 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 20
+[28-Jan-2020 05:21:30 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/pecedu/public_html/cms/test/cms/DB_TRANS/login.php on line 22
+[28-Jan-2020 11:13:12 America/Chicago] PHP Warning:  unlink(../content_upload/0): No such file or directory in /home/pecedu/public_html/cms/test/cms/DB_TRANS/delete_memo.php on line 19
+[29-Jan-2020 04:31:01 America/Chicago] PHP Warning:  unlink(../content_upload/6087334i): No such file or directory in /home/pecedu/public_html/cms/test/cms/DB_TRANS/delete_memo.php on line 19
+[29-Jan-2020 04:31:01 America/Chicago] PHP Warning:  unlink(../content_upload/6087374i): No such file or directory in /home/pecedu/public_html/cms/test/cms/DB_TRANS/delete_memo.php on line 19
+[29-Jan-2020 09:11:17 America/Chicago] PHP Warning:  unlink(../content_upload/93119.jpg): No such file or directory in /home/pecedu/public_html/cms/test/cms/DB_TRANS/delete_memo.php on line 19

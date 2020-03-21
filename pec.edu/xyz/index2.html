@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Administration</title>  <!-- ENTER PAGE TITLE -->
+    <title>Skeleton 2</title>  <!-- ENTER PAGE TITLE -->
     <link rel="icon" href="../img/icon.png">
     <link rel="manifest" href="../manifest.json" />
     <link rel="apple-touch-icon" href="../img/icons/150px.png" />
@@ -39,6 +39,10 @@
 <!--custom imports ends-->
     <style>
         main{
+            opacity: 0; 
+            transition: opacity 3s;
+        }
+        floatbtn{
             opacity: 0; 
             transition: opacity 3s;
         }
@@ -101,44 +105,7 @@
         }
 
         /*ENTER INLINE CONTENT CSS*/
-        .card{
-    border: 2px solid #2e8690;
-    border-radius: 15px;
-    background: linear-gradient(60deg, #2e869020 0%, white 100%);
-    margin-bottom: 15px;
-}
-.border{
-    height: 2px;
-    background-color: #2e8690;
-}
-.ad_ov{
-    margin-left: 2%;
-}
-th{
-    color: #0e8690;
-}
-.photo{
- /* align-self: center; */
- margin-left:25%;
- width:50% ;height:10%;
- margin-top: 10%;
-}
-.info{
- align-self: center;
- width:70% ;height:10%;
- margin-top: 5%;
- margin-bottom:7%    
-}
-.name{
-    margin-top: 3px;
-    font-weight: bold;
-    text-align: center;
-    font-size:x-large;
-    
-}
-#read_more,#read_more1,#read_more2,#read_more3{
-    cursor: pointer;
-}
+        
         /*content css ends*/
     </style>
     <script>
@@ -176,8 +143,8 @@ th{
                     </div>
                 </a>
                 <div class="mob-btn">
-                    <img alt="search" src="../img/search.svg"data-toggle="collapse" href="#collapseSearch" onclick="window.scrollTo(0,0);focusS()" style="margin-bottom: 10px" alt="search">
-                    <div data-toggle="collapse" href="#collapseMenu" class="menu-icon" onclick="window.scrollTo(0,0);change()">
+                    <img src="../img/search.svg" data-toggle="collapse" href="#collapseSearch" onclick="focusS()" style="margin-bottom: 10px" alt="search">
+                    <div data-toggle="collapse" class="menu-icon" href="#collapseMenu" onclick="change()">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
@@ -186,6 +153,7 @@ th{
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
+    </header>
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -225,7 +193,6 @@ th{
             </div>
         </div>
     </div>
-    </header>
     <main>
         <crumbs id="pec-crumb" class="pec-crumb"></crumbs>
         
@@ -233,260 +200,8 @@ th{
 
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
-
-        <div class="container-fluid">
-            <hr class="border">
-            <h2>Administration overview</h2>
-            <hr class="border">
-            <div class="ad_ov">
-            <div class="row">
-                <table>
-                    <th>CHAIRMAN</th>
-                    <tr>
-                        <td style="color: #a52a2a;font-weight: bold;">Shri. A. ANBARASU, I.A.S</td>
-                    </tr>
-                    <tr>
-                        <td>Secretary (Education),Govt. of Puducherry</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <th>MEMBER SECRETARY</th>
-                    <tr>
-                        <td style="color: #a52a2a;font-weight: bold;">Shri. Yasam Lakshmi Narayana Reddy</td>
-                    </tr>
-                    <tr>
-                        <td>Director, DHTE, Puducherry</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <th>PRINCIPAL</th>
-                    <tr>
-                        <td style="color: #a52a2a;font-weight: bold;">Dr.S.KOTHANDARAMAN</td>
-                    </tr>
-                    <tr>
-                        <td>B.E., M.E., Ph.D., F.I.E., MISTE., MICI, MSAEST, MACI,</td>
-                    </tr>
-                    <tr>
-                        <td>Professor in Civil Engg.,</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td>Phone/Fax</td><td>: +91-413-2655214</td>
-                    </tr>
-                    <tr>
-                        <td>Fax</td><td>: +91-413-2655101</td>
-                    </tr>
-                    <tr>
-                        <td>E-mail</td><td>: principal@pec.edu</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <th>REGISTRAR</th>
-                    <tr>
-                        <td style="color: #a52a2a;font-weight: bold;">Dr.K.VIVEKANANDAN</td>
-                    </tr>
-                    <tr>
-                        <td>B.E., M.Tech., Ph.D.,</td>
-                    </tr>
-                    <tr>
-                        <td>Professor in CSE</td>
-                    </tr>
-                </table>
-            </div>
-            <br> 
-            <!-- <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Assistant Registrar (Acadamic)</td>
-                    </tr>
-                    <tr>
-                        <td>Vacant</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Assistant Registrar (Establishment)</td>
-                    </tr>
-                    <tr>
-                        <td>Vacant</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Assistant Registrar (Finance) I/C</td>
-                    </tr>
-                    <tr>
-                        <td><span style="font-weight: bold;">Mr.S.Giridharan</span>, M.Com.,PGDCA</td>
-                    </tr>
-                </table>
-            </div>
-            <br> -->
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Librarian I/C</td>
-                    </tr>
-                    <tr>
-                        <td><span style="font-weight: bold;">Mr.V.Desingu</span>, M.A.,M.Phill.,MLIS,DCPA,</td>
-                    </tr>
-                    <tr>
-                        <td>Director of Physical Education I/C</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Executive Engineer</td>
-                    </tr>
-                    <tr>
-                        <td><span style="font-weight: bold;">Dr.G.Vijayakumar</span>, M.Tech., Ph.D.</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Estate officer</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Assistant Engineer (Electrical)</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Horticulture Officer</td>
-                    </tr>
-                    <tr>
-                        <td><span style="font-weight: bold;">Mr.V.Ravitchandrane</span>, B.Sc.(Agri), M.Sc.(Hort)</td>
-                    </tr>
-                </table>
-            </div>
-            <br>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td style="color: #0e8690;">Warden, PEC Hostel</td>
-                    </tr>
-                    <tr>
-                        <td><span style="font-weight: bold;">DR.P.Mathiazhagan</span>, M.E., Ph.D.,</td>
-                    </tr>
-                    <tr>
-                        <td>Professor in Mechanical Engg.</td>
-                    </tr>
-                </table>
-            </div>
-            <br> 
-            </div>  
-        <hr class="border">
-        <h3>Help cards</h3>
-        <hr class="border">
-        <div class="row" style="margin-top: 20px;">
-          <div class="col-lg-3 col-sm-6" style="margin-top: 5px;">
-            <div class="card" style="padding: 2px;background-color: #ebf3f4;border: 2px solid #2e8690;border-radius: 15px;">
-                <!--  -->
-                 
-                <a class="card-image" data-image-full="img/Vivekanandan.jpg">
-                    <img src="" class="photo" style="background-color: rgb(255, 255, 255,0.4);">
-                </a>
-
-                
-                
-                
-                
-                <!--  -->
-                <div class="name">Dr.K.Vivekanandan<br><span style="font-size: large;font-weight: normal;">Registrar</span></div>
-                <div class="info">                    
-                    <span id="more4">
-                    <h6><span style="color: grey;">Contact&nbsp</span>&nbsp9443777795</h6>
-                    <h6><span style="color: grey;">Email&nbsp</span>&nbspregistrar@pec.edu</h6>
-                    <h6 style="color: grey;">Post description</h6><h6>All administration responsibilities of the college</h6></span>
-                    <span onclick="func(4)" style="color: blue;margin-left: 32%;" id="read_more3">Read more</span>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-sm-6" style="margin-top: 5px;">
-          <div class="card" style="padding: 2px;background-color: #ebf3f4;border: 2px solid #2e8690;border-radius: 15px;">
             
-              <a class="card-image" data-image-full="img/Gridharan.jpg">
-                <img src="" class="photo" style="background-color: rgb(255, 255, 255,0.4);">
-              </a>
-              <div class="name">S.Gridharan<br><span style="font-size: large;font-weight: normal;">Assistant Registrar (Finance)</span></div>
-              <div class="info">
-                  <span id="more3">
-                    <h6><span style="color: grey;">Contact&nbsp</span>&nbsp9443425633</h6>
-                    <h6><span style="color: grey;">Email&nbsp</span>&nbsparfinance@pec.edu</h6>
-                    <h6 style="color: grey;">Post description</h6><h6>Finance related matters (bill process,students fees,salary etc.)</h6></span>
-                    <span onclick="func(3)" style="color: blue;margin-left: 32%;" id="read_more2">Read more</span>
-                </div>
-          </div>
-      </div>
-        <div class="col-lg-3 col-sm-6" style="margin-top: 5px;">
-          <div class="card" style="padding: 2px;background-color: #ebf3f4;border: 2px solid #2e8690;border-radius: 15px;">
-            <a class="card-image" data-image-full="img/Sukanti_Dasse.jpg">
-                <img src="" class="photo" style="background-color: rgb(255, 255, 255,0.4);">
-              </a>
-              
-              <div class="name">Sukanthi Dasse<br><span style="font-size: large;font-weight: normal;">Assistant Registrar (Establishment)</span></div>
-              <div class="info">
-                  <span id="more2">
-                    <h6><span style="color: grey;">Contact&nbsp</span>&nbsp9443425633</h6>
-                    <h6><span style="color: grey;">Email&nbsp</span>&nbsparfinance@pec.edu</h6>
-                    <h6 style="color: grey;">Post description</h6><h6>Admission of students, maintenance of students permanent details etc.<br>
-                      Collection of fee, issue of Certificates,tc,release of CD conducted by board meetings.</h6></span>
-                    <span onclick="func(2)" style="color: blue;margin-left: 32%;" id="read_more1">Read more</span>
-              </div>
-          </div>
-      </div>
-  
-          <div class="col-lg-3 col-sm-6">
-            <div class="card" style="padding: 2px;margin-top: 5px;background-color: #ebf3f4;border: 2px solid #2e8690;border-radius: 15px;">
-                <a class="card-image" data-image-full="img/Kalaisalvy.jpg">
-                    <img src="" class="photo" style="background-color: rgb(255, 255, 255,0.4);">
-                  </a>
-                <div class="name">J.Kalaiselvi<br><span style="font-size: large;font-weight: normal;">Assistant Registrar (Acadamics)</span></div>
-                <div class="info">
-                    <span id="more1">
-                      <h6><span style="color: grey;">Contact&nbsp</span>&nbsp9443425633</h6>
-                      <h6><span style="color: grey;">Email&nbsp</span>&nbsparfinance@pec.edu</h6>
-                      <h6 style="color: grey;">Post description</h6><h6>All services related to teaching and non-teaching staffs of PEC</h6></span>
-                      <span style="color: blue;margin-left: 32%;" onclick="func(1)" id="read_more">Read more</span>
-                </div>
-            </div>
-        </div>  
-</div>
-<hr class="border">
-</div>
-</body>
-<br><br>
+
         <!--main content ends-->
     </main>
     <footer>
@@ -580,82 +295,15 @@ th{
         crumbs.forEach((crumb,i)=>{
             a+='/'+crumb;
             if(i<crumbs.length-1)
-                document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
+                if(crumbs[i+1]!="")
+                    document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
+                else
+                    document.getElementById('pec-crumb').innerHTML+=crumb.split('.')[0];
             else
                 document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
             });
-            var b;
-  more1.style.display="none";
-  more2.style.display="none";
-  more3.style.display="none";
-  more4.style.display="none";
-  function func(b)
-  {
-    if(b==1){
-    if(read_more.innerHTML=="Read more")
-    {
-      more1.style.display="inline";
-      read_more.innerHTML="Collapse";
-      
-    }
-    else{
-      more1.style.display="none";
-      read_more.innerHTML="Read more";
-    }}
-    if(b==2){
-    if(read_more1.innerHTML=="Read more")
-    {
-      more2.style.display="inline";
-      read_more1.innerHTML="Collapse";
-      
-    }
-    else{
-      more2.style.display="none";
-      read_more1.innerHTML="Read more";
-    }}
-    if(b==3){
-    if(read_more2.innerHTML=="Read more")
-    {
-      more3.style.display="inline";
-      read_more2.innerHTML="Collapse";
-      
-    }
-    else{
-      more3.style.display="none";
-      read_more2.innerHTML="Read more";
-    }}
-    if(b==4){
-    if(read_more3.innerHTML=="Read more")
-    {
-      more4.style.display="inline";
-      read_more3.innerHTML="Collapse";
-      
-    }
-    else{
-      more4.style.display="none";
-      read_more3.innerHTML="Read more";
-    }}
-  }    
-//Custom script here
 
-window.addEventListener('load', function() {
-    
-	setTimeout(lazyLoad, 1000);
-	
-});
-
-function lazyLoad() {
-	var card_images = document.querySelectorAll('.card-image');
-	card_images.forEach(function(card_image) {
-		var image_url = card_image.getAttribute('data-image-full');
-		var content_image = card_image.querySelector('img');
-		content_image.src = image_url;
-		
-	});
-	
-}
-    //end of custom script   
-</script>
+    </script>
 
 </body>
 
