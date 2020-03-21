@@ -638,22 +638,34 @@ th{
   }    
 //Custom script here
 
-window.addEventListener('load', function() {
-    
-	setTimeout(lazyLoad, 1000);
-	
-});
+function lazyLoad(target) {
 
-function lazyLoad() {
-	var card_images = document.querySelectorAll('.card-image');
-	card_images.forEach(function(card_image) {
-		var image_url = card_image.getAttribute('data-image-full');
-		var content_image = card_image.querySelector('img');
-		content_image.src = image_url;
-		
-	});
-	
+    var image_url = target.getAttribute('data-image-full')
+    var content_image = target.querySelector('img')
+    content_image.src = image_url
 }
+
+const cards = document.querySelectorAll('.card-image')
+const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px 300px 0px"
+}
+
+const appearOnScroll = new IntersectionObserver((entries,appearOnScroll)=>{
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                return
+            }
+            lazyLoad(entry.target)
+            appearOnScroll.unobserve(entry.target)
+        })
+    },
+appearOptions)
+
+cards.forEach(card => {
+    appearOnScroll.observe(card)
+})
+	
     //end of custom script   
 </script>
 
