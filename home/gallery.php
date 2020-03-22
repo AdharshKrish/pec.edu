@@ -130,8 +130,12 @@ if($res=mysqli_query($db_con,$query))
                     margin: 0;
                     text-align: left;
                 }
+                .img-fluid{
+                    border: 5px solid transparent;
+                }
                 .img-fluid:hover{
                     cursor: pointer;
+                    border: 5px solid #2e8690;
                 }
 
         /*content css ends*/
