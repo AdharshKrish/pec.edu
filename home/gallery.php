@@ -6,16 +6,16 @@ if(isset($_GET['cat']))
     $cat=$_GET['cat'];
     $count=$_GET['count'];
   
-$final=$count+24;
-$prev=$count-24;
+$final=$count+12;
+$prev=$count-12;
 $query="SELECT * FROM `gallery` WHERE department='$cat' LIMIT $count,$final ";
 }
 else
 {
 
 $count=0;
-$final=$count+24;
-$prev=$count-24;
+$final=$count+12;
+$prev=$count-12;
 $query="SELECT * FROM `gallery` LIMIT  $count,$final ";
 }
 if($res=mysqli_query($db_con,$query))
