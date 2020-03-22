@@ -1,33 +1,33 @@
 <?php
-session_start();
-if(isset($_SESSION['loggedin_status']))
-{
-$logged=$_SESSION['loggedin_status'];
-if($logged=900)
-{
-    if($_SESSION['role']=="webmaster")
-    {
-        $error=0;
-        if(isset($_GET['message']))
-        {
-        $message=$_GET['message'];
-        $error=1;
-        }
-    }
-    else {
-       header("Location: ../index.php");
-    }
-}
-else {
-    header("Location: http://localhost/pec/error/error404.html");
-    exit();
-}
-}
+// session_start();
+// if(isset($_SESSION['loggedin_status']))
+// {
+// $logged=$_SESSION['loggedin_status'];
+// if($logged=900)
+// {
+//     if($_SESSION['role']=="webmaster")
+//     {
+//         $error=0;
+//         if(isset($_GET['message']))
+//         {
+//         $message=$_GET['message'];
+//         $error=1;
+//         }
+//     }
+//     else {
+//        header("Location: ../index.php");
+//     }
+// }
+// else {
+//     header("Location: http://localhost/pec/error/error404.html");
+//     exit();
+// }
+// }
 
-else {
-    header("Location: http://localhost/pec/error/error404.html");
-    exit();
-}
+// else {
+//     header("Location: http://localhost/pec/error/error404.html");
+//     exit();
+// }
 ?>
 <html>
 
@@ -38,10 +38,34 @@ else {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-<script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
-<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script defer src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+<script defer src="../bootstrap/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../css/master.css">
 <link rel="stylesheet" href="../css/header.css">
+<style>
+    .role-panel-body{
+        background-color: #EBF2F3;
+        overflow: hidden;
+        height:450px;
+    }
+    .h-tab{
+        margin-bottom:50px;
+        text-align:center;
+        background:#2e869030;
+        font-size:20px;
+        font-weight:bold;
+    }
+    .h-tab tab{
+        padding:10px 0;
+    }
+    .h-tab tab:nth-child(1){
+        border-right:2px solid #000;
+        background:#2e8690aa;
+    }
+    #c{
+        display:none;
+    }
+</style>
 </head>
 
 <body>
@@ -65,14 +89,17 @@ else {
                 <div class="col-md-8 ">
                     <div class="panel panel-default"> 
                     <?php
-                if($error==1)
-                 echo "  <div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> ".$message."
-               </div>";
+            //     if($error==1)
+            //      echo "<div class='alert alert-success'>
+            //      <strong>SUCCESSFULL</strong> ".$message."
+            //    </div>";
                 ?>
-                        <div class="panel-body">
-                                <form class="form3" method="POST" action="../DB_TRANS/addrole.php">                 
-                             
+                        <div class="role-panel-body">
+                            <div class="row h-tab">
+                                <tab class="col-xs-6" onclick="switchTab(this)" t="d">Departmental</tab>
+                                <tab class="col-xs-6" onclick="switchTab(this)" t="c">4C's</tab>
+                            </div>
+                                <form class="form3" id="d" method="POST" action="../DB_TRANS/addrole.php">            
                                     <div class="form-group">
                                         <label for="dept">Department</label>
                                         <select name="dept" class="form-control">
@@ -100,17 +127,75 @@ else {
 
                                     <div class="form-group">
                                         <label for="email">Role</label>
-                                        <select name="role" class="form-control" onchange='checkvalue(this.value)'>
+                                        <select name="role" class="form-control">
                                             <option value="none" selected="true" disabled>Select</option>
                                             <option value="HOD">HOD</option>
                                             <option value="WEBHANDLER">Webhandler</option>
                                             <option value="WEBMASTER">Webmaster</option>
-                                            <option value="other">4C</option>
                                         </select>
                                     </div>
-                                    <input type="text" name="4C" id="4c" class="form-control" style='display:none' placeholder="Enter Cell/Club/Committee/Chapter Title">
+                                    <!-- <input type="text" name="4C" id="4c" class="form-control" style='display:none' placeholder="Enter Cell/Club/Committee/Chapter Title"> -->                        
+
                                     <br>
                                     <input type="submit" value="GRANT ACCESS" class="btn btn-primary btn-large grant-access">
+                                </form>
+                                <form class="form3" id="c" method="POST" action="solely for this section">
+                                    <div class="form-group">
+                                        <label for="title">Title</label>
+                                        <select name="4C" class="form-control">
+                                            <option value="none" selected="true" disabled>Cell/Club/Committee/Chapter title</option>
+                                        <!-- Committee -->
+                                            <option value="Add New"> Add New</option> 
+                                            <option value="Alumni Association"> Alumni Association</option> 
+                                            <option value="Examination Wing"> Examination Wing</option> 
+                                            <option value="Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
+                                            <option value="National Cadet Corps (NCC)"> National Cadet Corps (NCC)</option> 
+                                            <option value="National Service Scheme (NSS)"> National Service Scheme (NSS)</option> 
+                                            <option value="Students’ Council"> Students’ Council</option> 
+                                            <option value="Students’ Disciplinary Committee"> Students’ Disciplinary Committee</option> 
+                                            <option value="NIRF"> NIRF</option> 
+                                            <option value="PMKVY"> PMKVY</option> 
+                                            <option value="Skill Development Centre"> Skill Development Centre</option> 
+                                            <option value="NBA"> NBA</option> 
+                                            <option value="Jal Sakthi Abhiyan"> Jal Sakthi Abhiyan</option> 
+                                            <option value="Hostel"> Hostel</option> 
+                                            <option value="Campus Networking"> Campus Networking</option> 
+                                            <option value="IIS"> IIS</option> 
+                                            <option value="Building Division"> Building Division</option> 
+                                            <option value="Press and Publicity"> Press and Publicity</option> 
+                                            <option value="NeiLit"> NeiLit</option> 
+                                            <option value="PEC Newsletter"> PEC Newsletter</option> 
+                                            <option value="Library"> Library</option> 
+                                            <option value="PRERANA (SC/ST)"> PRERANA (SC/ST)</option> 
+                                            <option value="Center for Continuing Education (CCE)"> Center for Continuing Education (CCE)</option> 
+                                        <!-- Cells -->
+                                            <option value="Counselling and Career Guidance Cell (CCGC)"> Counselling and Career Guidance Cell (CCGC)</option> 
+                                            <option value="Grievance Redressal Cell"> Grievance Redressal Cell</option> 
+                                            <option value="Innovation and Entrepreneurship Development Cell (IEDC)"> Innovation and Entrepreneurship Development Cell (IEDC)</option> 
+                                            <option value="Internal Quality Assurance Cell (IQAC)"> Internal Quality Assurance Cell (IQAC)</option> 
+                                            <option value="IP Rights and Patenting Cell"> IP Rights and Patenting Cell</option> 
+                                            <option value="SC/ST Cell"> SC/ST Cell</option> 
+                                            <option value="Women’s Cell"> Women’s Cell</option> 
+                                        <!-- Clubs -->
+                                            <option value="Cultural Club"> Cultural Club</option> 
+                                            <option value="Design Club"> Design Club</option> 
+                                            <option value="Google DSC"> Google DSC</option> 
+                                            <option value="Health, Hygiene and Environmental Club (H2EC)"> Health, Hygiene and Environmental Club (H2EC)</option> 
+                                            <option value="Literary Club"> Literary Club</option> 
+                                            <option value="Photography Club"> Photography Club</option> 
+                                            <option value="Rotaract Club"> Rotaract Club</option> 
+                                            <option value="Thamizh Mandram"> Thamizh Mandram</option> 
+                                        <!-- Chapters -->
+                                            <option value="Swayam/NPTEL – Students"> Swayam/NPTEL – Students</option> 
+                                            <option value="Quality Enhancement in Engineering Education (QEEE)"> Quality Enhancement in Engineering Education (QEEE)</option> 
+                                            <option value="Swayam/NPTEL – Staffs"> Swayam/NPTEL – Staffs</option> 
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Username</label>
+                                        <input type="text" name="email" placeholder="Email" class="form-control">
+                                    </div>
+                                    <input type="submit" value="ADD" class="btn btn-primary btn-large grant-access">
                                 </form>
                             </div>
                     </div>
@@ -121,12 +206,19 @@ else {
     <footer>
     </footer>
     <script>
-        function checkvalue(val)
-        {
-            if(val==="other")
-            document.getElementById('4c').style.display='block';
-            else
-            document.getElementById('4c').style.display='none'; 
+        function switchTab(elt){
+            document.querySelectorAll('tab').forEach((t)=>{
+                t.style.backgroundColor="#2e869030"
+            })
+            elt.style.backgroundColor="#2e8690aa"
+            if(elt.getAttribute('t')=='c'){
+                document.querySelector('#c').style.display="block"
+                document.querySelector('#d').style.display="none"
+            }
+            else{
+                document.querySelector('#c').style.display="none"
+                document.querySelector('#d').style.display="block"
+            }
         }
     </script>
 </body>
