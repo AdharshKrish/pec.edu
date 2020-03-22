@@ -425,10 +425,10 @@
                 else
                     document.getElementById('pec-crumb').innerHTML+=crumb.split('.')[0];
             else
-                document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
+                document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0];
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
+        window.onload = function() {
             const images = document.querySelectorAll('[pec-img]');
             images.forEach((image)=>{
                 $.ajax({
@@ -445,7 +445,7 @@
                     }
                 })
             })
-        })
+        }
 
     </script>
 

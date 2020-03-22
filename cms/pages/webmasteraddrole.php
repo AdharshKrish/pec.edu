@@ -3,7 +3,7 @@ session_start();
 if(isset($_SESSION['loggedin_status']))
 {
 $logged=$_SESSION['loggedin_status'];
-if($logged=900)
+if($logged==900)
 {
     if($_SESSION['role']=="webmaster")
     {
@@ -138,10 +138,10 @@ else {
                                     <br>
                                     <input type="submit" value="GRANT ACCESS" class="btn btn-primary btn-large grant-access">
                                 </form>
-                                <form class="form3" id="c" method="POST" action="solely for this section">
+                                <form class="form3" id="c" method="POST" action="../DB_TRANS/ccc_addrole.php">
                                     <div class="form-group">
                                         <label for="title">Title</label>
-                                        <select name="4C" class="form-control" onchange='Checknew4c(this.value);'>
+                                        <select name="name" class="form-control" onchange='Checknew4c(this.value);'>
                                             <option value="none" selected="true" disabled>Cell/Club/Committee/Chapter title</option>
                                         <!-- Committee -->
                                             <option value="Add New"> Add New</option> 
@@ -190,7 +190,7 @@ else {
                                             <option value="Swayam/NPTEL – Staffs"> Swayam/NPTEL – Staffs</option> 
                                         </select>
                                     </div>
-                                    <input type="text" name="4Cnew" id="4Cnew" class="form-control" placeholder="Enter Title" style='display:none;'/>
+                                    <input type="text" name="title" id="4Cnew" class="form-control" placeholder="Enter Title" style='display:none;'/>
                                     <br>
                                     <div class="form-group">
                                         <label for="name">Username</label>
