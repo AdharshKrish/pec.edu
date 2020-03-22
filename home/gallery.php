@@ -1,16 +1,21 @@
 <?php
 include('../cms\DB_TRANS/db_con.php');
+$count=$_GET['count'];
+$final=$count+24;
+$prev=$count-24;
 if(isset($_GET['cat']))
 {
     $cat=$_GET['cat'];
-$query="SELECT * FROM `gallery` WHERE department='$cat' LIMIT 0,24 ";
+    $count=$_GET['count'];
+$query="SELECT * FROM `gallery` WHERE department='$cat' LIMIT $count,$final ";
 }
 else
-$query="SELECT * FROM `gallery` LIMIT 0,24 ";
+$query="SELECT * FROM `gallery` LIMIT  $count,$final ";
+
 if($res=mysqli_query($db_con,$query))
 {
  
-    
+    $row=mysqli_num_rows($res);
 }
 
 ?>
@@ -47,7 +52,28 @@ if($res=mysqli_query($db_con,$query))
     <script defer src="../js/menu.js"></script>
     <script async src="../js/pace.js"></script>
 
+
+    
+
     <style>
+    .pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
         main{
             opacity: 0; 
             transition: opacity 3s;
@@ -260,62 +286,62 @@ if($res=mysqli_query($db_con,$query))
                             <div class="nested-footer-2 " style="max-width:90%;">
                                 <div class="row row-footer-21">
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="all" href="gallery.php">
+                                        <a alt="all" href="gallery.php?count=0">
                                             <p class="link-footer-2">All</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="campus" href="gallery.php?cat=campus">
+                                        <a alt="campus" href="gallery.php?cat=campus&count=0">
                                             <p class="link-footer-2">Campus</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="others" href="gallery.php?cat=others">
+                                        <a alt="others" href="gallery.php?cat=others&count=0">
                                             <p class="link-footer-2">Others</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="cse" href="gallery.php?cat=cse">
+                                        <a alt="cse" href="gallery.php?cat=cse&count=0">
                                             <p class="link-footer-2">CSE</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="eee" href="gallery.php?cat=eee">
+                                        <a alt="eee" href="gallery.php?cat=eeecount=0">
                                             <p class="link-footer-2">EEE</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="ece" href="gallery.php?cat=ece">
+                                        <a alt="ece" href="gallery.php?cat=ece&count=0">
                                             <p class="link-footer-2">ECE</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="chem" href="gallery.php?cat=che">
+                                        <a alt="chem" href="gallery.php?cat=che&count=0">
                                             <p class="link-footer-2">Chem</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="it" href="gallery.php?cat=it">
+                                        <a alt="it" href="gallery.php?cat=itcount=0">
                                             <p class="link-footer-2">IT</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="eie" href="gallery.php?cat=eie">
+                                        <a alt="eie" href="gallery.php?cat=eie&count=0">
                                             <p class="link-footer-2">EIE</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="civil" href="gallery.php?cat=civil">
+                                        <a alt="civil" href="gallery.php?cat=civil&count=0">
                                             <p class="link-footer-2">Civil</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="mech" href="gallery.php?cat=mech">
+                                        <a alt="mech" href="gallery.php?cat=mech&count=0">
                                             <p class="link-footer-2">Mech</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="hss" href="gallery.php?cat=hs">
+                                        <a alt="hss" href="gallery.php?cat=hs&count=0">
                                             <p class="link-footer-2">HSS & Sc</p>
                                         </a>
                                     </div>
@@ -345,7 +371,17 @@ if($res=mysqli_query($db_con,$query))
                 </div>';  
             }
                 ?>
-            </div>     
+            </div> 
+            
+            <div class="pagination">
+<?php
+if($count!=0)
+  echo'<a href="gallery.php?cat='.$cat.'&count='.$prev.'">PREVIOUS</a>';
+if($row>24)
+  echo'<a href="gallery.php?cat='.$cat.'&count='.$final.'">NEXT</a>';
+  ?>
+ 
+</div>
         </div>   
         <!--main content ends-->
     </main>
