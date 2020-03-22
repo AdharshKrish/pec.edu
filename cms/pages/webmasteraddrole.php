@@ -1,33 +1,33 @@
 <?php
-// session_start();
-// if(isset($_SESSION['loggedin_status']))
-// {
-// $logged=$_SESSION['loggedin_status'];
-// if($logged=900)
-// {
-//     if($_SESSION['role']=="webmaster")
-//     {
-//         $error=0;
-//         if(isset($_GET['message']))
-//         {
-//         $message=$_GET['message'];
-//         $error=1;
-//         }
-//     }
-//     else {
-//        header("Location: ../index.php");
-//     }
-// }
-// else {
-//     header("Location: http://localhost/pec/error/error404.html");
-//     exit();
-// }
-// }
+session_start();
+if(isset($_SESSION['loggedin_status']))
+{
+$logged=$_SESSION['loggedin_status'];
+if($logged=900)
+{
+    if($_SESSION['role']=="webmaster")
+    {
+        $error=0;
+        if(isset($_GET['message']))
+        {
+        $message=$_GET['message'];
+        $error=1;
+        }
+    }
+    else {
+       header("Location: ../index.php");
+    }
+}
+else {
+    header("Location: http://localhost/pec/error/error404.html");
+    exit();
+}
+}
 
-// else {
-//     header("Location: http://localhost/pec/error/error404.html");
-//     exit();
-// }
+else {
+    header("Location: http://localhost/pec/error/error404.html");
+    exit();
+}
 ?>
 <html>
 
@@ -89,10 +89,10 @@
                 <div class="col-md-8 ">
                     <div class="panel panel-default"> 
                     <?php
-            //     if($error==1)
-            //      echo "<div class='alert alert-success'>
-            //      <strong>SUCCESSFULL</strong> ".$message."
-            //    </div>";
+                if($error==1)
+                 echo "<div class='alert alert-success'>
+                 <strong>SUCCESSFULL</strong> ".$message."
+               </div>";
                 ?>
                         <div class="role-panel-body">
                             <div class="row h-tab">
@@ -134,7 +134,6 @@
                                             <option value="WEBMASTER">Webmaster</option>
                                         </select>
                                     </div>
-                                    <!-- <input type="text" name="4C" id="4c" class="form-control" style='display:none' placeholder="Enter Cell/Club/Committee/Chapter Title"> -->                        
 
                                     <br>
                                     <input type="submit" value="GRANT ACCESS" class="btn btn-primary btn-large grant-access">
@@ -191,10 +190,12 @@
                                             <option value="Swayam/NPTEL – Staffs"> Swayam/NPTEL – Staffs</option> 
                                         </select>
                                     </div>
+                                    <br>
                                     <div class="form-group">
                                         <label for="name">Username</label>
                                         <input type="text" name="email" placeholder="Email" class="form-control">
                                     </div>
+                                    <br>
                                     <input type="submit" value="ADD" class="btn btn-primary btn-large grant-access">
                                 </form>
                             </div>
