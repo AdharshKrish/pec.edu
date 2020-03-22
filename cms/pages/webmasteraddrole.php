@@ -95,9 +95,9 @@ else {
                </div>";
                 ?>
                         <div class="role-panel-body">
-                            <div class="row h-tab">
-                                <tab class="col-xs-6" onclick="switchTab(this)" t="d">Departmental</tab>
-                                <tab class="col-xs-6" onclick="switchTab(this)" t="c">4C's</tab>
+                            <div class="row h-tab" style="cursor: pointer">
+                                <tab class="col-xs-6" onclick="switchTab(this)" t="d">General Roles</tab>
+                                <tab class="col-xs-6" onclick="switchTab(this)" t="c">4Cs</tab>
                             </div>
                                 <form class="form3" id="d" method="POST" action="../DB_TRANS/addrole.php">            
                                     <div class="form-group">
@@ -141,7 +141,7 @@ else {
                                 <form class="form3" id="c" method="POST" action="solely for this section">
                                     <div class="form-group">
                                         <label for="title">Title</label>
-                                        <select name="4C" class="form-control">
+                                        <select name="4C" class="form-control" onchange='Checknew4c(this.value);'>
                                             <option value="none" selected="true" disabled>Cell/Club/Committee/Chapter title</option>
                                         <!-- Committee -->
                                             <option value="Add New"> Add New</option> 
@@ -190,6 +190,7 @@ else {
                                             <option value="Swayam/NPTEL – Staffs"> Swayam/NPTEL – Staffs</option> 
                                         </select>
                                     </div>
+                                    <input type="text" name="4Cnew" id="4Cnew" class="form-control" placeholder="Enter Title" style='display:none;'/>
                                     <br>
                                     <div class="form-group">
                                         <label for="name">Username</label>
@@ -220,6 +221,13 @@ else {
                 document.querySelector('#c').style.display="none"
                 document.querySelector('#d').style.display="block"
             }
+        }
+        function Checknew4c(val){
+            var element=document.getElementById('4Cnew');
+            if(val=='Add New'||val=='others')
+            element.style.display='block';
+            else  
+            element.style.display='none';
         }
     </script>
 </body>
