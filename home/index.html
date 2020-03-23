@@ -141,7 +141,7 @@
             margin:10px;
             font-weight:bold;
             border:3px solid transparent;
-            transition:.5s ;
+            transition: padding .5s,background-color .5s,color .5s,border .5s;
         }
         .qlinks:after{
             content:'......';
@@ -150,13 +150,12 @@
             float:right;
             font-weight: bold;
             margin:0 10px 0 0;
-            transition:.2s;
+            transition: margin .2s;
+            cursor: pointer;
         }
         .qlinks:hover{
-            cursor: pointer;
             padding:8px 0px 8px 40px;
             border:3px solid #2e8690;
-            border-radius:3px;
             background-color:#fff;
             color:#2e8690;
         }
@@ -214,7 +213,7 @@
         }
         .text-center{
             padding:0 0 20px 0;
-            transition: 1s;
+            transition: padding 1s;
         }
         .suthum-box:hover .text-center{
             padding:20px 0 0 0;
@@ -223,7 +222,7 @@
             background-color: #ffffff50;
             font-weight: 700;
             padding-left:20px;
-            transition:1s;
+            transition: background-color 1s,padding .6s;
         }
         .btn-clr:hover::before {
             border-top-color: #2e8690;
@@ -319,7 +318,7 @@
             margin-right:30px;
             padding-bottom:7px;
             font-weight: 500;
-            transition:.3s;
+            transition: border-bottom .3s;
         }
         .nt .active{
             border-bottom:3.5px solid #ebdd22;
@@ -337,7 +336,7 @@
         #note-container .cad{
             margin-right:50px;
             cursor: pointer;
-            transition:.3s;
+            transition: box-shadow .3s, transform .3s;
             border:1px solid transparent;
             border-radius: 10px;
             background-color:#fff;
@@ -389,6 +388,7 @@
         }
         .departments{
             padding:50px 20px;
+            /* background-color: #fff; */
         }
         .departments h1{
             border-top:1px solid #707070;
@@ -402,7 +402,7 @@
             line-height:1.2;
             margin-top:17px;
             padding-bottom:5px;
-            transition-duration: .6s;
+            transition: color .6s;
             cursor: pointer;
         }
         .departments .dept::before{
@@ -456,6 +456,18 @@
         .from-left.appear, .from-right.appear{
             opacity: 1;
             transform:translateX(0);
+        }
+
+        .parallax-bg{
+            position: relative;
+        }
+        #parallax{
+            position: absolute;
+            top:75vh;
+            left:0;
+            width:100%;
+            z-index: -1;
+            height:auto;
         }
 
         @media screen and (max-width:993px){
@@ -608,6 +620,11 @@
                 <div class="modal" id="full-notice" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true"></div>                
             </div>
             <div class="divider"></div>
+
+            <div class="parallax-bg">
+                <img id="parallax" src="img/parallax.png">
+            </div>        
+
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xl-5 slide-in from-left">
@@ -868,6 +885,11 @@
             appearOnScroll.observe(slider)
         })
 
+        window.addEventListener('scroll',()=>{
+            let scroll = window.pageYOffset;
+                const p = document.querySelector('#parallax');
+                p.style.top = (70+(scroll-2400)/15) + "vh"
+        })
     </script>
 
 </body>
