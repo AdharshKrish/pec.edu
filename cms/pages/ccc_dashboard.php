@@ -19,7 +19,7 @@ if (isset($_SESSION['loggedin_status'])) {
     exit();
   }
 } else {
-   header("Location:  ../error/error404.html");
+  header("Location:  ../error/error404.html");
   exit();
 }
 ?>
@@ -35,10 +35,11 @@ if (isset($_SESSION['loggedin_status'])) {
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/master.css">
+  <!-- <link rel="stylesheet" href="../css/master.css"> -->
   <link rel="stylesheet" href="../css/header.css">
   <meta http-equiv="Content-Language" content="en-us">
-  <title>Rich Text Editor</title>
+  <title>4C Editor</title>
+  <link rel="icon" href="../icon.png">
   <meta charset="utf-8">
   <link href="wh/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <script type="wh/text/javascript" src="wh/js/jquery.js"></script>
@@ -54,9 +55,12 @@ if (isset($_SESSION['loggedin_status'])) {
       margin-top: 50px;
     }
 
+    .btn-toolbar{
+      margin-top:-40px;
+    }
 
     #editor {
-      max-height: 250px;
+      max-height: auto;
       height: 250px;
       background-color: white;
       border-collapse: separate;
@@ -71,6 +75,7 @@ if (isset($_SESSION['loggedin_status'])) {
       border-top-left-radius: 3px;
       overflow: auto;
       outline: none;
+      resize: vertical;
     }
 
     #voiceBtn {
@@ -91,6 +96,10 @@ if (isset($_SESSION['loggedin_status'])) {
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+    }
+
+    .btn {
+      margin: 2px;
     }
 
     .dropdown-menu a {
@@ -125,8 +134,6 @@ if (isset($_SESSION['loggedin_status'])) {
           <!--verticle li-->
 
           <ul class="nav nav-tab">
-
-            <li> <a href="ccc_viewmemo.php"> VIEW DATASET </a></li>
             <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
           </ul>
         </div>
@@ -274,25 +281,13 @@ if (isset($_SESSION['loggedin_status'])) {
                   <input type="submit" value="Submit" name="B1" class="btn btn-primary btn-large">
                 </div>
               </form>
-</body>
 
-</html>
-
-
-
-</div>
-</div>
-</div>
-
-
-
-</div>
-</div>
-</main>
-
-<footer>
-
-</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
