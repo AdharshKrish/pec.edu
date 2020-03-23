@@ -12,7 +12,7 @@ require_once('./db_con.php');
 //echo $_POST['email'];
 $usernaam=$_POST['email'];
 $role=$_GET['role'];
-$query="SELECT * FROM login where email='".$usernaam."' ";
+$query="SELECT * FROM login where email='".$usernaam."' AND `department`!='' ";
 
 
 $_SESSION['role']=$role;
@@ -28,7 +28,7 @@ echo $query;
 if($cv>0)
 {
                             echo"user exists";
-                            $query2="SELECT 8 FROM `role` WHERE idref=".$arr['id']." AND desg='$role'";
+                            $query2="SELECT * FROM `role` WHERE idref=".$arr['id']." AND desg='$role'";
                             echo $query2;
                             $count=mysqli_query($db_con,$query2);
                         $cv=mysqli_num_rows($count);

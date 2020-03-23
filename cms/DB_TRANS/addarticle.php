@@ -4,7 +4,8 @@ $email=$_POST['email'];
 $name=$_POST['name'];
 $dep=$_POST['dept'];
 $img = $_FILES['file']['name'];$img = time().$img;
-$query="INSERT INTO `article`(`name`, `email`, `dep`, `img`) VALUES ( '".$name."','".$email."','".$dep."','".$img."')";
+$author=$_POST['author'];
+$query="INSERT INTO `article`(`name`, `email`, `dep`, `img`,`author`) VALUES ( '".$name."','".$email."','".$dep."','".$img."','".$author."')";
 if(mysqli_query($db_con,$query))
 { 
 $filename = $img;
