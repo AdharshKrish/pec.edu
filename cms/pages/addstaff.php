@@ -3,7 +3,7 @@
 require_once('../DB_TRANS/db_con.php');
 if (isset($_SESSION['loggedin_status'])) {
     $logged = $_SESSION['loggedin_status'];
-    if ($logged = 900) {
+    if ($logged == 900) {
         if ($_SESSION['role'] == "faculty") {
             $error = 0;
             if (isset($_GET['message'])) {

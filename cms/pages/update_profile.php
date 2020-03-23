@@ -5,7 +5,7 @@ if(isset($_SESSION['loggedin_status']))
 {
 $logged=$_SESSION['loggedin_status'];
 
-if($logged=900)
+if($logged==900)
 {
    $id= $_SESSION['id'];
    $query="SELECT * FROM basic_faculty where f_id=".$id;

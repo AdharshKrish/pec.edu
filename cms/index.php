@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_SESSION['loggedin_status'])){ 
-        header("Location: http://cms.pec.edu/test/cms/pages/".$_SESSION['role']."_dashboard.php");
+        header("Location: pages/".$_SESSION['role']."_dashboard.php");
         exit();
     }
     else {
