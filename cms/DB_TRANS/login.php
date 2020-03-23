@@ -12,7 +12,7 @@ require_once('./db_con.php');
 //echo $_POST['email'];
 $usernaam=$_POST['email'];
 $role=$_GET['role'];
-$query="SELECT * FROM login where email='".$usernaam."' ";
+$query="SELECT * FROM login where email='".$usernaam."' AND `department`!='' ";
 
 
 $_SESSION['role']=$role;
