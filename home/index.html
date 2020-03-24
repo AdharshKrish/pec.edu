@@ -721,7 +721,7 @@
                     </div>
                     <div class="col-lg-6 slide-in from-left">
                         <div id="cv" style="width: 100%;height: 100%;padding:50px">
-                            <div class="load-background" style="background: #eee">
+                            <div class="load-background" style="background: #eee;height:100%">
                                 <div class="loading-animation"></div>
                             </div>
                         </div>
@@ -754,7 +754,7 @@
                     </div>
                     <div class="col-lg-6 slide-in from-right">
                         <div id="pv" style="width: 100%;height: 100%;padding:50px">
-                            <div class="load-background" style="background: #eee">
+                            <div class="load-background" style="background: #eee;height:100%">
                                 <div class="loading-animation"></div>
                             </div>
                         </div>
@@ -926,7 +926,7 @@
                     }
                     entry.target.classList.add('appear')
                     appearOnScroll.unobserve(entry.target)
-                    if(entry.target.getAttribute('i')=='i'){
+                    if(entry.target.getAttribute('i')=='i' && window.outerWidth<600){
                         window.cv.innerHTML='<img src="img/campus-life.jpg" class="c-p-images">'
                         window.pv.innerHTML='<img src="img/placements.jpg" class="c-p-images">'
                     }
@@ -946,25 +946,6 @@
                 const p = document.querySelector('#parallax')
                 p.style.top = (40+(scroll-2400)/18.5) + "vh"
         })
-
-        function asyncLoad(images,attribute){
-            images.forEach((image)=>{
-                    $.ajax({
-                        url: image.getAttribute(attribute),
-                        cache:false,
-                        xhr:function(){
-                            var xhr = new XMLHttpRequest()
-                            xhr.responseType= 'blob'
-                            return xhr
-                        },
-                        success: function(data){
-                            var url = window.URL || window.webkitURL
-                            image.src = url.createObjectURL(data)
-                        }
-                })
-            })
-        }
-
 
         const videoObserver = new IntersectionObserver(function(elts,videoObserver){
                 elts.forEach(elt=>{
