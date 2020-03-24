@@ -134,15 +134,22 @@
             padding-top: 15px;
             text-align:justify;
         }
+        
         .accred{
             border: 2px solid #000;
-            padding:5px 10px;
+            padding:5px 30px 5px 10px;
             font-weight:bold;
             font-size: 18px;
-            width:100%;
+            cursor: pointer;
+            margin:20px 0;
+            transition: all .5s;
+        }
+        .accred:hover{
+            padding:5px 10px 5px 30px;
+            background-color: #000;
+            color:#fff;
         }
         .youtube {
-            margin:20px 0;
             position: relative;
             padding-bottom: 55%;
             height: 0;
@@ -165,27 +172,21 @@
             margin-top:10px;
             margin-bottom:30px;
         }
-
-        .about-hyper span {
-            color: #000;
-            /* background-color: yellow; */
-
+        .hyper{
+            width:100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .hyper btn{
+            color: #999;
+            cursor: pointer;
+        }
+        .hyper btn:hover{
+            color:#000;
+            text-decoration: underline;
         }
 
-        /* .about-hyper span:after {
-            content: attr(txt);
-            position: absolute;
-            color: #000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            background-color: yellow;
-        } */
 
-        .about-hyper span::selection {
-            background: white;
-        }
         /*content css ends*/
     </style>
     <script>
@@ -296,21 +297,22 @@
                 • To establish Centres of Excellence in collaboration with industries, research laboratories and other agencies to meet the changing needs of society.
             </div>
             <div class="row">
-                <div class="col-lg-5">
+                <div class="col-md-6">
                     <div class="nirf">
                         <div class="nirf-title">NIRF Ranking</div>
                         <div class="nirf-content">
                             The National Institutional Ranking Framework (NIRF) is a methodology approved by the MHRD, Govt. of India to rank institutions across the country.  The Core Committee set up by the MHRD for NIRF ranking draws an understanding from the overall recommendations regarding each institution in India, based on various parameters. The parameters broadly cover Teaching, Learning and Resources, Research and Professional Practices, Graduation Outcomes, Outreach and Inclusivity and Perception. <b>PEC was endowed with 76th position in the All India NIRF ranking for the year 2019.</b>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="accred">View Accreditations →</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-2">
-                    <div class="accred">View Accrediations →</div>
-                </div>
-                <div class="col-lg-5">
+                <div class="col-md-6">
                     <div class="youtube">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/4MT892CmdPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/UqjJD1Ij44M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                     </div>
                 </div>
             </div>
@@ -322,14 +324,15 @@
                 the purposes of administration, staff recruitment and college development and is <span txt="managed by">managed by</span> a 
                 <span txt="Board of Governors">Board of Governors</span>. The College is <span txt="affiliated">affiliated</span> to <span txt="Pondicherry University">Pondicherry University</span>, Pondicherry, for academic purposes. 
                 The college campus is <span txt="situated">situated</span> in <span txt="Pillaichavadi">Pillaichavadi</span> on the shores of Bay of Bengal, 
-                <span txt="about 130 kms south of Chennai.">about 130 kms south of Chennai.</span> The magnificent <span txt="lush green premise">lush green premise</span> along with the neatly laden roads spreads over an <span txt="area">area</span> of 
+                <span txt="about 130 kms">about 130 kms</span> <span txt="south of Chennai."> south of Chennai.</span> The magnificent <span txt="lush green premise">lush green premise</span> along with the neatly laden roads spreads over an <span txt="area">area</span> of 
                 <span txt="210 acres">210 acres</span>. The highly equipped departments buildings accommodate <span txt="state-of-art">state-of-art</span> technical and hygiene 
                 <span txt="facilities">facilities</span>. The well-lit, airy and spacious administrative building offers a fantastic view of the sea from its 
-                many non-glazed openings in the upper floors.<span txt="Click the button to read again"></span>
+                many non-glazed openings in the upper floors.<span></span>
+                <div class="hyper">
+                    <btn id="callReader">Hyper Read</btn>
+                </div>
             </div>
-                <button onclick="hyperRead()" >Hyper Read</button>
         </div>
-
         <!--main content ends-->
     </main>
     <footer>
@@ -449,21 +452,22 @@
                 })
             })
         }
-
+        const btn = document.querySelector('#callReader')
+        btn.addEventListener('click',hyperRead)
         function hyperRead(){
-            const hypers = document.querySelector('.about-hyper').querySelectorAll('span');
-            let index = 0;
-            let htime = window.setInterval(function(){
+            let htime,index = 0
+            const hypers = document.querySelector('.about-hyper').querySelectorAll('span')
+            btn.removeEventListener('click',hyperRead)
+            htime = window.setInterval(function(){
+                window.running = true
                 hypers[index].style.backgroundColor = "white"
                 index++
                 hypers[index].style.backgroundColor = "yellow"
-                let synth = new SpeechSynthesisUtterance(hypers[index].getAttribute('txt'))
-                synth.rate=2;
-                window.speechSynthesis.speak(synth);
                 if(index==hypers.length-1){
                     clearInterval(htime)
+                    btn.addEventListener('click',hyperRead)
                 }
-            },1750)
+            },80)
         }
 
     </script>
