@@ -511,7 +511,7 @@
             border-right: 6px solid #00f;
             animation: rotate .7s infinite linear;
             z-index: 10;
-            opacity: .5;
+            opacity: .4;
         }
         .video video{
             width:100%;
@@ -520,9 +520,9 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            background-image: url(img/college-comp-100.jpg);
+            background-image: url(img/home.jpg);
             width:100%;
-            height: 700px;
+            height: 50vw;
             position: relative;
         }
         /*content css ends*/
@@ -721,7 +721,7 @@
                     </div>
                     <div class="col-lg-6 slide-in from-left">
                         <div id="cv" style="width: 100%;height: 100%;padding:50px">
-                            <div style="width: 100%;height:100%;background-color: #eee;position: relative;">
+                            <div class="load-background" style="background: #eee">
                                 <div class="loading-animation"></div>
                             </div>
                         </div>
@@ -754,7 +754,7 @@
                     </div>
                     <div class="col-lg-6 slide-in from-right">
                         <div id="pv" style="width: 100%;height: 100%;padding:50px">
-                            <div style="width: 100%;height:100%;background-color: #eee;position: relative;">
+                            <div class="load-background" style="background: #eee">
                                 <div class="loading-animation"></div>
                             </div>
                         </div>
@@ -913,7 +913,7 @@
         const sliders = document.querySelectorAll('.slide-in')
         const appearOptions = {
             threshold: 0.2,
-            rootMargin: "800px 0px -200px 0px"
+            rootMargin: "2600px 0px -200px 0px"
         }
 
         const appearOnScroll = new IntersectionObserver(
@@ -927,7 +927,8 @@
                     entry.target.classList.add('appear')
                     appearOnScroll.unobserve(entry.target)
                     if(entry.target.getAttribute('i')=='i'){
-                        asyncLoad(document.querySelectorAll('[pec-scroll]'),'pec-scroll')
+                        window.cv.innerHTML='<img src="img/campus-life.jpg" class="c-p-images">'
+                        window.pv.innerHTML='<img src="img/placements.jpg" class="c-p-images">'
                     }
                 })
             },
@@ -977,22 +978,16 @@
 
         window.onload = function() {
 
-            if(window.outerWidth>500){
+            if(window.outerWidth>600){
                 window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop></video>'
                 window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
                 window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
+                videoObserver.observe(document.querySelector('video'))
             }
             else{
-                window.mv.innerHTML='<img class="college-comp" src="img/college-comp-100.jpg" pec-scroll="img/college-comp.jpg">'
-                window.cv.innerHTML='<img src="img/campus-life-100.jpg" pec-scroll="img/campus-life.jpg" class="c-p-images">'
-                window.pv.innerHTML='<img src="img/placements-100.jpg" pec-scroll="img/placements.jpg" class="c-p-images">'
+                window.mv.innerHTML='<img class="college-comp" src="img/home.jpg" pec-img="img/home.jpg">'
             }
 
-
-            // document.querySelectorAll('video').forEach(i=>{
-                // videoObserver.observe(i)
-            // })
-            videoObserver.observe(document.querySelector('video'))
 
             const images = document.querySelectorAll('[pec-img]')
             asyncLoad(images,'pec-img')
