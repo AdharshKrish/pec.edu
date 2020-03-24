@@ -495,24 +495,102 @@
                 transform: rotate(360deg);
             }
         }
-        .loading-animation {
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            border-radius: 50%;
-            border-top: 6px solid #f00;
-            border-bottom: 6px solid #ff0;
-            border-left: 6px solid #0f0;
-            border-right: 6px solid #00f;
-            animation: rotate .7s infinite linear;
-            z-index: 10;
-            opacity: .4;
+
+/* ... */
+
+        .lds-roller {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
         }
+        .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+        }
+        .lds-roller div:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #fff;
+        margin: -4px 0 0 -4px;
+        }
+        .lds-roller div:nth-child(1) {
+        animation-delay: -0.036s;
+        }
+        .lds-roller div:nth-child(1):after {
+        top: 63px;
+        left: 63px;
+        background: #f00;
+        }
+        .lds-roller div:nth-child(2) {
+        animation-delay: -0.072s;
+        }
+        .lds-roller div:nth-child(2):after {
+        top: 68px;
+        left: 56px;
+        background: #0f0;
+        }
+        .lds-roller div:nth-child(3) {
+        animation-delay: -0.108s;
+        }
+        .lds-roller div:nth-child(3):after {
+        top: 71px;
+        left: 48px;
+        background: #00f;
+        }
+        .lds-roller div:nth-child(4) {
+        animation-delay: -0.144s;
+        }
+        .lds-roller div:nth-child(4):after {
+        top: 72px;
+        left: 40px;
+        background: #ff0;
+        }
+        .lds-roller div:nth-child(5) {
+        animation-delay: -0.18s;
+        }
+        .lds-roller div:nth-child(5):after {
+        top: 71px;
+        left: 32px;
+        background: #0ff;
+        }
+        .lds-roller div:nth-child(6) {
+        animation-delay: -0.216s;
+        }
+        .lds-roller div:nth-child(6):after {
+        top: 68px;
+        left: 24px;
+        background: #f0f;
+        }
+        .lds-roller div:nth-child(7) {
+        animation-delay: -0.252s;
+        }
+        .lds-roller div:nth-child(7):after {
+        top: 63px;
+        left: 17px;
+        background: #000;
+        }
+        .lds-roller div:nth-child(8) {
+        animation-delay: -0.288s;
+        }
+        .lds-roller div:nth-child(8):after {
+        top: 56px;
+        left: 12px;
+        background: #fa0;
+        }
+        @keyframes lds-roller {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+/* ... */
         .video video{
             width:100%;
         }
@@ -523,7 +601,9 @@
             background-image: url(img/home.jpg);
             width:100%;
             height: 50vw;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         /*content css ends*/
     </style>
@@ -622,7 +702,7 @@
         <!--ENTER MAIN CONTENT HERE-->
             <div class="video" id="mv">
                 <div class="load-background">
-                    <div class="loading-animation"></div>
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
             </div>
             <div class="divider"></div>
@@ -721,7 +801,7 @@
                     <div class="col-lg-6 slide-in from-left">
                         <div id="cv" style="width: 100%;height: 100%;padding:50px">
                             <div class="load-background" style="background: #eee;height:100%">
-                                <div class="loading-animation"></div>
+                                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                             </div>
                         </div>
                     </div>
@@ -754,7 +834,7 @@
                     <div class="col-lg-6 slide-in from-right">
                         <div id="pv" style="width: 100%;height: 100%;padding:50px">
                             <div class="load-background" style="background: #eee;height:100%">
-                                <div class="loading-animation"></div>
+                                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                             </div>
                         </div>
                     </div>
@@ -943,7 +1023,7 @@
         window.addEventListener('scroll',()=>{
             let scroll = window.pageYOffset
                 const p = document.querySelector('#parallax')
-                p.style.top = (40+(scroll-2400)/18.5) + "vh"
+                p.style.top = (40+(scroll-2400)/17) + "vh"
         })
 
         const videoObserver = new IntersectionObserver(function(elts,videoObserver){
@@ -960,12 +1040,12 @@
 
             if(window.outerWidth>600){
                 window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay muted></video>'
-                window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
-                window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
+                window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" poster="img/campus-life.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
+                window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" poster="img/placements.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
                 videoObserver.observe(document.querySelector('video'))
             }
             else{
-                window.mv.innerHTML='<img class="college-comp" src="img/home.jpg" pec-img="img/home.jpg">'
+                window.mv.innerHTML='<img src="img/home.jpg" pec-img="img/home.jpg">'
             }
         }
 
