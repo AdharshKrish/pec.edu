@@ -960,7 +960,7 @@
         window.onload = function() {
 
             if(window.outerWidth>600){
-                window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay></video>'
+                window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay muted></video>'
                 window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
                 window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
                 videoObserver.observe(document.querySelector('video'))
