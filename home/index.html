@@ -141,6 +141,7 @@
             font-weight:bold;
             border:3px solid transparent;
             transition: padding .5s,background-color .5s,color .5s,border .5s;
+            cursor: pointer;
         }
         .qlinks:after{
             content:'......';
@@ -150,7 +151,6 @@
             font-weight: bold;
             margin:0 10px 0 0;
             transition: margin .2s;
-            cursor: pointer;
         }
         .qlinks:hover{
             padding:8px 0px 8px 40px;
@@ -505,18 +505,26 @@
             right: 0;
             margin: auto;
             border-radius: 50%;
-            border-top: 3px solid #bbb;
-            border-bottom: 3px solid #bbb;
-            border-left: 4px solid #999;
-            border-right: 4px solid #999;
-            animation: rotate 2s infinite linear;
+            border-top: 6px solid #f00;
+            border-bottom: 6px solid #ff0;
+            border-left: 6px solid #0f0;
+            border-right: 6px solid #00f;
+            animation: rotate .7s infinite linear;
             z-index: 10;
-            opacity: .6;
+            opacity: .5;
         }
         .video video{
             width:100%;
         }
-
+        .load-background{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url(img/college-comp-100.jpg);
+            width:100%;
+            height: 700px;
+            position: relative;
+        }
         /*content css ends*/
     </style>
     <script>
@@ -564,7 +572,6 @@
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
-    </header>
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -604,6 +611,8 @@
             </div>
         </div>
     </div>
+</header>
+
     <main>
         <crumbs id="pec-crumb" class="pec-crumb"></crumbs>
         
@@ -611,8 +620,8 @@
 
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
-            <div class="video" id="play">
-                <div style="width: 100%;height:800px;background-color: #eee;position: relative;">
+            <div class="video" id="mv">
+                <div class="load-background">
                     <div class="loading-animation"></div>
                 </div>
             </div>
@@ -698,7 +707,7 @@
                                         <div class="col-md-auto slide-in from-right"><div class="dept" onclick="window.location.href='#'">Mathematics</div></div>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-auto slide-in from-right"><div class="dept" onclick="window.location.href='#'">Information Technology (IT)</div></div>
                                         <div class="col-md-auto slide-in from-right"><div class="dept" onclick="window.location.href='#'">Chemical Engineering (ChE)</div></div>
@@ -711,8 +720,10 @@
                         </div>
                     </div>
                     <div class="col-lg-6 slide-in from-left">
-                        <div class="" style="width: 100%;height: 100%;padding:50px">
-                            <img src="img/campus-life-100.jpg" pec-scroll="img/campus-life.jpg" class="c-p-images">
+                        <div id="cv" style="width: 100%;height: 100%;padding:50px">
+                            <div style="width: 100%;height:100%;background-color: #eee;position: relative;">
+                                <div class="loading-animation"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 slide-in from-right">
@@ -743,8 +754,10 @@
                         </div>
                     </div>
                     <div class="col-lg-6 slide-in from-right">
-                        <div class="" style="width: 100%;height: 100%;padding:50px">
-                            <img id='test' src="img/placements-100.jpg" pec-scroll="img/placements.jpg" class="c-p-images">
+                        <div id="pv" style="width: 100%;height: 100%;padding:50px">
+                            <div style="width: 100%;height:100%;background-color: #eee;position: relative;">
+                                <div class="loading-animation"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="admission fade-in">
@@ -758,8 +771,6 @@
                 </div>
             </div>
 
-            
-    
             <img src="img/beach.jpg" style="width: 100%;object-fit:cover">
         <!--main content ends-->
     </main>
@@ -902,8 +913,8 @@
         const faders = document.querySelectorAll('.fade-in')
         const sliders = document.querySelectorAll('.slide-in')
         const appearOptions = {
-            threshold: 0,
-            rootMargin: "0px 0px -300px 0px"
+            threshold: 0.2,
+            rootMargin: "800px 0px -200px 0px"
         }
 
         const appearOnScroll = new IntersectionObserver(
@@ -912,12 +923,12 @@
             ){
                 entries.forEach(entry => {
                     if(!entry.isIntersecting){
-                        return;
+                        return
                     }
                     entry.target.classList.add('appear')
                     appearOnScroll.unobserve(entry.target)
                     if(entry.target.getAttribute('i')=='i'){
-                        asyncLoad(document.querySelectorAll('[pec-scroll]'),'pec-scroll');
+                        asyncLoad(document.querySelectorAll('[pec-scroll]'),'pec-scroll')
                     }
                 })
             },
@@ -954,11 +965,42 @@
             })
         }
 
+
+        const videoObserver = new IntersectionObserver(function(elts,videoObserver){
+                elts.forEach(elt=>{
+                    if(elt.isIntersecting==true)
+                        elt.target.play()
+                    else
+                        elt.target.pause()
+                })
+            },{threshold: 0.5})
+
+
         window.onload = function() {
+
+            if(window.outerWidth>500){
+                window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop></video>'
+                window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
+                window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" class="c-p-images" onmouseover=obs(this) loop></video>'
+            }
+            else{
+                window.mv.innerHTML='<img class="college-comp" src="img/college-comp-100.jpg" pec-scroll="img/college-comp.jpg">'
+                window.cv.innerHTML='<img src="img/campus-life-100.jpg" pec-scroll="img/campus-life.jpg" class="c-p-images">'
+                window.pv.innerHTML='<img src="img/placements-100.jpg" pec-scroll="img/placements.jpg" class="c-p-images">'
+            }
+
+
+            // document.querySelectorAll('video').forEach(i=>{
+                // videoObserver.observe(i)
+            // })
+            videoObserver.observe(document.querySelector('video'))
+
             const images = document.querySelectorAll('[pec-img]')
             asyncLoad(images,'pec-img')
-            window.play.innerHTML='<video src="img/wearepec.mp4" loop autoplay></video>'
-            // window.scrollTo(0,128)
+        }
+
+        function obs(elt){
+            videoObserver.observe(elt)
         }
 
     </script>
