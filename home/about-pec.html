@@ -167,11 +167,12 @@
         }
 
         .about-hyper span {
-            position: relative;
-            color: #FFF;
+            color: #000;
+            /* background-color: yellow; */
+
         }
 
-        .about-hyper span:after {
+        /* .about-hyper span:after {
             content: attr(txt);
             position: absolute;
             color: #000;
@@ -180,7 +181,7 @@
             width: 100%;
             height: 50%;
             background-color: yellow;
-        }
+        } */
 
         .about-hyper span::selection {
             background: white;
@@ -189,10 +190,10 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded",function(){
-        var imports = document.querySelectorAll(".styleload");
-        imports.forEach((imp)=>{
-            imp.removeAttribute("disabled");
-        });        
+            var imports = document.querySelectorAll(".styleload");
+            imports.forEach((imp)=>{
+                imp.removeAttribute("disabled");
+            });
         });
     </script>
 </head>
@@ -232,7 +233,6 @@
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
-    </header>
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -272,6 +272,8 @@
             </div>
         </div>
     </div>
+    </header>
+
     <main>
         <crumbs id="pec-crumb" class="pec-crumb"></crumbs>
         
@@ -314,7 +316,7 @@
             </div>
             <img class="college-comp" src="img/college-comp-100.jpg" pec-img="img/college-comp.jpg">
             <div class="container about-hyper">
-                Pondicherry Engineering College (PEC) is an institution sponsored by the Union Territory of Pondicherry, 
+               <span></span>Pondicherry Engineering College (PEC) is an institution sponsored by the Union Territory of Pondicherry, 
                 India. The College was <span txt="started">started</span> in <span txt="1984">1984</span> under the VII Five Year Plan. 
                 It is an <span txt="autonomous Institution">autonomous Institution</span> for 
                 the purposes of administration, staff recruitment and college development and is <span txt="managed by">managed by</span> a 
@@ -323,8 +325,9 @@
                 <span txt="about 130 kms south of Chennai.">about 130 kms south of Chennai.</span> The magnificent <span txt="lush green premise">lush green premise</span> along with the neatly laden roads spreads over an <span txt="area">area</span> of 
                 <span txt="210 acres">210 acres</span>. The highly equipped departments buildings accommodate <span txt="state-of-art">state-of-art</span> technical and hygiene 
                 <span txt="facilities">facilities</span>. The well-lit, airy and spacious administrative building offers a fantastic view of the sea from its 
-                many non-glazed openings in the upper floors.
+                many non-glazed openings in the upper floors.<span txt="Click the button to read again"></span>
             </div>
+                <button onclick="hyperRead()" >Hyper Read</button>
         </div>
 
         <!--main content ends-->
@@ -445,6 +448,22 @@
                     }
                 })
             })
+        }
+
+        function hyperRead(){
+            const hypers = document.querySelector('.about-hyper').querySelectorAll('span');
+            let index = 0;
+            let htime = window.setInterval(function(){
+                hypers[index].style.backgroundColor = "white"
+                index++
+                hypers[index].style.backgroundColor = "yellow"
+                let synth = new SpeechSynthesisUtterance(hypers[index].getAttribute('txt'))
+                synth.rate=2;
+                window.speechSynthesis.speak(synth);
+                if(index==hypers.length-1){
+                    clearInterval(htime)
+                }
+            },1750)
         }
 
     </script>
