@@ -266,11 +266,9 @@
     <main>
         <!--ENTER MAIN CONTENT HERE-->
 
-<div  style="padding:40px" class="container-fluid tb1 card-container">
-        <div class="row " style="height:400px">
-        <?php echo $body?>
-</div>
-</div>
+        <div class="container-fluid" style="padding-top:30px;padding-bottom:30px">
+            <?php echo $body?>
+        </div>
 
         <!--main content ends-->
     </main>
