@@ -118,10 +118,9 @@
             background-color: #2e8690;
         }
         .gal-img{
-            width:100%;
-            object-fit: cover;
-            background:no-repeat;
-            height: 556px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
             background-image: url(img/gal-img.jpg);
         }
         .qic-link{
@@ -463,7 +462,7 @@
         }
         #parallax{
             position: absolute;
-            top:75vh;
+            top:40vh;
             left:0;
             width:100%;
             z-index: -1;
@@ -934,7 +933,7 @@
         window.addEventListener('scroll',()=>{
             let scroll = window.pageYOffset
                 const p = document.querySelector('#parallax')
-                p.style.top = (70+(scroll-2400)/18.5) + "vh"
+                p.style.top = (40+(scroll-2400)/18.5) + "vh"
         })
 
         function asyncLoad(images,attribute){
