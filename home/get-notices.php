@@ -44,6 +44,7 @@ if($result=mysqli_query($db_con,$query))
         echo'<btn class=cad onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
         <div class=header>
             <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>
+            <span style="float: right;margin-right:20px"><img class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
             <div class=row>
                 <div class=col-1>';
                 if($bul && !isset($_COOKIE[$cid]))
