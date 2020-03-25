@@ -978,6 +978,10 @@
                         document.getElementById('full-notice').innerHTML = html;
                     }
                 });
+                if(temp = document.querySelector('#bul2'+cid)){
+                    document.querySelector('#bul1'+cid).innerHTML=''
+                    temp.innerHTML=''
+                }
         }
         
         const faders = document.querySelectorAll('.fade-in')

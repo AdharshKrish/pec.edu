@@ -47,11 +47,11 @@ if($result=mysqli_query($db_con,$query))
             <div class=row>
                 <div class=col-1>';
                 if($bul && !isset($_COOKIE[$cid]))
-                    echo '<span class=bul>&bull;</span>';
+                    echo '<span id="bul1'.$cid.'" class=bul>&bull;</span>';
                 echo '</div><div class=col-10>
                     <div class=head>';
                     if($bul && !isset($_COOKIE[$cid]))
-                        echo '<new>New</new><br>';
+                        echo '<new id="bul2'.$cid.'">New</new><br>';
                     else
                         echo '<new style="height:25px;display:block"></new>';
                 echo '<start>'.$start.'</start>

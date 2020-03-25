@@ -399,7 +399,7 @@ if($result=mysqli_query($db_con,$query))
                     <span style="float: right"><img class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>';
                     
                     if($bul && !isset($_COOKIE[$cid]))
-                        echo '<p class="new-bullet"><span>&bull;</span>New</p>';
+                        echo '<p id="bul'.$cid.'" class="new-bullet"><span>&bull;</span>New</p>';
                     else
                         echo '<p style="height:32px;width:20px"></p>';
                     
@@ -547,6 +547,8 @@ if($result=mysqli_query($db_con,$query))
                         document.getElementById('full-notice').innerHTML = html;
                     }
                 });
+            if(temp = document.querySelector('#bul'+cid))
+                temp.innerHTML='<p style="height:32px;width:20px"></p>';
         }
     </script>
 
