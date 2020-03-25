@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title> <!-- ENTER PAGE TITLE -->
+    <title>Notice & Updates</title> <!-- ENTER PAGE TITLE -->
     <link rel="icon" href="../img/icon.png">
     <link rel="manifest" href="../manifest.json" />
     <link rel="apple-touch-icon" href="../img/icons/150px.png" />
