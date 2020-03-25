@@ -254,9 +254,6 @@
             text-decoration: none;
             color: #000;
         }
-        img{
-            margin: 5px;
-        }
 
         /*content css ends*/
     </style>
