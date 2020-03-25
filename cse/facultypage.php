@@ -335,7 +335,7 @@ if($result)
        $specilization=$arr['specialization'];
        $contact=$arr['phno'];
        $ext=$arr['extension'];
-       $dob=$arr['dob'];
+       $dob = date("d-M-Y",strtotime($arr['dob']));
       // $exists=0;
       $query="SELECT * FROM  academic where f_id=".$id;      
        $result=mysqli_query($db_con,$query);
