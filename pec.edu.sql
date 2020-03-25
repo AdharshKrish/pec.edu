@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 25, 2020 at 07:54 AM
+-- Generation Time: Mar 25, 2020 at 10:24 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `pec_edu`
+-- Database: `pec.edu`
 --
 
 -- --------------------------------------------------------
@@ -236,10 +236,9 @@ CREATE TABLE `news_update` (
 
 INSERT INTO `news_update` (`id`, `breif`, `expires_on`, `Faculty_id`, `start`, `end`, `department`, `verified`, `timestamp`) VALUES
 (40, 'fFsds', '0001-12-12', 10, '0000-00-00', '1212-02-21', 'cse', 0, '2020-03-25 05:00:52'),
-(41, 'fFsds', '0001-12-12', 10, '0000-00-00', '1212-02-21', 'cse', 1, '2020-03-25 05:00:52'),
-(46, 'another test', '2019-12-16', 10, '2019-12-12', '2019-12-14', 'all', 1, '2020-03-25 05:00:52'),
+(46, 'another test', '2020-04-16', 10, '2019-12-12', '2020-04-14', 'all', 1, '2020-03-25 05:00:52'),
 (48, 'test', '0000-00-00', 12, '2019-08-19', '2019-08-13', 'dep', 1, '2020-03-25 05:02:08'),
-(60, 'hi', '2322-12-31', 10, '3000-12-12', '3000-12-12', 'all', 1, '2020-03-25 06:23:04');
+(60, 'hi', '2322-12-31', 10, '3000-12-12', '3000-12-12', 'all', 1, '2020-03-18 06:23:04');
 
 -- --------------------------------------------------------
 

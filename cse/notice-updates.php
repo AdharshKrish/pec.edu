@@ -187,7 +187,6 @@
         }
         .hashtags{
             padding: 7px;
-            /* color:#0ea2be; */
             color:#00f;
             height:40px;
             overflow-y: auto;
@@ -383,15 +382,28 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        $start=$arr['start'];
-        $end=$arr['end'];
+        $start = date("d-M-Y",strtotime($arr['start']));
+        $end = date("d-M-Y",strtotime($arr['end']));
+        date_default_timezone_set('Asia/Kolkata');
+        $notetime = new DateTime($arr['timestamp']);
+        $curtime = new DateTime();
+        $timediff = $notetime->diff($curtime);
+        if(intval($timediff->format('%Y%M%D%H%I%S'))<7000000){
+            $bul=true;
+        }else{
+            $bul=false;
+        }
         $cid=$arr['id'];
         echo'<btn class="card tb2" onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
                 <div class="card-header">
-                    <span style="float: right;"><img class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
+                    <span style="float: right"><img class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>';
                     
-                    <p class="new-bullet"><span>&bull;</span>New</p>
-                    <p>'.$start.'</p>
+                    if($bul && !isset($_COOKIE[$cid]))
+                        echo '<p class="new-bullet"><span>&bull;</span>New</p>';
+                    else
+                        echo '<p style="height:32px;width:20px"></p>';
+                    
+                   echo '<p>'.$start.'</p>
                     <p>'.$end.'</p>
                 </div>
                 <div class="card-body">
@@ -413,24 +425,6 @@ if($result=mysqli_query($db_con,$query))
     }
 }
 ?>
-
-                    
-                        <!-- <card class="card tb2">
-                            <div class="card-header">
-                                <span style="float: right;"><img src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
-                                
-                                <p> <span class="new-bullet">&bull;</span> New</p>
-                                <p>22 June '19</p>
-                                <p>9.00 - 11.00</p>
-                            </div>
-                            <div class="card-body">
-                                A workshop on android app sponsored by google will be conducted in auditorium hall, interested can register soon.
-                            </div>
-                            <div class="hashtags">
-                                    <tag id="">#workshop</tag> &nbsp;&nbsp;
-                            </div>
-                        </card> -->
-                    
 
                     </div>
                 </div>
