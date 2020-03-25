@@ -14,6 +14,7 @@ if($result=mysqli_query($db_con,$query))
         $start=$arr['start'];
         $end=$arr['end'];
         $cid=$arr['id'];
+        setcookie($cid, "seen", strtotime($arr['expires_on']), "/"); 
 
        echo'
                            

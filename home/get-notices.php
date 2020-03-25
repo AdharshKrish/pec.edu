@@ -13,8 +13,17 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        $start=$arr['start'];
-        $end=$arr['end'];
+        $start = date("d-M-Y",strtotime($arr['start']));
+        $end = date("d-M-Y",strtotime($arr['end']));
+        date_default_timezone_set('Asia/Kolkata');
+        $notetime = new DateTime($arr['timestamp']);
+        $curtime = new DateTime();
+        $timediff = $notetime->diff($curtime);
+        if(intval($timediff->format('%Y%M%D%H%I%S'))<7000000){
+            $bul=true;
+        }else{
+            $bul=false;
+        }
         $cid=$arr['id'];
         $dept=$arr['department'];
         if($dept=="cse"){
@@ -36,13 +45,16 @@ if($result=mysqli_query($db_con,$query))
         <div class=header>
             <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>
             <div class=row>
-                <div class=col-1>
-                    <span class=bul>&bull;</span>
-                </div>
-                <div class=col-10>
-                    <div class=head>
-                        <new>New</new><br>
-                        <start>'.$start.'</start>
+                <div class=col-1>';
+                if($bul && !isset($_COOKIE[$cid]))
+                    echo '<span class=bul>&bull;</span>';
+                echo '</div><div class=col-10>
+                    <div class=head>';
+                    if($bul && !isset($_COOKIE[$cid]))
+                        echo '<new>New</new><br>';
+                    else
+                        echo '<new style="height:25px;display:block"></new>';
+                echo '<start>'.$start.'</start>
                         <p>'.$end.'</p>
                     </div>
                 </div>
