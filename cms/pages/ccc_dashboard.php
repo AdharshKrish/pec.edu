@@ -1,28 +1,56 @@
 <?php
-session_start();
-$error = 0;
-if (isset($_SESSION['loggedin_status'])) {
-  $logged = $_SESSION['loggedin_status'];
-  if ($logged == 900) {
-    /*if ($_SESSION['role'] != "ccc") {
-      
-      if (isset($_GET['message'])) {
-        $message = $_GET['message'];
-        $error = 1;
-      }
-    } else {
-     // header("Location: ../index.php");
-        exit();
-    }*/
-  } else {
-    header("Location: ../index.php");
-    exit();
+include_once('../DB_TRANS/db_con.php');
+$error=0;
+if(isset($_SESSION['loggedin_status']))
+{
+$logged=$_SESSION['loggedin_status'];
+if($logged=900)
+{
+  if($_SESSION['role']!="ccc")
+  {
+    
+    if(isset($_GET['message']))
+    {
+    $message=$_GET['message'];
+    $error=1;
+    }
   }
-} else {
-  header("Location:  ../error/error404.html");
-  exit();
+  else {
+    // header("Location: ../index.php");
+  }
 }
+else {
+   // header("Location: ../index.php");
+    exit();
+}
+}
+
+else {
+  //  header("Location:  ../error/error404.html");
+    exit();
+}
+
+$id=$_SESSION['id'];	
+$body='';	
+$query="SELECT * FROM article where `author`='$id'";	
+//echo $query;	
+if($result=mysqli_query($db_con,$query))	
+{	
+
+  if(mysqli_num_rows($result)>0)	
+  {	
+
+  $arr=mysqli_fetch_assoc($result);	
+
+  $body=$arr['body'];	
+  }	
+}	
+
+
+
+
 ?>
+
 <html>
 
 <head>
@@ -61,7 +89,7 @@ if (isset($_SESSION['loggedin_status'])) {
 
     #editor {
       max-height: auto;
-      height: 250px;
+      height: 530px;
       background-color: white;
       border-collapse: separate;
       border: 1px solid rgb(204, 204, 204);
@@ -138,7 +166,7 @@ if (isset($_SESSION['loggedin_status'])) {
           </ul>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-12">
           <div class="panel panel-default"> <?php
                                             if ($error == 1)
                                               echo "  <div class='alert alert-success'>
@@ -150,7 +178,7 @@ if (isset($_SESSION['loggedin_status'])) {
 
 
 
-              <form method="POST" name="form1" action="../../DB_TRANS/cccbody.php?id=<?php echo $id ?>" onsubmit="loadVal();">
+              <form method="POST" name="form1" action="../DB_TRANS/cccbody.php?id=<?php echo $id ?>" onsubmit="loadVal();">
 
                 <div class="content">
 
@@ -214,7 +242,7 @@ if (isset($_SESSION['loggedin_status'])) {
                     <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
                   </div>
 
-                  <div id="editor"></div>
+                  <div id="editor"><?php echo $body ?></div>
 
                   <textarea rows="2" name="desc" cols="20" style="display:none; "> </textarea>
 

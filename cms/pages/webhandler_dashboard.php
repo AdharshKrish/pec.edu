@@ -107,6 +107,11 @@ if (isset($_SESSION['loggedin_status'])) {
 
                                 <br>
 
+                                <div class="form-group">
+                                    <label for="name">Author </label>
+                                    <input class="form-control" type="text" name="author" placeholder="Name">
+                                </div>
+                                 <br>
                                 <div class="row" style="text-align: center;">
                                     <div class="col-sm-6" style="text-align: left;">
                                         <label for="myFile">Select one of more files:</label> <input type="file" name="file" style="border: unset;" class="btn btn-default">

@@ -22,7 +22,7 @@ if (isset($_SESSION['loggedin_status'])) {
     exit();
 }
 
-$query = "SELECT * FROM article";
+$query = "SELECT * FROM article where dep!='ccc'";
 $result = mysqli_query($db_con, $query);
 ?>
 <html>
