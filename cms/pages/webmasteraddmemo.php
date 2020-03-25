@@ -125,7 +125,7 @@ else
                                     <p>".$arr1['contact_official_email']."</p>
                                     <h4>Department</h4>
                                     <p>".$arr1['department']."</p>
-                                  <strong> <p><a href='./webmasteraddmemo.php?content_id=".$arr_ok['id']."'>View</a></p></strong>
+                                  <strong> <p><a href='./webmasterverifymemo.php?content_id=".$arr_ok['id']."'>View</a></p></strong>
                                 </div>
                             </div>";
                             }}
@@ -136,31 +136,23 @@ else
                 <div class="col-md-8 col-md-pull-2">
                     <div class="panel panel-default"> 
                         <div class="panel-body">
-                            <form action="" class="form" method="POST">
-                                <div class="form-group">
-                                    <label for="note"> Note </label>
-                                    <?php
-                                    if(isset($_GET['content_id']))
-                                    echo"<textarea name='note' cols='30' rows='7' class='form-control'  style='background-color: white;' >".$arr['breif']."</textarea>";
-                                    else {
-                                        echo"<textarea name='note' cols='30' rows='7' class='form-control' placeholder='e.g. Happy Independence Day' style='background-color: white;' ></textarea>";
-                                    }
-                                ?>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Hashtags</label>
-                                    <?php
-                                    if(isset($_GET['content_id']))
-                                    echo" <input type='text' name='hashtag' value='".$tag."' class='form-control'>";
-                                    else {
-                                        echo" <input type='text' name='hashtag' placeholder='Hashtags' class='form-control'>";
-                                    }
-                                ?>
-                                </div>
-                                  <div class="form-group">
-                                    <label for="date-from">Visibility</label>
+                        <form action="../DB_TRANS/addmemo_master.php" class="form" enctype='multipart/form-data' method="POST">
+                            <div class="form-group">
+                                <label for="note"> Note </label>
+                                <textarea name="note" cols="30" rows="7" class="form-control" placeholder="e.g. Happy Independence Day" style="background-color: white;" ></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Hashtags</label>
+                                <input type="text" name="tags" placeholder="e.g. Holiday" class="form-control">
+                            </div>
+
+                            <div class="row">
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="date-from">Visibility (Please strictly select necessary)</label>
                                         <select name="visib" class="form-control">
-                                            <option value="none" selected="true" disabled>Select</option>
+                                            <option value="none"selected="true" disabled>Select</option>
                                             <option value="all">ALL DEPARTMENTS AND MAIN PAGE</option>
                                             <option value="main">MAIN PAGE</option>
                                             <option value="cse">Computer Science and Engineering</option>
@@ -176,93 +168,46 @@ else
                                             <option value="math">Department of Mathematics</option>
                                             <option value="hs">Department of Humanity Sciences</option>
                                             </select>
-                                </div>
-                                <div class="row">
-                                    
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="date-from">From</label>
-                                            <?php
-                                    if(isset($_GET['content_id']))
-                                    echo"<input type='date' name='date-from' value=".$arr['start']." placeholder='From' class='form-control' title='From'>";
-                                    else {
-                                        echo"<input type='date' name='date-from' placeholder='From' class='form-control' title='From'>";
-                                    }
-                                ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="date-to "> To </label>
-                                            <?php
-                                    if(isset($_GET['content_id']))
-                                    echo"<input type='date' name='date-to' value=".$arr['end']." placeholder='TO' class='form-control' title='From'>";
-                                    else {
-                                        echo"<input type='date' name='date-to' placeholder='To' class='form-control' title='From'>";
-                                    }
-                                ?>
-                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="expiry">Expires on</label>
-                                    <?php
-                                    if(isset($_GET['content_id']))
-                                    echo"<input type='date' name='date-from' value=".$arr['expires_on']." placeholder='expires' class='form-control' title='From'>";
-                                    else {
-                                        echo"<input type='date' name='date-from' placeholder='expires' class='form-control' title='From'>";
-                                    }
-                                ?>
                                 </div>
-                                <div class="row" style="text-align: center;">
-                                    <div class="col-sm-6" style="text-align: left;">
-                                        <div class="form-group">
-                                            <label for="myFile" >Select one or more file:</label> 
-                                            <ul>
-                                            <?php
-                                              if(isset($_GET['content_id']))
-                                              {
-                                            if($arratt=mysqli_query($db_con,"SELECT * FROM attachment where content_id=".$content_id))
-                                           { while($arrnew=mysqli_fetch_assoc($arratt))
-                                            {
-                                             $fl=$arrnew['name'];
-                                             echo "<a href='../content_upload/".$fl."'><li>".$fl."</li></a>";
-                                            }}
-                                        }
-                                        else {
-                                        echo'    <input type="file" name="file[]" style="border: unset;" class="btn btn-default" multiple="multiple">';
-                                        }
-                                            ?> </ul>
+                            
+                            <div class="row">
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="date-from">From</label>
+                                        <input type="date" name="date-from" placeholder="From" class="form-control" title="From">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="date-to "> To </label>
+                                        <input type="date" name="date-to" title="To" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="expiry">Expires on</label>
+                                <input type="date" name="expiry" placeholder="expiry" class="form-control">
+                            </div>
+                            <div class="row" style="text-align: center;">
+                                <div class="col-sm-6" style="text-align: left;">
+                                    <label for="myFile" >Select one file: <br>(Please attach as link using Google Drive if more file is concerned)</label> <input type="file" name="file[]" style="border: unset;" class="btn btn-default" multiple="multiple">
+                                </div>
+                                <br>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <input type="button" value="CLEAR" class="clearButton grant-access">
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <input type="submit" value="APPLY" class="grant-access">
                                         </div>
                                     </div>
-                                    <br>
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                            <?php
-
-                                            if(isset($_GET['content_id']))
-                                            echo '    <a href="../DB_TRANS/delete_memo.php?id='.$content_id.'"> <input type="button" value="DELETE  MEMO" class="clearButton grant-access"></a>';
-                                            else {
-                                                echo'';
-                                            }
-                                            ?>
-                                          
-                                            </div>
-                                            <div class='col-xs-6'>
-                                            <?php
-
-                                            if(isset($_GET['content_id']))
-                                            echo '<a href="../DB_TRANS/verify_memo.php?id='.$content_id.'"> <input type="button" value="VERIFY  MEMO" class="clearButton grant-access"></a>';
-                                            else {
-                                                echo' <a href="../DB_TRANS/addmemo_master.php?id='.$content_id.'"> <input type="button" value="ADD MEMO" class="clearButton grant-access"></a>';
-                                            }
-                                            ?>
-                                           </div>
-                                          
-                                    </div> 
-                                </div>
-                            </form>
+                                </div> 
+                            </div>
+                        </form>
                         </div>
                     </div>
                 </div>

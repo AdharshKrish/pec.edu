@@ -141,6 +141,7 @@
             font-weight:bold;
             border:3px solid transparent;
             transition: padding .5s,background-color .5s,color .5s,border .5s;
+            cursor: pointer;
         }
         .qlinks:after{
             content:'......';
@@ -150,7 +151,6 @@
             font-weight: bold;
             margin:0 10px 0 0;
             transition: margin .2s;
-            cursor: pointer;
         }
         .qlinks:hover{
             padding:8px 0px 8px 40px;
@@ -247,7 +247,7 @@
             border-left-color: #2e8690;
         }
         .about-color:hover{
-            background-color: #2e869030;
+            background-color: #a3d6e088;
         }
         .academics-color h1{
             color:#ae2929;
@@ -261,7 +261,7 @@
             border-left-color: #ae2929;
         }
         .academics-color:hover{
-            background-color: #ae292930;
+            background-color: #f3c0c0aa;
         }
         .campus-color{
             margin-right:50px;
@@ -278,7 +278,7 @@
             border-left-color: #1e3799;
         }
         .campus-color:hover{
-            background-color: #1e379930;
+            background-color: #a4a3ddaa;
         }
         .placement-color{
             margin-left:50px;
@@ -295,7 +295,7 @@
             border-left-color: #ffc72c;
         }
         .placement-color:hover{
-            background-color: #ffc72c50;
+            background-color: #ddd8b8aa;
         }
         .note-head{
             width: 99%;
@@ -336,14 +336,14 @@
             margin-right:50px;
             cursor: pointer;
             transition: box-shadow .3s, transform .3s;
-            border:1px solid transparent;
-            border-radius: 10px;
+            border:1px solid #bfbfbf;
+            border-radius: 5px;
             background-color:#fff;
             box-shadow: 0 3px 6px 0 #0003;
         }
         #note-container .cad:hover{
-            box-shadow: 4px 4px 12px 2px #0005;
-            transform: scale(1.008);
+            box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
+            transform: scale(1.03);
         }
         #note-container .header{
             padding:0px 0;
@@ -495,28 +495,108 @@
                 transform: rotate(360deg);
             }
         }
-        .loading-animation {
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            border-radius: 50%;
-            border-top: 3px solid #bbb;
-            border-bottom: 3px solid #bbb;
-            border-left: 4px solid #999;
-            border-right: 4px solid #999;
-            animation: rotate 2s infinite linear;
-            z-index: 10;
-            opacity: .6;
+
+/* ... */
+
+        .lds-roller {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
         }
+        .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+        }
+        .lds-roller div:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #000;
+        margin: -4px 0 0 -4px;
+        }
+        .lds-roller div:nth-child(1) {
+        animation-delay: -0.036s;
+        }
+        .lds-roller div:nth-child(1):after {
+        top: 63px;
+        left: 63px;
+        }
+        .lds-roller div:nth-child(2) {
+        animation-delay: -0.072s;
+        }
+        .lds-roller div:nth-child(2):after {
+        top: 68px;
+        left: 56px;
+        }
+        .lds-roller div:nth-child(3) {
+        animation-delay: -0.108s;
+        }
+        .lds-roller div:nth-child(3):after {
+        top: 71px;
+        left: 48px;
+        }
+        .lds-roller div:nth-child(4) {
+        animation-delay: -0.144s;
+        }
+        .lds-roller div:nth-child(4):after {
+        top: 72px;
+        left: 40px;
+        }
+        .lds-roller div:nth-child(5) {
+        animation-delay: -0.18s;
+        }
+        .lds-roller div:nth-child(5):after {
+        top: 71px;
+        left: 32px;
+        }
+        .lds-roller div:nth-child(6) {
+        animation-delay: -0.216s;
+        }
+        .lds-roller div:nth-child(6):after {
+        top: 68px;
+        left: 24px;
+        }
+        .lds-roller div:nth-child(7) {
+        animation-delay: -0.252s;
+        }
+        .lds-roller div:nth-child(7):after {
+        top: 63px;
+        left: 17px;
+        }
+        .lds-roller div:nth-child(8) {
+        animation-delay: -0.288s;
+        }
+        .lds-roller div:nth-child(8):after {
+        top: 56px;
+        left: 12px;
+        }
+        @keyframes lds-roller {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
         .video video{
             width:100%;
         }
-
+        .load-background{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-image: url(img/home.jpg);
+            width:100%;
+            height: 50vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         /*content css ends*/
     </style>
     <script>
@@ -564,7 +644,6 @@
             </div>
         </div>
         <hr style="margin: 0 2%;border-width: 2px;box-shadow: 0 3 6 #0003">
-    </header>
     <div class="collapse" id="collapseSearch">
         <div style="display:flex;justify-content: center">
             <input id="focus" type="text" style="padding-left:10px;width: 80%;" placeholder="Enter search text here...">
@@ -604,6 +683,8 @@
             </div>
         </div>
     </div>
+</header>
+
     <main>
         <crumbs id="pec-crumb" class="pec-crumb"></crumbs>
         
@@ -611,9 +692,9 @@
 
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
-            <div class="video" id="play">
-                <div style="width: 100%;height:800px;background-color: #eee;position: relative;">
-                    <div class="loading-animation"></div>
+            <div class="video" id="mv">
+                <div class="load-background">
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
                 </div>
             </div>
             <div class="divider"></div>
@@ -672,8 +753,7 @@
                     <div i="i" class="col-xl-5 slide-in from-left">
                         <div class="suthum-box academics-color" onclick="window.location.href='#'">
                             <h1>Academics</h1>
-                            <p>There are 12 departments at PEC constituting of Engineering, Science and Humanities disciplines. These departments offer B.Tech., M.Tech., PhD and MCA (only Dept. of CSE) degree courses.
-                            </p>
+                            <p>We are committed to providing knowledge and skill development for furthering societal, environmental and organizational growth. There are 12 departments at PEC constituting of Engineering, Science and Humanities disciplines. These departments offer B.Tech., M.Tech., PhD and MCA (only Dept. of CSE) degree courses.</p>
                             <div class="text-center">
                                 <svg class="d-a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40pt" height="40pt" viewBox="0 0 24 24" version="1.1">
                                     <g id="surface1">
@@ -698,7 +778,7 @@
                                         <div class="col-md-auto slide-in from-right"><div class="dept" onclick="window.location.href='#'">Mathematics</div></div>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-auto slide-in from-right"><div class="dept" onclick="window.location.href='#'">Information Technology (IT)</div></div>
                                         <div class="col-md-auto slide-in from-right"><div class="dept" onclick="window.location.href='#'">Chemical Engineering (ChE)</div></div>
@@ -711,15 +791,16 @@
                         </div>
                     </div>
                     <div class="col-lg-6 slide-in from-left">
-                        <div class="" style="width: 100%;height: 100%;padding:50px">
-                            <img src="img/campus-life-100.jpg" pec-scroll="img/campus-life.jpg" class="c-p-images">
+                        <div id="cv" style="width: 100%;height: 100%;padding:50px">
+                            <div class="load-background" style="background: #eee;height:100%">
+                                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 slide-in from-right">
                         <div class="suthum-box campus-color" onclick="window.location.href='#'">
                             <h1>Campus Life</h1>
-                            <p>Apart from Academics, the campus is a hub for sports activities and events and activities under various clubs and committees are held round the year.
-                            </p>
+                            <p>The campus provides a stimulating ambience that motivates students to discover their personal identity and make prudent life choices. Cultural diversity enhances the richness of experience for the students and the campus becomes a powerhouse of inclusion, nurturing expansive thinking, scientific temperament and innovative ideas. In addition to academic pursuits, the campus is a hub for various extracurricular activities and several events under the aegis of various clubs and committees are held all round the year.</p>
                             <div class="text-center">
                                 <svg class="d-a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40pt" height="40pt" viewBox="0 0 24 24" version="1.1">
                                     <g id="surface1">
@@ -743,8 +824,10 @@
                         </div>
                     </div>
                     <div class="col-lg-6 slide-in from-right">
-                        <div class="" style="width: 100%;height: 100%;padding:50px">
-                            <img id='test' src="img/placements-100.jpg" pec-scroll="img/placements.jpg" class="c-p-images">
+                        <div id="pv" style="width: 100%;height: 100%;padding:50px">
+                            <div class="load-background" style="background: #eee;height:100%">
+                                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                            </div>
                         </div>
                     </div>
                     <div class="admission fade-in">
@@ -758,8 +841,6 @@
                 </div>
             </div>
 
-            
-    
             <img src="img/beach.jpg" style="width: 100%;object-fit:cover">
         <!--main content ends-->
     </main>
@@ -902,8 +983,8 @@
         const faders = document.querySelectorAll('.fade-in')
         const sliders = document.querySelectorAll('.slide-in')
         const appearOptions = {
-            threshold: 0,
-            rootMargin: "0px 0px -300px 0px"
+            threshold: 0.2,
+            rootMargin: "2600px 0px -200px 0px"
         }
 
         const appearOnScroll = new IntersectionObserver(
@@ -912,12 +993,13 @@
             ){
                 entries.forEach(entry => {
                     if(!entry.isIntersecting){
-                        return;
+                        return
                     }
                     entry.target.classList.add('appear')
                     appearOnScroll.unobserve(entry.target)
-                    if(entry.target.getAttribute('i')=='i'){
-                        asyncLoad(document.querySelectorAll('[pec-scroll]'),'pec-scroll');
+                    if(entry.target.getAttribute('i')=='i' && window.outerWidth<600){
+                        window.cv.innerHTML='<img src="img/campus-life.jpg" class="c-p-images">'
+                        window.pv.innerHTML='<img src="img/placements.jpg" class="c-p-images">'
                     }
                 })
             },
@@ -933,32 +1015,34 @@
         window.addEventListener('scroll',()=>{
             let scroll = window.pageYOffset
                 const p = document.querySelector('#parallax')
-                p.style.top = (40+(scroll-2400)/18.5) + "vh"
+                p.style.top = (40+(scroll-2400)/17) + "vh"
         })
 
-        function asyncLoad(images,attribute){
-            images.forEach((image)=>{
-                    $.ajax({
-                        url: image.getAttribute(attribute),
-                        cache:false,
-                        xhr:function(){
-                            var xhr = new XMLHttpRequest()
-                            xhr.responseType= 'blob'
-                            return xhr
-                        },
-                        success: function(data){
-                            var url = window.URL || window.webkitURL
-                            image.src = url.createObjectURL(data)
-                        }
+        const videoObserver = new IntersectionObserver(function(elts,videoObserver){
+                elts.forEach(elt=>{
+                    if(elt.isIntersecting==true)
+                        elt.target.play()
+                    else
+                        elt.target.pause()
                 })
-            })
-        }
+            },{threshold: 0.5})
+
 
         window.onload = function() {
-            const images = document.querySelectorAll('[pec-img]')
-            asyncLoad(images,'pec-img')
-            window.play.innerHTML='<video src="img/wearepec.mp4" loop autoplay></video>'
-            // window.scrollTo(0,128)
+
+            if(window.outerWidth>600){
+                window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay muted></video>'
+                window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" poster="img/campus-life.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
+                window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" poster="img/placements.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
+                videoObserver.observe(document.querySelector('video'))
+            }
+            else{
+                window.mv.innerHTML='<img src="img/home.jpg" pec-img="img/home.jpg">'
+            }
+        }
+
+        function obs(elt){
+            videoObserver.observe(elt)
         }
 
     </script>

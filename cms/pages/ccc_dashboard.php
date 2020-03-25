@@ -1,49 +1,56 @@
 <?php
-require_once('../DB_TRANS/db_con.php');
-$error = 0;
-if (isset($_SESSION['loggedin_status'])) {
-  $logged = $_SESSION['loggedin_status'];
-  if ($logged == 900) {
-    /*if ($_SESSION['role'] != "ccc") {
-      
-      if (isset($_GET['message'])) {
-        $message = $_GET['message'];
-        $error = 1;
-      }
-    } else {
-     // header("Location: ../index.php");
-        exit();
-    }*/
-  } else {
-    header("Location: ../index.php");
-    exit();
-  }
-} else {
-   header("Location:  ../error/error404.html");
-  exit();
-}
-
-
-
-
-
-$id=$_SESSION['id'];
-$body='';
-$query="SELECT * FROM article where `author`='$id'";
-//echo $query;
-if($result=mysqli_query($db_con,$query))
+include_once('../DB_TRANS/db_con.php');
+$error=0;
+if(isset($_SESSION['loggedin_status']))
 {
-  
-  if(mysqli_num_rows($result)>0)
+$logged=$_SESSION['loggedin_status'];
+if($logged=900)
+{
+  if($_SESSION['role']!="ccc")
   {
     
-  $arr=mysqli_fetch_assoc($result);
-  
-  $body=$arr['body'];
+    if(isset($_GET['message']))
+    {
+    $message=$_GET['message'];
+    $error=1;
+    }
+  }
+  else {
+    // header("Location: ../index.php");
   }
 }
+else {
+   // header("Location: ../index.php");
+    exit();
+}
+}
+
+else {
+  //  header("Location:  ../error/error404.html");
+    exit();
+}
+
+$id=$_SESSION['id'];	
+$body='';	
+$query="SELECT * FROM article where `author`='$id'";	
+//echo $query;	
+if($result=mysqli_query($db_con,$query))	
+{	
+
+  if(mysqli_num_rows($result)>0)	
+  {	
+
+  $arr=mysqli_fetch_assoc($result);	
+
+  $body=$arr['body'];	
+  }	
+}	
+
+
+
 
 ?>
+
 <html>
 
 <head>
@@ -56,10 +63,11 @@ if($result=mysqli_query($db_con,$query))
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
   <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
   <script src="../bootstrap/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/master.css">
+  <!-- <link rel="stylesheet" href="../css/master.css"> -->
   <link rel="stylesheet" href="../css/header.css">
   <meta http-equiv="Content-Language" content="en-us">
-  <title>Rich Text Editor</title>
+  <title>4C Editor</title>
+  <link rel="icon" href="../icon.png">
   <meta charset="utf-8">
   <link href="wh/css/bootstrap.css" rel="stylesheet" type="text/css" />
   <script type="wh/text/javascript" src="wh/js/jquery.js"></script>
@@ -75,10 +83,13 @@ if($result=mysqli_query($db_con,$query))
       margin-top: 50px;
     }
 
+    .btn-toolbar{
+      margin-top:-40px;
+    }
 
     #editor {
-      max-height: 250px;
-      height: 250px;
+      max-height: auto;
+      height: 530px;
       background-color: white;
       border-collapse: separate;
       border: 1px solid rgb(204, 204, 204);
@@ -92,6 +103,7 @@ if($result=mysqli_query($db_con,$query))
       border-top-left-radius: 3px;
       overflow: auto;
       outline: none;
+      resize: vertical;
     }
 
     #voiceBtn {
@@ -112,6 +124,10 @@ if($result=mysqli_query($db_con,$query))
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+    }
+
+    .btn {
+      margin: 2px;
     }
 
     .dropdown-menu a {
@@ -146,13 +162,11 @@ if($result=mysqli_query($db_con,$query))
           <!--verticle li-->
 
           <ul class="nav nav-tab">
-
-            <li> <a href="ccc_viewmemo.php"> VIEW DATASET </a></li>
             <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
           </ul>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-12">
           <div class="panel panel-default"> <?php
                                             if ($error == 1)
                                               echo "  <div class='alert alert-success'>
@@ -228,13 +242,9 @@ if($result=mysqli_query($db_con,$query))
                     <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
                   </div>
 
-                  <div id="editor"><?php echo $body?></div>
+                  <div id="editor"><?php echo $body ?></div>
 
-                  <textarea rows="2" name="desc" cols="20" style="display:none; "> 
-
-                  <?php echo $bodyarr?>                
-                  
-                  </textarea>
+                  <textarea rows="2" name="desc" cols="20" style="display:none; "> </textarea>
 
 
                   <script>
@@ -299,25 +309,13 @@ if($result=mysqli_query($db_con,$query))
                   <input type="submit" value="Submit" name="B1" class="btn btn-primary btn-large">
                 </div>
               </form>
-</body>
 
-</html>
-
-
-
-</div>
-</div>
-</div>
-
-
-
-</div>
-</div>
-</main>
-
-<footer>
-
-</footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
