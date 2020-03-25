@@ -213,7 +213,7 @@
     </div>
     <main>
         <div class="watermark"></div>
-        <div style="margin:15px"> 
+        <div style="margin:15px 30px"> 
         <!--ENTER MAIN CONTENT HERE-->
             <?php echo $body?>
 
