@@ -38,14 +38,13 @@ foreach ($str_arr as $tag) {
     echo "SELECT id FROM news_update where breif='".$content."' AND expire_on=".$date_exp;
   }
 }
-$countfiles = count($_FILES['file']['name']);
-// Looping all files
-for($i=0;$i<$countfiles;$i++){
-  $filename = $_FILES['file']['name'][$i];
-  $file_type=$_FILES['file']['type'][$i];
-  $filename=substr($filename,3);
+   print_r($_FILES);
+  $filename = $_FILES['file']['name'];
+  $file_type=$_FILES['file']['type'];
+  $filename = time().$filename;
+$filename=strtolower($filename);
   // Upload file
-  move_uploaded_file($_FILES['file']['tmp_name'][$i],'../content_upload/'.$filename);
+  move_uploaded_file($_FILES['file']['tmp_name'],'../content_upload/'.$filename);
   $query_files="INSERT INTO `attachment`( `type`, `name`, `content_id`) VALUES ('".$file_type."','".$filename."',".$idc.")";
   
   if(mysqli_query($db_con,$query_files))
@@ -55,7 +54,7 @@ for($i=0;$i<$countfiles;$i++){
   else {
     $flag=0;
   }
-   }
+   
    
 }
 else {
@@ -63,7 +62,7 @@ else {
 }
 if($flag==0)
 {
-  header("location: ../pages/addmemo.php?message=some error occured&error=1");
+header("location: ../pages/addmemo.php?message=some error occured&error=1");
 }
 else {
   echo"ok";

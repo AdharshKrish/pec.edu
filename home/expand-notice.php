@@ -11,24 +11,22 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        $start=$arr['start'];
-        $end=$arr['end'];
+        $start = date("d-M-Y",strtotime($arr['start']));
+        $end = date("d-M-Y",strtotime($arr['end']));
         $cid=$arr['id'];
         setcookie($cid, "seen", strtotime($arr['expires_on']), "/"); 
 
        echo'
-                           
-
-<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-<div class="modal-content">
-  <div class="modal-header">
-    <h5 class="modal-title">'.$start.' &emsp;to&emsp; '.$end.'</h5>
-    <div type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </div>
-  </div>
-  <div class="modal-body">
-    '.$summary.'<br>';
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">'.$start.' &emsp;to&emsp; '.$end.'</h5>
+                <div type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                '.$summary.'<br>';
 
                             $query1="SELECT * FROM tags WHERE content_id=".$cid;
                             

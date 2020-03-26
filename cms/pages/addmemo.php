@@ -166,7 +166,7 @@ else {
                             </div>
                             <div class="row" style="text-align: center;">
                                 <div class="col-sm-6" style="text-align: left;">
-                                    <label for="myFile" >Select one file: <br>(Please attach as link using Google Drive if more file is concerned)</label> <input type="file" name="file[]" style="border: unset;" class="btn btn-default" multiple="multiple">
+                                    <label for="myFile" >Select one file: <br>(Please attach as link using Google Drive if more file is concerned)</label> <input type="file" name="file" style="border: unset;" class="btn btn-default" >
                                 </div>
                                 <br>
                                 <div class="col-sm-6">
