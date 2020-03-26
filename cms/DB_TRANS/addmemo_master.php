@@ -48,7 +48,8 @@ $countfiles = count($_FILES['file']['name']);
 for($i=0;$i<$countfiles;$i++){
   $filename = $_FILES['file']['name'][$i];
   $file_type=$_FILES['file']['type'][$i];
-  $filename=substr($filename,3);
+  $filename = time().$filename;
+$filename=strtolower($filename);
   // Upload file
   move_uploaded_file($_FILES['file']['tmp_name'][$i],'../content_upload/'.$filename);
   $query_files="INSERT INTO `attachment`( `type`, `name`, `content_id`) VALUES ('".$file_type."','".$filename."',".$idc.")";
@@ -68,10 +69,10 @@ else {
 }
 if($flag==0)
 {
-  //header("location: ../pages/webmaster_viewmemo.php?message=ERROR IN ADDING ");
+  header("location: ../pages/webmaster_viewmemo.php?message=ERROR IN ADDING ");
 }
 else {
   echo"ok";
-  //header("location: ../pages/webmaster_viewmemo.php?message=SUCCESS IN ADDING ");
+  header("location: ../pages/webmaster_viewmemo.php?message=SUCCESS IN ADDING ");
 }
 ?>

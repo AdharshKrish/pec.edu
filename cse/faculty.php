@@ -166,6 +166,7 @@
             height: 20px;
             font-size: 15px;
             background: -webkit-linear-gradient(left, #000, #000, #fff);
+            margin-bottom: 5px;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -224,6 +225,7 @@
 
         .degree {
             text-align: center;
+            margin-top:10px;
             font-size: 18px;
         }
 
@@ -416,7 +418,7 @@
                 </div>
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Professor'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Professor' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
 
