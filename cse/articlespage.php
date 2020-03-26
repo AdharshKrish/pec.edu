@@ -274,6 +274,7 @@
     </header>
     <main>
         <!--ENTER MAIN CONTENT HERE-->
+        <br>
         <?php 
             echo "
                 <center>
@@ -282,7 +283,7 @@
                 </center>
             "
         ?>
-        <div class="container-fluid" style="padding-top:30px;padding-bottom:30px">
+        <div class="container-fluid" style="margin:15px 50px;">
             <?php echo $body?>
         </div>
         <br>
