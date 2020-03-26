@@ -369,7 +369,7 @@
 
         <?php
         include("db_con.php");
-        $query = "SELECT * FROM basic_faculty_info where post_tier='HOD'";
+        $query = "SELECT * FROM basic_faculty_info where post_tier='HOD' and department='cse'";
         $result = mysqli_query($db_con, $query);
         if ($result) {
             $arr = mysqli_fetch_assoc($result);
@@ -380,7 +380,7 @@
             $number = $arr['phno'];
             $ext = $arr['extension'];
             $email = $arr['contact_official_email'];
-            $query = "SELECT * FROM uploading where id=" . $id;
+            $query = "SELECT * FROM uploading where id=" . $id ;
             $result = mysqli_query($db_con, $query);
             $arr = mysqli_fetch_assoc($result);
             $file_path = $arr['file_name'];
@@ -416,7 +416,7 @@
                 </div>
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Professor'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Professor' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
 
@@ -472,7 +472,7 @@
 
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Associate Professor'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Associate Professor' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
 
@@ -523,7 +523,7 @@
 
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Assistant Professor'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Assistant Professor' and department='cse'";
                 if ($result = mysqli_query($db_con, $query)) {
 
 
@@ -570,7 +570,7 @@
                 } ?>
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Programmer'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Programmer' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
                     while ($arr = mysqli_fetch_assoc($result)) {
@@ -616,7 +616,7 @@
 
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Others'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Others' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
 
