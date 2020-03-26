@@ -2,9 +2,9 @@
 include("db_con.php");
 $id=$_POST['id'];
 if($id==0){
-    $query="SELECT * FROM `news_update` WHERE department='all' AND verified=1 ORDER BY expires_on DESC LIMIT 30";
+    $query="SELECT * FROM `news_update` WHERE department<>'all' AND verified=1 AND expires_on<=current_date ORDER BY expires_on DESC LIMIT 50";
 }else{
-    $query="SELECT * FROM `news_update` WHERE department='main' AND verified=1 ORDER BY expires_on DESC LIMIT 30";
+    $query="SELECT * FROM `news_update` WHERE department='all' AND verified=1 AND expires_on<=current_date ORDER BY expires_on DESC LIMIT 50";
 }
 
 if($result=mysqli_query($db_con,$query))
@@ -44,7 +44,17 @@ if($result=mysqli_query($db_con,$query))
         echo'<btn class=cad onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
         <div class=header>
             <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>
-            <span style="float: right;margin-right:20px"><img class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender" ></span>
+            <span style="float: right">
+                    
+                   
+            <form method="post" action="../ics/downloadcalendar.php">
+            <input type="hidden" name="date_start" value='.$start.'>
+            <input type="hidden" name="date_end" value='.$end.'>
+            <input type="hidden" name="location" value="Pondicherry Engineering College, Pillaichavady">
+            <input type="hidden" name="description" value='.$summary.'>
+            
+          <input align="right" type="image" value="Add to Calendar"class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender">  </span></input>
+            </form></span>
             <div class=row>
                 <div class=col-1>';
                 if($bul && !isset($_COOKIE[$cid]))
