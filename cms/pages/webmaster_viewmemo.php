@@ -80,8 +80,9 @@ $result = mysqli_query($db_con, $query);
                             <table style="width:100%" border="1">
                                 <tr>
                                     <th>Article name</th>
-                                    <th>Department
-                                    <th>
+                                    <th>Department</th>
+                                    <th>Expires on</th>
+                                    <th>Options</th>
                                 </tr>
 
                                 <?php
@@ -89,14 +90,14 @@ $result = mysqli_query($db_con, $query);
                                     $breif = $arr['breif'];
                                     $id = $arr['id'];
                                     $dep = $arr['department'];
+                                    $exp = $arr['expires_on'];
 
-                                    echo "<tr>
-                     
-                        <td> $breif</td>
-                        <td> $dep</td>
-                        
-                        <td><a href='../DB_TRANS/delete_memo.php?id=$id'>DELETE</a></td>
-                                      </tr>
+                                    echo "<tr>                   
+                                            <td> $breif</td>
+                                            <td> $dep</td>    
+                                            <td> $exp</td>                                        
+                                            <td><a href='../DB_TRANS/delete_memo.php?id=$id'>DELETE</a></td>
+                                        </tr>
                                       ";
                                 }
                                 ?>
