@@ -2,9 +2,9 @@
 include("db_con.php");
 $id=$_POST['id'];
 if($id==0){
-    $query="SELECT * FROM `news_update` WHERE department='all' AND verified=1 AND expires_on<=current_date ORDER BY expires_on DESC LIMIT 30";
+    $query="SELECT * FROM `news_update` WHERE department='all' AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 30";
 }else{
-    $query="SELECT * FROM `news_update` WHERE department='main' AND verified=1 AND expires_on<=current_date ORDER BY expires_on DESC LIMIT 30";
+    $query="SELECT * FROM `news_update` WHERE department='main' AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 30";
 }
 
 if($result=mysqli_query($db_con,$query))

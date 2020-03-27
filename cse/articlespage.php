@@ -13,7 +13,7 @@
             $dep=$arr['dep'];
             $img=$arr['img'];
             $body=$arr['body'];
-        
+            $author=$arr['author'];
     }
 ?>
 <head>
@@ -153,7 +153,16 @@
         }
         
         /*ENTER INLINE CONTENT CSS*/
-        
+        .back{
+            color:#707070;
+            background-color:transparent;
+            border:none;
+            margin-left:90%;
+        }
+        .back:hover{
+            color:black;
+            text-decoration:underline;
+        }
         /*content css ends*/
     </style>
     <script>
@@ -265,11 +274,21 @@
     </header>
     <main>
         <!--ENTER MAIN CONTENT HERE-->
-
-        <div class="container-fluid" style="padding-top:30px;padding-bottom:30px">
+        <br>
+        <?php 
+            echo "
+                <center>
+                    <h1>".$summary."</h1>
+                    <h4 style='color:#707070'>".$author."</h4>
+                </center>
+            "
+        ?>
+        <div class="container-fluid" style="margin:15px 50px;">
             <?php echo $body?>
         </div>
-
+        <br>
+        <div><a href="articles.php?id='.$id.'"><button class="back">Go back</button></a></div>
+        <br>
         <!--main content ends-->
     </main>
     <footer>
