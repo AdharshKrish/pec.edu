@@ -340,40 +340,42 @@
             border-radius: 5px;
             background-color:#fff;
             box-shadow: 0 3px 6px 0 #0003;
+            width:300px;
         }
         #note-container .cad:hover{
             box-shadow: 4px 4px 12px 2px rgba(0,0,0,0.4);
             transform: scale(1.03);
         }
         #note-container .header{
-            padding:0px 0;
+            padding:0px 20px 0 0;
             background-color:#fff;
-            border:none
+            color:#707070;
+            font-size:15px;
+            font-weight: 600;
+            border:none;
+            height:160px;
+            overflow: hidden;
         }
         #note-container .tag{
-            width:100%;
+            width:110%;
             font-size:13px;
             padding:0 20px;
             color:#fff;
-            margin:20px 0
+            margin:20px 20px 0px 0;
         }
         #note-container .bul{
             color:red;
-            font-size:40px;
-            line-height:.5;
-            width:10px;
-            overflow:hidden;
-            margin-left:13px
+            font-size:35px;
+            margin-left:10px
         }
-        #note-container .head{
-            padding:2px 0;
-            font-weight:500;
-            color:#707070;
-            font-size:15px
+        #note-container .lab{
+            margin-left:24px;
+            width:100px;
+            height:fit-content;
         }
         #note-container .summary{
             width:320px;
-            padding:0px 30px;
+            padding:0px 25px;
             font-size:18px;
             text-align:justify;
             overflow-y:hidden;
@@ -978,9 +980,8 @@
                         document.getElementById('full-notice').innerHTML = html;
                     }
                 });
-                if(temp = document.querySelector('#bul2'+cid)){
-                    document.querySelector('#bul1'+cid).innerHTML=''
-                    temp.innerHTML=''
+                if(temp = document.querySelector('#bul'+cid)){
+                    temp.innerHTML='<div style="height:55px;width:20px"></div>'
                 }
         }
         
@@ -1019,7 +1020,7 @@
         window.addEventListener('scroll',()=>{
             let scroll = window.pageYOffset
                 const p = document.querySelector('#parallax')
-                p.style.top = (40+(scroll-2400)/17) + "vh"
+                p.style.top = (50+(scroll-2400)/17) + "vh"
         })
 
         const videoObserver = new IntersectionObserver(function(elts,videoObserver){
