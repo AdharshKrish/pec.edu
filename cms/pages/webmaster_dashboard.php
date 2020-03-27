@@ -101,7 +101,6 @@
                                         <label for="dept">Designation</label>
                                         <select name="role" class="form-control" onchange='checkvalue(this.value)'>
                                         <option value="none" selected="true" disabled>Select</option>
-                                            <option value="none" selected="true" disabled>Select</option>
                                                 <option value="professor">Professor</option>
                                                 <option value="asociate professor">Associate Professor</option>
                                                 <option value="assistant prof">Assistant Professor</option>

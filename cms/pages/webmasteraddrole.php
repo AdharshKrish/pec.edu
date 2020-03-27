@@ -121,7 +121,7 @@ else {
                                     </div>   
                                     
                                     <div class="form-group">
-                                        <label for="name">Username</label>
+                                        <label for="name">Usermail</label>
                                         <input type="text" name="email" placeholder="Email" class="form-control">
                                     </div>
 
@@ -147,7 +147,7 @@ else {
                                             <option value="Add New"> Add New</option> 
                                             <option value="Alumni Association"> Alumni Association</option> 
                                             <option value="Examination Wing"> Examination Wing</option> 
-                                            <option value="Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
+                                            <option value="Internal Complaints Committee"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
                                             <option value="National Cadet Corps (NCC)"> National Cadet Corps (NCC)</option> 
                                             <option value="National Service Scheme (NSS)"> National Service Scheme (NSS)</option> 
                                             <option value="Students’ Council"> Students’ Council</option> 

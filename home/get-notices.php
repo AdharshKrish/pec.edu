@@ -13,12 +13,12 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        if(strpos($arr['start'],'0001')!==false)
+        if(strpos($arr['start'],'0000')!==false)
             $start = 'NA';
         else
             $start = date("d-M-Y",strtotime($arr['start']));
 
-        if(strpos($arr['end'],'0001')!==false)
+        if(strpos($arr['end'],'0000')!==false)
             $end = 'NA';
         else
             $end = date("d-M-Y",strtotime($arr['end']));
