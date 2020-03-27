@@ -30,8 +30,15 @@ $arr1=mysqli_fetch_assoc($result);$idref=$arr1['id'];
 
 $query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'$desg')";
 mysqli_query($db_con,$query);
-//continu
-header("Location: ../pages/webmaster_dashboard.php?message=successfully added role");
+if($desg=='faculty')
+{
+
+$query="INSERT INTO `basic_faculty_info`(`name`,`contact_official_email`, `department`, `post_tier`) VALUES ('".$name."','".$email."','".$dep."','others')";
+mysqli_query($db_con,$query);
+
+}
+//continue
+header("Location: ../pages/webmaster_dashboard.php?message=successfully added member");
           exit();
       
 }
