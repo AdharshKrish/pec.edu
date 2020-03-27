@@ -23,14 +23,14 @@ if($result)
 
        if($cv>0)
        {
-           echo $query;
-        // header("Location: ../pages/webmasteraddrole.php?message=already exists");
+           //echo $query;
+           header("Location: ../pages/webmasteraddrole.php?message=already exists");
             exit();
         }
-        else {
+        else {       
             $query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'$role')";
-            mysqli_query($db_con,$query);    
-            header("Location: ../pages/webmasteraddrole.php?message=successfully added role");
+            mysqli_query($db_con,$query);
+            header("Location: ../pages/webmasteraddrole.php?message=add role");
             exit();
         }
     }
