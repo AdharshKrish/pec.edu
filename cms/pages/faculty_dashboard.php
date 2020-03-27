@@ -57,10 +57,16 @@ if (isset($_SESSION['loggedin_status'])) {
             $name = $arr['username'];
             $email = $arr['email'];
             $dept = $arr['department'];
+            $query = "     SELECT * FROM `role` WHERE idref=".$id." AND desg='HOD'";
+            
             $staff = 0;
-            if ($post_tier == 'HOD') {
+            if($result = mysqli_query($db_con, $query))
+            {
+            $arr = mysqli_fetch_assoc($result);
+           
+            if (mysqli_num_rows($result)) {
                 $staff = 1;
-            }
+            }}
         } else {
 
             $exist = 0;

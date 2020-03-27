@@ -101,10 +101,12 @@
                                         <label for="dept">Designation</label>
                                         <select name="role" class="form-control" onchange='checkvalue(this.value)'>
                                         <option value="none" selected="true" disabled>Select</option>
-                                        s    <option value="faculty">Faculty</option>
-                                            <option value="DEAN">Webhandler</option>
-                                            <option value="WEBMASTER">Webmaster</option>
-                                            <option value="other">4C</option>
+                                            <option value="none" selected="true" disabled>Select</option>
+                                                <option value="professor">Professor</option>
+                                                <option value="asociate professor">Associate Professor</option>
+                                                <option value="assistant prof">Assistant Professor</option>
+                                                <option value="programmer">Programmer</option>
+                                                <option value="others">Others</option>
                                         </select>
                                     </div>
 
