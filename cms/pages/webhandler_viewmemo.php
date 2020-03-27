@@ -76,7 +76,7 @@ $result = mysqli_query($db_con, $query);
                                                         ?>
                         <div class="panel-body">
 
-                            <table style="width:100%" border="1">
+                            <table style="width:100%">
                                 <tr>
                                     <th>Article name</th>
                                     <th>Department
@@ -95,7 +95,8 @@ $result = mysqli_query($db_con, $query);
                         <td> $dep</td>
                         <td><a href='wh/editor.php?id=$id'>EDIT</a></td>
                         <td><a href='../DB_TRANS/articles_del.php?id=$id'>DELETE</a></td>
-                                      </tr>";
+                                      </tr>
+                                      <br>";
                                 }
                                 ?>
 

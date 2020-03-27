@@ -43,6 +43,7 @@ if($result=mysqli_query($db_con,$query))
   $arr=mysqli_fetch_assoc($result);	
 
   $body=$arr['body'];	
+  $name=$arr['name'];
   }	
 }	
 
@@ -150,6 +151,7 @@ if($result=mysqli_query($db_con,$query))
 <body>
   <header>
     <h1>pec.edu <span>CMS_</span> </h1>
+    <h1 align:center><?php echo $name?></h1>
   </header>
 
   <main>
