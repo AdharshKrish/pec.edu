@@ -13,8 +13,16 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        $start = date("d-M-Y",strtotime($arr['start']));
-        $end = date("d-M-Y",strtotime($arr['end']));
+        if(strpos($arr['start'],'0001')!==false)
+            $start = 'NA';
+        else
+            $start = date("d-M-Y",strtotime($arr['start']));
+
+        if(strpos($arr['end'],'0001')!==false)
+            $end = 'NA';
+        else
+            $end = date("d-M-Y",strtotime($arr['end']));
+
         date_default_timezone_set('Asia/Kolkata');
         $notetime = new DateTime($arr['timestamp']);
         $curtime = new DateTime();
@@ -28,7 +36,7 @@ if($result=mysqli_query($db_con,$query))
         $dept=$arr['department'];
         if($dept=="all"){
             $dept="All Department";
-            $clr="#3c6382";
+            $clr="#fa983a";
         }else{
             $dept="General";
             $clr="#0ea2be";
@@ -38,11 +46,14 @@ if($result=mysqli_query($db_con,$query))
         echo'<btn class=cad onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
         <div class=header>
             <div class=tag style="background-color:'.$clr.'">'.$dept.'</div>';
-            
-        if($bul && !isset($_COOKIE[$cid]))
+
+        if(isset($_COOKIE[$cid]))
+            echo'<div id="bul'.$cid.'"><span class=bul>&nbsp;</span><span style="color:#2e8690">Read</span></div>';
+        else if($bul)
             echo'<div id="bul'.$cid.'"><span class=bul>&bull;</span><span>New</span></div>';
         else
-            echo'<div style="height:55px;width:20px"></div>';
+            echo'<div id="bul'.$cid.'"><span class=bul>&nbsp;</span><span style="color:#2e8690">-</span></div>';
+
         echo'<span>            
                 <form method="post" action="../ics/downloadcalendar.php">
                     <input type="hidden" name="date_start" value='.$start.'>
@@ -77,21 +88,5 @@ if($result=mysqli_query($db_con,$query))
         echo'   </div>
         </btn>';
     }
-    //     <div class=row>
-    //     <div class=col-1>';
-    //     if($bul && !isset($_COOKIE[$cid]))
-    //         echo '<span id="bul1'.$cid.'" class=bul>&bull;</span>';
-    //     echo '</div><div class=col-10>
-    //         <div class=head>';
-    //         if($bul && !isset($_COOKIE[$cid]))
-    //             echo '<new id="bul2'.$cid.'">New</new><br>';
-    //         else
-    //             echo '<new style="height:25px;display:block"></new>';
-    //     echo '<start>From'.$start.'</start>
-    //             <p>To'.$end.'</p>
-    //         </div>
-    //     </div>
-    // </div>
-
 }
 ?>

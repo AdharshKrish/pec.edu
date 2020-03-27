@@ -149,8 +149,8 @@
             border: 1px solid green;
         }
         .card{
-            width: 300px;
-            min-width: 280px;
+            max-width:300px;
+            min-width: 300px;
             padding: 15px 20px;
             margin: 10px 15px;
 
@@ -185,6 +185,10 @@
             height: 220px;
             overflow-y: auto;
         }
+        .card .old-bullet{
+            padding:8px 0 0 5px;
+            height:33px;
+        }
         .hashtags{
             padding: 7px;
             color:#00f;
@@ -211,11 +215,11 @@
             margin-top: 10px;
         }
 
-        @media (max-width: 520px){
+        /* @media (max-width: 520px){
             .card{
                 min-width: 260px;
             }
-        }
+        } */
         @media (min-width:920px){
             ::-webkit-scrollbar
             {
@@ -382,8 +386,16 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        $start = date("d-M-Y",strtotime($arr['start']));
-        $end = date("d-M-Y",strtotime($arr['end']));
+        if(strpos($arr['start'],'0001')!==false)
+            $start = 'NA';
+        else
+            $start = date("d-M-Y",strtotime($arr['start']));
+
+        if(strpos($arr['end'],'0001')!==false)
+            $end = 'NA';
+        else
+            $end = date("d-M-Y",strtotime($arr['end']));
+
         date_default_timezone_set('Asia/Kolkata');
         $notetime = new DateTime($arr['timestamp']);
         $curtime = new DateTime();
@@ -408,13 +420,19 @@ if($result=mysqli_query($db_con,$query))
                   <input align="right" type="image" value="Add to Calendar"class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender">  </span></input>
                     </form></span>';
                     
-                    if($bul && !isset($_COOKIE[$cid]))
-                        echo '<p id="bul'.$cid.'" class="new-bullet"><span>&bull;</span>New</p>';
+                    if(isset($_COOKIE[$cid]))
+                        echo '<p class="old-bullet">Read</p>';
+                    else if($bul)
+                        echo '<div id="bul'.$cid.'"><p class="new-bullet"><span>&bull;</span>New</p></div>';
                     else
-                        echo '<p style="height:32px;width:20px"></p>';
+                        echo '<div id="bul'.$cid.'"><p class="old-bullet">-</p></div>';
                     
-                   echo '<p>'.$start.'</p>
-                    <p>'.$end.'</p>
+                   echo '<div class=row style="margin-left:-10px">
+                            <div class=col-3>From</div>
+                            <div class=col-8>'.$start.'</div>
+                            <div class=col-3>To</div>
+                            <div class=col-8>'.$end.'</div>
+                        </div>
                 </div>
                 <div class="card-body">
                     '.$summary.'
@@ -558,7 +576,7 @@ if($result=mysqli_query($db_con,$query))
                     }
                 });
             if(temp = document.querySelector('#bul'+cid))
-                temp.innerHTML='<p style="height:32px;width:20px"></p>';
+                temp.innerHTML='<p class="old-bullet">Read</p>';
         }
     </script>
 
