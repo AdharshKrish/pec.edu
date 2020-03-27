@@ -185,7 +185,16 @@
             color:#000;
             text-decoration: underline;
         }
-
+        .cht-head{
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding:10px;
+            margin:30px 0;
+            text-align: center;
+            font-weight:600;
+            font-size: 25px;
+            font-family: Oswald;
+        }
 
         /*content css ends*/
     </style>
@@ -312,7 +321,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="youtube">
-                        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4MT892CmdPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/4MT892CmdPE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -333,21 +342,240 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <canvas id="canvas1"></canvas>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="cht-head">
+                Undergraduate Students
             </div>
-            <div class="col-md-6">
-                <canvas id="canvas2"></canvas>
-            </div>
-            <div class="col-md-12" style="display: flex;justify-content: center;">
-                <div class="col-md-7">
-                    <canvas id="canvas3"></canvas>
-                </div>
-            </div>
-            
         </div>
+        <div class="col-lg-5">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">2019-20</th>
+                    <th scope="col">2018-19</th>
+                    <th scope="col">2017-18</th>
+                    <th scope="col">2016-17</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">CIVIL</th>
+                    <td>71</td>
+                    <td>70</td>
+                    <td>73</td>
+                    <td>73</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ME</th>
+                    <td>96</td>
+                    <td>80</td>
+                    <td>73</td>
+                    <td>70</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ECE</th>
+                    <td>116</td>
+                    <td>95</td>
+                    <td>72</td>
+                    <td>71</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CSE</th>
+                    <td>121</td>
+                    <td>105</td>
+                    <td>71</td>
+                    <td>74</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">EEE</th>
+                    <td>52</td>
+                    <td>64</td>
+                    <td>69</td>
+                    <td>70</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">EIE</th>
+                    <td>51</td>
+                    <td>62</td>
+                    <td>59</td>
+                    <td>51</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IT</th>
+                    <td>59</td>
+                    <td>63</td>
+                    <td>55</td>
+                    <td>50</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">CHE</th>
+                    <td>52</td>
+                    <td>57</td>
+                    <td>49</td>
+                    <td>56</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+        <div class="col-lg-7" style="display: flex;align-items: center;">
+            <canvas id="canvas1"></canvas>
+        </div>
+        <div class="col-12">
+            <div class="cht-head">
+                Postgraduate Students
+            </div>
+        </div>
+        <div class="col-lg-7" style="display: flex;align-items: center;">
+            <canvas id="canvas2"></canvas>
+        </div>
+        <div class="col-lg-5">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">2019-20</th>
+                    <th scope="col">2018-19</th>
+                    <th scope="col">2017-18</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">SE</th>
+                    <td>15</td>
+                    <td>18</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">EE</th>
+                    <td>11</td>
+                    <td>11</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PDM</th>
+                    <td>15</td>
+                    <td>10</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ECE</th>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">WC</th>
+                    <td>4</td>
+                    <td>12</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DCS</th>
+                    <td>3</td>
+                    <td>9</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IS</th>
+                    <td>16</td>
+                    <td>23</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">EDC</th>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ET</th>
+                    <td>3</td>
+                    <td>11</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IE</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IT</th>
+                    <td>0</td>
+                    <td>6</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">MCA</th>
+                    <td>13</td>
+                    <td>32</td>
+                    <td>35</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">M.Sc.</th>
+                    <td>3</td>
+                    <td>0</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">M.Phil.</th>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+        </div>
+        <div class="col-12">
+            <div class="cht-head">
+                Total Students
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Programme</th>
+                    <th scope="col">Male</th>
+                    <th scope="col">Female</th>
+                    <th scope="col">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">UG</th>
+                    <td>1514</td>
+                    <td>739</td>
+                    <td>2253</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">PG</th>
+                    <td>138</td>
+                    <td>147</td>
+                    <td>285</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                    <td>1652</td>
+                    <td>886</td>
+                    <td>2538</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+        <div class="col-lg-5" style="margin-bottom:20px">
+            <canvas id="canvas3"></canvas>
+        </div>
+    </div>
+
+</div>
+    
+
 
         <!--main content ends-->
     </main>
@@ -520,15 +748,6 @@
                     ],
                     borderWidth: 1
                 }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
             }
         });
 
@@ -539,7 +758,7 @@
                 labels: ['SE','EE','PDM','ECE','WC','DCS','IS','EDC','ET','IE','IT','MCA','M.Sc','M.Phil'],
                 datasets: [{
                     label: 'PG Departmental Strength',
-                    data: [33,22,21,16,12,39,16,14,0,6,45,3,1],
+                    data: [33,22,25,21,16,12,39,16,14,0,6,80,3,1],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.7)',
                         'rgba(54, 162, 235, 0.7)',
@@ -575,15 +794,7 @@
                     borderWidth: 1
                 }]
             },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
+            
         });
 
 
@@ -605,15 +816,6 @@
                     ],
                     borderWidth: 2
                 }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
             }
         });
 
