@@ -320,7 +320,7 @@
                         </div>
                         <div class="col-md-3 hidden-sm-md col-lg-1 col-xl-2 col-footer-1"></div>
                         <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2 col-footer-1 padding_remove">
-                            <button class="contact" onclick="window.location.href='../contact-us/'">CONTACT&nbsp;US</button>
+                            <button class="contact" onclick="window.location.href='../home/contact-us.html'">CONTACT&nbsp;US</button>
                             <div class="dotted_bordered">
 
 
@@ -335,32 +335,32 @@
                             <div class="nested-footer-2 tb2">
                                 <div class="row row-footer-2">
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="http://pec.edu" target="blank">
+                                        <a alt="pec" href="http://pec.edu/old/" target="blank">
                                             <p class="link-footer-2">Old&nbsp;Site</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="http://cms.pec.edu/test/cells/iedc">
+                                        <a alt="iedc" href="https://www.peciedc.com/" target="blank">
                                             <p class="link-footer-2">IEDC</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="https://www.nirfindia.org/2019/EngineeringRanking.html">
+                                        <a alt="nirf" href="https://www.nirfindia.org/" target="blank">
                                             <p class="link-footer-2">NIRF</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="http://cms.pec.edu/test/sitemap">
+                                        <a href="../home/sitemap.html">
                                             <p class="link-footer-2">Sitemap</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="http://cms.pec.edu/test/about-page">
+                                        <a href="../home/about-us.html">
                                             <p class="link-footer-2">AboutSite</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="http://cms.pec.edu/test/disclaimer">
+                                        <a href="../home/disclaimer.html">
                                             <p class="link-footer-2">Disclaimer</p>
                                         </a>
                                     </div>
