@@ -303,21 +303,21 @@
     </footer>
 
     <script>
-        let link = window.location.href;
-        link = link.replace('http://','');
-        link = link.replace('https://','');
-        let crumbs = link.split('/');
-        let a = 'http:/';
-        crumbs.forEach((crumb,i)=>{
-            a+='/'+crumb;
-            if(i<crumbs.length-1)
-                if(crumbs[i+1]!="")
-                    document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
-                else
-                    document.getElementById('pec-crumb').innerHTML+=crumb.split('.')[0];
-            else
-                document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
-            });
+        // let link = window.location.href;
+        // link = link.replace('http://','');
+        // link = link.replace('https://','');
+        // let crumbs = link.split('/');
+        // let a = 'http:/';
+        // crumbs.forEach((crumb,i)=>{
+        //     a+='/'+crumb;
+        //     if(i<crumbs.length-1)
+        //         if(crumbs[i+1]!="")
+        //             document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
+        //         else
+        //             document.getElementById('pec-crumb').innerHTML+=crumb.split('.')[0];
+        //     else
+        //         document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
+        //     });
 
     </script>
 
