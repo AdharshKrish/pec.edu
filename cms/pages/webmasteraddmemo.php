@@ -85,6 +85,8 @@ else
                         <li> <a href="webmasteraddrole.php" id=""> ADD ROLES </a></li>
                         <li class="active"> <a href="webmasteraddmemo.php" style="color: black;"> ADD MEMO </a></li>
                         <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
+                        
+                        <li> <a href="webmaster_role.php"> VIEW ROLES </a></li>
                         <li> <a href="webmaster_viewfaculty.php"  > VIEW FACULTY DATA SET </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>

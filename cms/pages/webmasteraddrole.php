@@ -81,6 +81,8 @@ else {
                         <li  class="active"> <a href="webmasteraddrole.php"style="color: black;"> ADD ROLES </a></li>
                         <li> <a href="webmasteraddmemo.php" id=""> ADD MEMO </a></li>
                         <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
+                        
+                        <li> <a href="webmaster_role.php"> VIEW ROLES </a></li>
                         <li> <a href="webmaster_viewfaculty.php"> VIEW FACULTY DATA SET </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>
@@ -121,7 +123,7 @@ else {
                                     </div>   
                                     
                                     <div class="form-group">
-                                        <label for="name">Usermail</label>
+                                        <label for="name">Username</label>
                                         <input type="text" name="email" placeholder="Email" class="form-control">
                                     </div>
 
@@ -147,7 +149,7 @@ else {
                                             <option value="Add New"> Add New</option> 
                                             <option value="Alumni Association"> Alumni Association</option> 
                                             <option value="Examination Wing"> Examination Wing</option> 
-                                            <option value="Internal Complaints Committee"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
+                                            <option value="Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
                                             <option value="National Cadet Corps (NCC)"> National Cadet Corps (NCC)</option> 
                                             <option value="National Service Scheme (NSS)"> National Service Scheme (NSS)</option> 
                                             <option value="Students’ Council"> Students’ Council</option> 
