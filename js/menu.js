@@ -33,8 +33,8 @@ function menu(elt,item)
         document.getElementById('menu-col-4').innerHTML='';
     }
     else if(item==='departments'){
-        document.getElementById('menu-col-3').innerHTML='<ul><li>Chemical Engineering</li><li>Chemistry</li><li>Civil Engineering</li><li>Computer Science and Engineering</li><li>Electronics and Communication Engineering</li></ul>';
-        document.getElementById('menu-col-4').innerHTML='<ul><li>Electronics and Instrumentation Engineering</li><li>Humanities and Social Sciences</li><li>Information Technology</li><li>Mathematics</li><li>Mechanical Engineering</li><li>Physics</li></ul>';
+        document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../che/\'">Chemical Engineering</li><li onclick="location.href=\'../chem/\'">Chemistry</li><li onclick="location.href=\'../ce/\'">Civil Engineering</li><li onclick="location.href=\'../cse/\'">Computer Science and Engineering</li><li onclick="location.href=\'../ece/\'">Electronics and Communication Engineering</li></ul>';
+        document.getElementById('menu-col-4').innerHTML='<ul><li onclick="location.href=\'../eie/\'">Electronics and Instrumentation Engineering</li><li onclick="location.href=\'../hss/\'">Humanities and Social Sciences</li><li onclick="location.href=\'../it/\'">Information Technology</li><li onclick="location.href=\'../maths/\'">Mathematics</li><li onclick="location.href=\'../me/\'">Mechanical Engineering</li><li onclick="location.href=\'../phy/\'">Physics</li></ul>';
     }
     else{
         document.getElementById('menu-col-3').innerHTML='<p class="menu-about">Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and College development and is managed by a Board of Governors.</p>';
@@ -56,7 +56,7 @@ function menu1(elt,index)
     }else if(index==3){
         document.getElementById('menu-col-4').innerHTML='<ul><li onclick="location.href=\'../home/CCC.php?id=Cultural%20Club\'">Cultural Club</li><li onclick="location.href=\'../home/CCC.php?id=Design%20Club\'">Design Club</li><li onclick="location.href=\'../home/CCC.php?id=Health,%20Hygiene%20and%20Environmental%20Club\'">Health, Hygiene and Environmental Club</li><li onclick="location.href=\'../home/CCC.php?id=Literary%20Club\'">Literary Club</li><li onclick="location.href=\'../home/CCC.php?id=Google%20DSC\'">Google DSC</li><li onclick="location.href=\'../home/CCC.php?id=Photography%20Club\'">Photography Club</li><li onclick="location.href=\'../home/CCC.php?id=Rotaract%20Club\'">Rotaract Club</li><li onclick="location.href=\'../home/CCC.php?id=Thamizh%20Mandram\'">Tamizh Mandram</li></ul>';
     }else if(index==4){
-        document.getElementById('menu-col-4').innerHTML='<ul id="chapter-font"><li onclick="location.href=\'../home/CCC.php?id=Swayam-NPTEL%20–%20Students\'">Swayam/NPTEL - Students</li><li onclick="location.href=\'../home/CCC.php?id=Quality%20Enhancement%20in%20Engineering%20Education\'">Quality Enhancement in Engineering Education</li><li onclick="location.href=\'../home/CCC.php?id=Swayam-NPTEL%20–%20Staffs\'">Swayam/NPTEL - Staffs</li></ul>';
+        document.getElementById('menu-col-4').innerHTML='<ul id="chapter-font"><li onclick="location.href=\'../home/CCC.php?id=Swayam-NPTEL%20-%20Students\'">Swayam/NPTEL - Students</li><li onclick="location.href=\'../home/CCC.php?id=Quality%20Enhancement%20in%20Engineering%20Education\'">Quality Enhancement in Engineering Education</li><li onclick="location.href=\'../home/CCC.php?id=Swayam-NPTEL%20-%20Staffs\'">Swayam/NPTEL - Staffs</li></ul>';
     }
 }
 document.addEventListener('scroll',()=>{
