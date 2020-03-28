@@ -1,6 +1,11 @@
 <?php
 include_once('../DB_TRANS/db_con.php');
 $error=0;
+if(isset($_GET['message']))
+    {
+    $message=$_GET['message'];
+    $error=1;
+    }
 if(isset($_SESSION['loggedin_status']))
 {
 $logged=$_SESSION['loggedin_status'];
@@ -16,17 +21,17 @@ if($logged=900)
     }
   }
   else {
-    // header("Location: ../index.php");
+    //header("Location: ../index.php");
   }
 }
 else {
-   // header("Location: ../index.php");
+   header("Location: ../index.php");
     exit();
 }
 }
 
 else {
-  //  header("Location:  ../error/error404.html");
+   header("Location:  ../error/error404.html");
     exit();
 }
 
@@ -37,14 +42,25 @@ $query="SELECT * FROM article where `author`='$id'";
 if($result=mysqli_query($db_con,$query))	
 {	
 
+  $query1='SELECT * FROM login where id='.$id;
+    $result1=mysqli_query($db_con,$query1);
+    $arr1=mysqli_fetch_assoc($result1);	
+
+  //$body=$arr['body'];	
+  $name=$arr1['username'];
+
   if(mysqli_num_rows($result)>0)	
   {	
 
   $arr=mysqli_fetch_assoc($result);	
 
   $body=$arr['body'];	
-  $name=$arr['name'];
+  //$name=$arr['name'];
   }	
+  else
+  {
+    
+  }
 }	
 
 
@@ -169,15 +185,15 @@ if($result=mysqli_query($db_con,$query))
         </div>
 
         <div class="col-md-12">
-          <div class="panel panel-default"> <?php
+          <div class="panel panel-default"> 
+            <div class="panel-body">
+
+            <?php
                                             if ($error == 1)
                                               echo "  <div class='alert alert-success'>
                  <strong>SUCCESSFULL</strong> " . $message . "
                </div>";
                                             ?>
-            <div class="panel-body">
-
-
 
 
               <form method="POST" name="form1" action="../DB_TRANS/cccbody.php?id=<?php echo $id ?>" onsubmit="loadVal();">
