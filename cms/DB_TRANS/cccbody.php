@@ -18,7 +18,7 @@ if($result=mysqli_query($db_con,$query1))
     if(mysqli_query($db_con,$query))
 {
  echo "succesfull";
- header("Location: ../pages/ccc_dashboard.php");
+ header("Location: ../pages/ccc_dashboard.php?message=succesfully updated post");
 exit();
 }
 else{

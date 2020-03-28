@@ -12,7 +12,7 @@ require_once('./db_con.php');
 //echo $_POST['email'];
 $usernaam=$_POST['email'];
 $role=$_GET['role'];
-$query="SELECT * FROM login where username='".$usernaam."' ";
+$query="SELECT * FROM login where username='Examination Wing' AND `department`=''";
 
 
 $_SESSION['role']=$role;
@@ -97,7 +97,7 @@ if($cv>0)
                             
                             } catch (Exception $e) {
                                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-                            header("Location: ../index.php?message=some technical error please try again later1");
+                            header("Location: ../index.php?message=some technical error please try again later");
                                 die();
                             }
     
