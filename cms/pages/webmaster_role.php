@@ -61,7 +61,7 @@ $result = mysqli_query($db_con, $query);
                         <li> <a href="webmasteraddmemo.php" id=""> ADD MEMO </a></li>
                         <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
                         <li> <a href="webmaster_role.php"  style="color: black;"> VIEW ROLES </a></li>
-                        <li> <a href="webmaster_viewfaculty.php"> VIEW FACULTY DATA SET </a></li>
+                        <li> <a href="webmaster_viewfaculty.php"> FACULTY ACCESS LIST </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>
                 </div>
@@ -78,7 +78,7 @@ $result = mysqli_query($db_con, $query);
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=webhandler'>WEBHANDLER</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=ccc'>Cells and Community</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=ccc'>4C</a></button></td>
                             </tr>
                             <tr>
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=webmaster'>WEBMASTER</a></button></td>
