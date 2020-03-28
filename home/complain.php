@@ -62,11 +62,11 @@ require 'PHPMailer/src/SMTP.php';
         {
         echo "alert('Complaint has been registered')";
 
-        header("Location: http://cms.pec.edu/test/contact-us/");
+        header("Location: http://www.pec.edu/home/contact-us.html");
         die();}
         else {
             echo "alert('some technical error please try again later')";
-            header("Location: http://cms.pec.edu/test/contact-us/");
+            header("Location: http://www.pec.edu/home/contact-us.html");
             die();
         }
     
