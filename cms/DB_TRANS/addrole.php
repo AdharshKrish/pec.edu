@@ -7,7 +7,9 @@ $dep=$_POST['dept'];
 
 //echo "INSERT INTO `login`(`desg`, `username`, `email`, `department`) VALUES ('".$role."','".$name."','".$email."','".$dep."')";
 
-$query_check_exists="SELECT * FROM login WHERE email='".$email."' and dep!=''";
+
+$query_check_exists="SELECT * FROM login WHERE email='".$email."' and department!=''";
+echo $query_check_exists;
 $result=mysqli_query($db_con,$query_check_exists);
 if($result)
 {
@@ -39,7 +41,7 @@ if($result)
     }
 }
 else {
-    header("Location: ../pec/error/error404.html");
+  header("Location: ../pec/error/error404.html");
     exit();
 }
 ?>
