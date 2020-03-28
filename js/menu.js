@@ -29,7 +29,7 @@ function menu(elt,item)
             document.getElementById('menu-col-4').style.left='35%';
         }
         document.getElementById('menu-col-3').style.borderRight='1px solid #707070';
-        document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../home/campus-life.html\'" class="menu3">Campus Life</li><li class="menu3" onmouseover="menu1(this,1)">Committees<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,2)">Cells<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,3)">Clubs<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,4)">Chapters<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3">Facilities</li></ul>';
+        document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../home/campus-life.html\'" class="menu3">Campus Life</li><li class="menu3" onmouseover="menu1(this,1)">Committees<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,2)">Cells<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,3)">Clubs<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onmouseover="menu1(this,4)">Chapters<img src="../img/forward.svg" class="forward" alt=">"></li><li class="menu3" onclick="location.href=\'../home/facilities.html\'">Facilities</li></ul>';
         document.getElementById('menu-col-4').innerHTML='';
     }
     else if(item==='departments'){
