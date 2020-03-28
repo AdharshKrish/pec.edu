@@ -78,7 +78,7 @@ $result = mysqli_query($db_con, $query);
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=webhandler'>WEBHANDLER</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=ccc'>Cells and Community</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editccc.php?role=ccc'>Cells and Community</a></button></td>
                             </tr>
                             <tr>
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editrole.php?role=webmaster'>WEBMASTER</a></button></td>

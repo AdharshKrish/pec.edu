@@ -83,7 +83,7 @@ else {
                         <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
                         
                         <li> <a href="webmaster_role.php"> VIEW ROLES </a></li>
-                        <li> <a href="webmaster_viewfaculty.php"> VIEW FACULTY DATA SET </a></li>
+                        <li> <a href="webmaster_viewfaculty.php"> FACULTY ACCESS LIST </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>
                 </div>
@@ -149,11 +149,11 @@ else {
                                             <option value="Add New"> Add New</option> 
                                             <option value="Alumni Association"> Alumni Association</option> 
                                             <option value="Examination Wing"> Examination Wing</option> 
-                                            <option value="Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
-                                            <option value="National Cadet Corps (NCC)"> National Cadet Corps (NCC)</option> 
-                                            <option value="National Service Scheme (NSS)"> National Service Scheme (NSS)</option> 
-                                            <option value="Students’ Council"> Students’ Council</option> 
-                                            <option value="Students’ Disciplinary Committee"> Students’ Disciplinary Committee</option> 
+                                            <option value="Internal Complaints Committee"> Internal Complaints Committee (Complaints on Sexual Harassment of Women at Workplace)</option> 
+                                            <option value="National Cadet Corps"> National Cadet Corps (NCC)</option> 
+                                            <option value="National Service Scheme"> National Service Scheme (NSS)</option> 
+                                            <option value="Students Council"> Students’ Council</option> 
+                                            <option value="Students Disciplinary Committee"> Students’ Disciplinary Committee</option> 
                                             <option value="NIRF"> NIRF</option> 
                                             <option value="PMKVY"> PMKVY</option> 
                                             <option value="Skill Development Centre"> Skill Development Centre</option> 
@@ -167,29 +167,29 @@ else {
                                             <option value="NeiLit"> NeiLit</option> 
                                             <option value="PEC Newsletter"> PEC Newsletter</option> 
                                             <option value="Library"> Library</option> 
-                                            <option value="PRERANA (SC/ST)"> PRERANA (SC/ST)</option> 
-                                            <option value="Center for Continuing Education (CCE)"> Center for Continuing Education (CCE)</option> 
+                                            <option value="PRERANA"> PRERANA (SC/ST)</option> 
+                                            <option value="Center for Continuing Education"> Center for Continuing Education (CCE)</option> 
                                         <!-- Cells -->
-                                            <option value="Counselling and Career Guidance Cell (CCGC)"> Counselling and Career Guidance Cell (CCGC)</option> 
+                                            <option value="Counselling and Career Guidance Cell"> Counselling and Career Guidance Cell (CCGC)</option> 
                                             <option value="Grievance Redressal Cell"> Grievance Redressal Cell</option> 
-                                            <option value="Innovation and Entrepreneurship Development Cell (IEDC)"> Innovation and Entrepreneurship Development Cell (IEDC)</option> 
-                                            <option value="Internal Quality Assurance Cell (IQAC)"> Internal Quality Assurance Cell (IQAC)</option> 
+                                            <option value="Innovation and Entrepreneurship Development Cell"> Innovation and Entrepreneurship Development Cell (IEDC)</option> 
+                                            <option value="Internal Quality Assurance Cell"> Internal Quality Assurance Cell (IQAC)</option> 
                                             <option value="IP Rights and Patenting Cell"> IP Rights and Patenting Cell</option> 
-                                            <option value="SC/ST Cell"> SC/ST Cell</option> 
-                                            <option value="Women’s Cell"> Women’s Cell</option> 
+                                            <option value="SC-ST Cell"> SC/ST Cell</option> 
+                                            <option value="Womens Cell"> Women’s Cell</option> 
                                         <!-- Clubs -->
                                             <option value="Cultural Club"> Cultural Club</option> 
                                             <option value="Design Club"> Design Club</option> 
                                             <option value="Google DSC"> Google DSC</option> 
-                                            <option value="Health, Hygiene and Environmental Club (H2EC)"> Health, Hygiene and Environmental Club (H2EC)</option> 
+                                            <option value="Health, Hygiene and Environmental Club"> Health, Hygiene and Environmental Club (H2EC)</option> 
                                             <option value="Literary Club"> Literary Club</option> 
                                             <option value="Photography Club"> Photography Club</option> 
                                             <option value="Rotaract Club"> Rotaract Club</option> 
                                             <option value="Thamizh Mandram"> Thamizh Mandram</option> 
                                         <!-- Chapters -->
-                                            <option value="Swayam/NPTEL – Students"> Swayam/NPTEL – Students</option> 
-                                            <option value="Quality Enhancement in Engineering Education (QEEE)"> Quality Enhancement in Engineering Education (QEEE)</option> 
-                                            <option value="Swayam/NPTEL – Staffs"> Swayam/NPTEL – Staffs</option> 
+                                            <option value="Swayam-NPTEL – Students"> Swayam/NPTEL – Students</option> 
+                                            <option value="Quality Enhancement in Engineering Education"> Quality Enhancement in Engineering Education (QEEE)</option> 
+                                            <option value="Swayam-NPTEL – Staffs"> Swayam/NPTEL – Staffs</option> 
                                         </select>
                                     </div>
                                     <input type="text" name="title" id="4Cnew" class="form-control" placeholder="Enter Title" style='display:none;'/>

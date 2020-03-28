@@ -21,8 +21,8 @@ if (isset($_SESSION['loggedin_status'])) {
     header("Location:  ../error/error404.html");
     exit();
 }
-$dep = $_GET['dep'];
-$query = "SELECT * FROM `login` where department='$dep'";
+
+$query = "SELECT * FROM `login` where department=''";
 //echo $query;
 $result = mysqli_query($db_con, $query);
 ?>
@@ -66,12 +66,12 @@ $result = mysqli_query($db_con, $query);
                         <li> <a href="webmasteraddmemo.php" id=""> ADD MEMO </a></li>
                         <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
                         <li> <a href="webmaster_role.php"> VIEW ROLES </a></li>
-                        <li> <a href="webmaster_viewfaculty.php" style="color: black;"> FACULTY ACCESS LIST </a></li>
+                        <li> <a href="webmaster_viewfaculty.php" style="color: black;"> VIEW FACULTY DATA SET </a></li>
                         
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
                     </ul>
                 </div>
-                <a href='./webmaster_viewfaculty.php'><button class="btn">
+                <a href='./webmaster_role.php'><button class="btn">
                         GO BACK <span class="badge badge-primary"></span></a>
                 </button>
                 <div class="col-md-8 ">
@@ -85,8 +85,8 @@ $result = mysqli_query($db_con, $query);
 
                             <table style="width:100%">
                                 <tr>
-                                    <th>FACULTY NAME</th>
-                                    <th>Department
+                                    <th>ROLE NAME</th>
+                                    <th>Email</th>
                                     <th>
                                 </tr>
 
@@ -94,7 +94,7 @@ $result = mysqli_query($db_con, $query);
                                 while ($arr = mysqli_fetch_assoc($result)) {
                                     $breif = $arr['username'];
                                     $id = $arr['id'];
-                                    $dep = $arr['department'];
+                                    $dep = $arr['email'];
 
                                     echo "<tr>
                      
