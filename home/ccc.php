@@ -212,6 +212,7 @@
         </div>
     </div>
     <main>
+      <crumbs id="pec-crumb" class="pec-crumb"></crumbs>
         <div class="watermark"></div>
         <div style="margin:15px 30px"> 
         <!--ENTER MAIN CONTENT HERE-->
@@ -303,21 +304,26 @@
     </footer>
 
     <script>
-        // let link = window.location.href;
-        // link = link.replace('http://','');
-        // link = link.replace('https://','');
-        // let crumbs = link.split('/');
-        // let a = 'http:/';
-        // crumbs.forEach((crumb,i)=>{
-        //     a+='/'+crumb;
-        //     if(i<crumbs.length-1)
-        //         if(crumbs[i+1]!="")
-        //             document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
-        //         else
-        //             document.getElementById('pec-crumb').innerHTML+=crumb.split('.')[0];
-        //     else
-        //         document.getElementById('pec-crumb').innerHTML+=crumbs[crumbs.length-1].split('.')[0] ;
-        //     });
+        let link = window.location.href;
+        link = link.replace('http://','');
+        link = link.replace('https://','');
+        let crumbs = link.split('/');
+        let a = 'http:/';
+        crumbs.forEach((crumb,i)=>{
+            a+='/'+crumb;
+            if(i<crumbs.length-1)
+                if(crumbs[i+1]!="")
+                    document.getElementById('pec-crumb').innerHTML+='<a class="pec-crumb-item" href="'+a+'">'+ crumb + '</a>&nbsp;/&nbsp;';
+                else
+                    document.getElementById('pec-crumb').innerHTML+=crumb.split('.')[0];
+                
+            else{                
+                    let cr = crumb.split('.')[1];
+                    cr = cr.replace(/%20/g,' ');
+                    document.getElementById('pec-crumb').innerHTML+=cr.split('?id=')[1];
+                    console.log(cr.split('?id=')[1]);
+            }
+        });
 
     </script>
 
