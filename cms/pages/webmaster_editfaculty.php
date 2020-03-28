@@ -103,7 +103,7 @@ $result = mysqli_query($db_con, $query);
                         
                         <td><a href='../DB_TRANS/delete_faculty.php?id=$id'>DELETE</a></td>
                                       </tr>
-                                      <br>";
+                                      ";
                                 }
                                 ?>
 

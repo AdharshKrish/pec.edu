@@ -17,6 +17,7 @@ if($result)
     $cv=mysqli_num_rows($result);
     if($cv>0)
     {
+
         $query="SELECT * FROM `role` WHERE idref=$idref AND desg='$role'";
        // echo "UPDATE login set desg='".$role."'  where id=".$arr['id'];
        $result=mysqli_query($db_con,$query);
@@ -29,11 +30,36 @@ if($result)
            header("Location: ../pages/webmasteraddrole.php?message=already exists");
             exit();
         }
-        else {       
+        else {  
+            if($role=='HOD')
+            {
+                $result=mysqli_query($db_con,"SELECT * FROM login l INNER JOIN role r ON l.department='cse' AND r.desg='HOD' AND l.id=r.idref");
+                echo"SELECT * FROM login l and role r ON l.department='".$dep."' AND r.role='".$role."'";
+                if(mysqli_num_rows($result)>0)
+                {
+                    $query="UPDATE `role` set idref=".$idref;
+                    mysqli_query($db_con,$query);
+                    header("Location: ../pages/webmasteraddrole.php?message=updated HOD of ".$dep);
+                    exit();
+
+                }
+                else
+                {
+                    $query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'$role')";
+                    mysqli_query($db_con,$query);
+                    header("Location: ../pages/webmasteraddrole.php?message=added role");
+                    exit();
+
+                }
+
+            }  
+            else
+            {   
             $query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'$role')";
             mysqli_query($db_con,$query);
-            header("Location: ../pages/webmasteraddrole.php?message=add role");
+            header("Location: ../pages/webmasteraddrole.php?message=added role");
             exit();
+            }
         }
     }
     else {
