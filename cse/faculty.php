@@ -199,6 +199,7 @@
             font-size: 14px;
             font-weight: bold;
             color: #707070;
+            margin-right: 5px;
         }
 
         .thumbnail {
@@ -469,7 +470,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -523,7 +524,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -571,7 +572,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -616,7 +617,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -666,7 +667,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
