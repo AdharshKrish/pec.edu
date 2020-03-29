@@ -107,11 +107,7 @@
         }
 
         /*ENTER INLINE CONTENT CSS*/
-        .video img{
-            /* height:720px; */
-            width: 100%;
-            object-fit: cover;
-        }
+        
         .divider{
             height:5px;
             width: 100%;
@@ -489,116 +485,152 @@
             }
         }
 
-        @keyframes rotate {
-            from {
-                transform: rotate(-360deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
+        .video{
+            transition:transform 1s;
         }
-
-/* ... */
-
-        .lds-roller {
-        display: inline-block;
-        position: relative;
-        width: 80px;
-        height: 80px;
-        }
-        .lds-roller div {
-        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-        transform-origin: 40px 40px;
-        }
-        .lds-roller div:after {
-        content: " ";
-        display: block;
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #000;
-        margin: -4px 0 0 -4px;
-        }
-        .lds-roller div:nth-child(1) {
-        animation-delay: -0.036s;
-        }
-        .lds-roller div:nth-child(1):after {
-        top: 63px;
-        left: 63px;
-        }
-        .lds-roller div:nth-child(2) {
-        animation-delay: -0.072s;
-        }
-        .lds-roller div:nth-child(2):after {
-        top: 68px;
-        left: 56px;
-        }
-        .lds-roller div:nth-child(3) {
-        animation-delay: -0.108s;
-        }
-        .lds-roller div:nth-child(3):after {
-        top: 71px;
-        left: 48px;
-        }
-        .lds-roller div:nth-child(4) {
-        animation-delay: -0.144s;
-        }
-        .lds-roller div:nth-child(4):after {
-        top: 72px;
-        left: 40px;
-        }
-        .lds-roller div:nth-child(5) {
-        animation-delay: -0.18s;
-        }
-        .lds-roller div:nth-child(5):after {
-        top: 71px;
-        left: 32px;
-        }
-        .lds-roller div:nth-child(6) {
-        animation-delay: -0.216s;
-        }
-        .lds-roller div:nth-child(6):after {
-        top: 68px;
-        left: 24px;
-        }
-        .lds-roller div:nth-child(7) {
-        animation-delay: -0.252s;
-        }
-        .lds-roller div:nth-child(7):after {
-        top: 63px;
-        left: 17px;
-        }
-        .lds-roller div:nth-child(8) {
-        animation-delay: -0.288s;
-        }
-        .lds-roller div:nth-child(8):after {
-        top: 56px;
-        left: 12px;
-        }
-        @keyframes lds-roller {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
         .video video{
             width:100%;
+            outline:3px solid #2e8690;
         }
+        #fc img{
+            object-fit: cover;
+            width: 100%;
+            height:50vw;
+        }
+
         .load-background{
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             background-image: url(img/home.jpg);
+            filter:blur(10px);
             width:100%;
-            height: 50vw;
+            height: 40vw;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        
+
+        .waves {
+            position: absolute;
+            bottom:0;
+            width: 100%;
+            height: 50%;
+            margin-bottom: -3px;
+            z-index:-10;
+            filter:blur(2px);
+        }
+
+        .parallax>use {
+            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        }
+        .parallax>use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+        }
+        .parallax>use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+        }
+        .parallax>use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+        }
+        .parallax>use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 20s;
+        }
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-90px, 0, 0);
+            }
+            100% {
+                transform: translate3d(85px, 0, 0);
+            }
+        }
+
+
+
+
+
+
+
+#clouds{
+    width:100%;
+}
+
+.cloud {
+    position: absolute;
+    top:50px;
+	width: 200px; height: 60px;
+	background: #fff;
+	border-radius: 200px;
+}
+
+.cloud:before, .cloud:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	width: 100px; height: 80px;
+	position: absolute; 
+    top: -15px; 
+    left: 10px;
+	border-radius: 100px;
+	transform: rotate(30deg);
+}
+
+.cloud:after {
+	width: 120px;
+    height: 120px;
+	top: -55px;
+    left: auto; 
+    right: 15px;
+}
+
+.x1 {
+    left:50%;
+	animation: moveclouds 10s linear infinite;
+}
+
+.x2 {
+    top:10%;
+	left: 30%;
+	transform: scale(0.6);
+	opacity: 0.9;
+	animation: moveclouds 11s linear infinite;
+}
+
+.x3 {
+	left: -20%; 
+    top: 15%;
+	transform: scale(0.8);
+	opacity: 0.8;
+	animation: moveclouds 15s linear infinite;
+}
+
+.x4 {
+	left: 40%; 
+    top: 25%;
+	transform: scale(0.75);
+	opacity: 0.75;
+	animation: moveclouds 13s linear infinite;
+
+}
+
+.x5 {
+	left: -10%; 
+    top: 15%;
+	transform: scale(0.8);
+	opacity: 0.8;
+	animation: moveclouds 11s linear infinite;
+}
+
+@keyframes moveclouds {
+	0% {margin-left: 100%;}
+	100% {margin-left: -100%;}
+}
+        
         /*content css ends*/
     </style>
     <script>
@@ -694,11 +726,29 @@
 
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
-            <div class="video" id="mv">
-                <div class="load-background">
-                    <div class="lds-roller"></div>
+                <div id="fc" style="position:relative;background: #adf6;">
+                    <div id="clouds">
+                        <div class="cloud x1"></div>
+                        <div class="cloud x2"></div>
+                        <div class="cloud x3"></div>
+                        <div class="cloud x4"></div>
+                        <div class="cloud x5"></div>
+                    </div>
+                    <div class="video">
+                        <div id="mv"><div class="load-background"></div></div>
+                    </div>
+                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="#09F5" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="#09F6" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="#0AF7" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#0AF8" />
+                        </g>
+                    </svg>
                 </div>
-            </div>
             <div class="divider"></div>
             <div class="container-fluid">
                 <div class="row">
@@ -1040,16 +1090,17 @@
                 window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" poster="img/campus-life.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
                 window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" poster="img/placements.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
                 videoObserver.observe(document.querySelector('video'))
+                document.querySelector('.video').style.transform="scale(0.8) translate(0px,-5vw)"
             }
             else{
-                window.mv.innerHTML='<img src="img/home.jpg" pec-img="img/home.jpg">'
+                window.fc.innerHTML='<img src="img/home.jpg" pec-img="img/home.jpg">'
             }
         }
 
         function obs(elt){
             videoObserver.observe(elt)
         }
-
+        
     </script>
 
 </body>
