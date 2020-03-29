@@ -199,7 +199,6 @@
             font-size: 14px;
             font-weight: bold;
             color: #707070;
-            margin-right: 5px;
         }
 
         .thumbnail {
@@ -226,7 +225,7 @@
 
         .degree {
             text-align: center;
-            margin-top: 10px;
+            margin-top:10px;
             font-size: 18px;
         }
 
@@ -254,6 +253,9 @@
         a:hover {
             text-decoration: none;
             color: #000;
+        }
+        img{
+            margin: 5px;
         }
 
         /*content css ends*/
@@ -336,22 +338,22 @@
                 <div class="row">
                     <div class="col-lg-3 col-6" id="menu-col-1">
                         <ul>
-                            <li onclick="location.href='https://peciis.info/PECMIS/';">IIS</li>
-                            <li onclick="location.href='http://tnp.pec.edu/';">Placement</li>
-                            <li onclick="location.href='http://research.pec.edu/';">Research</li>
-                            <li onclick="location.href='../home/admission.html';">Admission</li>
-                            <li onclick="location.href='http://academics.pec.edu/';">Academics</li>
-                            <li onclick="location.href='http://www.pec.edu/alumni.php';">Alumni</li>
+                            <li>IIS</li>
+                            <li>Placement</li>
+                            <li>Research</li>
+                            <li>Admission</li>
+                            <li>Academics</li>
+                            <li>Alumni</li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-6" id="menu-col-2">
                         <ul>
-                            <li class="menu2" onclick="location.href='../home/about-pec.html'"; onmouseover="menu(this,'about')">About</li>
-                            <li class="menu2" onclick="location.href='../home/gallery.php'"; onmouseover="menu(this,'gallery')">Gallery</li>
+                            <li class="menu2" onmouseover="menu(this,'about')">About</li>
+                            <li class="menu2" onmouseover="menu(this,'gallery')">Gallery</li>
                             <li class="menu2" onmouseover="menu(this,'oncampus')">On&nbsp;Campus<img src="../img/forward.svg" class="forward" alt=">"></li>
                             <li class="menu2" onmouseover="menu(this,'departments')">Departments<img src="../img/forward.svg" class="forward" alt=">"></li>
-                            <li class="menu2" onclick="location.href='../home/administration.html'"; onmouseover="menu(this,'administration')">Administration</li>
-                            <li class="menu2" onclick="location.href='http://www.teqip.pec.edu/'"; onmouseover="menu(this,'teqip')">TEQIP</li>
+                            <li class="menu2" onmouseover="menu(this,'administration')">Administration</li>
+                            <li class="menu2" onmouseover="menu(this,'teqip')">TEQIP</li>
                         </ul>
                     </div>
                     <div id="menu2-cover"> <button onclick="goBack()"> <img src="../img/go-back.svg" alt="go-back"> </button> </div>
@@ -377,9 +379,9 @@
 
         $result = mysqli_query($db_con, $query);
         if ($result) {
-            // echo $query;
+           // echo $query;
             $arr = mysqli_fetch_assoc($result);
-            $email = $arr['email'];
+            $email=$arr['email'];
             $query = "SELECT * FROM `basic_faculty_info` WHERE contact_official_email='$email'";
             //echo $query;
 
@@ -400,35 +402,37 @@
             $file_path = $arr['file_name'];
         }
         ?>
-        <div class="faculty-header">
+        <div class="faculty-header"> 
             <h2>Faculty</h2>
         </div>
         <div class="container-fluid  card-container">
 
             <div class="row ">
 
-                <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
-                    <a href="facultypage.php?email=<?php echo $email ?>">
-                        <div class="card">
-                            <p class="designation" style="background-color:#4a69bb">Head of Department</p>
-                            <h3 class="faculty-name"><?php echo $name ?></h3>
-                            <div class="thumbnail">
-                                <img src="../cms/profilepic/<?php echo $file_path ?>" alt="img/profile-placeholder.png" style="object-fit: cover;
+          <?php  echo '
+            <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
+            <a href="facultypage.php?email=' . $email . '">
+           
+                <div class="card">
+                <p class="designation" style="background-color:#4a69bb">Head of Department</p>
+                    <h3 class="faculty-name">' . $name . '</h3>
+                    <div class="thumbnail">
+                        <img src="../cms/profilepic/' . $file_path . '" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;">
-                            </div>
-                            <p class="degree"><?php echo $alma ?></p>
-                            <div class="details">
-                                <label class="label"> Specialization </label>
-                                <div class="dotdotdot"><?php echo $spl ?></div>
-                                <label class="label"> Phone Number </label> <?php echo $number ?> <br>
-                                <label class="label">Email </label> <?php echo $email ?> <br>
-                                <label class="label"> Extension </label> <?php echo $ext ?> <br>
-                            </div>
+                    </div>
+                    <p class="degree">' . $alma . '</p>
+                    <div class="details">
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Phone Number </label>' . $number . '<br>
+                        <label class="label">Email </label>' . $email . '<br>
+                        <label class="label"> Extension </label>' . $ext . ' <br>
                         </div>
-                    </a>
-                </div>
-
+                        </div>
+                        </a>
+                    </div>
+               
+                    ';?>
                 <?php
                 $query = "SELECT * FROM basic_faculty_info where post_tier='Professor' and department='cse'";
 
@@ -470,7 +474,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -524,7 +528,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -572,7 +576,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -617,7 +621,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -667,7 +671,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
@@ -714,7 +718,7 @@
                         </div>
                         <div class="col-md-3 hidden-sm-md col-lg-1 col-xl-2 col-footer-1"></div>
                         <div class="col-sm-6 col-md-2 col-lg-2 col-xl-2 col-footer-1 padding_remove">
-                            <button class="contact" onclick="window.location.href='../home/contact-us.html'">CONTACT&nbsp;US</button>
+                            <button class="contact" onclick="window.location.href='../contact-us/'">CONTACT&nbsp;US</button>
                             <div class="dotted_bordered">
 
 
@@ -729,32 +733,32 @@
                             <div class="nested-footer-2 tb2">
                                 <div class="row row-footer-2">
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a alt="pec" href="http://pec.edu/old/" target="blank">
+                                        <a href="http://pec.edu" target="blank">
                                             <p class="link-footer-2">Old&nbsp;Site</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a alt="iedc" href="https://www.peciedc.com/" target="blank">
+                                        <a href="http://cms.pec.edu/test/cells/iedc">
                                             <p class="link-footer-2">IEDC</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a alt="nirf" href="https://www.nirfindia.org/" target="blank">
+                                        <a href="https://www.nirfindia.org/2019/EngineeringRanking.html">
                                             <p class="link-footer-2">NIRF</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="../home/sitemap.html">
+                                        <a href="http://cms.pec.edu/test/sitemap">
                                             <p class="link-footer-2">Sitemap</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="../home/about-us.html">
+                                        <a href="http://cms.pec.edu/test/about-page">
                                             <p class="link-footer-2">AboutSite</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a href="../home/disclaimer.html">
+                                        <a href="http://cms.pec.edu/test/disclaimer">
                                             <p class="link-footer-2">Disclaimer</p>
                                         </a>
                                     </div>
