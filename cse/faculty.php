@@ -369,17 +369,23 @@
     <main>
         <!--ENTER MAIN CONTENT HERE-->
 
+        <div class="faculty-header"> 
+            <h2>Faculty</h2>
+        </div>
+        <div class="container-fluid  card-container">
 
-        <?php
-        include("db_con.php");
+            <div class="row ">
+            <?php 
+          
+          include("db_con.php");
 
         $query = "SELECT l.id,l.email FROM login l INNER JOIN role r ON l.id=r.idref AND l.department='cse' AND r.desg='HOD'";
 
         $result = mysqli_query($db_con, $query);
-        if ($result) {
-            // echo $query;
+        if (mysqli_num_rows($result)) {
+           // echo $query;
             $arr = mysqli_fetch_assoc($result);
-            $email = $arr['email'];
+            $email=$arr['email'];
             $query = "SELECT * FROM `basic_faculty_info` WHERE contact_official_email='$email'";
             //echo $query;
 
@@ -398,37 +404,39 @@
             $result = mysqli_query($db_con, $query);
             $arr = mysqli_fetch_assoc($result);
             $file_path = $arr['file_name'];
-        }
-        ?>
-        <div class="faculty-header">
-            <h2>Faculty</h2>
-        </div>
-        <div class="container-fluid  card-container">
 
-            <div class="row ">
 
-                <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
-                    <a href="facultypage.php?email=<?php echo $email ?>">
-                        <div class="card">
-                            <p class="designation" style="background-color:#4a69bb">Head of Department</p>
-                            <h3 class="faculty-name"><?php echo $name ?></h3>
-                            <div class="thumbnail">
-                                <img src="../cms/profilepic/<?php echo $file_path ?>" alt="img/profile-placeholder.png" style="object-fit: cover;
+            echo '
+            <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
+            <a href="facultypage.php?email=' . $email . '">
+           
+                <div class="card">
+                <p class="designation" style="background-color:#4a69bb">Head of Department</p>
+                    <h3 class="faculty-name">' . $name . '</h3>
+                    <div class="thumbnail">
+                        <img src="../cms/profilepic/' . $file_path . '" alt="faculty-image" style="object-fit: cover;
                         width: 200px;
                         height: 200px;">
-                            </div>
-                            <p class="degree"><?php echo $alma ?></p>
-                            <div class="details">
-                                <label class="label"> Specialization </label>
-                                <div class="dotdotdot"><?php echo $spl ?></div>
-                                <label class="label"> Phone Number </label> <?php echo $number ?> <br>
-                                <label class="label">Email </label> <?php echo $email ?> <br>
-                                <label class="label"> Extension </label> <?php echo $ext ?> <br>
-                            </div>
+                    </div>
+                    <p class="degree">' . $alma . '</p>
+                    <div class="details">
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Phone Number </label>' . $number . '<br>
+                        <label class="label">Email </label>' . $email . '<br>
+                        <label class="label"> Extension </label>' . $ext . ' <br>
                         </div>
-                    </a>
-                </div>
+                        </div>
+                        </a>
+                    </div>
+               
+                    ';
 
+
+        }
+          
+          
+          
+         ?>
                 <?php
                 $query = "SELECT * FROM basic_faculty_info where post_tier='Professor' and department='cse'";
 
