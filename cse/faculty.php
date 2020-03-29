@@ -372,22 +372,13 @@
         <!--ENTER MAIN CONTENT HERE-->
 
 
-       
-        <div class="faculty-header"> 
-            <h2>Faculty</h2>
-        </div>
-        <div class="container-fluid  card-container">
-
-            <div class="row ">
-
-          <?php 
-          
-          include("db_con.php");
+        <?php
+        include("db_con.php");
 
         $query = "SELECT l.id,l.email FROM login l INNER JOIN role r ON l.id=r.idref AND l.department='cse' AND r.desg='HOD'";
 
         $result = mysqli_query($db_con, $query);
-        if (mysqli_num_rows($result)) {
+        if ($result) {
            // echo $query;
             $arr = mysqli_fetch_assoc($result);
             $email=$arr['email'];
@@ -409,9 +400,16 @@
             $result = mysqli_query($db_con, $query);
             $arr = mysqli_fetch_assoc($result);
             $file_path = $arr['file_name'];
+        }
+        ?>
+        <div class="faculty-header"> 
+            <h2>Faculty</h2>
+        </div>
+        <div class="container-fluid  card-container">
 
+            <div class="row ">
 
-            echo '
+          <?php  echo '
             <div class="col-sm-4 col-md-6 col-lg-3  card-parent">
             <a href="facultypage.php?email=' . $email . '">
            
@@ -434,14 +432,7 @@
                         </a>
                     </div>
                
-                    ';
-
-
-        }
-          
-          
-          
-         ?>
+                    ';?>
                 <?php
                 $query = "SELECT * FROM basic_faculty_info where post_tier='Professor' and department='cse'";
 
