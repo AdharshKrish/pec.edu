@@ -25,7 +25,9 @@
     <link rel='dns-prefetch' href='https://fonts.googleapis.com/' >
     <link rel='dns-prefetch' href="https://khms1.googleapis.com/">
 
-    <script defer src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://ricostacruz.com/jquery.transit/jquery.transit.min.js"></script>
+
     <script defer src="../js/materialize.min.js"></script>
     <script defer src="../js/bootstrap4.js"></script>
     <script defer src="../js/menu.js"></script>
@@ -35,6 +37,8 @@
     <!-- <link rel="stylesheet" href="enter link" class="styleload" media="all" disabed> -->
     <!-- <script defer src="enter link"></script> -->
     <link rel="stylesheet" href="../css/oswald.css" class="styleload" media="all" disabled>
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap"
+        rel="stylesheet">
     
 
 <!--custom imports ends-->
@@ -492,6 +496,7 @@
             width:100%;
             outline:3px solid #2e8690;
             outline-offset: 3px;
+
         }
         #fc img{
             object-fit: cover;
@@ -622,6 +627,22 @@
 	0% {margin-left: 100%;}
 	100% {margin-left: -100%;}
 }
+
+.dep{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:100%;
+        /* font-weight: 700; */
+        /* font-weight: 100; */
+
+        font-size: 22px;
+        /* font-family: 'Titan One', cursive; */
+        font-family: 'Spicy Rice', cursive;
+        font-weight: 100;
+        color:#fff;
+
+    }
         
         /*content css ends*/
     </style>
@@ -718,33 +739,33 @@
 
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
-                <div id="fc" style="position:relative;background: #cef5;">
-                    <div id="clouds">
+                <div id="fc" style="position:relative">
+                    <!-- <div id="clouds">
                         <div class="cloud x1"></div>
                         <div class="cloud x2"></div>
                         <div class="cloud x3"></div>
                         <div class="cloud x4"></div>
                         <div class="cloud x5"></div>
-                    </div>
+                    </div> -->
                     <div class="video">
                         <div id="mv"><div class="load-background"></div></div>
                     </div>
-                    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <!-- <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                         <defs>
                             <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
                         </defs>
                         <g class="parallax">
-                            <!-- <use xlink:href="#gentle-wave" x="48" y="0" fill="#4bf7" />
+                             <use xlink:href="#gentle-wave" x="48" y="0" fill="#4bf7" />
                             <use xlink:href="#gentle-wave" x="48" y="3" fill="#4bf6" />
                             <use xlink:href="#gentle-wave" x="48" y="5" fill="#4cf5" />
-                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#4cf4" /> -->
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#4cf4" /> 
                             <use xlink:href="#gentle-wave" x="48" y="0" fill="#befd" />
                             <use xlink:href="#gentle-wave" x="48" y="3" fill="#befc" />
                             <use xlink:href="#gentle-wave" x="48" y="5" fill="#befb" />
                             <use xlink:href="#gentle-wave" x="48" y="7" fill="#befa" />
 
                         </g>
-                    </svg>
+                    </svg> -->
                 </div>
             <div class="divider"></div>
             <div class="container-fluid">
@@ -1097,6 +1118,113 @@
         function obs(elt){
             videoObserver.observe(elt)
         }
+
+
+
+
+
+
+         var background = {}
+
+            background.initializr = function () {
+
+                var $this = this;
+
+
+
+                //option
+                $this.id = "background_css3";
+                $this.style = { bubbles_color: "#fff", stroke_width: 0, stroke_color: "black" };
+                $this.bubbles_number = 30;
+                $this.speed = [1500, 8000]; //milliseconds
+                $this.max_bubbles_height = $this.height;
+                $this.shape = false // 1 : circle | 2 : triangle | 3 : rect | false :random
+
+                if ($("#" + $this.id).lenght > 0) {
+                    $("#" + $this.id).remove();
+                }
+                $this.object = $("<div style='z-index:-1;margin:0;padding:0; overflow:hidden;position:absolute;bottom:0' id='" + $this.id + "'> </div>'").appendTo("#fc");
+
+                $this.ww = $(window).width()
+                $this.wh = $(window).height()
+                $this.width = $this.object.width($this.ww);
+                $this.height = $this.object.height($this.wh);
+
+
+                $("body").prepend("<style>.shape_background {transform-origin:center; width:80px;height:80px; background: " + $this.style.bubbles_color + "; position: absolute}</style>");
+
+
+                for (i = 0; i < $this.bubbles_number; i++) {
+                    $this.generate_bubbles()
+                }
+
+            }
+
+
+
+
+            background.generate_bubbles = function () {
+                var $this = this;
+                // var base = $("<div class='shape_background'></div>");
+                var base = $("<div class='shape_background'></div>");
+
+                var shape_type = $this.shape ? $this.shape : Math.floor($this.rn(1, 8));
+                if (shape_type == 1) {
+                    var bolla = base.css({ borderRadius: "50%", background: "#f00" })
+                    // base.html("dajkfsjafkasljfa")
+                    base.html("<div class='dep'>ECE</div>")
+
+                } else if (shape_type == 2) {
+                    var bolla = base.css({ borderRadius: "50%", background: "#0f0" })
+                    base.html("<div class='dep' style='color:#000'>EEE</div>")
+
+
+                } else if (shape_type == 3) {
+                    var bolla = base.css({ borderRadius: "50%", background: "#00f" })
+                    base.html("<div class='dep'>EIE</div>")
+
+
+                } else if (shape_type == 4) {
+                    var bolla = base.css({ borderRadius: "50%", background: "#ff0" })
+                    base.html("<div class='dep' style='color:#000'>IT</div>")
+
+
+                } else if (shape_type == 5) {
+                    var bolla = base.css({ background: "#0ff",color:"#000" });
+                    base.html("<div class='dep' style='color:#000'>CHEM</div>")
+
+                } else if (shape_type == 6) {
+                    var bolla = base.css({ background: "#f0f" });
+                    base.html("<div class='dep'>CE</div>")
+
+                } else if (shape_type == 7) {
+                    var bolla = base.css({ background: "#D61" });
+                    base.html("<div class='dep'>MECH</div>")
+
+                } else {
+                    var bolla = base.css({ background:"teal" });
+                    base.html("<div class='dep'>CSE</div>")
+
+                }
+                var rn_size = $this.rn(1.1, 1.6);
+                bolla.css({ "transform": "scale(" + rn_size + ") rotate(" + $this.rn(-360, 360) + "deg)", top: $this.wh + 100, left: $this.rn(-60, $this.ww + 60) });
+                bolla.appendTo($this.object);
+                bolla.transit({ top: $this.rn($this.wh / 3, $this.wh / 3 - 60), "transform": "scale(" + rn_size / 2 + ") rotate(" + $this.rn(-360, 360) + "deg)", opacity: 0 }, $this.rn($this.speed[0], $this.speed[1]), function () {
+                    $(this).remove();
+                    $this.generate_bubbles();
+                })
+
+            }
+
+
+            background.rn = function (from, to, arr) {
+                if (arr) {
+                    return Math.random() * (to - from + 1) + from;
+                } else {
+                    return Math.floor(Math.random() * (to - from + 1) + from);
+                }
+            }
+            background.initializr()
         
     </script>
 
