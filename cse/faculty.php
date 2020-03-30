@@ -401,9 +401,17 @@
             $ext = $arr['extension'];
             $email = $arr['contact_official_email'];
             $query = "SELECT * FROM uploading where id=" . $id;
-            $result = mysqli_query($db_con, $query);
-            $arr = mysqli_fetch_assoc($result);
-            $file_path = $arr['file_name'];
+            // $result = mysqli_query($db_con, $query);
+            // $arr = mysqli_fetch_assoc($result);
+            // $file_path = $arr['file_name'];
+            if ($result1 = mysqli_query($db_con, $query)) {
+
+                $arr1 = mysqli_fetch_assoc($result1);
+                if (mysqli_num_rows($result1) > 0)
+                    $file_path = $arr1['file_name'];
+                else
+                    $file_path = "profile-placeholder.png";
+            }
 
 
             echo '
@@ -420,7 +428,7 @@
                     </div>
                     <p class="degree">' . $alma . '</p>
                     <div class="details">
-                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div><br>
+                        <label class="label"> Specialization </label><div class="dotdotdot"> ' . $spl . '</div>
                         <label class="label"> Phone Number </label>' . $number . '<br>
                         <label class="label">Email </label>' . $email . '<br>
                         <label class="label"> Extension </label>' . $ext . ' <br>
