@@ -79,6 +79,7 @@ $result=mysqli_query($db_con,$query);
                         <li> <a href="../gallery/"> ADD PHOTOS </a></li>
                         <li> <a href="../gallery/edit.php"  style="color: black;"> EDIT PHOTOS </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
              
@@ -86,7 +87,7 @@ $result=mysqli_query($db_con,$query);
                     <div> <?php
                 if($error==1)
                  echo "  <div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> ".$message."
+                 <strong>STATUS: L</strong> ".$message."
                </div>";
                 ?>
                         <div class="panel-body">

@@ -67,13 +67,14 @@ else {
                         <li> <a href="../gallery/"  style="color: black;"> ADD PHOTOS </a></li>
                         <li> <a href="../gallery/edit.php"> EDIT PHOTOS </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
                 
                     <div> <?php
                 if($error==1)
                  echo "  <div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> ".$message."
+                 <strong>STATUS: L</strong> ".$message."
                </div>";
                 ?>
                 

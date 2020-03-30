@@ -95,6 +95,7 @@ else
                         <li class="active"> <a href="AddMemoWebmaster.html" style="color: black;"> ADD MEMO </a></li>
                         <li> <a href="ViewDatabase.html"> VIEW DATASET </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
                 <div class="col-md-2 col-md-push-8">

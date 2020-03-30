@@ -62,6 +62,7 @@ if (isset($_SESSION['loggedin_status'])) {
                         <li class="active"> <a href="./faculty_dashboard.php" style="color: black;">PROFILE </a></li>
                         <li> <a href="./addmemo.php" id=""> ADD MEMO </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
 
@@ -72,7 +73,7 @@ if (isset($_SESSION['loggedin_status'])) {
                         <?php
                         if ($error == 1)
                             echo "  <div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> " . $message . "
+                 <strong>STATUS: L</strong> " . $message . "
                </div>";
                         ?>
                         <div class="panel-body">

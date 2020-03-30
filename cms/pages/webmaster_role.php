@@ -63,6 +63,7 @@ $result = mysqli_query($db_con, $query);
                         <li> <a href="webmaster_role.php"  style="color: black;"> VIEW ROLES </a></li>
                         <li> <a href="webmaster_viewfaculty.php"> FACULTY ACCESS LIST </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
 
