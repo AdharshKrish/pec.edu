@@ -1,4 +1,4 @@
-|<?php
+<?php
 foreach ($_POST as $param_name => $param_val) {
   echo "Param: $param_name; Value: $param_val<br />\n";
 }
@@ -19,15 +19,22 @@ $query="INSERT INTO `news_update` (`breif`, `expires_on`, `Faculty_id`, `start`,
 //echo "INSERT INTO `news_update`( `breif`, `expires_on`, `Faculty_id`, `start`, `end`, `department`) VALUES ('".$content."','".$date_exp."',".$id.",'".$date_from."','".$date_to."','".$dept."',0)";
 //hastags
 echo $query;
+
 if(mysqli_query($db_con,$query))
 { 
+  $flag=1;
+
+  if(count(array_filter($_POST['tags']>0)))
+{
 $string=$_POST['tags'];
-$str_arr = explode (",", $string);  
+$str_arr = explode (",", $string);
+  
 //print_r($str_arr); 
 $query_fetch="SELECT * FROM news_update where breif='".$content."' AND expires_on='".$date_exp."'";
 echo $query_fetch;
 $content_id=mysqli_fetch_assoc(mysqli_query($db_con,$query_fetch));
 $idc=$content_id['id'];
+
 foreach ($str_arr as $tag) {
 
  
@@ -63,7 +70,7 @@ $filename=strtolower($filename);
   }
    }
    
-}
+}}
 else {
  $flag=0;
 }
@@ -76,3 +83,5 @@ else {
  header("location: ../pages/webmaster_viewmemo.php?message=SUCCESS IN ADDING ");
 }
 ?>
+
+

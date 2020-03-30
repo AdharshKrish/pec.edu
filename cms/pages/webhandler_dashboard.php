@@ -68,7 +68,7 @@ if (isset($_SESSION['loggedin_status'])) {
                     <div class="panel panel-default"> <?php
                                                         if ($error == 1)
                                                             echo "  <div class='alert alert-success'>
-                 <strong>STATUS: L</strong> " . $message . "
+                 <strong>STATUS: </strong> " . $message . "
                </div>";
                                                         ?>
                         <div class="panel-body">
@@ -115,7 +115,7 @@ if (isset($_SESSION['loggedin_status'])) {
                                  <br>
                                 <div class="row" style="text-align: center;">
                                     <div class="col-sm-6" style="text-align: left;">
-                                        <label for="myFile">Select one of more files:</label> <input type="file" name="file" style="border: unset;" class="btn btn-default">
+                                        <label for="myFile">Select a cover image:</label> <input type="file" name="file" style="border: unset;" class="btn btn-default">
                                     </div>
                                     <br>
                                     <br> <br> <br>
@@ -124,8 +124,6 @@ if (isset($_SESSION['loggedin_status'])) {
                         </div>
                     </div>
                 </div>
-
-
 
             </div>
         </div>

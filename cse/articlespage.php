@@ -283,7 +283,7 @@
                 </center>
             "
         ?>
-        <div class="container-fluid" style="margin:15px 50px;">
+        <div class="container-fluid" style="margin:15px 0px;">
             <?php echo $body?>
         </div>
         <br>

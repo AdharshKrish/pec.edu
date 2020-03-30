@@ -157,7 +157,7 @@ if (isset($_SESSION['loggedin_status'])) {
                         <?php
                         if ($error == 1)
                             echo    "<div class='alert alert-success'>
-                                    <strong>STATUS: L</strong> " . $message .
+                                    <strong>STATUS: </strong> " . $message .
                                     "</div>";
                         if ($staff == 1) {
                             echo '<button type="button" class="btn success"> <a href="addstaff.php"> ADD/EDIT STAFF</a></button>';
