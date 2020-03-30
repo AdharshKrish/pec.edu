@@ -16,6 +16,9 @@ $query="INSERT INTO `news_update` (`breif`, `expires_on`, `Faculty_id`, `start`,
 //hastags
 if(mysqli_query($db_con,$query))
 { 
+  $flag=1;
+  if(count(array_filter($_POST['tags']>0)))
+  {
 $string=$_POST['tags'];
 $str_arr = explode (",", $string);  
 //print_r($str_arr); 
@@ -55,7 +58,7 @@ $filename=strtolower($filename);
   }
    
    
-}
+}}
 else {
  $flag=0;
 }
