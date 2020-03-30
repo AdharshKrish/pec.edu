@@ -101,7 +101,7 @@ else {
                     <div class="panel panel-body"><?php
                 if($suc==1)
                  echo "  <div class='alert alert-success'>
-                 <strong>STATUS: L</strong> ".$message."
+                 <strong>STATUS: </strong> ".$message."
                </div>";
                 ?>
                     <?php

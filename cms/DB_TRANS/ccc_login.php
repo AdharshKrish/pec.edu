@@ -14,10 +14,8 @@ $usernaam=$_POST['email'];
 $role=$_GET['role'];
 $query="SELECT * FROM login where username='Examination Wing' AND `department`=''";
 
-
 $_SESSION['role']=$role;
 $count=mysqli_query($db_con,$query);
-
 
 $cv=mysqli_num_rows($count);
 echo $cv;
