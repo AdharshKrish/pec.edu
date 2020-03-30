@@ -79,7 +79,7 @@ $result = mysqli_query($db_con, $query);
                                                         ?>
                         <div class="panel-body">
 
-                            <table style="width:100%">
+                            <table border="1" style="width:100%;">
                                 <tr>
                                     <th>Content</th>
                                     <th>Visibility</th>
