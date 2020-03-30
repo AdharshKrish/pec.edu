@@ -82,6 +82,7 @@ else {
                         <li class="active" > <a href="./faculty_dashboard.php">PROFILE </a></li>
                             <li> <a href="./addmemo.php" id=""  style="color: black;"> ADD MEMO </a></li>
                             <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                         </ul>
                     </div>
                 </div>
@@ -100,7 +101,7 @@ else {
                     <div class="panel panel-body"><?php
                 if($suc==1)
                  echo "  <div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> ".$message."
+                 <strong>STATUS: L</strong> ".$message."
                </div>";
                 ?>
                     <?php

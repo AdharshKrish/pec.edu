@@ -133,6 +133,7 @@ if (isset($_SESSION['loggedin_status'])) {
                                 <li class="active"> <a href="./faculty_dashborad.php" style="color: black;">PROFILE </a></li>
                                 <li> <a href="./addmemo.php" id=""> ADD MEMO </a></li>
                                 <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                             </ul>
                         </div>
                     </div>
@@ -156,7 +157,7 @@ if (isset($_SESSION['loggedin_status'])) {
                         <?php
                         if ($error == 1)
                             echo    "<div class='alert alert-success'>
-                                    <strong>SUCCESSFULL</strong> " . $message .
+                                    <strong>STATUS: L</strong> " . $message .
                                     "</div>";
                         if ($staff == 1) {
                             echo '<button type="button" class="btn success"> <a href="addstaff.php"> ADD/EDIT STAFF</a></button>';

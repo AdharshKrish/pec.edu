@@ -85,6 +85,7 @@ else {
                         <li> <a href="webmaster_role.php"> VIEW ROLES </a></li>
                         <li> <a href="webmaster_viewfaculty.php"> FACULTY ACCESS LIST </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
              
@@ -93,7 +94,7 @@ else {
                     <?php
                 if($error==1)
                  echo "<div class='alert alert-success'>
-                 <strong>SUCCESSFULL</strong> ".$message."
+                 <strong>STATUS: L</strong> ".$message."
                </div>";
                 ?>
                         <div class="role-panel-body">
