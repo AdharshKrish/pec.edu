@@ -11,8 +11,15 @@ if($result=mysqli_query($db_con,$query))
     while($arr=mysqli_fetch_assoc($result))
     {
         $summary=$arr['breif'];
-        $start = date("d-M-Y",strtotime($arr['start']));
-        $end = date("d-M-Y",strtotime($arr['end']));
+        if(strpos($arr['start'],'0000')!==false)
+            $start = 'NA';
+        else
+            $start = date("d-M-Y",strtotime($arr['start']));
+
+        if(strpos($arr['end'],'0000')!==false)
+            $end = 'NA';
+        else
+            $end = date("d-M-Y",strtotime($arr['end']));
         $cid=$arr['id'];
         setcookie($cid, "seen", strtotime($arr['expires_on']), "/"); 
 
