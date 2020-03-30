@@ -1,7 +1,7 @@
 <?php
 $cntid=$_GET['id'];
 require_once('../DB_TRANS/db_con.php');
-$query="DELETE  FROM `staff` where id=".$cntid;
+$query="DELETE  FROM `login` where id=".$cntid;
 
 if($result=mysqli_query($db_con,"DELETE FROM `login` where id=".$cntid))
 {
