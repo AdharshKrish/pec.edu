@@ -34,16 +34,15 @@ foreach ($str_arr as $tag) {
   
    if(mysqli_query($db_con,$query2))
    {
-       //files
+       $flag=1;
 
   }
   else {
     $flag=0;
-    echo "INSERT INTO `tags`( `content_id`, `tagname`) VALUES (".$content_id.",'".$tag."')";
-    echo "SELECT id FROM news_update where breif='".$content."' AND expire_on=".$date_exp;
+    
   }
 }
-$countfiles = count($_FILES['file']['name']);
+$countfiles = array_filter(count($_FILES['file']['name']));
 // Looping all files
 for($i=0;$i<$countfiles;$i++){
   $filename = $_FILES['file']['name'][$i];
