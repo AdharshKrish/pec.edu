@@ -76,7 +76,7 @@ if($cv>0)
                                                         // TCP port to connect to
                             
                                 //Recipients
-                                $mail->setFrom('purushottambanerjee@pec.edu', 'PEC.EDU@noreply');
+                                $mail->setFrom('noreply@pec.edu', 'PEC.EDU@noreply');
                                 $mail->addAddress($arr['email'], 'reciever');     // Add a recipient
                             // $mail->addAddress('optional name');               // Name is optional
                                 $mail->addReplyTo('info@example.com', 'Information');
