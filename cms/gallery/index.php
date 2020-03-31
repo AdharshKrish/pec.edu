@@ -66,7 +66,7 @@ else {
                         <li> <a href="../pages/webhandler_viewmemo.php"> VIEW MEMO </a></li>
                         <li> <a href="../gallery/"  style="color: black;"> ADD PHOTOS </a></li>
                         <li> <a href="../gallery/edit.php"> EDIT PHOTOS </a></li>
-                        <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
+                        <li><a href="../pages/signout.php" style="color: #2E8690">SIGNOUT</a></li>
                         <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
@@ -74,7 +74,7 @@ else {
                     <div> <?php
                 if($error==1)
                  echo "  <div class='alert alert-success'>
-                 <strong>STATUS: L</strong> ".$message."
+                 <strong>STATUS: </strong> ".$message."
                </div>";
                 ?>
                 
@@ -110,7 +110,7 @@ else {
                                         </select>
                                     </div>
                   <br>
-                  <input type="submit" value="INPUT IMAGE" class="btn btn-primary btn-large grant-access">
+                  <input type="submit" value="SUBMIT" class="btn btn-primary btn-large grant-access">
               </form> 
 
                                 </div>

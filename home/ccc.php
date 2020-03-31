@@ -216,8 +216,10 @@
         <div class="watermark"></div>
         <div style="margin:15px 30px"> 
         <!--ENTER MAIN CONTENT HERE-->
+        <div style="max-width:1000px; text-align:center; margin: 10px auto">
             <?php echo $body?>
-
+            <br>
+        </div>
         <!--main content ends-->
         </div>
     </main>

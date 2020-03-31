@@ -12,7 +12,7 @@ require_once('./db_con.php');
 //echo $_POST['email'];
 $usernaam=$_POST['email'];
 $role=$_GET['role'];
-$query="SELECT * FROM login where username='Examination Wing' AND `department`=''";
+$query="SELECT * FROM login where username='".$usernaam."' AND `department`=''";
 
 
 $_SESSION['role']=$role;
@@ -107,7 +107,7 @@ if($cv>0)
 
 else {
     
-  //header("Location: ../index.php?message=no user found  ");
+  header("Location: ../index.php?message=no user found  ");
     die();
 }
 ?>

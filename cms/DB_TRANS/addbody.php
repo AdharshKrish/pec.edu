@@ -17,10 +17,10 @@ echo $query;
 if(mysqli_query($db_con,$query))
 {
  echo "succesfull";
- header("Location: ../../".$dep."/articles/index.php");
+ header("Location: ../../".$dep."/articles.php");
 exit();
 }
 else{
-    echo "unsuccesfull";
+    echo "unsuccesful";
 }
 ?>

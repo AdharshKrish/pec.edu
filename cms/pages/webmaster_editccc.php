@@ -79,7 +79,7 @@ $result = mysqli_query($db_con, $query);
                     <div class="panel panel-default"> <?php
                                                         if ($error == 1)
                                                             echo "  <div class='alert alert-success'>
-                 <strong>STATUS: L</strong> " . $message . "
+                 <strong>STATUS: </strong> " . $message . "
                </div>";
                                                         ?>
                         <div class="panel-body">

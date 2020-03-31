@@ -1,3 +1,4 @@
+
 <?php
 include_once('../DB_TRANS/db_con.php');
 $error=0;
@@ -192,12 +193,12 @@ if($result=mysqli_query($db_con,$query))
             <?php
                                             if ($error == 1)
                                               echo "  <div class='alert alert-success'>
-                 <strong>STATUS: L</strong> " . $message . "
+                 <strong>STATUS: </strong> " . $message . "
                </div>";
                                             ?>
 
 
-              <form method="POST" name="form1" action="../DB_TRANS/cccbody.php?id=<?php echo $id ?>" onsubmit="loadVal();">
+              <form method="POST" name="form1" action="../DB_TRANS/cccbody.php?id=<?php echo $id ?>&name='<?php echo $name ?>'" onsubmit="loadVal();">
 
                 <div class="content">
 
@@ -338,3 +339,85 @@ if($result=mysqli_query($db_con,$query))
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+include_once('../DB_TRANS/db_con.php');
+$error=0;
+if(isset($_GET['message']))
+    {
+    $message=$_GET['message'];
+    $error=1;
+    }
+if(isset($_SESSION['loggedin_status']))
+{
+$logged=$_SESSION['loggedin_status'];
+if($logged=900)
+{
+  if($_SESSION['role']!="ccc")
+  {
+    
+    if(isset($_GET['message']))
+    {
+    $message=$_GET['message'];
+    $error=1;
+    }
+  }
+  else {
+    //header("Location: ../index.php");
+  }
+}
+else {
+   header("Location: ../index.php");
+    exit();
+}
+}
+
+else {
+   header("Location:  ../error/error404.html");
+    exit();
+}
+
+$id=$_SESSION['id'];	
+$body='';	
+$query="SELECT * FROM article where `author`='$id'";	
+//echo $query;	
+if($result=mysqli_query($db_con,$query))	
+{	
+
+  $query1='SELECT * FROM login where id='.$id;
+    $result1=mysqli_query($db_con,$query1);
+    $arr1=mysqli_fetch_assoc($result1);	
+
+  //$body=$arr['body'];	
+  $name=$arr1['username'];
+
+  if(mysqli_num_rows($result)>0)	
+  {	
+
+  $arr=mysqli_fetch_assoc($result);	
+
+  $body=$arr['body'];	
+  //$name=$arr['name'];
+  }	
+  else
+  {
+    
+  }
+}	
+
+
+
+
+?>
+

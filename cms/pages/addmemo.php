@@ -86,7 +86,7 @@ else {
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2 col-md-push-8 data">
+                <div class="col-md-2 col-md-push-8 data" style="overflow-x: auto;">
                     <div class="container">
                         <h3>Name</h3>
                         <p><?php echo $name?></p>
@@ -101,13 +101,13 @@ else {
                     <div class="panel panel-body"><?php
                 if($suc==1)
                  echo "  <div class='alert alert-success'>
-                 <strong>STATUS: L</strong> ".$message."
+                 <strong>STATUS: </strong> ".$message."
                </div>";
                 ?>
                     <?php
                 if($error==1)
                  echo "  <div class='alert alert-danger'>
-                 <strong>THE INPUT FORMAT IS WRONG OR IS NOT FILLED AT ALL</strong>Please do not spam or else your system will be banned
+                 <strong>THE INPUT FORMAT IS WRONG OR IS NOT FILLED AT ALL</strong>: Check Helpbook or contact Webmaster
                </div>";
                 ?>
                         <form action="../DB_TRANS/addmemo_faculty.php" class="form" enctype='multipart/form-data' method="POST">

@@ -94,7 +94,7 @@ else {
                     <?php
                 if($error==1)
                  echo "<div class='alert alert-success'>
-                 <strong>STATUS: L</strong> ".$message."
+                 <strong>STATUS: </strong> ".$message."
                </div>";
                 ?>
                         <div class="role-panel-body">
