@@ -57,7 +57,7 @@
 
     function move() {
         document.getElementById('rec').style.transform = "translate(300%,0)";
-        document.getElementById("otp").action="./DB_TRANS/login.php?role=faculty";
+        document.getElementById("otp").action="./DB_TRANS/facultylogin.php?role=faculty";
         document.getElementById("label1").innerHTML="Faculty Login";
         document.getElementById('web').style.display="block";
         document.getElementById('cell').style.display="none";
