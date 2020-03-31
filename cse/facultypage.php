@@ -432,10 +432,11 @@ else {
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-12 pb-2">
+                    <div class="col-12">
                         <?php echo $qualification?>
                     </div>
                     <div class="col-12">
+                    <hr>
                         <label class="label"> Alma mater </label><br>
                         <?php echo $alma?>
                     </div>
