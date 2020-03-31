@@ -501,7 +501,7 @@
 
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Associate Professor'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Associate Professor' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
 
@@ -552,7 +552,7 @@
 
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Assistant Professor'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Assistant Professor' and department='cse'";
                 if ($result = mysqli_query($db_con, $query)) {
 
 
@@ -599,7 +599,7 @@
                 } ?>
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Programmer'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Programmer' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
                     while ($arr = mysqli_fetch_assoc($result)) {
@@ -645,7 +645,7 @@
 
 
                 <?php
-                $query = "SELECT * FROM basic_faculty_info where post_tier='Others'";
+                $query = "SELECT * FROM basic_faculty_info where post_tier='Others' and department='cse'";
 
                 if ($result = mysqli_query($db_con, $query)) {
 
@@ -692,6 +692,42 @@
                     </div></a>';
                     }
                 } ?>
+
+            <?php            
+            $query = "SELECT * FROM staff where dep='cse'";
+
+            if ($result = mysqli_query($db_con, $query)) {
+
+
+                while ($arr = mysqli_fetch_assoc($result)) {
+                    $name = $arr['name'];
+                    $id = $arr['id'];
+                    $role = $arr['role'];
+                    $number = $arr['phone'];
+
+                    if (mysqli_num_rows($result) > 0)
+                    $file_path = $arr['picname'];
+                    else
+                    $file_path = "profile-placeholder.png";
+
+
+                    echo '<div class="col-sm-6 col-md-6 col-lg-3 card-parent"><a href="facultypage.php?email=' . $email . '">
+                            <div class="card">
+                                <p class="designation" style="background-color:#33DD88">Staff</p>
+                                <h3 class="faculty-name">' . $name . '</h3>
+                                <div class="thumbnail">
+                                    <img src="../cms/profilepic/' . $file_path . '" alt="faculty-image" style="object-fit: cover;
+                                    width: 200px;
+                                    height: 200px;">
+                                </div>
+                                <p class="degree">' . $role . '</p>
+                                <div class="details">
+                                    <label class="label"> Phone Number </label>' . $number . '<br>
+                                </div>
+                            </div>   
+                        </div></a>';
+                }
+            } ?>
 
 
             </div>
