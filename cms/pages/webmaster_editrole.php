@@ -25,6 +25,7 @@ $dep = $_GET['role'];
 $query = "SELECT * FROM `role` where desg='$dep'";
 //echo $query;
 $result = mysqli_query($db_con, $query);
+
 ?>
 <html>
 
@@ -65,10 +66,9 @@ $result = mysqli_query($db_con, $query);
                         <li> <a href="webmasteraddrole.php" id=""> ADD ROLES </a></li>
                         <li> <a href="webmasteraddmemo.php" id=""> ADD MEMO </a></li>
                         <li> <a href="webmaster_viewmemo.php"> VIEW MEMO </a></li>
-                        <li> <a href="webmaster_role.php"  style="color: black;"> VIEW ROLES </a></li>
-                        <li> <a href="webmaster_viewfaculty.php"> FACULTY ACCESS LIST </a></li>
+                        <li> <a href="webmaster_role.php"> VIEW ROLES </a></li>
+                        <li> <a href="webmaster_viewfaculty.php" style="color: black;"> VIEW FACULTY DATA SET </a></li>
                         <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
-                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                     </ul>
                 </div>
                 <a href='./webmaster_role.php'><button class="btn">
@@ -78,7 +78,7 @@ $result = mysqli_query($db_con, $query);
                     <div class="panel panel-default"> <?php
                                                         if ($error == 1)
                                                             echo "  <div class='alert alert-success'>
-                 <strong>STATUS: </strong> " . $message . "
+                 <strong>SUCCESSFULL</strong> " . $message . "
                </div>";
                                                         ?>
                         <div class="panel-body">
@@ -92,10 +92,15 @@ $result = mysqli_query($db_con, $query);
                                 </tr>
 
                                 <?php
-                                while ($arr = mysqli_fetch_assoc($result)) {
-                                    $id= $arr['id'];
-                                    $idref = $arr['idref'];
-                                    $role=$arr['desg'];
+                               // echo mysqli_num_rows($result);
+                               $arr1=mysqli_fetch_all($result);
+                             // print_r($arr1);
+                            // for($i=0;$i<mysqli_num_rows($result);$i++){
+                                   foreach($arr1 as $arr){
+                                     //  print_r($arr);
+                                    $id= $arr[0];
+                                    $idref = $arr[1];
+                                    $role=$arr[2];
                                     $query="SELECT * FROM login WHERE  id=".$idref;
                                    
                                     $result=mysqli_query($db_con,$query);
