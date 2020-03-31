@@ -321,7 +321,7 @@
         <div class="row">
         <?php
                   include("db_con.php");
-                  $query="SELECT * FROM `article` WHERE dep='cse' LIMIT 20 ";
+                  $query="SELECT * FROM `article` WHERE dep='cse' LIMIT 50 ";
 
                     if($result=mysqli_query($db_con,$query))
                     { 
