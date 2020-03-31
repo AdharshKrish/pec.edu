@@ -145,7 +145,7 @@
 }
 .label{
     font-weight: bold;
-    color: #707070;
+    color: #000000;
 }
 .row_dob{
     background-color: #fefeb1;
@@ -441,7 +441,7 @@ else {
                     </div>
                 </div>
                 <div class="row_specialization" style="margin-top: 20px; margin-bottom: 20px">
-                    <label class="label"> Specialization </label><br>
+                    <label class="label" style="color: #2e8690;"> Specialization </label><br>
                     <?php echo $specilization?>
                 </div>
             </div>
@@ -455,7 +455,7 @@ else {
                             <!-- <hr> -->
                         </div>
                         <div class="col-sm-6" style="min-width: 240px;">   
-                            <h6 style="color: #707070;">Find me on</h6>
+                            <h6 style="color: #2e8690;">Find me on</h6>
                             <ul style="margin: 5px 0px 5px 0px;">
                                 <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
                                 <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $facebook?></a><br></li>
