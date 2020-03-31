@@ -2,6 +2,11 @@
 require_once('../DB_TRANS/db_con.php');
 if (isset($_SESSION['loggedin_status'])) {
     $logged = $_SESSION['loggedin_status'];
+    $error = 0;
+            if (isset($_GET['message'])) {
+                $message = $_GET['message'];
+                $error = 1;
+            }
 
     if ($logged == 900) {
 
@@ -11,12 +16,8 @@ if (isset($_SESSION['loggedin_status'])) {
 
         $result = mysqli_query($db_con, $query);
 
-        if ($result) {
-            $error = 0;
-            if (isset($_GET['message'])) {
-                $message = $_GET['message'];
-                $error = 1;
-            }
+        if (mysqli_num_rows($result)>0) {
+            
 
 
             $exist = 1;
@@ -76,8 +77,21 @@ if (isset($_SESSION['loggedin_status'])) {
             $name = $arr['username'];
             $email = $arr['email'];
             $dept = $arr['department'];
-            $desg = $arr['desg'];
-            echo "ok";
+            //$desg = $arr['desg'];
+           // echo "ok";
+
+            $query = "     SELECT * FROM `role` WHERE idref=".$id." AND desg='HOD'";
+            
+            $staff = 0;
+            if($result = mysqli_query($db_con, $query))
+            {
+            $arr = mysqli_fetch_assoc($result);
+           
+            if (mysqli_num_rows($result)) {
+                $staff = 1;
+            }}
+
+            
         }
     } else {
         echo "error2";
@@ -133,7 +147,7 @@ if (isset($_SESSION['loggedin_status'])) {
                                 <li class="active"> <a href="./faculty_dashborad.php" style="color: black;">PROFILE </a></li>
                                 <li> <a href="./addmemo.php" id=""> ADD MEMO </a></li>
                                 <li><a href="signout.php" style="color: #2E8690">SIGNOUT</a></li>
-                        <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
+                                <li><a href="../../files/cms-helpbook.docx" target="blank" style="color: #0000EE">HELPBOOK</a></li>
                             </ul>
                         </div>
                     </div>
@@ -177,10 +191,11 @@ if (isset($_SESSION['loggedin_status'])) {
                                                 $count = mysqli_num_rows($result);
                                                 $fetch = mysqli_fetch_assoc($result);
                                                 $path = '..\profilepic/';
-                                                $path = $path . strtolower($fetch['file_name']);
+                                             
                                                 if ($count <= 0) {
                                                     echo  "<img src='thiru.png'   class='img-responsive' /></div>";
                                                 } else {
+                                                    $path = $path . strtolower($fetch['file_name']);
                                                     echo  "<img src='" . $path . "'   class='img-responsive' /></div>";
                                                 } ?>
                                                 <input id="uploadImage" type="file" style=" border: unset;
@@ -327,9 +342,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="projects">Projects and Activities</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '   <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Enter line by line.">' . $project . '</textarea>';
+                                        echo '   <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Use <br> to display in next line.">' . $project . '</textarea>';
                                     else {
-                                        echo '  <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Enter line by line"></textarea>';
+                                        echo '  <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Use <br> to display in next line."></textarea>';
                                     }                                                ?>
 
                                 </div>

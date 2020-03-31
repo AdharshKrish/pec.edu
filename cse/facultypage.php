@@ -297,17 +297,52 @@ h3{
     </header>
 
     <main>
-    <div class="watermark">
-    </div>
-        <!--ENTER MAIN CONTENT HERE-->
+    <div class="watermark"></div>
+    <!--ENTER MAIN CONTENT HERE-->
+        
 <?php
+$post_tier='';
+$number='';
+$qualification='';
+$specilization='';
+$contact='';
+$ext='';
+$dob ='';
+// $exists=0;
+
+$alma='';
+$interest='';
+$research='';
+$student='';
+$project='';
+
+$website='';
+$facebook='';
+$twitter='';
+$linkedin='';
+
+$books='';
+$conferences='';
+$journals='';
+
+$name='';
+$email='';
+$dept='';
+
+
+
+
+
+
+
+
 $path= $_SERVER['DOCUMENT_ROOT'];
 require_once('./db_con.php');
 $email=$_GET['email'];
 
 $query="SELECT * FROM login where email='".$email."'";
 $result=mysqli_query($db_con,$query);
-if($result)
+if(mysqli_num_rows($result)>0)
 { 
     $arr=mysqli_fetch_assoc($result);
     $name=$arr['username'];
@@ -316,7 +351,7 @@ if($result)
    $id=$arr['id'];
 $query="SELECT * FROM basic_faculty_info where id=".$id;
 $result=mysqli_query($db_con,$query);
-if($result)
+if(mysqli_num_rows($result)>0)
 { 
        $exist=1;
        $arr=mysqli_fetch_assoc($result);
@@ -355,21 +390,28 @@ if($result)
        $name=$arr['username'];
        $email=$arr['email'];
        $dept=$arr['department']; 
-       $query="SELECT * FROM uploading where id=".$id;      
-       $result=mysqli_query($db_con,$query);
-       $arr=mysqli_fetch_assoc($result); 
-       $file_path=$arr['file_name'];
+
+
+
 }
 else {
     
-    echo "error1";
+   // echo "error1";
 }  
       
    }
    else {
-       echo "error2";
+       //echo "error2";
    }
+   $query="SELECT * FROM uploading where id=".$id;      
+   if ($result1 = mysqli_query($db_con, $query)) {
 
+    $arr1 = mysqli_fetch_assoc($result1);
+    if (mysqli_num_rows($result1) > 0)
+        $file_path = $arr1['file_name'];
+    else
+        $file_path = "profile-placeholder.png";
+}
 
 ?>
         <div class="container root-container" >
@@ -413,9 +455,9 @@ else {
                             <h6 style="color: #707070;">Find me on</h6>
                             <ul style="margin: 5px 0px 5px 0px;">
                                 <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
-                                <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $twitter?></a><br></li>
-                                <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $facebook?> </a><br></li>
-                                <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $contact?></a><br></li>
+                                <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $facebook?></a><br></li>
+                                <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $twitter?> </a><br></li>
+                                <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $website?></a><br></li>
                             </ul>   
                         </div>
                     </div>
@@ -486,6 +528,7 @@ else {
             </div>
         </div>
     </div>
+
 
         <!--main content ends-->
     </main>
@@ -591,3 +634,7 @@ else {
 </body>
 
 </html>
+
+
+
+

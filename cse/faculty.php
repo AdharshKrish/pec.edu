@@ -401,9 +401,6 @@
             $ext = $arr['extension'];
             $email = $arr['contact_official_email'];
             $query = "SELECT * FROM uploading where id=" . $id;
-            // $result = mysqli_query($db_con, $query);
-            // $arr = mysqli_fetch_assoc($result);
-            // $file_path = $arr['file_name'];
             if ($result1 = mysqli_query($db_con, $query)) {
 
                 $arr1 = mysqli_fetch_assoc($result1);
@@ -412,6 +409,8 @@
                 else
                     $file_path = "profile-placeholder.png";
             }
+
+
 
 
             echo '
@@ -700,7 +699,7 @@
         </div>
 
         <!--main content ends-->
-    </main>
+        </main>
     <footer>
         <div class="foot">
             <div class="footer">

@@ -6,6 +6,7 @@ require_once('./db_con.php');
 $desc=$_POST['desc'];
 $id=$_SESSION['id'];
 
+$name=$_GET['name'];
 $query1="SELECT * FROM `article` WHERE author=$id";
 
 if($result=mysqli_query($db_con,$query1))
@@ -27,7 +28,11 @@ else{
     }
     else
     {
-        $query="INSERT INTO `article`(`dep`, `body`,`author`) VALUES ('ccc','$desc','".$id."')";
+
+
+        $query="INSERT INTO `article`(`name`,`dep`, `body`,`author`) VALUES ($name,'ccc','$desc','".$id."')";
+        
+        echo $query;
 if(mysqli_query($db_con,$query))
 { 
 
@@ -37,7 +42,7 @@ exit();
 
 }
 else{
-    header("Location: ../pages/ccc_dashboard.php?message=error has occured");
+  header("Location: ../pages/ccc_dashboard.php?message=error has occured");
     exit();
 }
     }
