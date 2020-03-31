@@ -119,7 +119,7 @@ $result = mysqli_query($db_con, $query);
                         
                         <td><a href='../DB_TRANS/delete_role.php?id=$id&role=$role'>DELETE</a></td>
                                       </tr>
-                                      <br>";
+                                      ";
                                 }
                                 ?>
 
