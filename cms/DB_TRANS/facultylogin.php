@@ -14,7 +14,6 @@ $usernaam=$_POST['email'];
 $role=$_GET['role'];
 $query="SELECT * FROM login where email='".$usernaam."' AND `department`!=''";
 
-
 $_SESSION['role']=$role;
 $count=mysqli_query($db_con,$query);
 echo $query;
@@ -70,7 +69,7 @@ if($cv>0)
                                                         // TCP port to connect to
                             
                                 //Recipients
-                                $mail->setFrom('purushottambanerjee@pec.edu', 'PEC.EDU@noreply');
+                                $mail->setFrom('PEC.EDU@noreply');
                                 $mail->addAddress($arr['email'], 'reciever');     // Add a recipient
                             // $mail->addAddress('optional name');               // Name is optional
                                 $mail->addReplyTo('info@example.com', 'Information');
