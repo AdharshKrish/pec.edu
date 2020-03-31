@@ -145,7 +145,7 @@
 }
 .label{
     font-weight: bold;
-    color: #707070;
+    color: #000000;
 }
 .row_dob{
     background-color: #fefeb1;
@@ -173,19 +173,7 @@ a{
 h3{
     font-size: 20px !important;
 }
-.watermark{
-    float: right;
-    /* z-index: -999; */
-    opacity: .4;
-}
-.watermark img{
-    position: absolute;
-    z-index: -10;
-    right: 5%;
-    height: 400px;
-    width: 270px;
-    opacity: 0.5;
-}
+
 
 @media (max-width: 992px) and (min-width: 576px){
     .jumbotron{
@@ -307,13 +295,12 @@ h3{
         </div>
     </div>
     </header>
+
     <main>
-        <!--ENTER MAIN CONTENT HERE-->
+    <div class="watermark"></div>
+    <!--ENTER MAIN CONTENT HERE-->
         
 <?php
-
-
-
 $post_tier='';
 $number='';
 $qualification='';
@@ -445,14 +432,18 @@ else {
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-12">
+                        <?php echo $qualification?>
+                    </div>
+                    <div class="col-12">
+                    <hr>
                         <label class="label"> Alma mater </label><br>
-                        <pre><?php echo $alma?></pre>
+                        <?php echo $alma?>
                     </div>
                 </div>
                 <div class="row_specialization" style="margin-top: 20px; margin-bottom: 20px">
-                    <label class="label"> Specialization </label><br>
-                    <pre><?php echo $specilization?></pre>
+                    <label class="label" style="color: #2e8690;"> Specialization </label><br>
+                    <?php echo $specilization?>
                 </div>
             </div>
             <div class="col-sm-7 col-lg-8 testBorder1 jumbotron">
@@ -465,12 +456,12 @@ else {
                             <!-- <hr> -->
                         </div>
                         <div class="col-sm-6" style="min-width: 240px;">   
-                            <h6 style="color: #707070;">Find me on</h6>
+                            <h6 style="color: #2e8690;">Find me on</h6>
                             <ul style="margin: 5px 0px 5px 0px;">
-                                <li><a href="https://www.linkedin.com/<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
-                                <li><a href="https://www.twitter.com/<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $twitter?></a><br></li>
-                                <li><a href="https://www.facebook.com/<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $facebook?> </a><br></li>
-                                <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $contact?></a><br></li>
+                                <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
+                                <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $facebook?></a><br></li>
+                                <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $twitter?> </a><br></li>
+                                <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $website?></a><br></li>
                             </ul>   
                         </div>
                     </div>
@@ -491,20 +482,19 @@ else {
             </div>
         </div>  
         <hr>
-        <div class="watermark">
-        </div>
+
         <div class="row">
             <div class="col-md-5 col-sm-4" >
                 <div>
                     <p> 
                         <label class="label"> Current Research</label><br>
-                        <pre>      <?php echo $research?></pre>
+                           <?php echo $research?>
                     </p>
                 </div>
                 <div>
                     <p> 
                         <label class="label"> Students </label><br>
-                        <pre> <?php echo $student?></pre>
+                            <?php echo $student?>
                         </p>
                 </div>
             </div>
@@ -512,7 +502,7 @@ else {
                 <div>
                     <label class="label"> Projects and Activities </label>
                     <br>
-                    <pre>  <?php echo$project?></pre>
+                    <?php echo$project?>
                     
                     
                     </div>
@@ -524,20 +514,20 @@ else {
                 <article>
                     <h3 style="color: #ebdd22;">Books</h3>
                     <hr>
-                    <pre>  <?php echo $books?><br></pre>
+                    <?php echo $books?><br>
                 </article>
                 <br>
                 <article>
                     <h3 style="color: #fa983a;">Journals</h3>
                     <hr>
-                    <pre>   <?php echo $journals?><br></pre>
+                    <?php echo $journals?><br>
                    
                 </article>
                 <br>
                 <article>
                     <h3 style="color: #b71540;">Conferences</h3>
                     <hr>
-                    <pre> <?php echo $conferences?><br></pre>
+                    <?php echo $conferences?><br>
                 </article>
             </div>
         </div>
