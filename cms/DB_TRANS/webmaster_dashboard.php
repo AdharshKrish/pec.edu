@@ -102,12 +102,12 @@ else {
                                             <option value="ece">Electronics and Communication Engineering</option>
                                             <option value="eie">Electronics and Instrumentation Engineering</option>
                                             <option value="civil">Civil Engineering</option>
-                                            <option value="chem">Chemical Engineering</option>
+                                            <option value="che">Chemical Engineering</option>
                                             <option value="mech">Mechanical Engineering</option>
                                             <option value="phy">Department of Physics</option>
-                                            <option value="che">Department of Chemistry</option>
-                                            <option value="math">Department of Mathematics</option>
-                                            <option value="hs">Department of Humanity Sciences</option>
+                                            <option value="chem">Department of Chemistry</option>
+                                            <option value="maths">Department of Mathematics</option>
+                                            <option value="hss">Department of Humanity Sciences</option>
                                             <option value="other">Others</option>
 
                                         </select>
