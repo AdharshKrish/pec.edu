@@ -467,9 +467,9 @@ else {
                         <div class="col-sm-6" style="min-width: 240px;">   
                             <h6 style="color: #707070;">Find me on</h6>
                             <ul style="margin: 5px 0px 5px 0px;">
-                                <li><a href="https://www.linkedin.com/<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
-                                <li><a href="https://www.twitter.com/<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $twitter?></a><br></li>
-                                <li><a href="https://www.facebook.com/<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $facebook?> </a><br></li>
+                                <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
+                                <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $twitter?></a><br></li>
+                                <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $facebook?> </a><br></li>
                                 <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $contact?></a><br></li>
                             </ul>   
                         </div>
