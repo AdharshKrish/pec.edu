@@ -33,13 +33,17 @@ if($result)
         else {  
             if($role=='HOD')
             {
-                $result=mysqli_query($db_con,"SELECT * FROM login l INNER JOIN role r ON l.department='cse' AND r.desg='HOD' AND l.id=r.idref");
-                echo"SELECT * FROM login l and role r ON l.department='".$dep."' AND r.role='".$role."'";
+                $result=mysqli_query($db_con,"SELECT r.id FROM login l INNER JOIN role r ON l.department='cse' AND r.desg='HOD' AND l.id=r.idref");
+               // echo"SELECT * FROM login l and role r ON l.department='".$dep."' AND r.role='".$role."'";
                 if(mysqli_num_rows($result)>0)
                 {
-                    $query="UPDATE `role` set idref=".$idref;
+                    $arr1=mysqli_fetch_assoc($result);
+                    $id=$arr1['id'];
+                    
+                    $query="UPDATE `role` set idref=".$idref." WHERE id=$id";
+                   // echo $query;
                     mysqli_query($db_con,$query);
-                    header("Location: ../pages/webmasteraddrole.php?message=updated HOD of ".$dep);
+                   header("Location: ../pages/webmasteraddrole.php?message=updated HOD of ".$dep);
                     exit();
 
                 }
