@@ -13,7 +13,7 @@ echo $query_check_exists;
 $result=mysqli_query($db_con,$query_check_exists);
 if($result)
 {
-    $arr=mysqli_fetch_assoc($result);$idref=$arr['id'];
+    $arr=mysqli_fetch_assoc($result);$idref=$arr['id'];$dep=$arr['department'];
     $cv=mysqli_num_rows($result);
     if($cv>0)
     {
@@ -33,7 +33,7 @@ if($result)
         else {  
             if($role=='HOD')
             {
-                $result=mysqli_query($db_con,"SELECT r.id FROM login l INNER JOIN role r ON l.department='cse' AND r.desg='HOD' AND l.id=r.idref");
+                $result=mysqli_query($db_con,"SELECT r.id FROM login l INNER JOIN role r ON l.department='$dep' AND r.desg='HOD' AND l.id=r.idref");
                // echo"SELECT * FROM login l and role r ON l.department='".$dep."' AND r.role='".$role."'";
                 if(mysqli_num_rows($result)>0)
                 {
