@@ -173,19 +173,7 @@ a{
 h3{
     font-size: 20px !important;
 }
-.watermark{
-    float: right;
-    /* z-index: -999; */
-    opacity: .4;
-}
-.watermark img{
-    position: absolute;
-    z-index: -10;
-    right: 5%;
-    height: 400px;
-    width: 270px;
-    opacity: 0.5;
-}
+
 
 @media (max-width: 992px) and (min-width: 576px){
     .jumbotron{
@@ -307,9 +295,12 @@ h3{
         </div>
     </div>
     </header>
+
     <main>
+    <div class="watermark">
+    </div>
         <!--ENTER MAIN CONTENT HERE-->
-        <?php
+<?php
 $path= $_SERVER['DOCUMENT_ROOT'];
 require_once('./db_con.php');
 $email=$_GET['email'];
@@ -445,8 +436,7 @@ else {
             </div>
         </div>  
         <hr>
-        <div class="watermark">
-        </div>
+
         <div class="row">
             <div class="col-md-5 col-sm-4" >
                 <div>
