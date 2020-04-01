@@ -46,9 +46,11 @@
   
   .sitemap-main > ul {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
+    min-width: max-content;
   }
   
   .sitemap-main > ul > li {
