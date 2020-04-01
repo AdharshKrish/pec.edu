@@ -89,6 +89,12 @@
     border-top: none;
     content: "";
   }
+
+   @media(max-width:576px){
+        .sitemap-main li:after {
+            height: 1em;
+        }
+    }
   
   .sitemap-main li:after {
     position: absolute;
