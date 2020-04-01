@@ -24,6 +24,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
+    @media(max-width:576px){
+        .sitemap a {
+            padding: .1em .4em;
+        }
+    }
+
   .sitemap a:hover{
     opacity: .9;
     transform: scale(1.02);
