@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     flex-flow: row wrap;
-    padding: 0;
+    padding: 10;
     overflow-x: auto;
     padding-top: 15px;
   }
