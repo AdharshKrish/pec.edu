@@ -1,3 +1,5 @@
+
+
 .sitemap {
     position: relative;
     display: flex;
@@ -17,7 +19,15 @@
     background: #ebf3f4;
     font-weight: 500;
     text-decoration: none;
-    color: #595959;
+    /* color: #595959; */
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .sitemap a:hover{
+    opacity: .9;
+    transform: scale(1.02);
+    transition-duration: 100ms;
   }
   
   .sitemap a:before {
@@ -133,6 +143,9 @@
   .sitemap-main > ul > li > a {
     background: #f2e8dd;
     border-color: #b71540;
+  }
+  .sitemap-main > ul > li > a :hover{
+    background: green;
   }
   
   .sitemap-main ul ul ul a {
