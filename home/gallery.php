@@ -337,12 +337,12 @@ if($res=mysqli_query($db_con,$query))
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="civil" href="gallery.php?cat=civil&count=0">
+                                        <a alt="civil" href="gallery.php?cat=ce&count=0">
                                             <p class="link-footer-2">Civil</p>
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-4 col-md-2 col-lg-1 text-center col-footer-2">
-                                        <a alt="mech" href="gallery.php?cat=mech&count=0">
+                                        <a alt="mech" href="gallery.php?cat=me&count=0">
                                             <p class="link-footer-2">Mech</p>
                                         </a>
                                     </div>
