@@ -7,6 +7,8 @@ $query="SELECT * FROM `login`  WHERE id=".$id;
 $result=mysqli_query($db_con,$query);
 $dep=mysqli_fetch_assoc($result);
 $department=$dep['department'];
+if($department=='hss'||$department=='chem'||$department=='phy'||$department=='math')
+$department='hs';
 $visib=$_POST['visib'];
 if($visib=='department')
 {
