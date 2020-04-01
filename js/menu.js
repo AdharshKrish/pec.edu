@@ -33,7 +33,7 @@ function menu(elt,item)
         document.getElementById('menu-col-4').innerHTML='';
     }
     else if(item==='departments'){
-        document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../che/\'">Chemical Engineering</li><li onclick="location.href=\'../chem/\'">Chemistry</li><li onclick="location.href=\'../ce/\'">Civil Engineering</li><li onclick="location.href=\'../cse/\'">Computer Science and Engineering</li><li onclick="location.href=\'../ece/\'">Electronics and Communication Engineering</li></ul>';
+        document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../che/\'">Chemical Engineering</li><li onclick="location.href=\'../chem/\'">Chemistry</li><li onclick="location.href=\'../ce/\'">Civil Engineering</li><li onclick="location.href=\'../cse/\'">Computer Science and Engineering</li><li onclick="location.href=\'../ece/\'">Electronics and Communication Engineering</li><li onclick="location.href=\'../eee/\'">Electrical and Electronics Engineering</li></ul>';
         document.getElementById('menu-col-4').innerHTML='<ul><li onclick="location.href=\'../eie/\'">Electronics and Instrumentation Engineering</li><li onclick="location.href=\'../hss/\'">Humanities and Social Sciences</li><li onclick="location.href=\'../it/\'">Information Technology</li><li onclick="location.href=\'../maths/\'">Mathematics</li><li onclick="location.href=\'../me/\'">Mechanical Engineering</li><li onclick="location.href=\'../phy/\'">Physics</li></ul>';
     }
     else{
