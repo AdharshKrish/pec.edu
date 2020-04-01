@@ -223,8 +223,8 @@ if (isset($_SESSION['loggedin_status'])) {
                                                 </option>
                                                 <option value="none" selected="true" disabled>Select</option>
                                                 <option value="professor">Professor</option>
-                                                <option value="asociate professor">Associate Professor</option>
-                                                <option value="assistant prof">Assistant Professor</option>
+                                                <option value="associate professor">Associate Professor</option>
+                                                <option value="Assistant Professor">Assistant Professor</option>
                                                 <option value="programmer">Programmer</option>
                                                 <option value="others">Others</option>
                                             </select>

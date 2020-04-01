@@ -101,7 +101,7 @@ else {
                                             <option value="eee">Electrical and Electronics Engineering</option>
                                             <option value="ece">Electronics and Communication Engineering</option>
                                             <option value="eie">Electronics and Instrumentation Engineering</option>
-                                            <option value="civil">Civil Engineering</option>
+                                            <option value="ce">Civil Engineering</option>
                                             <option value="che">Chemical Engineering</option>
                                             <option value="mech">Mechanical Engineering</option>
                                             <option value="phy">Department of Physics</option>
