@@ -140,7 +140,7 @@
         position: absolute;
         z-index: 1;
         overflow: hidden;
-        height:98%;
+        height:97%;
         width: 100%;
         outline: 1px solid white;
         outline-offset: -20px;
@@ -197,6 +197,18 @@ html,body {
   }
 #main-container{
     height: 82vh;
+    background: url("img/cover.jpg") center center no-repeat;
+    background-size:100% ;
+    outline: 1px solid white;
+     outline-offset: -20px;
+     transition: all 0.1s ease-in-out;
+     animation: breath 60s linear 10ms infinite;
+}
+@keyframes breath{
+    0%{background-size: 100% auto;}
+    50%{background-size: 140% auto;}
+    100%{background-size: 100% auto;}
+
 }
 .butt{
     position: absolute;
@@ -453,8 +465,8 @@ html,body {
 
         
         <section>
-            <div style="display:flex;justify-content: center;position: relative;overflow: hidden;" width="100%" id="main-container">
-                <img id="dept-image" src="img/cover.jpg" style="z-index:1">
+            <div style="display:flex;justify-content: center;position: relative;" width="100%" id="main-container">
+                <!-- <img id="dept-image" src="img/cover.jpg" style="z-index:1"> -->
                 <div class="contain" style="z-index:1" >
                     <div class="flex-container justify-content-center nav-pan">
                              <a  href="notice-updates.php"><div class="nav_items">Notice & Updates</div></a>
