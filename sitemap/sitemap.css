@@ -91,6 +91,12 @@
   }
 
    @media(max-width:576px){
+    .sitemap-main li:before,
+    .sitemap-main li:after {
+      height: 0;
+    }
+  }
+   @media(max-width:576px){
         .sitemap-main li:after {
             height: 1em;
         }
@@ -128,6 +134,13 @@
   /* The home/top level link */
   .sitemap-root {
     margin-bottom: 2em;
+  }
+
+       
+  @media(max-width:576px){
+    .sitemap-root {
+        margin-bottom: 1em;
+    }
   }
   
   .sitemap-root > a {
