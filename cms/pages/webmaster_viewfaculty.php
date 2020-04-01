@@ -80,10 +80,10 @@ $result = mysqli_query($db_con, $query);
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=cse'>COMPUTER SCIENCE AND ENGINEERING</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=civil'>CIVIL ENGINEERING</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=ce'>CIVIL ENGINEERING</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=chemical'>CHEMICAL ENGINEERING</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=che'>CHEMICAL ENGINEERING</a></button></td>
                             </tr>
                             <tr>
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=eee'>ELECTRICAL AND ELECTRONICS ENGINEERING</a></button></td>
@@ -98,16 +98,16 @@ $result = mysqli_query($db_con, $query);
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=phy'>DEPARTMENT OF PHYSICS</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=che'>DEPARTMENT OF CHEMISTRY</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=chem'>DEPARTMENT OF CHEMISTRY</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=math'>DEPARTMENT OF MATHEMATICS</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=maths'>DEPARTMENT OF MATHEMATICS</a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=mech'>MECHANICAL ENGINEERING </a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=me'>MECHANICAL ENGINEERING </a></button></td>
                             </tr>
                             <tr>
-                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=hs'>DEPARTMENT OF HUMANITY SCIENCES</a></button></td>
+                                <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=hss'>DEPARTMENT OF HUMANITY SCIENCES</a></button></td>
                             </tr>
                             <tr>
                                 <td><button type="button" class="btn btn-mini"><a href='webmaster_editfaculty.php?dep=it'>INFORMATION TECHNOLOGY</a></button></td>
