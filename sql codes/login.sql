@@ -69,8 +69,7 @@ INSERT INTO login( username, email, department) VALUES ( "Dr. M. Thachayani", "m
 INSERT INTO login( username, email, department) VALUES ( "Dr. R. Sandanalakshmi", "sandanalakshmi@pec.edu", "ECE");
 INSERT INTO login( username, email, department) VALUES ( "Dr. A. V. Ananthalakshmi", "anantha_av@pec.edu", "ECE");
 
-INSERT INTO login( username, email, department) VALUES ( "Dr. K. Manivannan", "kmanivannan@pec.edu", "EEE"); 
-INSERT INTO login( username, email, department) VALUES ( "Dr. S. Himavathi", "himavathi@pec.edu", "EEE"); 
+INSERT INTO login( username, email, department) VALUES ( "Dr. K. Manivannan", "kmanivannan@pec.edu", "EEE");  
 INSERT INTO login( username, email, department) VALUES ( "Dr. S. Himavathi", "himavathi@pec.edu", "EEE"); 
 INSERT INTO login( username, email, department) VALUES ( "Dr. A. Muthuramalingam", "amrlingam@pec.edu", "EEE"); 
 INSERT INTO login( username, email, department) VALUES ( "Dr. R. Gnanadass", "gnanadass@pec.edu", "EEE"); 
@@ -129,7 +128,7 @@ INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr N.Alagumurthi", "al
 INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr M. Pugazhvadivu", "pv_pec@pec.edu", "ME"); 
 INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr. P Mathiazhagan", "pmathi@pec.edu", "ME"); 
 INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr B. Prabu", "prabu@pec.edu", "ME"); 
-INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr S. MohaMEd Ali", "smdali@pec.edu", "ME"); 
+INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr S. Mohamed Ali", "smdali@pec.edu", "ME"); 
 INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr A.V.Raviprakash", "avrp@pec.edu", "ME"); 
 INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr K Palaniradja Kichena", "palaniradja72@pec.edu", "ME"); 
 INSERT INTO login( usernaME, email, departMEnt) VALUES ( "Dr Auro Ashish Saha", "asaha@pec.edu", "ME"); 
