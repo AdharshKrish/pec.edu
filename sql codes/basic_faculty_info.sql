@@ -128,7 +128,7 @@ INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departME
 INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr M. Pugazhvadivu", "pv_pec@pec.edu", "ME"); 
 INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr. P Mathiazhagan", "pmathi@pec.edu", "ME"); 
 INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr B. Prabu", "prabu@pec.edu", "ME"); 
-INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr S. MohaMEd Ali", "smdali@pec.edu", "ME"); 
+INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr S. Mohamed Ali", "smdali@pec.edu", "ME"); 
 INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr A.V.Raviprakash", "avrp@pec.edu", "ME"); 
 INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr K Palaniradja Kichena", "palaniradja72@pec.edu", "ME"); 
 INSERT INTO basic_faculty_info(post_tier, name, contact_official_email, departMEnt) VALUES ("Professor", "Dr Auro Ashish Saha", "asaha@pec.edu", "ME"); 

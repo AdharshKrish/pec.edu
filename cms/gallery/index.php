@@ -71,14 +71,15 @@ else {
                     </ul>
                 </div>
                 
-                    <div> <?php
+                    <div> 
+                
+            <div class="col-sm-10 ">
+            <?php
                 if($error==1)
                  echo "  <div class='alert alert-success'>
                  <strong>STATUS: </strong> ".$message."
                </div>";
                 ?>
-                
-            <div class="col-sm-10 ">
                         <div class="panel-body">
                             
                         <div class="form-group">
