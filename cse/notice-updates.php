@@ -163,7 +163,8 @@
             box-shadow:none;
         }
         .card-container{
-            /* min-height: 150px; */
+            min-height: 170px;
+            /* width:190px; */
             /* height: 300px; */
             display: flex;
             padding: 20px;
@@ -214,7 +215,6 @@
         .faculty-header h2{
             margin-top: 10px;
         }
-
         /* @media (max-width: 520px){
             .card{
                 min-width: 260px;
@@ -254,8 +254,38 @@
             cursor: pointer;
 
         }
-
-
+        .default_info{
+            margin-top:2%;
+            margin-left:42%;
+            align-self:center;
+        }
+        .default_info ,p{
+            color:#707070;
+        }
+        @media (max-width:1108px){
+            .default_info{
+                margin-left:39%;
+            align-self:center;
+            }
+        }
+        @media (max-width:816px){
+            .default_info{
+                margin-left:35%;
+            align-self:center;
+            }
+        }
+        @media (max-width:590px){
+            .default_info{
+                margin-left:30%;
+            align-self:center;
+            }
+        }
+        @media (max-width:374px){
+            .default_info{
+                margin-left:20%;
+            align-self:center;
+            }
+        }
         /*content css ends*/
     </style>
     <script>
@@ -376,85 +406,93 @@
                     <div class="card-container tb3">
 
                      
-<?php
- include("db_con.php");
-$query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 50";
+                                <?php
+                                 include("db_con.php");
+                                $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 50";
 
-if($result=mysqli_query($db_con,$query))
-{ 
+                                if($result=mysqli_query($db_con,$query))
+                                { 
 
-    while($arr=mysqli_fetch_assoc($result))
-    {
-        $summary=$arr['breif'];
-        if(strpos($arr['start'],'0000')!==false)
-            $start = 'NA';
-        else
-            $start = date("d-M-Y",strtotime($arr['start']));
+                                    while($arr=mysqli_fetch_assoc($result))
+                                    {
+                                        $summary=$arr['breif'];
+                                        if(strpos($arr['start'],'0000')!==false)
+                                            $start = 'NA';
+                                        else
+                                            $start = date("d-M-Y",strtotime($arr['start']));
 
-        if(strpos($arr['end'],'0000')!==false)
-            $end = 'NA';
-        else
-            $end = date("d-M-Y",strtotime($arr['end']));
+                                        if(strpos($arr['end'],'0000')!==false)
+                                            $end = 'NA';
+                                        else
+                                            $end = date("d-M-Y",strtotime($arr['end']));
 
-        date_default_timezone_set('Asia/Kolkata');
-        $notetime = new DateTime($arr['timestamp']);
-        $curtime = new DateTime();
-        $timediff = $notetime->diff($curtime);
-        if(intval($timediff->format('%Y%M%D%H%I%S'))<7000000){
-            $bul=true;
-        }else{
-            $bul=false;
-        }
-        $cid=$arr['id'];
-        echo'<btn class="card tb2" onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
-                <div class="card-header">
-                    <span style="float: right">
-                    
-                   
-                    <form method="post" action="../ics/downloadcalendar.php">
-                    <input type="hidden" name="date_start" value='.$start.'>
-                    <input type="hidden" name="date_end" value='.$end.'>
-                    <input type="hidden" name="location" value="Pondicherry Engineering College, Pillaichavady">
-                    <input type="hidden" name="description" value='.$summary.'>
-                    
-                  <input align="right" type="image" value="Add to Calendar"class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender">  </span></input>
-                    </form></span>';
-                    
-                    if(isset($_COOKIE[$cid]))
-                        echo '<p class="old-bullet">Read</p>';
-                    else if($bul)
-                        echo '<div id="bul'.$cid.'"><p class="new-bullet"><span>&bull;</span>New</p></div>';
-                    else
-                        echo '<div id="bul'.$cid.'"><p class="old-bullet">-</p></div>';
-                    
-                   echo '<div class=row style="margin-left:-10px">
-                            <div class=col-3>From</div>
-                            <div class=col-8>'.$start.'</div>
-                            <div class=col-3>To</div>
-                            <div class=col-8>'.$end.'</div>
-                        </div>
-                </div>
-                <div class="card-body">
-                    '.$summary.'
-                </div>';
-                $query1="SELECT * FROM tags WHERE content_id=".$cid;
-                echo'<div class="hashtags">';
+                                        date_default_timezone_set('Asia/Kolkata');
+                                        $notetime = new DateTime($arr['timestamp']);
+                                        $curtime = new DateTime();
+                                        $timediff = $notetime->diff($curtime);
+                                        if(intval($timediff->format('%Y%M%D%H%I%S'))<7000000){
+                                            $bul=true;
+                                        }else{
+                                            $bul=false;
+                                        }
+                                        $cid=$arr['id'];
+                                        echo'<btn class="card tb2" onclick="getFullContent('.$cid.')" data-toggle="modal" data-target="#full-notice">
+                                                <div class="card-header">
+                                                    <span style="float: right">
+                                                    
+                                                
+                                                    <form method="post" action="../ics/downloadcalendar.php">
+                                                    <input type="hidden" name="date_start" value='.$start.'>
+                                                    <input type="hidden" name="date_end" value='.$end.'>
+                                                    <input type="hidden" name="location" value="Pondicherry Engineering College, Pillaichavady">
+                                                    <input type="hidden" name="description" value='.$summary.'>
+                                                    
+                                                  <input align="right" type="image" value="Add to Calendar"class="cal-icon" src="../img/calendar.svg" height="24" width="24" alt="calender-icon" title="Add to my Calender">  </span></input>
+                                                    </form></span>';
+                                                    
+                                                    if(isset($_COOKIE[$cid]))
+                                                        echo '<p class="old-bullet">Read</p>';
+                                                    else if($bul)
+                                                        echo '<div id="bul'.$cid.'"><p class="new-bullet"><span>&bull;</span>New</p></div>';
+                                                    else
+                                                        echo '<div id="bul'.$cid.'"><p class="old-bullet">-</p></div>';
+                                                    
+                                                   echo '<div class=row style="margin-left:-10px">
+                                                            <div class=col-3>From</div>
+                                                            <div class=col-8>'.$start.'</div>
+                                                            <div class=col-3>To</div>
+                                                            <div class=col-8>'.$end.'</div>
+                                                        </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    '.$summary.'
+                                                </div>';
+                                                $query1="SELECT * FROM tags WHERE content_id=".$cid;
+                                                echo'<div class="hashtags">';
 
-                if($result1=mysqli_query($db_con,$query1))
-                {
-                    while($a=mysqli_fetch_assoc($result1))
-                    {
-                        $tag=$a['tagname'];
-                        echo'<tag>#'.$tag.'</tag> &nbsp;&nbsp;';
-                    }
-                }
-        echo'   </div>
-            </btn>';            
-    }
-}
-?>
+                                                if($result1=mysqli_query($db_con,$query1))
+                                                {
+                                                    while($a=mysqli_fetch_assoc($result1))
+                                                    {
+                                                        $tag=$a['tagname'];
+                                                        echo'<tag>#'.$tag.'</tag> &nbsp;&nbsp;';
+                                                    }
+                                                }
+                                        echo'   </div>
+                                            </btn>';            
+                                    }
+                                }
+                                ?>
 
                     </div>
+                    <?php 
+                        if(mysqli_num_rows($result)==0){
+                            echo'<div class="default_info">
+                        <center><img class="info_" src="img/info.svg" width="50px" alt=""></center>
+                        <p>No content to show</p>
+                        </div>';
+                        }
+                    ?>
                 </div>
             </div>
         <!-- </div> -->
