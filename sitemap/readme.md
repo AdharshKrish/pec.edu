@@ -1,4 +1,6 @@
-ALmost done.
+
+
+No more changes here. Files moved to /home/sitemap.html
 
 Currently, absolute path, can be directly deployed on root.(pec.edu). Directory str. is ok
 
