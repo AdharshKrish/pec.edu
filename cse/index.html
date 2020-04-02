@@ -193,7 +193,7 @@ html,body {
     height: 100%;
   }
 #main-container{
-    height: 82vh;
+    height: 620px;
     background: url("img/cover.jpg") center center no-repeat;
     background-size:100% ;
     outline: 1px solid white;
@@ -203,6 +203,66 @@ html,body {
 #main-container:hover{
     transition: all 2s;
     background-size: 110%;
+}
+@media screen and (min-width:350px) {
+    
+    #main-container{
+        height: 500px;
+        background-size: 250%;
+    }
+    #main-container:hover{
+    background-size: 300%;
+}
+
+}
+@media screen and (min-width:450px) {
+  
+    #main-container{
+        height: 500px;
+        background-size: 200%;
+    }
+     #main-container:hover{
+    background-size: 250%;
+}
+}
+@media screen and (min-width:700px) {
+    
+    #main-container{
+        background-size: 150%;
+    }
+     #main-container:hover{
+    background-size: 200%;
+}
+}
+@media screen and (min-width:860px) {
+  
+    #main-container{
+        height: 600px;
+        background-size: 130%;
+    }
+     #main-container:hover{
+    background-size: 150%;
+}
+}
+@media screen and (min-width:1120px){
+    
+    #main-container{
+        height: 640px;
+        background-size: 100%;
+    }
+     #main-container:hover{
+    background-size: 130%;
+}
+}
+@media screen and (max-width:350px) {
+    
+    #main-container{
+        height: 500px;
+        background-size: 350%;
+    }
+     #main-container:hover{
+    background-size: 400%;
+}
 }
 
 .butt{
