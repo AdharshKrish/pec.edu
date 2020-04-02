@@ -33,7 +33,8 @@
   .sitemap a:hover{
     opacity: .9;
     transform: scale(1.02);
-    transition-duration: 100ms;
+    transition-duration: 50ms;
+    background: white;
   }
   
   .sitemap a:before {
