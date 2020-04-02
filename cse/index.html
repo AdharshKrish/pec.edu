@@ -196,8 +196,9 @@ html,body {
     height: 100%;
   }
 #main-container{
-    height: 82vh;
+    height: 640px;
     background: url("img/cover.jpg") center center no-repeat;
+    background-size: cover;
     outline: 1px solid white;
     outline-offset: -20px;
     animation: zoom 20s linear infinite alternate;
@@ -205,20 +206,23 @@ html,body {
 
 @media screen and (min-width:350px) {
     @keyframes zoom{
-        0%{background-size:310%}
-        100%{background-size:360%}
+        0%{background-size:250%}
+        100%{background-size:300%}
+    }
+    #main-container{
+        height: 500px;
     }
 }
 @media screen and (min-width:450px) {
     @keyframes zoom{
-        0%{background-size:250%}
-        100%{background-size:300%}
+        0%{background-size:200%}
+        100%{background-size:250%}
     }
 }
 @media screen and (min-width:700px) {
     @keyframes zoom{
-        0%{background-size:200%}
-        100%{background-size:250%}
+        0%{background-size:150%}
+        100%{background-size:200%}
     }
 }
 @media screen and (min-width:860px) {
@@ -226,17 +230,26 @@ html,body {
         0%{background-size:130%}
         100%{background-size:150%}
     }
+    #main-container{
+        height: 600px;
+    }
 }
 @media screen and (min-width:1120px){
     @keyframes zoom{
         0%{background-size:100%}
         100%{background-size: 130%}
     }
+    #main-container{
+        height: 640px;
+    }
 }
 @media screen and (max-width:350px) {
     @keyframes zoom{
-        0%{background-size:400%}
-        100%{background-size:500%}
+        0%{background-size:350%}
+        100%{background-size:400%}
+    }
+    #main-container{
+        height: 500px;
     }
 }
 
