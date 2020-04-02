@@ -212,4 +212,9 @@
       order: 2;
     }
   }
-  
+  .ext-link{
+    background: #222222;
+    /* border-color: #f5f1a6; */
+    border-color: #000;
+    color: wheat;
+  }
