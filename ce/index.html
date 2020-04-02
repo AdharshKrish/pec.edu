@@ -135,7 +135,7 @@
             text-decoration:none;
         }
 
-        #dept-image{
+        /* #dept-image{
         object-fit: cover;
         position: absolute;
         z-index: 1;
@@ -146,7 +146,7 @@
         outline-offset: -20px;
         transition: all 0.1s ease-in-out;
         animation: increase 60s linear 10ms infinite;
-}
+} */
 
 @keyframes increase{
     0%{transform:scale(1)}
@@ -197,6 +197,15 @@ html,body {
   }
 #main-container{
     height: 82vh;
+    background: url("img/cover.jpg") center center no-repeat;
+    background-size:100% ;
+    outline: 1px solid white;
+    outline-offset: -20px;
+    transition: all 2s ease-in-out
+}
+#main-container:hover{
+    transition: all 2s;
+    background-size: 110%;
 }
 .butt{
     position: absolute;
@@ -453,8 +462,8 @@ html,body {
 
         
         <section>
-            <div style="display:flex;justify-content: center;position: relative;overflow: hidden;" width="100%" id="main-container">
-                <img id="dept-image" src="img/cover.jpg" style="z-index:1">
+            <div style="display:flex;justify-content: center;position: relative;" width="100%" id="main-container">
+                <!-- <img id="dept-image" src="img/cover.jpg" style="z-index:1"> -->
                 <div class="contain" style="z-index:1" >
                     <div class="flex-container justify-content-center nav-pan">
                              <a  href="notice-updates.php"><div class="nav_items">Notice & Updates</div></a>

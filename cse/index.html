@@ -72,6 +72,7 @@
         }
         html{
             scroll-behavior: smooth;
+            overflow-x:hidden ;
         }
         /* body {
             display: flex;
@@ -135,7 +136,7 @@
             text-decoration:none;
         }
 
-        #dept-image{
+        /* #dept-image{
         object-fit: cover;
         position: absolute;
         z-index: 1;
@@ -145,14 +146,10 @@
         outline: 1px solid white;
         outline-offset: -20px;
         transition: all 0.1s ease-in-out;
-        animation: increase 60s linear 10ms infinite;
-}
+        animation: increase 2500s linear infinite;
+} */
 
-@keyframes increase{
-    0%{transform:scale(1)}
-    50%{transform:scale(1.3)}
-    100%{transform:scale(1)}
-}
+
 @media ( max-width:400px ){
     #dept-image{
         outline-offset: -10px;
@@ -200,16 +197,14 @@ html,body {
     background: url("img/cover.jpg") center center no-repeat;
     background-size:100% ;
     outline: 1px solid white;
-     outline-offset: -20px;
-     transition: all 0.1s ease-in-out;
-     animation: breath 60s linear 10ms infinite;
+    outline-offset: -20px;
+    transition: all 2s ease-in-out;
 }
-@keyframes breath{
-    0%{background-size: 100% auto;}
-    50%{background-size: 140% auto;}
-    100%{background-size: 100% auto;}
+#main-container:hover{
+    transition: all 2s;
+    background-size: 110%;
+}
 
-}
 .butt{
     position: absolute;
     top:60%;
