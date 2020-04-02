@@ -1,6 +1,8 @@
-yet some changes needs to be done.
 
-relative linking may create some problem, which will be resolved on final deployment. (Alternate, absolute linking)
+
+No more changes here. Files moved to /home/sitemap.html
+
+Currently, absolute path, can be directly deployed on root.(pec.edu). Directory str. is ok
 
 <a href="https://adharshkrish.github.io/pec.edu/sitemap/sitemap.html" > link </a>
 
