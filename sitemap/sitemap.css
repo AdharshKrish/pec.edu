@@ -213,8 +213,8 @@
     }
   }
   .ext-link{
-    background: #222222;
+    background: #222222 !important;
     /* border-color: #f5f1a6; */
-    border-color: #000;
-    color: wheat;
+    border-color: #000 !important;
+    color: wheat !important;
   }
