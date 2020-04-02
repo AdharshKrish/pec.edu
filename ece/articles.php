@@ -201,6 +201,42 @@
                 border-radius:0;
             }
         }
+        .container{
+            min-height:120px;
+        }
+        .default_info{
+            margin-top:2%;
+            margin-left:42%;
+            align-self:center;
+            max-width:150px;
+        }
+        .default_info ,p{
+            color:#707070;
+        }
+        @media (max-width:1108px){
+            .default_info{
+                margin-left:39%;
+            align-self:center;
+            }
+        }
+        @media (max-width:816px){
+            .default_info{
+                margin-left:35%;
+            align-self:center;
+            }
+        }
+        @media (max-width:590px){
+            .default_info{
+                margin-left:30%;
+            align-self:center;
+            }
+        }
+        @media (max-width:374px){
+            .default_info{
+                margin-left:20%;
+            align-self:center;
+            }
+        }
         /*content css ends*/
     </style>
     <script>
@@ -365,6 +401,14 @@
            
 
         </div> 
+        <?php 
+                        if(mysqli_num_rows($result)==0){
+                            echo'<div class="default_info">
+                        <center><img class="info_" src="img/info.png" width="50px" alt=""></center>
+                        <p>No content to show</p>
+                        </div>';
+                        }
+                    ?>  
 </div>
         <!--main content ends-->
     </main>

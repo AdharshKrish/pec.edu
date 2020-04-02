@@ -164,8 +164,6 @@
         }
         .card-container{
             min-height: 170px;
-            /* width:190px; */
-            /* height: 300px; */
             display: flex;
             padding: 20px;
             overflow-x:auto;
@@ -488,7 +486,7 @@
                     <?php 
                         if(mysqli_num_rows($result)==0){
                             echo'<div class="default_info">
-                        <center><img class="info_" src="img/info.svg" width="50px" alt=""></center>
+                        <center><img class="info_" src="img/info.png" width="50px" alt=""></center>
                         <p>No content to show</p>
                         </div>';
                         }

@@ -163,8 +163,7 @@
             box-shadow:none;
         }
         .card-container{
-            /* min-height: 150px; */
-            /* height: 300px; */
+            min-height:170px;
             display: flex;
             padding: 20px;
             overflow-x:auto;
@@ -255,7 +254,38 @@
 
         }
 
-
+        .default_info{
+            margin-top:2%;
+            margin-left:42%;
+            align-self:center;
+        }
+        .default_info ,p{
+            color:#707070;
+        }
+        @media (max-width:1108px){
+            .default_info{
+                margin-left:39%;
+            align-self:center;
+            }
+        }
+        @media (max-width:816px){
+            .default_info{
+                margin-left:35%;
+            align-self:center;
+            }
+        }
+        @media (max-width:590px){
+            .default_info{
+                margin-left:30%;
+            align-self:center;
+            }
+        }
+        @media (max-width:374px){
+            .default_info{
+                margin-left:20%;
+            align-self:center;
+            }
+        }
         /*content css ends*/
     </style>
     <script>
@@ -378,7 +408,7 @@
                      
 <?php
  include("db_con.php");
-$query="SELECT * FROM `news_update` WHERE (department='it' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 50";
+$query="SELECT * FROM `news_update` WHERE (department='it' OR department='all' ) AND verified=2 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 50";
 
 if($result=mysqli_query($db_con,$query))
 { 
@@ -455,6 +485,14 @@ if($result=mysqli_query($db_con,$query))
 ?>
 
                     </div>
+                    <?php 
+                        if(mysqli_num_rows($result)==0){
+                            echo'<div class="default_info">
+                        <center><img class="info_" src="img/info.png" width="50px" alt=""></center>
+                        <p>No content to show</p>
+                        </div>';
+                        }
+                    ?>
                 </div>
             </div>
         <!-- </div> -->
