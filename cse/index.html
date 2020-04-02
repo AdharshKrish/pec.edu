@@ -198,18 +198,48 @@ html,body {
 #main-container{
     height: 82vh;
     background: url("img/cover.jpg") center center no-repeat;
-    background-size:100% ;
     outline: 1px solid white;
-     outline-offset: -20px;
-     transition: all 0.1s ease-in-out;
-     animation: breath 60s linear 10ms infinite;
+    outline-offset: -20px;
+    animation: zoom 20s linear infinite alternate;
 }
-@keyframes breath{
-    0%{background-size: 100% auto;}
-    50%{background-size: 140% auto;}
-    100%{background-size: 100% auto;}
 
+@media screen and (min-width:350px) {
+    @keyframes zoom{
+        0%{background-size:310%}
+        100%{background-size:360%}
+    }
 }
+@media screen and (min-width:450px) {
+    @keyframes zoom{
+        0%{background-size:250%}
+        100%{background-size:300%}
+    }
+}
+@media screen and (min-width:700px) {
+    @keyframes zoom{
+        0%{background-size:200%}
+        100%{background-size:250%}
+    }
+}
+@media screen and (min-width:860px) {
+    @keyframes zoom{
+        0%{background-size:130%}
+        100%{background-size:150%}
+    }
+}
+@media screen and (min-width:1120px){
+    @keyframes zoom{
+        0%{background-size:100%}
+        100%{background-size: 130%}
+    }
+}
+@media screen and (max-width:350px) {
+    @keyframes zoom{
+        0%{background-size:400%}
+        100%{background-size:500%}
+    }
+}
+
 .butt{
     position: absolute;
     top:60%;
