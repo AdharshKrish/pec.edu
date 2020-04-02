@@ -150,6 +150,12 @@
     border-color: #000;
     color: #fff;
   }
+
+  .sitemap-root > a:hover{
+      color:#2e8690 ;
+      border-color: #2e8690;
+      background-color: white;
+    }
   
   .sitemap-root > a:before {
     color: #f2f2f2;
@@ -218,4 +224,11 @@
     /* border-color: #f5f1a6; */
     border-color: #000 !important;
     color: wheat !important;
+  }
+
+  .ext-link:hover{
+    background: #fff !important;
+    /* border-color: #f5f1a6; */
+    border-color: #000 !important;
+    color: #222 !important;
   }
