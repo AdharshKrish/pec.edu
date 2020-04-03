@@ -102,8 +102,8 @@
                                     <option value="PEC Newsletter"> PEC Newsletter</option> 
                                     <option value="Library"> Library</option> 
                                     <option value="PRERANA"> PRERANA (SC/ST)</option> 
-                                    <option value="Center for Continuing Education"> Center for Continuing Education (CCE)</option> 
                                 <!-- Cells -->
+                                    <option value="Center for Continuing Education"> Center for Continuing Education (CCE)</option>     
                                     <option value="Counselling and Career Guidance Cell"> Counselling and Career Guidance Cell (CCGC)</option> 
                                     <option value="Grievance Redressal Cell"> Grievance Redressal Cell</option> 
                                     <option value="Innovation and Entrepreneurship Development Cell"> Innovation and Entrepreneurship Development Cell (IEDC)</option> 
