@@ -112,7 +112,7 @@ $result=mysqli_query($db_con,$query);
                         
                         <td><a href='deletegallery.php?id=$id'>DELETE</a></td>
                                       </tr>
-                                      <br>";
+                                      ";
 
                     }
                     ?>
