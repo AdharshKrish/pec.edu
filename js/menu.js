@@ -61,7 +61,7 @@ function menu1(elt,index)
 }
 document.addEventListener('scroll',()=>{
     if(window.outerWidth>980){
-        if(window.pageYOffset>100){
+        if(window.pageYOffset>170){
             document.getElementsByClassName('mob-btn')[0].style.display='block';
         }
         else{

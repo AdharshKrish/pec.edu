@@ -488,162 +488,72 @@
                 margin-right:0;
             }
         }
-
-        .video{
-            transition:transform 1s;
-        }
-        .video video{
+        #vd video{
             width:100%;
-            outline:3px solid #2e8690;
-            outline-offset: 3px;
-
         }
-        #fc img{
-            object-fit: cover;
-            width: 100%;
-            height:50vw;
-        }
-
-        .load-background{
-            width:100%;
-            height: 40vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-
-        .waves {
+        #vd txt{
+            color: #0008;
+            font-weight: 900;
             position: absolute;
-            bottom:0;
+            left:3vw;
+            bottom: 2vw;
+            font-size: 4vw;
+            line-height: 1;
+        }
+        #vd #imp{
+            background-color: #fff;
+            position: absolute;
+            left:0;
+            top:3vw;
+            padding:1vw 2vw;
+            font-size:14px;
+        }
+        #video{
             width: 100%;
-            height: 50%;
-            margin-bottom: -3px;
-            z-index:-10;
-            /* filter:blur(2px); */
+            height:46vw;
+            background: url(img/home-crp.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
         }
 
-        .parallax>use {
-            animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+        #vd_btn {
+            position: absolute;
+            z-index:5;
+            bottom:0;
+            right:0;
         }
-        .parallax>use:nth-child(1) {
-            animation-delay: -2s;
-            animation-duration: 7s;
+        #vd_btn circle {
+            fill:#0000;
+            stroke-width:4px;
+            stroke:#000;
+            animation: fill-rotate 2s ease-in-out infinite alternate 0.5s;
+            stroke-dashoffset: 0;
+            stroke-dasharray:314;
+            transition: stroke-dasharray 1s;
         }
-        .parallax>use:nth-child(2) {
-            animation-delay: -3s;
-            animation-duration: 10s;
+        #vd_btn circle.play {
+            animation: dash-rotate 2s linear infinite;
+            stroke-dashoffset: 0;
+            stroke-dasharray:6;
         }
-        .parallax>use:nth-child(3) {
-            animation-delay: -4s;
-            animation-duration: 13s;
-        }
-        .parallax>use:nth-child(4) {
-            animation-delay: -5s;
-            animation-duration: 20s;
-        }
-        @keyframes move-forever {
-            0% {
-                transform: translate3d(-90px, 0, 0);
+        @keyframes fill-rotate {
+            from{
+                stroke-dashoffset: 0;
             }
-            100% {
-                transform: translate3d(85px, 0, 0);
+            to{
+                stroke-dashoffset: 314;
+            }
+        }
+        @keyframes dash-rotate {
+            from{
+                stroke-dashoffset: 0;
+            }
+            to{
+                stroke-dashoffset: 200;
             }
         }
 
-
-
-#clouds{
-    width:100%;
-}
-
-.cloud {
-    position: absolute;
-    top:50px;
-	width: 200px; height: 60px;
-	background: #fff;
-	border-radius: 200px;
-}
-
-.cloud:before, .cloud:after {
-	content: '';
-	position: absolute; 
-	background: #fff;
-	width: 100px; height: 80px;
-	position: absolute; 
-    top: -15px; 
-    left: 10px;
-	border-radius: 100px;
-	transform: rotate(30deg);
-}
-
-.cloud:after {
-	width: 120px;
-    height: 120px;
-	top: -55px;
-    left: auto; 
-    right: 15px;
-}
-
-.x1 {
-    left:50%;
-	animation: moveclouds 10s linear infinite;
-}
-
-.x2 {
-    top:10%;
-	left: 30%;
-	transform: scale(0.6);
-	opacity: 0.9;
-	animation: moveclouds 11s linear infinite;
-}
-
-.x3 {
-	left: -20%; 
-    top: 15%;
-	transform: scale(0.8);
-	opacity: 0.8;
-	animation: moveclouds 15s linear infinite;
-}
-
-.x4 {
-	left: 40%; 
-    top: 25%;
-	transform: scale(0.75);
-	opacity: 0.75;
-	animation: moveclouds 13s linear infinite;
-
-}
-
-.x5 {
-	left: -10%; 
-    top: 15%;
-	transform: scale(0.8);
-	opacity: 0.8;
-	animation: moveclouds 11s linear infinite;
-}
-
-@keyframes moveclouds {
-	0% {margin-left: 100%;}
-	100% {margin-left: -100%;}
-}
-
-.dep{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        height:100%;
-        /* font-weight: 700; */
-        /* font-weight: 100; */
-
-        font-size: 22px;
-        /* font-family: 'Titan One', cursive; */
-        font-family: 'Spicy Rice', cursive;
-        font-weight: 100;
-        color:#fff;
-
-    }
-        
         /*content css ends*/
     </style>
     <script>
@@ -739,34 +649,21 @@
 
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
-                <div id="fc" style="position:relative">
-                    <!-- <div id="clouds">
-                        <div class="cloud x1"></div>
-                        <div class="cloud x2"></div>
-                        <div class="cloud x3"></div>
-                        <div class="cloud x4"></div>
-                        <div class="cloud x5"></div>
-                    </div> -->
-                    <div class="video">
-                        <div id="mv"><div class="load-background"></div></div>
-                    </div>
-                    <!-- <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                        <defs>
-                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                        </defs>
-                        <g class="parallax">
-                             <use xlink:href="#gentle-wave" x="48" y="0" fill="#4bf7" />
-                            <use xlink:href="#gentle-wave" x="48" y="3" fill="#4bf6" />
-                            <use xlink:href="#gentle-wave" x="48" y="5" fill="#4cf5" />
-                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#4cf4" /> 
-                            <use xlink:href="#gentle-wave" x="48" y="0" fill="#befd" />
-                            <use xlink:href="#gentle-wave" x="48" y="3" fill="#befc" />
-                            <use xlink:href="#gentle-wave" x="48" y="5" fill="#befb" />
-                            <use xlink:href="#gentle-wave" x="48" y="7" fill="#befa" />
-
-                        </g>
-                    </svg> -->
+            <div id="video">
+                <div id="vd">
+                    <div id="imp">This is an important update. All important notice to be handled.<br>
+                        Default: hidden</div>
+                    <txt>Welcome to <br> PONDICHERRY ENGINEERING COLLEGE</txt>
                 </div>
+                <svg width="110" height="110" id='vd_btn'>
+                    <circle id="circle" cx="50" cy="50" r="25"/>
+                    <line id='line1' x1="42" y1="40" x2="42" y2="60" style="stroke-width:4px;stroke:#000;stroke-linecap: round;" />
+                    <path id='line2' d="M 42 40 L 60 50 L 42 60" rx="10" ry="10" style="stroke-width:4px;stroke:#000;fill:#000;stroke-linejoin: round;stroke-linecap: round;">
+                        <animate attributeName="d" dur="300ms" from="M 42 40 L 60 50 L 42 60" to="M 58 40 L 58 50 L 58 60" begin="indefinite" fill="freeze" id="play"/>
+                    </path>
+                    <animate xlink:href="#line2" attributeName="d" dur="300ms" from="M 58 40 L 58 50 L 58 60" to="M 42 40 L 60 50 L 42 60" fill="freeze" id="pause" begin="indefinite"/>
+                </svg>
+            </div>
             <div class="divider"></div>
             <div class="container-fluid">
                 <div class="row">
@@ -1104,11 +1001,8 @@
         window.onload = function() {
 
             if(window.outerWidth>600){
-                window.mv.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay muted></video>'
                 window.cv.innerHTML='<video src="img/campus-life.mp4" preload="metadata" poster="img/campus-life.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
                 window.pv.innerHTML='<video src="img/placements.mp4" preload="metadata" poster="img/placements.jpg" class="c-p-images" onmouseover=obs(this) muted loop></video>'
-                videoObserver.observe(document.querySelector('video'))
-                document.querySelector('.video').style.transform="scale(0.8) translate(0px,-5vw)"
             }
             else{
                 window.fc.innerHTML='<img src="img/home.jpg" pec-img="img/home.jpg">'
@@ -1119,113 +1013,33 @@
             videoObserver.observe(elt)
         }
 
+        // function play(){
+        //     window.vd.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay muted></video>'
+        //     // obs(document.querySelector('video'))
+        // }
 
-
-
-
-
-         var background = {}
-
-            background.initializr = function () {
-
-                var $this = this;
-
-
-
-                //option
-                $this.id = "background_css3";
-                $this.style = { bubbles_color: "#fff", stroke_width: 0, stroke_color: "black" };
-                $this.bubbles_number = 30;
-                $this.speed = [1500, 8000]; //milliseconds
-                $this.max_bubbles_height = $this.height;
-                $this.shape = false // 1 : circle | 2 : triangle | 3 : rect | false :random
-
-                if ($("#" + $this.id).lenght > 0) {
-                    $("#" + $this.id).remove();
-                }
-                $this.object = $("<div style='z-index:-1;margin:0;padding:0; overflow:hidden;position:absolute;bottom:0' id='" + $this.id + "'> </div>'").appendTo("#fc");
-
-                $this.ww = $(window).width()
-                $this.wh = $(window).height()
-                $this.width = $this.object.width($this.ww);
-                $this.height = $this.object.height($this.wh);
-
-
-                $("body").prepend("<style>.shape_background {transform-origin:center; width:80px;height:80px; background: " + $this.style.bubbles_color + "; position: absolute}</style>");
-
-
-                for (i = 0; i < $this.bubbles_number; i++) {
-                    $this.generate_bubbles()
-                }
-
-            }
-
-
-
-
-            background.generate_bubbles = function () {
-                var $this = this;
-                // var base = $("<div class='shape_background'></div>");
-                var base = $("<div class='shape_background'></div>");
-
-                var shape_type = $this.shape ? $this.shape : Math.floor($this.rn(1, 8));
-                if (shape_type == 1) {
-                    var bolla = base.css({ borderRadius: "50%", background: "#f00" })
-                    // base.html("dajkfsjafkasljfa")
-                    base.html("<div class='dep'>ECE</div>")
-
-                } else if (shape_type == 2) {
-                    var bolla = base.css({ borderRadius: "50%", background: "#0f0" })
-                    base.html("<div class='dep' style='color:#000'>EEE</div>")
-
-
-                } else if (shape_type == 3) {
-                    var bolla = base.css({ borderRadius: "50%", background: "#00f" })
-                    base.html("<div class='dep'>EIE</div>")
-
-
-                } else if (shape_type == 4) {
-                    var bolla = base.css({ borderRadius: "50%", background: "#ff0" })
-                    base.html("<div class='dep' style='color:#000'>IT</div>")
-
-
-                } else if (shape_type == 5) {
-                    var bolla = base.css({ background: "#0ff",color:"#000" });
-                    base.html("<div class='dep' style='color:#000'>CHEM</div>")
-
-                } else if (shape_type == 6) {
-                    var bolla = base.css({ background: "#f0f" });
-                    base.html("<div class='dep'>CE</div>")
-
-                } else if (shape_type == 7) {
-                    var bolla = base.css({ background: "#D61" });
-                    base.html("<div class='dep'>MECH</div>")
-
+        $(document).ready(function() {
+            var state = "paused";
+            loaded = false;
+            $('#vd_btn').on('click', function() {
+                if(state == 'paused') {
+                    if(!loaded){
+                        window.vd.innerHTML='<video src="img/wearepec.mp4" preload="metadata" loop autoplay muted></video>'
+                        loaded = true
+                    }
+                    state = "playing"
+                    $("#circle").attr("class", "play")
+                    $("#play")[0].beginElement()
+                    document.querySelector('video').play()
                 } else {
-                    var bolla = base.css({ background:"teal" });
-                    base.html("<div class='dep'>CSE</div>")
-
+                    document.querySelector('video').pause();
+                    state = "paused";
+                    $("#circle").attr("class", "");
+                    $("#pause")[0].beginElement();
                 }
-                var rn_size = $this.rn(1.1, 1.6);
-                bolla.css({ "transform": "scale(" + rn_size + ") rotate(" + $this.rn(-360, 360) + "deg)", top: $this.wh + 100, left: $this.rn(-60, $this.ww + 60) });
-                bolla.appendTo($this.object);
-                bolla.transit({ top: $this.rn($this.wh / 3, $this.wh / 3 - 60), "transform": "scale(" + rn_size / 2 + ") rotate(" + $this.rn(-360, 360) + "deg)", opacity: 0 }, $this.rn($this.speed[0], $this.speed[1]), function () {
-                    $(this).remove();
-                    $this.generate_bubbles();
-                })
-
-            }
-
-
-            background.rn = function (from, to, arr) {
-                if (arr) {
-                    return Math.random() * (to - from + 1) + from;
-                } else {
-                    return Math.floor(Math.random() * (to - from + 1) + from);
-                }
-            }
-            background.initializr()
-        
+            });
+        });
+ 
     </script>
 
 </body>
