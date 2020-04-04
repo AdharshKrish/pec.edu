@@ -1,0 +1,82 @@
+.card-container {
+    -webkit-perspective: 500px;
+            perspective: 500px;
+}
+
+.card-container:hover .card{
+    -webkit-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+.card {
+    -webkit-transition: -webkit-transform 0.7s;
+            transition: transform 0.7s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.front, .back {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.back {
+    -webkit-transform: rotateY( 180deg );
+            transform: rotateY( 180deg );
+}
+
+/*Custom Styles*/
+.cards-container{
+   display: -webkit-flex;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-flex-direction: row;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+    width: 240px;
+    height: 350px;
+    margin: 10px;
+}
+
+.front, .back {
+  box-shadow: 0 1px 6px 0 black;
+  position: absolute;
+  width: 240px;
+    height: 250px;
+  top: 0;
+  bottom: 0;
+}
+
+@media only screen and (max-width:800px){
+    .masthead{
+        height: 30vh !important;
+    }
+
+    .masthead-content{
+        padding-top: 60px !important;
+    }
+
+    .sect1{
+        height: 100vh !important;
+    }
+
+    .box1{
+        margin-top: 30px;
+        margin: 0px;
+    }
+    p{
+        font-size: 18px !important;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+}

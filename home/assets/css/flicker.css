@@ -1,0 +1,49 @@
+.on{
+  color: red;
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5),0 0 20px #3d0e0e,0 0 100px #832020,0 0 150px red,0 0 300px #3b0c0c;
+  animation: flicker1 1s linear 0s infinite;
+}
+
+.on1{
+  color: rgb(36, 112, 226);
+  text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5),0 0 20px #161158,0 0 100px #352083,0 0 150px rgb(98, 0, 255),0 0 300px #1a0c3b;
+  animation: flicker1 1s linear 0s infinite;
+}
+
+
+
+@keyframes flicker1{
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  79% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  84% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
