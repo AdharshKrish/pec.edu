@@ -492,7 +492,8 @@
             width:100%;
         }
         #video txt{
-            color: #0008;
+            color: #2e8690;
+            mix-blend-mode: color-burn;
             font-weight: 900;
             position: absolute;
             left:3vw;
@@ -538,6 +539,9 @@
             bottom:0;
             right:0;
         }
+        #vd_btn:hover{
+            cursor: pointer;
+        }
         @media (max-width:400px) {
             #vd_btn{
                 display:none;
@@ -546,7 +550,7 @@
         #vd_btn circle {
             fill:#0000;
             stroke-width:4px;
-            stroke:#fff;
+            stroke:#bfbfbf70;
             animation: fill-rotate 2s ease-in-out infinite alternate 0.5s;
             stroke-dashoffset: 0;
             stroke-dasharray:314;
@@ -670,20 +674,22 @@
         </div> 
         <!--ENTER MAIN CONTENT HERE-->
             <div id="video">
-                <div class="imp">
+                <!-- ENTER URGENT NOTICE HERE -->
+                <div class="imp" style="display: none;">
                     <div id="imp">
                         <span id="close">&#10006;</span>
                         This is an important update. All important notice to be handled.<br>
                         Default: hidden
                     </div>
                 </div>
+                <!-- urgent notice ends -->
                 <div id="vd">
                     <txt>Welcome to <br> PONDICHERRY ENGINEERING COLLEGE</txt>
                 </div>
                 <svg width="110" height="110" id='vd_btn'>
                     <circle id="circle" cx="50" cy="50" r="25"/>
-                    <line id='line1' x1="42" y1="40" x2="42" y2="60" style="stroke-width:4px;stroke:#fff;stroke-linecap: round;" />
-                    <path id='line2' d="M 42 40 L 60 50 L 42 60" rx="10" ry="10" style="stroke-width:4px;stroke:#fff;fill:#fff;stroke-linejoin: round;stroke-linecap: round;">
+                    <line id='line1' x1="42" y1="40" x2="42" y2="60" style="stroke-width:4px;stroke:#ebf3f4;stroke-linecap: round;" />
+                    <path id='line2' d="M 42 40 L 60 50 L 42 60" rx="10" ry="10" style="stroke-width:4px;stroke:#ebf3f4;fill:#ebf3f480;stroke-linejoin: round;stroke-linecap: round;">
                         <animate attributeName="d" dur="300ms" from="M 42 40 L 60 50 L 42 60" to="M 58 40 L 58 50 L 58 60" begin="indefinite" fill="freeze" id="play"/>
                     </path>
                     <animate xlink:href="#line2" attributeName="d" dur="300ms" from="M 58 40 L 58 50 L 58 60" to="M 42 40 L 60 50 L 42 60" fill="freeze" id="pause" begin="indefinite"/>
