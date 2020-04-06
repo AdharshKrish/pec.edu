@@ -539,9 +539,6 @@
             bottom:1vw;
             right:1vw;
         }
-        #vd_btn:hover{
-            cursor: pointer;
-        }
         @media (max-width:400px) {
             #vd_btn{
                 display:none;
@@ -554,7 +551,11 @@
             animation: fill-rotate 2s ease-in-out infinite alternate 0.5s;
             stroke-dashoffset: 0;
             stroke-dasharray:314;
-            transition: stroke-dasharray 1s;
+            transition: stroke-dasharray 1s, fill .5s;
+            cursor: pointer;
+        }
+        #vd_btn circle:hover {
+            fill:#fff3;
         }
         #vd_btn circle.play {
             animation: dash-rotate 2s linear infinite;
