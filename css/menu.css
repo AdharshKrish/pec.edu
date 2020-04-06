@@ -114,8 +114,8 @@ html{
 }
 
 #menu-col-1,#menu-col-2,#menu-col-3,#menu-col-4{
-    line-height:40px;
-    padding-left:70px;
+    line-height:35px;
+    /* padding-left:70px; */
 
 }
 
@@ -142,6 +142,19 @@ html{
 }
 #chapter-font{
   font-size: 18px;
+}
+
+#menu-col-3, #menu-col-4{
+  line-height: 1;
+}
+#menu-col-3 li, #menu-col-4 li{
+  padding-top: 15px;    
+}
+
+@media(min-width:996px){
+  #menu-col-3,#menu-col-4{
+    display: block;
+  }
 }
 
 @media(max-width:996px){
@@ -178,19 +191,19 @@ html{
 @media(max-width:650px){
   #menu-col-1,#menu-col-2,#menu-col-3,#menu-col-4 {
     padding-left:5vw;
-    line-height: 30px;
+    /* line-height: 30px; */
   }
-  .pec-menu{
-    font-size: 12px;
+ .pec-menu{
+    font-size: 14px;
   }
   #chapter-font{
-    font-size:10px;
-  }
+    font-size:12px;
+  } 
   #menu-col-4{
     display: none;
   }
   .menu-about{
-    font-size:14px;
+    font-size:15px;
   }
   .forward{
     height:10px;
