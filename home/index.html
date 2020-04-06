@@ -1054,8 +1054,10 @@
                     $("#circle").attr("class", "play")
                     $("#play")[0].beginElement()
                     document.querySelector('video').play()
+                    // document.querySelector('video').style.display = "block"
                 } else {
-                    document.querySelector('video').pause();
+                    document.querySelector('video').pause()
+                    // document.querySelector('video').style.display = "none"
                     state = "paused";
                     $("#circle").attr("class", "");
                     $("#pause")[0].beginElement();

@@ -4,8 +4,6 @@ function menu(elt,item)
         document.getElementById('menu-col-1').style.display = 'none';
         document.getElementById('menu-col-2').style.display = 'none';
         document.getElementById('menu2-cover').style.display = 'block';
-        document.getElementById('menu-col-3').style.display = 'block';
-        document.getElementById('menu-col-4').style.display = 'block';
         document.getElementById('menu-col-4').style.left='50%';
     }
     document.getElementById('menu-col-3').classList.replace('col-4','col-6');
@@ -34,11 +32,18 @@ function menu(elt,item)
     }
     else if(item==='departments'){
         document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../che/\'">Chemical Engineering</li><li onclick="location.href=\'../chem/\'">Chemistry</li><li onclick="location.href=\'../ce/\'">Civil Engineering</li><li onclick="location.href=\'../cse/\'">Computer Science and Engineering</li><li onclick="location.href=\'../ece/\'">Electronics and Communication Engineering</li><li onclick="location.href=\'../eee/\'">Electrical and Electronics Engineering</li></ul>';
-        document.getElementById('menu-col-4').innerHTML='<ul><li onclick="location.href=\'../eie/\'">Electronics and Instrumentation Engineering</li><li onclick="location.href=\'../hss/\'">Humanities and Social Sciences</li><li onclick="location.href=\'../it/\'">Information Technology</li><li onclick="location.href=\'../maths/\'">Mathematics</li><li onclick="location.href=\'../me/\'">Mechanical Engineering</li><li onclick="location.href=\'../phy/\'">Physics</li></ul>';
+        document.getElementById('menu-col-4').innerHTML='<ul><li onclick="location.href=\'../eie/\'">Electronics and Instrumentation Engineering</li><li window.location.href=\'../hss/\'">Humanities and Social Sciences</li><li onclick="location.href=\'../it/\'">Information Technology</li><li onclick="location.href=\'../maths/\'">Mathematics</li><li onclick="location.href=\'../me/\'">Mechanical Engineering</li><li onclick="location.href=\'../phy/\'">Physics</li></ul>';
     }
     else{
         document.getElementById('menu-col-3').innerHTML='<p class="menu-about">Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and college development and is managed by a Board of Governors.</p>';
         document.getElementById('menu-col-4').innerHTML='<img src="../img/about.jpg" alt="college-img" style="width:18vw">';
+    }
+
+    if(window.outerWidth<996){
+        setTimeout(()=>{
+            document.getElementById('menu-col-3').style.display = 'block';
+            document.getElementById('menu-col-4').style.display = 'block';
+        },100)
     }
 }
 function menu1(elt,index)
@@ -58,6 +63,7 @@ function menu1(elt,index)
     }else if(index==4){
         document.getElementById('menu-col-4').innerHTML='<ul id="chapter-font"><li onclick="location.href=\'../home/CCC.php?id=Swayam-NPTEL%20-%20Students\'">Swayam/NPTEL - Students</li><li onclick="location.href=\'../home/CCC.php?id=Quality%20Enhancement%20in%20Engineering%20Education\'">Quality Enhancement in Engineering Education (QEEE)</li><li onclick="location.href=\'../home/CCC.php?id=Swayam-NPTEL%20-%20Staffs\'">Swayam/NPTEL - Staffs</li></ul>';
     }
+
 }
 document.addEventListener('scroll',()=>{
     if(window.outerWidth>980){
