@@ -39,7 +39,7 @@ else {
     exit();
 }
 
-$query1="SELECT * FROM news_update where verified=0 ORDER BY expires_on DESC LIMIT 0,25";
+$query1="SELECT * FROM news_update where verified=0 ORDER BY expires_on DESC LIMIT 0,100";
 
 if($result=mysqli_query($db_con,$query1) )
 {
