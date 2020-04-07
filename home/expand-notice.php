@@ -53,7 +53,7 @@ if($result=mysqli_query($db_con,$query))
                                    {
                                     $fl=$arrnew['name'];
                                     $type=$arrnew['type'];
-                                    if($type[0]=='i')
+                                    if(strcmp($type[0],"i")==0)
                                     echo "<img width='300' src='../cms/content_upload/".$fl."'></img>";
                                    }}
 
@@ -63,7 +63,7 @@ if($result=mysqli_query($db_con,$query))
                             {
                             $type=$arrnew['type'];
                             $fl=$arrnew['name'];
-                            if($type[0]=='a')
+                            if(strcmp($type[0],"a")==0)
                             echo "<p>Download</p><a href='../cms/content_upload/".$fl."'><li>".$fl."</li></a>";
                             }
                             }

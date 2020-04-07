@@ -406,7 +406,7 @@
                      
                                 <?php
                                  include("db_con.php");
-                                $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 50";
+                                $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on ASC LIMIT 50";
 
                                 if($result=mysqli_query($db_con,$query))
                                 { 
