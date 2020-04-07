@@ -120,9 +120,9 @@ else
                                 $id=$arr_ok['Faculty_id'];
                                 $query2="SELECT * FROM basic_faculty_info where id=".$id;
                                 $arr1=mysqli_fetch_assoc(mysqli_query($db_con,$query2));
-                                echo "<div class='col-sm-6 col-md-12 ''>
+                                echo "<div class='col-sm-6 col-md-12'>
                                 <div class='container memo_palette'>
-                                    <h4>NAME</h4>
+                                    <h4>Name</h4>
                                     <p>".$arr1['name']."</p>
                                     <h4>Email</h4>
                                     <p>".$arr1['contact_official_email']."</p>
