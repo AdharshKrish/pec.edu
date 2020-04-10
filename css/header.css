@@ -59,6 +59,7 @@ header{
     padding-top: 8px;
     margin-bottom: 15px;
     border-left:1px solid #707070;
+    /* text-emphasis: wrap; */
 
 }
 .dept-of{
@@ -168,6 +169,9 @@ header{
     .dept-name{
         margin-left:0.3em;
     }  
+    .dept-name-text{
+        font-size:20px;
+    }
 }
 
 
@@ -175,6 +179,7 @@ header{
 
     .dept-name{
         padding-left:0;
+        padding-top: 7px;
         border: none;
 
     }.dept-of{
@@ -182,10 +187,13 @@ header{
 
     }
     .dept-name-text{
-        font-size:21px;
+        font-size:17px;
     }
     .logo{
-        width:38px;
+        width:40px;
+    }
+    .logo-container{
+        padding:10px;
     }
     .faculty-header h4{
         font-size: 32px;
@@ -211,10 +219,11 @@ header{
 
     }
     .dept-name-text{
-        font-size:18px;
+        font-size:15px;
+        width:200px;
     }
     .logo{
-        width:32px;
+        width:38px;
     }
     .logo-container{
         padding: 10px;
@@ -229,7 +238,7 @@ header{
     }
 }
 
-@media screen and (max-width:355px){
+/* @media screen and (max-width:355px){
 
     .dept-name{
         padding-left:0.4em;
@@ -249,4 +258,4 @@ header{
         padding: 8px 0 0 10px;
     }
 }
-
+ */
