@@ -253,37 +253,14 @@
             cursor: pointer;
 
         }
-        .default_info{
-            margin-top:2%;
-            margin-left:42%;
+.default_info{
             align-self:center;
+            margin-left:auto;
+            margin-right:auto;
+            transform:translateX(-20px);
         }
         .default_info ,p{
             color:#707070;
-        }
-        @media (max-width:1108px){
-            .default_info{
-                margin-left:39%;
-            align-self:center;
-            }
-        }
-        @media (max-width:816px){
-            .default_info{
-                margin-left:35%;
-            align-self:center;
-            }
-        }
-        @media (max-width:590px){
-            .default_info{
-                margin-left:30%;
-            align-self:center;
-            }
-        }
-        @media (max-width:374px){
-            .default_info{
-                margin-left:20%;
-            align-self:center;
-            }
         }
 
         /*content css ends*/

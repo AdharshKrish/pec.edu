@@ -255,37 +255,15 @@
         }
 
         .default_info{
-            margin-top:2%;
-            margin-left:42%;
             align-self:center;
+            margin-left:auto;
+            margin-right:auto;
+            transform:translateX(-20px);
         }
         .default_info ,p{
             color:#707070;
         }
-        @media (max-width:1108px){
-            .default_info{
-                margin-left:39%;
-            align-self:center;
-            }
-        }
-        @media (max-width:816px){
-            .default_info{
-                margin-left:35%;
-            align-self:center;
-            }
-        }
-        @media (max-width:590px){
-            .default_info{
-                margin-left:30%;
-            align-self:center;
-            }
-        }
-        @media (max-width:374px){
-            .default_info{
-                margin-left:20%;
-            align-self:center;
-            }
-        }
+
         /*content css ends*/
     </style>
     <script>
@@ -378,8 +356,8 @@
                         <li class="menu2" onclick="location.href='../home/gallery.php'"; onmouseover="menu(this,'gallery')">Gallery</li>
                         <li class="menu2" onmouseover="menu(this,'oncampus')">On&nbsp;Campus<img src="../img/forward.svg" class="forward" alt=">"></li>
                         <li class="menu2" onmouseover="menu(this,'departments')">Departments<img src="../img/forward.svg" class="forward" alt=">"></li>
-                        <li class="menu2" onclick="location.href='../home/administration.html'"; onmouseover="menu(this,'administration')">Administration</li>
-                        <li class="menu2" onclick="location.href='http://www.teqip.pec.edu/'"; onmouseover="menu(this,'teqip')">TEQIP</li>
+                        <li class="menu2" onclick="location.href='../home/administration.html'" onmouseover="menu(this,'administration')">Administration</li>
+                        <li class="menu2" onclick="location.href='http://www.teqip.pec.edu/'" onmouseover="menu(this,'teqip')">TEQIP</li>
                     </ul>
                 </div>
                 <div id="menu2-cover"> <button onclick="goBack()"> <img src="../img/go-back.svg" alt="go-back" > </button> </div>
