@@ -383,7 +383,7 @@
                      
                                 <?php
                                  include("db_con.php");
-                                $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on DESC LIMIT 50";
+                                $query="SELECT * FROM `news_update` WHERE (department='cse' OR department='all' ) AND verified=1 AND expires_on>=current_date ORDER BY expires_on ASC LIMIT 50";
 
                                 if($result=mysqli_query($db_con,$query))
                                 { 
@@ -520,7 +520,7 @@
                             <div class="nested-footer-2 tb2">
                                 <div class="row row-footer-2">
                                     <div class="col-4 col-sm-4 col-md-2 text-center col-footer-2">
-                                        <a alt="pec" href="http://pec.edu/old/" target="blank">
+                                        <a alt="pec-old" href="http://pec.edu/" target="blank">
                                             <p class="link-footer-2">Old&nbsp;Site</p>
                                         </a>
                                     </div>

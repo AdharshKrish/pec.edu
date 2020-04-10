@@ -21,13 +21,13 @@ if (!unlink($file)) {
   echo ("Deleted $file");
 }
 }else {
-   // header("location: edit.php?message=NO SUCCESS IN DELETING ");
+   header("location: edit.php?message=ERROR IN DELETING ");
     exit();
 }
 
 
 }
-//header("location: edit.php?message=SUCCESS IN DELETING ");
+header("location: edit.php?message=SUCCESS IN DELETING ");
 exit();
     
 ?>

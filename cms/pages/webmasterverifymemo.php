@@ -8,8 +8,6 @@ if($logged==900)
 {
     if($_SESSION['role']=="webmaster")
     {
-  
-    
     $tag="";
    if(isset($_GET['content_id']))
 {
@@ -39,7 +37,7 @@ else {
     exit();
 }
 
-$query1="SELECT * FROM news_update where verified=0 ORDER BY expires_on DESC LIMIT 0,25";
+$query1="SELECT * FROM news_update where verified=0 ORDER BY expires_on DESC LIMIT 0,100";
 
 if($result=mysqli_query($db_con,$query1) )
 {
@@ -119,9 +117,9 @@ else
                                 $id=$arr_ok['Faculty_id'];
                                 $query2="SELECT * FROM basic_faculty_info where id=".$id;
                                 $arr1=mysqli_fetch_assoc(mysqli_query($db_con,$query2));
-                                echo "<div class='col-sm-6 col-md-12 ''>
+                                echo "<div class='col-sm-6 col-md-12'>
                                 <div class='container memo_palette'>
-                                    <h4>NAME</h4>
+                                    <h4>Name</h4>
                                     <p>".$arr1['name']."</p>
                                     <h4>Email</h4>
                                     <p>".$arr1['contact_official_email']."</p>
@@ -162,7 +160,10 @@ else
                                   <div class="form-group">
                                     <label for="date-from">Visibility</label>
                                         <select name="visib" class="form-control">
-                                            <option value="none" selected="true" disabled>Select</option>
+                                        <?php
+                                        if(isset($_GET['content_id']))
+                                        echo"<option value=".$arr['department'].">".$arr['department']."</option>";
+                                        ?>
                                             <option value="all">ALL DEPARTMENTS AND MAIN PAGE</option>
                                             <option value="main">MAIN PAGE</option>
                                             <option value="cse">Computer Science and Engineering</option>
