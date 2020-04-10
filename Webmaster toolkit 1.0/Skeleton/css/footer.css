@@ -1,0 +1,144 @@
+
+
+.foot{
+    background-color: #EBF2F3;
+    /* height: 35vh; */
+    /*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);*/ /*can be uncomment*/
+}
+
+
+.footer{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding-bottom: 20px;
+}
+
+.row-footer-1{
+    margin-left: 0;
+    margin-right: 0;
+    /* height: 27vh; */
+}
+
+.col-footer-1{
+    /* border:1px solid blue; */
+    padding: 1.5em;
+    padding-bottom: 12px;
+}
+
+.nested-footer-2{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row-footer-2{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 10px;
+}
+
+.link-footer-2{
+    border-bottom: 1.3px dotted #707070;
+    padding:2px;
+    text-align: left;
+    width:80px;
+}
+.link-footer-2:hover{
+    border-bottom: 1.5px solid #000000;
+}
+.col-footer-2 a:hover{
+    text-decoration: none;
+    color: #000;
+}
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; /*This is the aspect ratio*/
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+.pp{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-weight:500;
+
+
+}
+
+.social_icon{
+    padding-top: 25px;
+}
+
+.icons{
+    padding-right: 5px;
+}
+
+
+.Rectangle-5 {
+    max-width: 150px;
+    height: 30px;
+    border-radius: 16px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 2px #000000;
+    text-align: center;
+    min-width: 130px;
+    margin-bottom: 20px;
+}
+
+.col-footer-2 a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid gray;
+
+}
+
+.contact{
+    font-size: 15px;
+    background-color:transparent;
+    border: solid 2px black;
+    border-radius: 16px;
+    padding: 5px 20px 5px 20px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    /* margin-bottom : 25px */
+    margin-bottom : 15px;
+}
+.contact:focus{
+    outline: none;
+    background:none;
+}
+.contact:hover{
+    background-color: #2e8690;
+    color: white;
+}
+
+
+@media (min-width:768px) and (max-width:1080px) {
+    .padding_remove {
+        padding-left: 0 !important;
+        margin-left: 0!important;
+    }
+}
+@media (max-width: 991px){
+    .hidden-sm-md{
+        display: none !important;
+    }
+}
+
+.dotted_bordered{
+    border: 1px dashed black;
+    opacity: .9;
+    padding: 7px;
+    border-radius: 5px;
+    max-width: 200px;
+    min-width: 140px;
+}
+/* } */

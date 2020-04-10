@@ -1,0 +1,17 @@
+**cms-helpbook.docx is maintained on 'pec.edu/file/' directory**
+-----
+**INTERNAL USE**
+**Department copy techniques.docx contains information 
+on making changes on a department level**
+**Database configuration.docx contains information on how
+to configure local/host databse connection**
+**Important-updates-feature.docx contain information on how 
+to use the hidden feature of posting a short urgent message
+on the homescreen**
+**pec.cms_access4C.docx contains table of conveners 
+and their mail id of 4Cs**
+**pec.edu_Links.docs contains page wise table of links 
+in the website**
+**pec.edu_Syllabus links.docx contains table of syllabus of all
+courses for dept/courses.html**
+-----

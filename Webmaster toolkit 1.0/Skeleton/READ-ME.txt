@@ -1,0 +1,39 @@
+**PEC Design System Web Template**
+**Version 1.0.0-Beta-16**April-2020**
+-----
+**xyz/index.html for department directory pages.**
+**xyz/index2.html for home directory pages.**
+-----
+**The incode comments in capitalized letters ONLY denotes 
+entrance point for additional codes.**
+**The incode comments in small caps are indicative of
+a function OR are informational.**
+-----
+**Choose of the index file and fill the body content 
+to obtain a page adhering to the PEC Design System.**
+-----
+**While copying to the domain index paste ONLY the resulting 
+index2.html file into home index or index.html into department
+index and rename it as required.**
+-----
+**PLEASE DO NOT EDIT ANYTHING OUTSIDE THE ENTRY POINTS.
+CONTACT THE CURRENT DEVELOPERS IF REQUIRED.**
+-----
+**To check the VERSION open git command line on the local development site
+and use: git describe.**
+**Convention [Major].[Minor-Feature].[Minor-Patch]-(Beta)-[Local changes]**
+**To set the version use: git tag -a "v1.0.0-beta" -m "version v1.0.0-beta"**
+-----
+**FONTS**
+**Headers-Oswald**
+**Primary-Segoe UI**
+**Secondary-Times New Roman**
+-----
+**COLORS**
+**Primary palette**
+**#2E8690-Teal;#0EA2BE-Blue;#EBF3F4-Light Blue;#707070-Dark Grey;
+#BFBFBF-Grey;#F8F8F8-Light Grey**
+**Secondary palette**
+**#FFC72C-Gold;##AE2929-Maroon;#3C6382-Navy Blue;#41A700-Green;
+#1E3799-Purple**
+------
