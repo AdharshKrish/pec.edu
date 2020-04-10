@@ -303,7 +303,7 @@
                 </div>
                 <div class="dept-name" id="dept-name">
                     <h4 class="dept-of">DEPARTMENT <i>of</i></h4>
-                    <h4 class="dept-name-text">Electronics and Instrumentation Engineering</h4>  <!--ENTER DEPARTMENT NAME-->
+                    <h4 class="dept-name-text">Electronics & Instrumentation Engineering</h4>  <!--ENTER DEPARTMENT NAME-->
                 </div>
 
                 <div class="search-box" style="position: absolute;top:0px;right: 80px;padding-top: 0px;">
