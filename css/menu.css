@@ -210,7 +210,8 @@ html{
     display: none;
   }
   .menu-about{
-    font-size:15px;
+    line-height: 1.4;
+    font-size:14px;
   }
   /* .forward{
     height:10px;
@@ -227,8 +228,5 @@ html{
   }
   #menu-col-3{
     padding:0px;
-  }
-  .menu-about{
-    font-size:12px;
   }
 }

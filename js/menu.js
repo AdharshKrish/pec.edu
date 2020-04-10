@@ -16,6 +16,9 @@ function menu(elt,item)
 
     elt.classList.add('active-m2');
     
+    document.getElementById('menu-col-3').innerHTML='<p class="menu-about">Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and college development and is managed by a Board of Governors.</p>';
+    document.getElementById('menu-col-4').innerHTML='<img src="../img/about.jpg" alt="college-img" style="width:18vw">';
+
     if(item==='gallery'){
         document.getElementById('menu-col-3').innerHTML='<a href="../home/gallery.php"><img src="../img/gallery.jpg" alt="college-img" width="260"></a>';
         document.getElementById('menu-col-4').innerHTML='';
@@ -34,12 +37,20 @@ function menu(elt,item)
         document.getElementById('menu-col-3').innerHTML='<ul><li onclick="location.href=\'../che/\'">Chemical Engineering</li><li onclick="location.href=\'../chem/\'">Chemistry</li><li onclick="location.href=\'../ce/\'">Civil Engineering</li><li onclick="location.href=\'../cse/\'">Computer Science and Engineering</li><li onclick="location.href=\'../ece/\'">Electronics and Communication Engineering</li><li onclick="location.href=\'../eee/\'">Electrical and Electronics Engineering</li></ul>';
         document.getElementById('menu-col-4').innerHTML='<ul><li onclick="location.href=\'../eie/\'">Electronics and Instrumentation Engineering</li><li window.location.href=\'../hss/\'">Humanities and Social Sciences</li><li onclick="location.href=\'../it/\'">Information Technology</li><li onclick="location.href=\'../maths/\'">Mathematics</li><li onclick="location.href=\'../me/\'">Mechanical Engineering</li><li onclick="location.href=\'../phy/\'">Physics</li></ul>';
     }
-    else{
-        document.getElementById('menu-col-3').innerHTML='<p class="menu-about">Pondicherry Engineering College (PEC) is an Institution sponsored by the Union Territory of Pondicherry, India. The College was started in 1984 under the VII Five Year Plan. It is an autonomous Institution for the purposes of administration, staff recruitment and college development and is managed by a Board of Governors.</p>';
-        document.getElementById('menu-col-4').innerHTML='<img src="../img/about.jpg" alt="college-img" style="width:18vw">';
-    }
-
+    
     if(window.outerWidth<996){
+
+        if(item==='teqip'){
+            location.href='http://www.teqip.pec.edu/';
+        }else if(item==='about'){
+            location.href='../home/about-pec.html';
+        }else if(item==='gallery'){
+            location.href='../home/gallery.php';
+        }
+        else if(item==='administration'){
+            location.href='../home/administration.html';
+        }
+
         setTimeout(()=>{
             document.getElementById('menu-col-3').style.display = 'block';
             document.getElementById('menu-col-4').style.display = 'block';
