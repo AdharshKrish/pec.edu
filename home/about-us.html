@@ -164,7 +164,7 @@
   </section>
   <section data-aos="zoom-in-up" data-aos-duration="800" data-aos-once="true">
     <h1 class="text-center d-xl-flex justify-content-xl-center align-items-xl-center title1"
-      style="margin: 27px;font-family: Oswald, sans-serif;color: rgb(0,0,0);z-index: 300;" id="core1">Project Core Team</h1>
+      style="margin: 27px;font-family: Oswald, sans-serif;color: rgb(0,0,0);z-index: 300; cursor: pointer;" id="core1" onclick="shake()">Project Core Team</h1>
     <div class="shadow-lg container" style="z-index: 5;border: 5px solid #2e8690;padding-top: 30px;">
       <div class="container">
         <h4 class="text-center shadow"
@@ -940,6 +940,13 @@
       document.getElementById('core1').style.color = "#010101";
       document.getElementById('core1').style.textShadow = "none";
       document.getElementById('core1').style.animation = "none";
+    }
+
+    // danger zone
+    function shake() {
+      var s=document.createElement('script');
+      s.setAttribute("src","https://nthitz.github.io/turndownforwhatjs/tdfw.js");
+      document.body.appendChild(s);
     }
   </script>
 
