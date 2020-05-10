@@ -699,9 +699,9 @@ function message(){
           // $('#focusChk').val($('#focus').val());  // to make both search box value consistence
           $(".search-result-container").show(250);
         });
-        // $("#focus").focusout(function(){
-        //   $(".search-result-container").hide(200);
-        // });
+         $("#focus").focusout(function(){
+           $(".search-result-container").hide(200);
+         });
         $("#focus").focusin(function(){
           // $('#focus').val($('#focusChk').val());
           $(".search-result-container").show(250);
