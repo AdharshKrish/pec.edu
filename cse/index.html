@@ -657,14 +657,14 @@ function message(){
             evt.preventDefault();
             //$('#focus').val("");        // setting null value so that its result doesnt affets #focus val
             var phrase= $('#focusChk').val();
-            //if(phrase.length>=2)      // type more than 2 chars
+            if(phrase.length>=2)      // type more than 2 chars
                 searchReq(phrase);
             
         });
         $('#focus').keyup(function(evt){          // second search box event
             evt.preventDefault();
             var phrase= $('#focus').val();
-            //if(phrase.length>=2)      // type more than 2 chars
+            if(phrase.length>=2)      // type more than 2 chars
                 searchReq(phrase);
             
         });
