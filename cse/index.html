@@ -669,7 +669,7 @@ function message(){
             //$('#searchTableBody').empty();
             $.ajax({
                 method: "GET",
-                url: 'http://pec-hari.herokuapp.com/search/'+phrase,                  //  TO BE CHANGED HERE WITH ACTUAL SERVER or `/search.php`
+                url: 'https://pec-hari.herokuapp.com/search/'+phrase,                  //  TO BE CHANGED HERE WITH ACTUAL SERVER or `/search.php`
                 async:true,
                 crossDomain:true,
                 success: function(searchResults){   //searchResult is received from server side
