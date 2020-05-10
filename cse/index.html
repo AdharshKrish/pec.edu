@@ -23,8 +23,11 @@
     <link rel='dns-prefetch' href='https://maps.googleapis.com'>
     <link rel='dns-prefetch' href='https://fonts.googleapis.com/' >
     <link rel='dns-prefetch' href="https://khms1.googleapis.com/">
+    <!--  Material Icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script defer src="../js/jquery.min.js"></script>
+
+    <script src="../js/jquery.min.js"></script>
     <script defer src="../js/materialize.min.js"></script>
     <script defer src="../js/bootstrap4.js"></script>
     <script defer src="../js/menu.js"></script>
@@ -122,7 +125,70 @@
           width: 100%;
           height: 2px;
         }
-        
+             
+ /* search body css*/      
+      .icon-padding{
+              position: relative;
+              top: 4px;
+      }
+
+      #bookTable{
+            background: white;
+        }
+      .search-result-container{
+          position: absolute;
+          max-height:70vh;
+          overflow-y:auto;
+          background-color: transparent;
+          margin-bottom: 15px;
+          z-index: 4;
+          display: none;                  /* initially */
+      }
+      @media (min-width: 986px) {
+        .search-result-container{
+          position: absolute;
+          right: 2em;
+          margin-top: -1.5em;
+          width: 21em;
+        }
+      }
+      
+      @media (max-width: 985px) {
+        .search-result-container{
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        #bookTable{
+            width: 80%;
+            margin: auto;
+        }
+      }
+      @media (max-width: 450px) {
+        .search-result-container{
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          font-size: small;
+        }
+        .icon-padding {
+            top: 6px;
+        }
+        .table th, .table td {
+            padding: 0.65rem;
+        }
+      }
+      .search-result-container a{
+          color: #707070;
+          display: block;
+          height: 100%;
+          width: 100%;
+      }
+      .search-result-container a:hover{
+          color: #000;
+          text-decoration: none;
+      }
+      /* search body css ends*/
         /*ENTER INLINE CONTENT CSS*/
 
 .cover-image {
@@ -440,10 +506,23 @@ html,body {
             </div>
         </div>
     </div>
+    
+    <div class="search-result-container">
+        <table class="table table-bordered" id="bookTable" style="margin-bottom: unset;">
+            <thead>
+                <tr class="thead-light"> <th > Results found: </th></tr>
+            </thead>
+            
+            <tbody id="searchTableBody" >
+                <tr> <td> &lt; Start Typing ... &gt; </td></tr>
+            </tbody>
+        </table>
+    </div>
+
+
     </header>
     <main>
         <!--ENTER MAIN CONTENT HERE-->
-            
 
         
         <section>
@@ -557,7 +636,74 @@ function message(){
     $("#snap").animate({height:'toggle',opacity:'toggle'},'slow');
 }
     </script>
-
+    <script>
+        /*script for search - requires jquery*/
+        //icons
+        const icon_perm_identity = '<span class="material-icons icon-padding"> perm_identity </span>'; //icon1
+        const icon_more = '<span class="material-icons icon-padding"> more </span>';         //icon 2
+        const icon_emoji_objects ='<span class="material-icons"> emoji_objects </span>';     //icon 3
+        const icon_language ='<span class="material-icons"> language </span>'                //icon 4
+  
+        function selectIcon(icon_id){
+            let icon = icon_id==1?icon_perm_identity:(icon_id==2?icon_more:(icon_id==3?icon_emoji_objects:icon_language))
+            return icon;
+        }
+  
+        $('#focusChk').keyup(function(evt){       //first search box event
+            evt.preventDefault();
+            //$('#focus').val("");        // setting null value so that its result doesnt affets #focus val
+            var phrase= $('#focusChk').val();
+            //if(phrase.length>=2)      // type more than 2 chars
+                searchReq(phrase);
+            
+        });
+        $('#focus').keyup(function(evt){          // second search box event
+            evt.preventDefault();
+            var phrase= $('#focus').val();
+            //if(phrase.length>=2)      // type more than 2 chars
+                searchReq(phrase);
+            
+        });
+                
+        function searchReq(phrase){ //keypress doesnt take last keyed in charachter
+            //$('#searchTableBody').empty();
+            $.ajax({
+                method: "GET",
+                url: 'http://pec-hari.herokuapp.com/search/'+phrase,                  //  TO BE CHANGED HERE WITH ACTUAL SERVER or `/search.php`
+                async:true,
+                crossDomain:true,
+                success: function(searchResults){   //searchResult is received from server side
+                    $('#searchTableBody').empty();
+                    searchResults.forEach(function(result) {
+                        //book = func(book, phrase);
+                        let chosen_icon= selectIcon(result.icon)
+                        $('#searchTableBody').append(`<tr>  <td > <a href=" ${result.link} "> ${chosen_icon} &nbsp; ${ result.data } </a> </td></tr>`);
+                    });
+                    if(searchResults.length ==0 ){
+                        $('#searchTableBody').empty();
+                        $('#searchTableBody').append(`<tr disabled> <td style="color:red"> No result found. Please modify your phrase</td></tr>`);
+                    }   
+                }
+            });
+        }
+  
+        $("#focusChk").focusout(function(){
+          // alert("focuss out");
+          $(".search-result-container").hide(300);
+        });
+        $("#focusChk").focusin(function(){
+          // $('#focusChk').val($('#focus').val());  // to make both search box value consistence
+          $(".search-result-container").show(250);
+        });
+        // $("#focus").focusout(function(){
+        //   $(".search-result-container").hide(200);
+        // });
+        $("#focus").focusin(function(){
+          // $('#focus').val($('#focusChk').val());
+          $(".search-result-container").show(250);
+        });
+  
+      </script>
 </body>
 
 </html>
