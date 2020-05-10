@@ -131,8 +131,12 @@ function change(){
 function focusS(){
     if(window.outerWidth>996)
         document.getElementById('focusChk').focus();
-    else
-        window.setTimeout(()=>{document.getElementById('focus').focus()},10);
+    else{
+        var searchInput =document.getElementById('collapseSearch');
+        if(searchInput.className == "collapse") {         // focus when input is visible
+            window.setTimeout(()=>{document.getElementById('focus').focus()},10);
+        }
+    }
 }
 document.getElementsByTagName('main')[0].style.opacity = '1';
 if(document.getElementsByTagName('floatbtn')[0])
