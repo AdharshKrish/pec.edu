@@ -82,7 +82,7 @@ CREATE TABLE `basic_faculty_info` (
   `qualification` varchar(4000) NOT NULL,
   `specialization` varchar(2000) NOT NULL,
   `department` varchar(50) NOT NULL,
-  `phno` int(20) DEFAULT NULL,
+  `phno` varchar(20) DEFAULT NULL,
   `dob` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
