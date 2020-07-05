@@ -2,14 +2,14 @@
 -----
 **INTERNAL USE**
 **Department copy techniques.docx contains information 
-on making changes on a department level**
+on making changes on department level**
 **Database configuration.docx contains information on how
-to configure local/host databse connection**
+to configure local/host database connection**
 **Important-updates-feature.docx contain information on how 
 to use the hidden feature of posting a short urgent message
 on the homescreen**
-**pec.cms_access4C.docx contains table of conveners 
-and their mail id of 4Cs**
+**pec.cms_access4C.docx contains list of convenors 
+and their mail id for the 4Cs (Cells, Clubs ...)**
 **pec.edu_Links.docs contains page wise table of links 
 in the website**
 **pec.edu_Syllabus links.docx contains table of syllabus of all

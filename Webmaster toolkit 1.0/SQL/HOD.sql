@@ -1,0 +1,12 @@
+INSERT INTO role( idref, desg) VALUES ( "2", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "10", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "13", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "29", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "53", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "73", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "88", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "96", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "103", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "111", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "118", "HOD");
+INSERT INTO role( idref, desg) VALUES ( "138", "HOD");
