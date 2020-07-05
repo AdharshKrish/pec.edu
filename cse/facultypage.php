@@ -361,7 +361,11 @@ if(mysqli_num_rows($result)>0)
        $specilization=$arr['specialization'];
        $contact=$arr['phno'];
        $ext=$arr['extension'];
-       $dob = date("d-M-Y",strtotime($arr['dob']));
+       if(strpos($arr['dob'],'0000')!==false)
+       $dob = 'Not provided';
+       else
+       $dob = date("d-M",strtotime($arr['dob']));
+        //    $dob = date("d-M-Y",strtotime($arr['dob']));
       // $exists=0;
       $query="SELECT * FROM  academic where f_id=".$id;      
        $result=mysqli_query($db_con,$query);
@@ -420,7 +424,7 @@ else {
                 <div class="row" style="min-width:120px;">
                     <div class="col-md-6 ">
                         <div class="thumbnail">
-                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both; width:150px; height:200px; margin-right:5px' alt='error'>";?></div>
+                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both; width:150px; height:200px; margin-right:5px; object-fit: cover' alt='error'>";?></div>
                         </div>
                     </div>
                     <div class="col-md-6 " style="margin-top:20px;display: flex; align-items: center;">
@@ -452,7 +456,7 @@ else {
                         <div class="col-sm-6">
                              <label class="label"> Phone </label>  <?php echo $contact?> <br>
                              <label class="label"> Email </label>  <?php echo $email?><br>
-                            <label class="label"> Extension </label>  123 <br>
+                            <label class="label"> Extension </label> <?php echo $ext?><br>  <br>
                             <!-- <hr> -->
                         </div>
                         <div class="col-sm-6" style="min-width: 240px;">   
@@ -470,7 +474,7 @@ else {
                             <div class="col-sm-4">
                                 <p> 
                                     <label class="label"> Date of Birth </label><br>
-                                     <?php echo$dob?>
+                                     <?php echo $dob?>
                                 </p>
                             </div>
                             <div class="col-sm-8">

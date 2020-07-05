@@ -713,7 +713,7 @@
 
                     echo '<div class="col-sm-6 col-md-6 col-lg-3 card-parent"><a href="facultypage.php?email=' . $email . '">
                             <div class="card">
-                                <p class="designation" style="background-color:#33DD88">Staff</p>
+                                <p class="designation" style="background-color:#33DD88"> '.$role.'</p>
                                 <h3 class="faculty-name">' . $name . '</h3>
                                 <div class="thumbnail">
                                     <img src="../cms/profilepic/' . $file_path . '" alt="faculty-image" style="object-fit: cover;

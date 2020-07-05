@@ -163,10 +163,10 @@ if (isset($_SESSION['loggedin_status'])) {
 
                         </div>
                     </div>
-
+                    
 
                     <div class="col-md-8 col-md-pull-2">
-                        <button type="button" class="btn success"> <a href=<?php echo "'../../" . $dept . "/facultypage.php?email=" . $email . "'" ?>>GO TO MY PAGE</a></button>
+                        <button type="button" class="btn success"> <a href=<?php echo "'../../" . strtolower($dept) . "/facultypage.php?email=" . $email . "'" ?>>GO TO MY PAGE</a></button>
 
                         <?php
                         if ($error == 1)
@@ -212,21 +212,21 @@ if (isset($_SESSION['loggedin_status'])) {
                                         <div class="form-group">
                                             <label for="designation">Designation</label>
                                             <select name="designation" class="form-control">
-                                                <option selected="selected">
+                                                <option selected="true" value="<?php echo $post_tier ?>" hidden>
                                                     <?php
                                                     if ($exist == 1)
                                                         echo $post_tier;
                                                     else {
-                                                        echo "Others";
+                                                        echo "Select";
                                                     }                                                
                                                     ?>
                                                 </option>
-                                                <option value="none" selected="true" disabled>Select</option>
-                                                <option value="professor">Professor</option>
-                                                <option value="associate professor">Associate Professor</option>
+                                                <!-- <option value="None" selected="true" disabled>Select</option> -->
+                                                <option value="Professor">Professor</option>
+                                                <option value="Associate Professor">Associate Professor</option>
                                                 <option value="Assistant Professor">Assistant Professor</option>
-                                                <option value="programmer">Programmer</option>
-                                                <option value="others">Others</option>
+                                                <option value="Programmer">Programmer</option>
+                                                <option value="Others">Others</option>
                                             </select>
                                         </div>
                                         <div class="row">
