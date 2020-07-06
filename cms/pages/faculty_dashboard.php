@@ -298,7 +298,7 @@ if (isset($_SESSION['loggedin_status'])) {
 
                                 </div>
                                 <div class="form-group">
-                                    <label for="interest">Date of Birth</label>
+                                    <label for="dob">Date of Birth</label>
                                     <?php
                                     if ($exist == 1)
                                         echo "<input type='date' name='dateofbirth' value=" . $dob . " placeholder='From' class='form-control' title='Date of Birth'>";
@@ -317,7 +317,6 @@ if (isset($_SESSION['loggedin_status'])) {
                                     }                                                ?>
 
                                 </div>
-
                                 <div class="form-group">
                                     <label for="research">Current Research/Work</label>
                                     <?php

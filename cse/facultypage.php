@@ -454,15 +454,20 @@ else {
                             <label class="label"> Extension </label> <?php echo $ext?><br>  <br>
                             <!-- <hr> -->
                         </div>
-                        <div class="col-sm-6" style="min-width: 240px;">   
-                            <h6 style="color: #2e8690;">Find me on</h6>
-                            <ul style="margin: 5px 0px 5px 0px;">
-                                <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
-                                <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $facebook?></a><br></li>
-                                <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $twitter?> </a><br></li>
-                                <li><a href="<?php echo $website?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $website?></a><br></li>
-                            </ul>   
-                        </div>
+                        <?php
+                        if($linkedin || $twitter || $facebook || $website){
+                            echo'
+                            <div class="col-sm-6" style="min-width: 240px;">   
+                                <h6 style="color: #2e8690;">Find me on</h6>
+                                <ul style="margin: 5px 0px 5px 0px;">';
+                                   if($linkedin) echo'<li><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> '.$linkedin.'</a><br></li>';
+                                   if($twitter) echo'<li><a href="'.$twitter.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">'. $facebook.'</a><br></li>';
+                                   if($facebook) echo'<li><a href="'.$facebook.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">'.$twitter.'</a><br></li>';
+                                   if($website) echo'<li><a href="'. $website.'"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px">'.$website.'</a><br></li>';
+                               echo' </ul>   
+                            </div>';
+                        }
+                        ?>
                     </div>
                     <br>
                     <div class="row row_dob">
@@ -472,10 +477,15 @@ else {
                                      <?php echo $dob?>
                                 </p>
                             </div>
-                            <div class="col-sm-8">
-                                <p> <label class="label"> Interests</label><br>
-                                <?php echo $interest?></p>
-                            </div>
+                        <?php
+                            if($interest!=""){
+                                echo '
+                                <div class="col-sm-8">
+                                    <p> <label class="label"> Interests</label><br>
+                                     '.$interest.'
+                                </div>';
+                            }
+                        ?>
                     </div>
                 </div>
             </div>
@@ -483,53 +493,69 @@ else {
         <hr>
 
         <div class="row">
-            <div class="col-md-5 col-sm-4" >
-                <div>
+            <!-- <div class="col-md-5 col-sm-4" > -->
+            <div class="col-12" >
+            <?php
+                if($research){
+                    echo '<div>
                     <p> 
                         <label class="label"> Current Research</label><br>
-                           <?php echo $research?>
+                           '.$research.'
                     </p>
-                </div>
-                <div>
+                </div>';
+                }
+                if($student){
+                    echo '<div>
                     <p> 
-                        <label class="label"> Students </label><br>
-                            <?php echo $student?>
-                        </p>
-                </div>
-            </div>
-            <div class="col-md-7 col-sm-8" style="overflow:auto;">
-                <div>
-                    <label class="label"> Projects and Activities </label>
-                    <br>
-                    <?php echo$project?>
-                    
-                    
-                    </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="container" style="margin: 20px 0px 30px 0px">
-                <label class="label"> Publications </label>
-                <article>
-                    <h3 style="color: #ebdd22;">Books</h3>
-                    <hr>
-                    <?php echo $books?><br>
-                </article>
-                <br>
-                <article>
-                    <h3 style="color: #fa983a;">Journals</h3>
-                    <hr>
-                    <?php echo $journals?><br>
-                   
-                </article>
-                <br>
-                <article>
-                    <h3 style="color: #b71540;">Conferences</h3>
-                    <hr>
-                    <?php echo $conferences?><br>
-                </article>
-            </div>
-        </div>
+                        <label class="label"> Students</label><br>
+                           '.$student.'
+                    </p>
+                </div>';
+                }
+                if($books || $journals || $conferences){
+                    echo '
+                    <div class="row" >
+                        <div class="container" style="margin: 20px 0px 30px 0px">
+                            <label class="label"> Publications </label>';
+                            if($books){
+                                echo'
+                                <article>
+                                    <h3 style="color: #ebdd22;">Books</h3>
+                                    <hr>
+                                    <div style="height:100px;overflow-y:auto">
+                                    '.$books.'
+                                    </div>
+                                </article>';
+                            }
+                            echo'<br>';
+                            if($journals){
+                                echo'
+                                <article>
+                                    <h3 style="color: #fa983a;">Journals</h3>
+                                    <hr>
+                                    <div style="height:100px;overflow-y:auto">
+                                    '.$journals.'<br>
+                                    </div>
+                                    </article>';
+                            }
+                            echo'<br>';
+                            if($conferences){
+                                echo'
+                                <article>
+                                    <h3 style="color: #b71540;">Conferences</h3>
+                                    <hr>
+                                    <div style="height:100px;overflow-y:auto">
+                                    '.$conferences.'<br>
+                                    </div>
+                                    </article>';
+                            }
+                            echo'
+                        </div>
+                    </div>';
+                }
+                
+                ?>
+                
     </div>
 
 
