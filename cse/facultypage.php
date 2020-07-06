@@ -359,7 +359,7 @@ if(mysqli_num_rows($result)>0)
        if(strpos($arr['dob'],'0000')!==false)
        $dob = 'Not provided';
        else
-       $dob = date("d-M",strtotime($arr['dob']));
+       $dob = date("F - d",strtotime($arr['dob']));
         //    $dob = date("d-M-Y",strtotime($arr['dob']));
       // $exists=0;
       $query="SELECT * FROM  academic where f_id=".$id;      
@@ -460,10 +460,10 @@ else {
                             <div class="col-sm-6" style="min-width: 240px;">   
                                 <h6 style="color: #2e8690;">Find me on</h6>
                                 <ul style="margin: 5px 0px 5px 0px;">';
-                                   if($linkedin) echo'<li><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> '.$linkedin.'</a><br></li>';
-                                   if($twitter) echo'<li><a href="'.$twitter.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">'. $facebook.'</a><br></li>';
-                                   if($facebook) echo'<li><a href="'.$facebook.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">'.$twitter.'</a><br></li>';
-                                   if($website) echo'<li><a href="'. $website.'"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px">'.$website.'</a><br></li>';
+                                   if($linkedin) echo'<li><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> Linkedin</a><br></li>';
+                                   if($twitter) echo'<li><a href="'.$twitter.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">Facebook</a><br></li>';
+                                   if($facebook) echo'<li><a href="'.$facebook.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">Twitter</a><br></li>';
+                                   if($website) echo'<li><a href="'. $website.'"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px">Website</a><br></li>';
                                echo' </ul>   
                             </div>';
                         }
@@ -521,8 +521,7 @@ else {
                                 echo'
                                 <article>
                                     <h3 style="color: #ebdd22;">Books</h3>
-                                    <hr>
-                                    <div style="height:100px;overflow-y:auto">
+                                    <div style="height:100px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
                                     '.$books.'
                                     </div>
                                 </article>';
@@ -532,8 +531,7 @@ else {
                                 echo'
                                 <article>
                                     <h3 style="color: #fa983a;">Journals</h3>
-                                    <hr>
-                                    <div style="height:100px;overflow-y:auto">
+                                    <div style="height:100px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
                                     '.$journals.'<br>
                                     </div>
                                     </article>';
@@ -543,8 +541,7 @@ else {
                                 echo'
                                 <article>
                                     <h3 style="color: #b71540;">Conferences</h3>
-                                    <hr>
-                                    <div style="height:100px;overflow-y:auto">
+                                    <div style="height:100px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
                                     '.$conferences.'<br>
                                     </div>
                                     </article>';

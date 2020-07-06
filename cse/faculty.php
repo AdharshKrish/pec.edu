@@ -693,6 +693,13 @@
                     }
                 } ?>
 
+            </div>
+            </div>
+            <div class="faculty-header"> 
+            <h2>Staff</h2>
+        </div>
+        <div class="container-fluid  card-container">
+            <div class="row ">
             <?php            
             $query = "SELECT * FROM staff where dep='cse'";
 
@@ -705,7 +712,12 @@
                     $role = $arr['role'];
                     $number = $arr['phone'];
 
-                    if (mysqli_num_rows($result) > 0)
+                    // if (mysqli_num_rows($result) > 0)
+                    // $file_path = $arr['picname'];
+                    // else
+                    // $file_path = "profile-placeholder.png";
+
+                    if ($arr['picname'])
                     $file_path = $arr['picname'];
                     else
                     $file_path = "profile-placeholder.png";
@@ -720,8 +732,7 @@
                                     width: 200px;
                                     height: 200px;">
                                 </div>
-                                <p class="degree">' . $role . '</p>
-                                <div class="details">
+                                <div class="details" style="text-align:center">
                                     <label class="label"> Phone Number </label>' . $number . '<br>
                                 </div>
                             </div>   
@@ -729,10 +740,10 @@
                 }
             } ?>
 
-
+        
             </div>
-
         </div>
+        <!-- </div> -->
 
         <!--main content ends-->
         </main>
