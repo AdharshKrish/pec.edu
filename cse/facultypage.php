@@ -460,7 +460,7 @@ else {
                                 <li><a href="<?php echo $linkedin?>"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $linkedin?></a><br></li>
                                 <li><a href="<?php echo $twitter?>"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px"> <?php echo $facebook?></a><br></li>
                                 <li><a href="<?php echo $facebook?>"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px"><?php echo $twitter?> </a><br></li>
-                                <li><a href="<?php echo $contact?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $website?></a><br></li>
+                                <li><a href="<?php echo $website?>"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px"><?php echo $website?></a><br></li>
                             </ul>   
                         </div>
                     </div>
