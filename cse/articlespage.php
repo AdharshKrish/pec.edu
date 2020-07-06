@@ -185,7 +185,7 @@
             <li><a href="../newsupdate/" class="btn-floating">Notice & Updates</a></li>
             <li><a href="../articles/" class="btn-floating">Articles</a></li>
             <li><a href="../overview/" class="btn-floating">Overview</a></li>
-            <li><a href="../facultylist/" class="btn-floating">Faculty</a></li>
+            <li><a href="../facultylist/" class="btn-floating">Faculty & Staff</a></li>
             <li><a href="../courses/" class="btn-floating">Courses & Curriculum</a></li>
         </ul>
     </floatbtn>
