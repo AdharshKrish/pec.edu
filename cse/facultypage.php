@@ -359,7 +359,7 @@ if(mysqli_num_rows($result)>0)
        if(strpos($arr['dob'],'0000')!==false)
        $dob = 'Not provided';
        else
-       $dob = date("F - d",strtotime($arr['dob']));
+       $dob = date("d F",strtotime($arr['dob']));
         //    $dob = date("d-M-Y",strtotime($arr['dob']));
       // $exists=0;
       $query="SELECT * FROM  academic where f_id=".$id;      
@@ -419,7 +419,7 @@ else {
                 <div class="row" style="min-width:120px;">
                     <div class="col-md-6 ">
                         <div class="thumbnail">
-                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both; width:150px; height:200px; margin-right:5px; object-fit: cover' alt='error'>";?></div>
+                            <div class=""><?php  echo "<img src='../cms/profilepic/". $file_path ."' style='resize: both; width:150px; height:180px; margin-right:5px; object-fit: cover' alt='error'>";?></div>
                         </div>
                     </div>
                     <div class="col-md-6 " style="margin-top:20px;display: flex; align-items: center;">
@@ -460,9 +460,9 @@ else {
                             <div class="col-sm-6" style="min-width: 240px;">   
                                 <h6 style="color: #2e8690;">Find me on</h6>
                                 <ul style="margin: 5px 0px 5px 0px;">';
-                                   if($linkedin) echo'<li><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px"> Linkedin</a><br></li>';
-                                   if($twitter) echo'<li><a href="'.$twitter.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">Facebook</a><br></li>';
-                                   if($facebook) echo'<li><a href="'.$facebook.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">Twitter</a><br></li>';
+                                   if($linkedin) echo'<li><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px">Linkedin</a><br></li>';
+                                   if($facebook) echo'<li><a href="'.$facebook.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">Facebook</a><br></li>';
+                                   if($twitter) echo'<li><a href="'.$twitter.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">Twitter</a><br></li>';
                                    if($website) echo'<li><a href="'. $website.'"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px">Website</a><br></li>';
                                echo' </ul>   
                             </div>';
@@ -512,6 +512,19 @@ else {
                     </p>
                 </div>';
                 }
+
+                if($project){
+                    echo ' <div class="col-md-7 col-sm-8" style="overflow:auto;">
+                    <div>
+                        <label class="label"> Projects and Activities </label>
+                        <br>
+                        '.$project.'
+                        
+                        
+                        </div>
+                </div>';
+                }
+
                 if($books || $journals || $conferences){
                     echo '
                     <div class="row" >
