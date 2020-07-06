@@ -330,12 +330,6 @@ $email='';
 $dept='';
 
 
-
-
-
-
-
-
 $path= $_SERVER['DOCUMENT_ROOT'];
 require_once('./db_con.php');
 $email=$_GET['email'];
@@ -345,16 +339,17 @@ $result=mysqli_query($db_con,$query);
 if(mysqli_num_rows($result)>0)
 { 
     $arr=mysqli_fetch_assoc($result);
-    $name=$arr['username'];
     $email=$arr['email'];
-    $dept=$arr['department'];
-   $id=$arr['id'];
-$query="SELECT * FROM basic_faculty_info where id=".$id;
+
+$query="SELECT * FROM basic_faculty_info where contact_official_email='".$email."'";
 $result=mysqli_query($db_con,$query);
 if(mysqli_num_rows($result)>0)
 { 
        $exist=1;
        $arr=mysqli_fetch_assoc($result);
+       $dept=$arr['department'];
+       $name=$arr['name'];
+       $id=$arr['id'];
        $post_tier=$arr['post_tier'];
        $number=$arr['phno'];
        $qualification=$arr['qualification'];
@@ -393,7 +388,7 @@ if(mysqli_num_rows($result)>0)
        $arr=mysqli_fetch_assoc($result);
        $name=$arr['username'];
        $email=$arr['email'];
-       $dept=$arr['department']; 
+       $dept=$arr['department'];
 
 
 
