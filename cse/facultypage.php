@@ -458,18 +458,18 @@ else {
                         if($linkedin || $twitter || $facebook || $website){
                             echo'
                             <div class="col-sm-6" style="min-width: 240px;">   
-                            <div class="row" style="margin: 5px 0px 5px 0px;">
-                                <h6 class="col-12" style="color: #2e8690;">Find me on</h6>';
-                                   if($linkedin) echo'<div class="col-lg-6"><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px">Linkedin</a><br></div>';
-                                   if($facebook) echo'<div class="col-lg-6"><a href="'.$facebook.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">Facebook</a><br></div>';
-                                   if($twitter) echo'<div class="col-lg-6"><a href="'.$twitter.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">Twitter</a><br></div>';
-                                   if($website) echo'<div class="col-lg-6"><a href="'. $website.'"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px">Website</a><br></div>';
-                               echo' </div>
+                                <h6 style="color: #2e8690;">Find me on</h6>
+                                <ul style="margin: 5px 0px 5px 0px;">';
+                                   if($linkedin) echo'<li><a href="'.$linkedin.'"><img src="../img/linkedin-brands.svg" alt="linkedin-brands" height="24" width="24" style="margin-right: 5px">Linkedin</a><br></li>';
+                                   if($facebook) echo'<li><a href="'.$facebook.'"><img src="../img/facebook-square-brands.svg" alt="facebook-square-brands" height="24" width="24" style="margin-right: 5px">Facebook</a><br></li>';
+                                   if($twitter) echo'<li><a href="'.$twitter.'"><img src="../img/twitter-brands.svg" alt="twitter-brands" height="24" width="24" style="margin-right: 5px">Twitter</a><br></li>';
+                                   if($website) echo'<li><a href="'. $website.'"><img src="../img/globe-solid.svg" alt="globe-solid" height="24" width="24" style="margin-right: 5px">Website</a><br></li>';
+                               echo' </ul>   
                             </div>';
                         }
                         ?>
                     </div>
-                    <!-- <br> -->
+                    <br>
                     <div class="row row_dob">
                             <div class="col-sm-4">
                                 <p> 
@@ -514,11 +514,14 @@ else {
                 }
 
                 if($project){
-                    echo '
+                    echo ' <div class="col-md-7 col-sm-8" style="overflow:auto;">
                     <div>
                         <label class="label"> Projects and Activities </label>
                         <br>
                         '.$project.'
+                        
+                        
+                        </div>
                 </div>';
                 }
 
