@@ -160,7 +160,6 @@ if (isset($_SESSION['loggedin_status'])) {
                             <p><?php echo $email ?></p>
                             <h3>Department</h3>
                             <p><?php echo $dept ?></p>
-
                         </div>
                     </div>
                     
@@ -202,7 +201,7 @@ if (isset($_SESSION['loggedin_status'])) {
                                         padding: 5px;" accept="image/*" name="image" />
                                             </div>
                                             <div class="btnChangePic">
-                                                <button class="btn btn-primary" style="align-self: center;" type="submit" value="Upload">ADD IMAGE</button>
+                                                <button class="btn btn-primary" style="align-self: center;" type="submit" value="Upload">CLICK TO ADD</button>
                                         </form>
                                     </div>
 
@@ -271,9 +270,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                             <label for="dept">Specialization</label>
                                             <?php
                                             if ($exist == 1)
-                                                echo '<input type="text" name="specialization" value="' . $specilization . '" placeholder="Enter your specializations" class="form-control">';
+                                                echo '<input type="text" name="specialization" value="' . $specilization . '" placeholder="e.g. Sensor Networks, Computer Networks .." class="form-control">';
                                             else {
-                                                echo ' <input type="text" name="specialization" placeholder="Specialization" class="form-control">';
+                                                echo ' <input type="text" name="specialization" placeholder="e.g. Sensor Networks, Computer Networks .." class="form-control">';
                                             }                                                ?>
 
                                         </div>
@@ -321,9 +320,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="research">Current Research/Work</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g. Sensor Networks">' . str_replace('<br />',"",$research ) . '</textarea>';
+                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated. e.g. &#10;[1] Work 1&#10;[2] Work 2 ..">' . str_replace('<br />',"",$research ) . '</textarea>';
                                     else {
-                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="e.g. Sensor Networks"></textarea>';
+                                        echo ' <textarea name="research" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated. e.g. &#10;[1] Work 1&#10;[2] Work 2 .."></textarea>';
                                     }                                                ?>
 
                                 </div>
@@ -341,9 +340,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="projects">Projects and Activities</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '   <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated.">' .str_replace('<br />',"",$project )  . '</textarea>';
+                                        echo '   <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in points. Press Enter for next line." placeholder="e.g. &#10;[1] Project 1&#10;[2] Project 2 ..">' .str_replace('<br />',"",$project )  . '</textarea>';
                                     else {
-                                        echo '  <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated."></textarea>';
+                                        echo '  <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in points. Press Enter for next line." placeholder="e.g. &#10;[1] Project 1&#10;[2] Project 2 .."></textarea>';
                                     }                                                ?>
 
                                 </div>
@@ -353,9 +352,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="books">Books</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '  <textarea name="books" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated">' . str_replace('<br />',"",$books)  . '</textarea>';
+                                        echo '  <textarea name="books" id="" cols="30" rows="3" class="form-control" placeholder="e.g. &#10;[1] Book 1&#10;[2] Book 2 .." title="Please Enter in points. Press Enter for next line.">' . str_replace('<br />',"",$books)  . '</textarea>';
                                     else {
-                                        echo '  <textarea name="books" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated"></textarea>';
+                                        echo '  <textarea name="books" id="" cols="30" rows="3" class="form-control" placeholder="e.g. &#10;[1] Book 1&#10;[2] Book 2 .." title="Please Enter in points. Press Enter for next line."></textarea>';
                                     }                                                ?>
 
                                 </div>
@@ -363,9 +362,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="journals">Journals</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '<textarea name="journals" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated">' . str_replace('<br />',"",$journals) . '</textarea>';
+                                        echo '<textarea name="journals" id="" cols="30" rows="3" class="form-control" placeholder="e.g. &#10;[1] Article 1&#10;[2] Article 2 .." title="Please Enter in points. Press Enter for next line.">' . str_replace('<br />',"",$journals) . '</textarea>';
                                     else {
-                                        echo '<textarea name="journals" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated"></textarea>';
+                                        echo '<textarea name="journals" id="" cols="30" rows="3" class="form-control" placeholder="e.g. &#10;[1] Article 1&#10;[2] Article 2 .." title="Please Enter in points. Press Enter for next line."></textarea>';
                                     }                                                ?>
 
                                 </div>
@@ -373,9 +372,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="conferences">Conferences</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '<textarea name="conferences" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated">' . str_replace('<br />',"",$conferences) . '</textarea>';
+                                        echo '<textarea name="conferences" id="" cols="30" rows="3" class="form-control" placeholder="e.g. &#10;[1] Conference 1&#10;[2] Conference 2 .." title="Please Enter in points. Press Enter for next line.">' . str_replace('<br />',"",$conferences) . '</textarea>';
                                     else {
-                                        echo '<textarea name="conferences" id="" cols="30" rows="3" class="form-control" placeholder="Please Keep this field updated" title="Please Keep this field updated"></textarea>';
+                                        echo '<textarea name="conferences" id="" cols="30" rows="3" class="form-control" placeholder="e.g. &#10;[1] Conference 1&#10;[2] Conference 2 .." title="Please Enter in points. Press Enter for next line."></textarea>';
                                     }                                                ?>
 
 
