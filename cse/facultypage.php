@@ -493,8 +493,8 @@ else {
         <hr>
 
         <div class="row">
-            <!-- <div class="col-md-5 col-sm-4" > -->
-            <div class="col-12" >
+            <div class="col-md-5 col-sm-4" >
+            <!-- <div class="col-12" > -->
             <?php
                 if($research){
                     echo '<div>
@@ -506,19 +506,23 @@ else {
                 }
                 if($student){
                     echo '<div>
-                    <p> 
-                        <label class="label"> Students</label><br>
-                           '.$student.'
-                    </p>
+                        <p> 
+                            <label class="label"> Students</label><br>
+                            '.$student.'
+                        </p>
+                    </div>
                 </div>';
                 }
 
                 if($project){
                     echo '
-                    <div>
-                        <label class="label"> Projects and Activities </label>
-                        <br>
-                        '.$project.'
+                    <div class="col-md-7 col-sm-8" >
+                        <div>
+                            <label class="label"> Projects and Activities </label>
+                            <br>
+                            '.$project.'
+                        </div>
+                    </div>
                 </div>';
                 }
 
