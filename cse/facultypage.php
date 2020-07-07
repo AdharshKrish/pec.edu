@@ -523,8 +523,9 @@ else {
                             '.$project.'
                         </div>
                     </div>
-                </div>';
+                </div><hr>';
                 }
+
 
                 if($books || $journals || $conferences){
                     echo '
@@ -535,7 +536,7 @@ else {
                                 echo'
                                 <article>
                                     <h3 style="color: #ebdd22;">Books</h3>
-                                    <div style="height:100px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
+                                    <div style="height:180px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
                                     '.$books.'
                                     </div>
                                 </article>';
@@ -545,7 +546,7 @@ else {
                                 echo'
                                 <article>
                                     <h3 style="color: #fa983a;">Journals</h3>
-                                    <div style="height:100px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
+                                    <div style="height:180px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
                                     '.$journals.'<br>
                                     </div>
                                     </article>';
@@ -555,7 +556,7 @@ else {
                                 echo'
                                 <article>
                                     <h3 style="color: #b71540;">Conferences</h3>
-                                    <div style="height:100px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
+                                    <div style="height:180px;overflow-y:auto; box-shadow: inset 0 0 3px #707070;padding-left:10px">
                                     '.$conferences.'<br>
                                     </div>
                                     </article>';
