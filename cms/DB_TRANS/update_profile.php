@@ -2,12 +2,11 @@
 require_once('./db_con.php');
 //session_start();
 $fid=$_SESSION['id'];
-$result2=mysqli_query($db_con,"SELECT * FROM login WHERE id=".$fid);
+$result2=mysqli_query($db_con,"SELECT * FROM basic_faculty_info WHERE id=".$fid);
 $result_val=mysqli_fetch_assoc($result2);
-$name=$result_val['username'];
-$email=$result_val['email'];
+$name=$result_val['name'];
+$email=$result_val['contact_official_email'];
 $department=$result_val['department'];
-
 $desg=$_POST['designation'];
 $contact=$_POST['phone'];
 $ext=$_POST['extno'];

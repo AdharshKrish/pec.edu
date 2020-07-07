@@ -6,8 +6,6 @@ $name=$_POST['name'];
 $dep=$_POST['dept'];
 $desg=$_POST['role'];
 
-//echo "INSERT INTO `login`(`desg`, `username`, `email`, `department`) VALUES ('".$role."','".$name."','".$email."','".$dep."')";
-
 $query_check_exists="SELECT * FROM login WHERE email='".$email."'";
 //echo $query_check_exists;
 $result=mysqli_query($db_con,$query_check_exists);
@@ -26,9 +24,6 @@ if($result)
 $result=mysqli_query($db_con,$query_check_exists);
 $arr1=mysqli_fetch_assoc($result);$idref=$arr1['id'];
 
-
-$query="INSERT INTO `role`(`idref`, `desg`) VALUES ($idref,'faculty')";
-mysqli_query($db_con,$query);
 $query="INSERT INTO `basic_faculty_info`(`name`,`contact_official_email`, `department`, `post_tier`) VALUES ('".$name."','".$email."','".$dep."','".$desg."')";
 mysqli_query($db_con,$query);
 

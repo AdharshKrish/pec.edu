@@ -341,9 +341,9 @@ if (isset($_SESSION['loggedin_status'])) {
                                     <label for="projects">Projects and Activities</label>
                                     <?php
                                     if ($exist == 1)
-                                        echo '   <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Use <br> to display in next line.">' .str_replace('<br />',"",$project )  . '</textarea>';
+                                        echo '   <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated.">' .str_replace('<br />',"",$project )  . '</textarea>';
                                     else {
-                                        echo '  <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated. Use <br> to display in next line."></textarea>';
+                                        echo '  <textarea name="projects" id="" cols="30" rows="3" class="form-control" title="Please Enter in bulletpoints." placeholder="Please Keep this field updated."></textarea>';
                                     }                                                ?>
 
                                 </div>
